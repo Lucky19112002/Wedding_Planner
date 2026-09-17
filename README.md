@@ -20,14 +20,14 @@ scripts/   Local automation, including the migration runner
 ## Setup
 
 1. Install PostgreSQL client tools so `psql` is available.
-2. Create a local untracked `.env` with `SUPABASE_DB_URL`.
+2. Confirm `.env` contains the current `SUPABASE_DB_URL`.
 3. Run migrations from the project root:
 
 ```text
 python scripts/migrate.py
 ```
 
-Do not commit `.env`, database URLs, API keys, service role keys, or build output.
+This repository is private because `.env` is tracked for single-machine restore. Do not make the repository public while `.env` contains live credentials.
 
 ## Branch Workflow
 
@@ -71,7 +71,7 @@ Planned tags:
 
 ## Roadmap
 
-- Phase 3.4: Public repository and release workflow
+- Phase 3.4: Private repository and release workflow
 - Phase 4: React foundation
 - Phase 5: Business modules
 

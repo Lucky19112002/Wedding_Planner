@@ -1,6 +1,6 @@
 # Changelog
 
-Newest entries first. This root changelog records public repository and release milestones. Detailed product documentation changes remain in `/docs`.
+Newest entries first. This root changelog records repository and release milestones. Detailed product documentation changes remain in `/docs`.
 
 ## [v0.3.4-repository-workflow] - 2026-09-18
 
@@ -8,12 +8,12 @@ Newest entries first. This root changelog records public repository and release 
 
 - Root README with architecture, setup, branch workflow, commit convention, release workflow, roadmap, and documentation links.
 - MIT license.
-- Public repository workflow standards for `main`, `dev`, Conventional Commits, and phase release tags.
+- Repository workflow standards for `main`, `dev`, Conventional Commits, and phase release tags.
 
 ### Changed
 
-- Expanded `.gitignore` to protect local secrets and generated output before initializing Git history.
+- Updated `.gitignore` to keep generated dependency/build output out of Git while allowing the private repo to track `.env`.
 
 ### Security
 
-- Verified `.env` is ignored before staging repository files.
+- Repository is private because `.env` is tracked for restore on a new PC.

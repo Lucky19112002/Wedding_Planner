@@ -1,0 +1,281 @@
+{
+  "communities": {
+    "0": [
+      "docs_changelog_changelog",
+      "docs_changelog_documentation_version_history",
+      "docs_changelog_phase_3_2_migration_readiness",
+      "docs_changelog_phase_3_database_readiness",
+      "docs_infrastructure_deployment_prerequisites",
+      "docs_infrastructure_environment_variables",
+      "docs_infrastructure_infrastructure",
+      "docs_infrastructure_supabase_auth_configuration",
+      "docs_infrastructure_supabase_project_setup",
+      "docs_log_log",
+      "docs_log_phase_2_1_documentation_revision",
+      "docs_log_phase_3_1_infrastructure_work",
+      "docs_log_phase_3_2_migration_work",
+      "docs_log_phase_3_database_work",
+      "docs_migrations_ci_migration_gate",
+      "docs_migrations_forward_only_rollback",
+      "docs_migrations_migration_history_and_checksums",
+      "docs_migrations_migration_runner",
+      "docs_migrations_migrations",
+      "docs_readme_documentation_governance",
+      "docs_readme_project_phase_status",
+      "docs_readme_readme",
+      "schema_readme_locked_baseline_migrations",
+      "schema_readme_migration_runner",
+      "schema_readme_numbered_sql_files",
+      "schema_readme_readme"
+    ],
+    "1": [
+      "completedprocess",
+      "hashlib",
+      "os",
+      "path",
+      "pathlib",
+      "re",
+      "scripts_migrate",
+      "scripts_migrate_checksum",
+      "scripts_migrate_db_url",
+      "scripts_migrate_history_rows",
+      "scripts_migrate_list_migrations",
+      "scripts_migrate_load_dotenv",
+      "scripts_migrate_main",
+      "scripts_migrate_psql",
+      "scripts_migrate_rationale_2",
+      "scripts_migrate_record",
+      "scripts_migrate_require_psql",
+      "subprocess",
+      "sys"
+    ],
+    "2": [
+      "docs_api_api",
+      "docs_api_archive_rpcs",
+      "docs_api_invitation_rpcs",
+      "docs_api_private_outfit_storage",
+      "docs_api_progress_views",
+      "docs_api_row_level_security",
+      "docs_api_supabase_postgrest_api",
+      "docs_database_archive_lifecycle",
+      "docs_database_audit_stamps",
+      "docs_database_database",
+      "docs_database_domain_tables",
+      "docs_database_private_outfit_storage",
+      "docs_database_progress_views",
+      "docs_database_row_level_security",
+      "docs_database_supabase_postgresql_source_of_truth",
+      "docs_decisions_dec_008_derived_progress_views",
+      "docs_infrastructure_private_outfit_storage"
+    ],
+    "3": [
+      "docs_phase_2_1_archive_restore_and_permanent_delete",
+      "docs_phase_2_1_audit_and_activity",
+      "docs_phase_2_1_invitation_onboarding",
+      "docs_phase_2_1_phase_2_1",
+      "docs_phase_2_1_progress_calculation",
+      "docs_prd_archive_restore_and_permanent_delete",
+      "docs_prd_audit_and_activity",
+      "docs_prd_event_management",
+      "docs_prd_invitation_onboarding",
+      "docs_prd_outfit_management",
+      "docs_prd_participant_management",
+      "docs_prd_prd",
+      "docs_prd_progress_calculation",
+      "docs_prd_reference_images_and_links",
+      "docs_prd_wedding_project",
+      "docs_sdd_invitation_onboarding",
+      "docs_sdd_progress_calculation"
+    ],
+    "4": [
+      "docs_database_wedding_scoped_data_isolation",
+      "docs_prd_user_roles_and_permissions",
+      "docs_sdd_archive_and_audit_alignment",
+      "docs_sdd_github_pages_hosting",
+      "docs_sdd_image_storage_lifecycle",
+      "docs_sdd_module_boundaries",
+      "docs_sdd_permission_model",
+      "docs_sdd_pwa_readiness",
+      "docs_sdd_react_frontend",
+      "docs_sdd_sdd",
+      "docs_sdd_supabase_backend",
+      "docs_sdd_wedding_scoped_data_isolation"
+    ],
+    "5": [
+      "docs_database_versioned_migrations",
+      "docs_decisions_dec_001_react_frontend",
+      "docs_decisions_dec_002_supabase_backend",
+      "docs_decisions_dec_003_github_pages_hosting",
+      "docs_decisions_dec_004_pwa_readiness",
+      "docs_decisions_dec_005_multi_wedding_architecture",
+      "docs_decisions_dec_006_archive_and_audit_history",
+      "docs_decisions_dec_007_wedding_id_denormalization",
+      "docs_decisions_dec_009_versioned_migrations",
+      "docs_decisions_decisions",
+      "docs_migrations_versioned_migrations"
+    ],
+    "6": [
+      "docs_plan_event_management",
+      "docs_plan_outfit_management",
+      "docs_plan_plan",
+      "docs_plan_reference_images_and_links",
+      "docs_plan_user_roles_and_permissions",
+      "docs_plan_wedding_project"
+    ]
+  },
+  "cohesion": {
+    "0": 0.1076923076923077,
+    "1": 0.1695906432748538,
+    "2": 0.13970588235294118,
+    "3": 0.13970588235294118,
+    "4": 0.16666666666666666,
+    "5": 0.18181818181818182,
+    "6": 0.3333333333333333
+  },
+  "gods": [
+    {
+      "id": "docs_sdd_sdd",
+      "label": "SDD",
+      "degree": 20
+    },
+    {
+      "id": "docs_database_database",
+      "label": "DATABASE",
+      "degree": 19
+    },
+    {
+      "id": "docs_prd_prd",
+      "label": "PRD",
+      "degree": 18
+    },
+    {
+      "id": "docs_log_log",
+      "label": "log",
+      "degree": 16
+    },
+    {
+      "id": "docs_decisions_decisions",
+      "label": "DECISIONS",
+      "degree": 16
+    },
+    {
+      "id": "docs_changelog_changelog",
+      "label": "CHANGELOG",
+      "degree": 15
+    },
+    {
+      "id": "docs_readme_readme",
+      "label": "README",
+      "degree": 14
+    },
+    {
+      "id": "docs_migrations_migrations",
+      "label": "MIGRATIONS",
+      "degree": 13
+    },
+    {
+      "id": "docs_api_api",
+      "label": "API",
+      "degree": 13
+    },
+    {
+      "id": "docs_infrastructure_infrastructure",
+      "label": "INFRASTRUCTURE",
+      "degree": 12
+    }
+  ],
+  "surprises": [
+    {
+      "source": "DATABASE",
+      "target": "README",
+      "source_files": [
+        "docs/DATABASE.md",
+        "schema/README.md"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "connects across different repos/directories; bridges separate communities"
+    },
+    {
+      "source": "Plan",
+      "target": "PRD",
+      "source_files": [
+        "docs/Plan.md",
+        "docs/PRD.md"
+      ],
+      "confidence": "INFERRED",
+      "relation": "semantically_similar_to",
+      "why": "inferred connection - not explicitly stated in source; bridges separate communities; semantically similar concepts with no structural link"
+    },
+    {
+      "source": "CHANGELOG",
+      "target": "README",
+      "source_files": [
+        "docs/CHANGELOG.md",
+        "schema/README.md"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "connects across different repos/directories"
+    },
+    {
+      "source": "INFRASTRUCTURE",
+      "target": "README",
+      "source_files": [
+        "docs/INFRASTRUCTURE.md",
+        "schema/README.md"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "connects across different repos/directories"
+    },
+    {
+      "source": "README",
+      "target": "log",
+      "source_files": [
+        "schema/README.md",
+        "docs/log.md"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "connects across different repos/directories"
+    }
+  ],
+  "questions": [
+    {
+      "type": "bridge_node",
+      "question": "Why does `SDD` connect `Wedding-scoped data isolation / User roles and permissions` to `CHANGELOG / Documentation version history`, `API / Archive RPCs`, `Archive restore and permanent delete / Audit and activity`, `Versioned migrations / DEC-001 React frontend`, `Event management / Outfit management`?",
+      "why": "High betweenness centrality (0.170) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `DATABASE` connect `API / Archive RPCs` to `CHANGELOG / Documentation version history`, `Archive restore and permanent delete / Audit and activity`, `Wedding-scoped data isolation / User roles and permissions`, `Versioned migrations / DEC-001 React frontend`?",
+      "why": "High betweenness centrality (0.150) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `PRD` connect `Archive restore and permanent delete / Audit and activity` to `CHANGELOG / Documentation version history`, `API / Archive RPCs`, `Wedding-scoped data isolation / User roles and permissions`, `Versioned migrations / DEC-001 React frontend`, `Event management / Outfit management`?",
+      "why": "High betweenness centrality (0.148) - this node is a cross-community bridge."
+    },
+    {
+      "type": "isolated_nodes",
+      "question": "What connects `Documentation version history`, `Phase 3.2 migration readiness`, `Phase 3 database readiness` to the rest of the system?",
+      "why": "46 weakly-connected nodes found - possible documentation gaps or missing edges."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `CHANGELOG / Documentation version history` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.1076923076923077 - nodes in this community are weakly interconnected."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `API / Archive RPCs` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.13970588235294118 - nodes in this community are weakly interconnected."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `Archive restore and permanent delete / Audit and activity` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.13970588235294118 - nodes in this community are weakly interconnected."
+    }
+  ]
+}

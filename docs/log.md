@@ -4,6 +4,22 @@ Newest entries first. Every document added or changed under `docs/` is recorded 
 
 ---
 
+## 2026-09-18 – Phase 3.4 Git repository and release workflow
+
+- **Status:** Complete
+- **Phase:** 3.4 – Git repository, branch strategy, and release workflow
+- **What changed:**
+  - Confirmed Git repository and GitHub remote `Lucky19112002/Wedding_Planner`.
+  - Confirmed repository visibility was changed from public to private before tracking `.env`.
+  - Documented `main` as stable release branch and `dev` as active development branch.
+  - Documented Conventional Commits and phase version tags.
+  - Added MIT license, root README, and root CHANGELOG.
+  - Tracked `.env` and Graphify outputs per operator restore preference.
+- **Follow from:** [README.md](../README.md), [CHANGELOG.md](../CHANGELOG.md)
+- **Next:** Phase 4 — React Foundation.
+
+---
+
 ## 2026-09-18 – Phase 3.3 Live Supabase database execution
 
 - **Status:** Complete

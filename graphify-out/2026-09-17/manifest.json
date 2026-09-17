@@ -1,0 +1,116 @@
+{
+  "schema/001_initial_schema.sql": {
+    "mtime": 1789659068.0863233,
+    "seen": 1789666531.716362,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "schema/002_rls_policies.sql": {
+    "mtime": 1789659019.015579,
+    "seen": 1789666531.716362,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "schema/003_storage.sql": {
+    "mtime": 1789659032.039991,
+    "seen": 1789666531.716362,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "schema/004_seed_data.sql": {
+    "mtime": 1789659037.7224145,
+    "seen": 1789666531.716362,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "schema/005_example.sql": {
+    "mtime": 1789659847.4734476,
+    "seen": 1789666531.716362,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "scripts/migrate.py": {
+    "mtime": 1789659847.5620272,
+    "seen": 1789666531.716362,
+    "ast_hash": "ba732cee990355399413ceda4d2c91e6",
+    "semantic_hash": "ba732cee990355399413ceda4d2c91e6"
+  },
+  "docs/API.md": {
+    "mtime": 1789659074.7841682,
+    "seen": 1789666531.716362,
+    "ast_hash": "d1b76d0339fc2f373ebbcc808a887d86",
+    "semantic_hash": "d1b76d0339fc2f373ebbcc808a887d86"
+  },
+  "docs/CHANGELOG.md": {
+    "mtime": 1789659890.2997684,
+    "seen": 1789666531.716362,
+    "ast_hash": "60af21f66542bf6a193506d6e175e7bb",
+    "semantic_hash": "60af21f66542bf6a193506d6e175e7bb"
+  },
+  "docs/DATABASE.md": {
+    "mtime": 1789659863.4617207,
+    "seen": 1789666531.716362,
+    "ast_hash": "9ec28024abf4e0dc3cf70d418447c8b4",
+    "semantic_hash": "9ec28024abf4e0dc3cf70d418447c8b4"
+  },
+  "docs/DECISIONS.md": {
+    "mtime": 1789659887.0913162,
+    "seen": 1789666531.716362,
+    "ast_hash": "a383d0d6070c36a159dff81686d32a30",
+    "semantic_hash": "a383d0d6070c36a159dff81686d32a30"
+  },
+  "docs/INFRASTRUCTURE.md": {
+    "mtime": 1789659875.248481,
+    "seen": 1789666531.716362,
+    "ast_hash": "92384bf0251d5f3799312bfbb260ffd3",
+    "semantic_hash": "92384bf0251d5f3799312bfbb260ffd3"
+  },
+  "docs/MIGRATIONS.md": {
+    "mtime": 1789659821.6383898,
+    "seen": 1789666531.716362,
+    "ast_hash": "1b65ba2e41795509682c78893db125c2",
+    "semantic_hash": "1b65ba2e41795509682c78893db125c2"
+  },
+  "docs/PHASE-2.1.md": {
+    "mtime": 1789658389.4569542,
+    "seen": 1789666531.716362,
+    "ast_hash": "a66034065ba6e69e365fd368f83cbf6c",
+    "semantic_hash": "a66034065ba6e69e365fd368f83cbf6c"
+  },
+  "docs/PRD.md": {
+    "mtime": 1789658280.643714,
+    "seen": 1789666531.716362,
+    "ast_hash": "a262a0d17b1814c9427bce8193113ebe",
+    "semantic_hash": "a262a0d17b1814c9427bce8193113ebe"
+  },
+  "docs/Plan.md": {
+    "mtime": 1789657716.412991,
+    "seen": 1789666531.716362,
+    "ast_hash": "fffe738ff5ac1cd5bd8a069f94b50292",
+    "semantic_hash": "fffe738ff5ac1cd5bd8a069f94b50292"
+  },
+  "docs/README.md": {
+    "mtime": 1789659902.27454,
+    "seen": 1789666531.716362,
+    "ast_hash": "ee73a7f2f7189974f8943f6c01eab5aa",
+    "semantic_hash": "ee73a7f2f7189974f8943f6c01eab5aa"
+  },
+  "docs/SDD.md": {
+    "mtime": 1789658345.7832491,
+    "seen": 1789666531.716362,
+    "ast_hash": "c0fb7819b3f8f4de8c5cede47e3bd03c",
+    "semantic_hash": "c0fb7819b3f8f4de8c5cede47e3bd03c"
+  },
+  "docs/log.md": {
+    "mtime": 1789659891.6634102,
+    "seen": 1789666531.716362,
+    "ast_hash": "b2f31c4ea2535d990dda8a9dd138cc66",
+    "semantic_hash": "b2f31c4ea2535d990dda8a9dd138cc66"
+  },
+  "schema/README.md": {
+    "mtime": 1789659911.5319445,
+    "seen": 1789666531.716362,
+    "ast_hash": "bf5f361365d686bda52c7a1bf3f0e6f3",
+    "semantic_hash": "bf5f361365d686bda52c7a1bf3f0e6f3"
+  }
+}
