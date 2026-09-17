@@ -4,7 +4,7 @@ Mobile-first wedding planning application for Lucky & Kareena Wedding 2026, desi
 
 ## Architecture
 
-- **Frontend:** React planned for Phase 4, hosted as a static app on GitHub Pages.
+- **Frontend:** React, Vite, TypeScript, Tailwind CSS, React Router, Zustand, React Hook Form, and Zod.
 - **Backend:** Supabase Auth, PostgreSQL, Row Level Security, and private Storage.
 - **Database changes:** Versioned SQL migrations in `/schema`, applied only through `scripts/migrate.py`.
 - **Documentation:** Locked product and system design live in `/docs`.
@@ -13,15 +13,32 @@ Mobile-first wedding planning application for Lucky & Kareena Wedding 2026, desi
 
 ```text
 docs/      Product, system, infrastructure, migration, and release docs
+public/    PWA manifest, favicon, and icons
 schema/    Numbered Supabase/PostgreSQL migrations
 scripts/   Local automation, including the migration runner
+src/       React application foundation
 ```
 
 ## Setup
 
 1. Install PostgreSQL client tools so `psql` is available.
 2. Confirm `.env` contains the current `SUPABASE_DB_URL`.
-3. Run migrations from the project root:
+3. Add the frontend Supabase values to `.env` before login testing:
+
+```text
+VITE_SUPABASE_URL=https://YOUR_PROJECT_REF.supabase.co
+VITE_SUPABASE_ANON_KEY=YOUR_ANON_PUBLIC_KEY
+```
+
+4. Install frontend dependencies and run checks:
+
+```text
+pnpm install
+pnpm run build
+pnpm run lint
+```
+
+5. Run migrations from the project root when database changes are added:
 
 ```text
 python scripts/migrate.py
@@ -71,7 +88,6 @@ Planned tags:
 
 ## Roadmap
 
-- Phase 3.4: Private repository and release workflow
 - Phase 4: React foundation
 - Phase 5: Business modules
 

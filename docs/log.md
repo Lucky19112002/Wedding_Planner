@@ -4,6 +4,23 @@ Newest entries first. Every document added or changed under `docs/` is recorded 
 
 ---
 
+## 2026-09-18 – Phase 4 React foundation
+
+- **Status:** Complete
+- **Phase:** 4 – Frontend foundation only
+- **What changed:**
+  - Added React, Vite, TypeScript, Tailwind CSS, React Router, Supabase JS, Zustand, React Hook Form, and Zod.
+  - Added Supabase client, auth provider, session persistence, protected `/app` route, login route, logout handler, and loading state.
+  - Added reusable UI primitives only; no wedding-specific modules.
+  - Added PublicLayout and AppLayout placeholders.
+  - Added empty auth, UI, and wedding stores.
+  - Added PWA manifest, favicon, and icon asset; no service worker.
+  - Verified `pnpm run build` and `pnpm run lint`.
+- **Follow from:** [README.md](../README.md), [CHANGELOG.md](../CHANGELOG.md)
+- **Next:** Phase 5 — Business Modules.
+
+---
+
 ## 2026-09-18 – Phase 3.4 Git repository and release workflow
 
 - **Status:** Complete

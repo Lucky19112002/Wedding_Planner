@@ -1,0 +1,43 @@
+{
+  "name": "wedding-planner",
+  "private": true,
+  "version": "0.4.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "typecheck": "tsc -b"
+  },
+  "dependencies": {
+    "@hookform/resolvers": "latest",
+    "@supabase/supabase-js": "latest",
+    "@vitejs/plugin-react": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "react-hook-form": "latest",
+    "react-router-dom": "latest",
+    "zod": "latest",
+    "zustand": "latest"
+  },
+  "devDependencies": {
+    "@eslint/js": "latest",
+    "@tailwindcss/postcss": "^4.3.3",
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "autoprefixer": "latest",
+    "eslint": "latest",
+    "eslint-config-prettier": "latest",
+    "eslint-plugin-react-hooks": "latest",
+    "eslint-plugin-react-refresh": "latest",
+    "globals": "latest",
+    "postcss": "latest",
+    "prettier": "latest",
+    "tailwindcss": "latest",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "latest",
+    "vite": "latest"
+  }
+}
