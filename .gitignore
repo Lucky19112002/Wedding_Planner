@@ -1,0 +1,16 @@
+.env
+.env.local
+.env.*
+!.env.example
+.DS_Store
+Thumbs.db
+
+node_modules/
+dist/
+build/
+coverage/
+.vite/
+
+*.pyc
+__pycache__/
+graphify-out/
