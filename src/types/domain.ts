@@ -152,9 +152,12 @@ export type ShoppingLinkInput = {
 
 export type DashboardSummary = {
   completedEvents: number;
+  familyMembers: number;
   overallCompletionPct: number;
   pendingOutfits: number;
+  pendingInvitations: number;
   readyOutfits: number;
+  todaysTasks: number;
   totalEvents: number;
   totalOutfits: number;
   totalParticipants: number;

@@ -86,6 +86,7 @@ Planned tags:
 - `v0.3.3-live-backend`
 - `v0.4.0-react-foundation`
 - `v0.5.0-business-modules`
+- `v1.0.0-production-ready`
 
 ## Roadmap
 
@@ -97,6 +98,7 @@ Planned tags:
 - Phase 5.5: Images and shopping links — complete
 - Phase 5.6: Progress dashboard — complete
 - Phase 5.7: Invitations and permissions — complete
+- Phase 6: Performance, dashboard, and production polish — complete
 
 ## Current App Surface
 
@@ -114,10 +116,11 @@ Planned tags:
 - Outfit create/edit/detail/archive flows connected to Supabase.
 - Outfit status workflow helpers, badges, timeline, archive-only destructive action, and Vitest coverage.
 - Private Supabase Storage outfit gallery with signed URLs, upload compression, thumbnail strip, full-screen preview, primary image ordering, delete, and reorder controls.
-- Shopping/reference link management with URL validation, provider detection, cards, edit/delete/open actions, and five-link cap handling.
-- Progress dashboard home screen using Supabase progress views for wedding readiness, event progress, participant insights, outfit analytics, upcoming timeline, and quick actions.
+- Shopping/reference link management with URL validation, provider detection, cards, copy/edit/delete/open actions, delete confirmation, and five-link cap handling.
+- Production dashboard home screen using Supabase progress views for wedding readiness, event progress, participant insights, outfit analytics, upcoming timeline, today tasks, pending invitations, family summary, and quick actions.
 - User management with invitation sending, pending invite actions, role-derived permission matrix, and deactivate guard.
 - Public invite response page for authenticated accept/reject flows.
+- Route-level code splitting with Suspense to keep the initial production bundle smaller.
 - Vitest unit coverage for participant duplicate/search validation.
 
 ## Documentation

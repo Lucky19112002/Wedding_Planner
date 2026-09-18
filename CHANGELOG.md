@@ -2,6 +2,33 @@
 
 Newest entries first. This root changelog records repository and release milestones. Detailed product documentation changes remain in `/docs`.
 
+## [v1.0.0-production-ready] - 2026-09-18
+
+### Added
+
+- Phase 6 production dashboard polish with today task count, pending invitations, and family member summary.
+- Route-level lazy loading with React Suspense for public and protected pages.
+- Shopping link copy action and delete confirmation.
+- Reference image delete confirmation and clearer multi-image upload guidance.
+
+### Changed
+
+- Dashboard continues to use existing SQL progress views for percentages while adding lightweight Supabase summaries.
+- Initial production bundle is split by route; the previous large single JS chunk warning is resolved.
+
+### Verified
+
+- `pnpm run typecheck`
+- `pnpm run lint`
+- `pnpm run test`
+- `pnpm run build`
+
+### Notes
+
+- No PRD, SDD, DATABASE, MIGRATIONS, SQL schema, or business-rule changes were made.
+
+---
+
 ## [v0.5.7-invitations-permissions] - 2026-09-18
 
 ### Added

@@ -4,11 +4,12 @@ import { detectLinkProvider, getLinkDomain } from '@/utils/shoppingLinks';
 
 type ShoppingLinkCardProps = {
   link: ShoppingLink;
+  onCopy: (url: string) => void;
   onDelete: (id: string) => void;
   onEdit: (link: ShoppingLink) => void;
 };
 
-export function ShoppingLinkCard({ link, onDelete, onEdit }: ShoppingLinkCardProps) {
+export function ShoppingLinkCard({ link, onCopy, onDelete, onEdit }: ShoppingLinkCardProps) {
   const provider = detectLinkProvider(link.url);
 
   return (
@@ -25,6 +26,9 @@ export function ShoppingLinkCard({ link, onDelete, onEdit }: ShoppingLinkCardPro
           <a href={link.url} rel="noreferrer" target="_blank">
             Open
           </a>
+        </Button>
+        <Button type="button" variant="ghost" onClick={() => onCopy(link.url)}>
+          Copy
         </Button>
         <Button type="button" variant="ghost" onClick={() => onEdit(link)}>
           Edit

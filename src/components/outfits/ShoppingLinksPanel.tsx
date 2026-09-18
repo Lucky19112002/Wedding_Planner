@@ -17,6 +17,7 @@ export function ShoppingLinksPanel({ outfit }: { outfit: Outfit }) {
   const updateLink = useShoppingLinkStore((state) => state.updateLink);
   const deleteLink = useShoppingLinkStore((state) => state.deleteLink);
   const [editing, setEditing] = useState<ShoppingLink | null>(null);
+  const [copiedId, setCopiedId] = useState<string | null>(null);
 
   useEffect(() => {
     void loadLinks(outfit.id);
@@ -44,12 +45,20 @@ export function ShoppingLinksPanel({ outfit }: { outfit: Outfit }) {
             <ShoppingLinkCard
               key={link.id}
               link={link}
-              onDelete={(id) => void deleteLink(id)}
+              onCopy={(url) => {
+                void navigator.clipboard.writeText(url);
+                setCopiedId(link.id);
+              }}
+              onDelete={(id) => {
+                if (window.confirm('Delete this shopping link?')) void deleteLink(id);
+              }}
               onEdit={setEditing}
             />
           ))}
         </div>
       ) : null}
+
+      {copiedId ? <p className="text-sm text-emerald-700">Link copied.</p> : null}
 
       {editing ? (
         <ShoppingLinkForm

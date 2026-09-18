@@ -72,11 +72,14 @@ export function AppHomePage() {
         <SummaryCard label="Wedding completion" value={`${clampProgress(summary.overallCompletionPct)}%`} />
         <SummaryCard label="Total events" value={summary.totalEvents} />
         <SummaryCard label="Upcoming events" value={summary.upcomingEvents} />
+        <SummaryCard label="Today's tasks" value={summary.todaysTasks} />
         <SummaryCard label="Completed events" value={summary.completedEvents} />
         <SummaryCard label="Total participants" value={summary.totalParticipants} />
         <SummaryCard label="Total outfits" value={summary.totalOutfits} />
         <SummaryCard label="Ready outfits" value={summary.readyOutfits} />
         <SummaryCard label="Pending outfits" value={summary.pendingOutfits} />
+        <SummaryCard label="Pending invitations" value={summary.pendingInvitations} />
+        <SummaryCard label="Family members" value={summary.familyMembers} />
       </section>
 
       <section className="grid gap-5 xl:grid-cols-[1.2fr_0.8fr]">

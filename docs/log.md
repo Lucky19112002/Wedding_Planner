@@ -4,6 +4,23 @@ Newest entries first. Every document added or changed under `docs/` is recorded 
 
 ---
 
+## 2026-09-18 – Phase 6 Performance, Dashboard & Production Polish
+
+- **Status:** Complete
+- **Phase:** 6 – Production polish and performance
+- **What changed:**
+  - Added dashboard summaries for today's tasks, pending invitations, and family member count while keeping progress percentages sourced from existing SQL progress views.
+  - Added route-level lazy loading with React Suspense for public and protected pages.
+  - Polished shopping links with copy action and delete confirmation.
+  - Polished image management with delete confirmation and clearer multi-image upload/compression guidance.
+  - Reduced the initial production JS from the RC warning state (~759 kB minified / ~215 kB gzip) to a split initial bundle (~318 kB minified / ~100 kB gzip) with page chunks.
+  - Verified TypeScript, ESLint, Vitest, and production build.
+  - Did not modify PRD, SDD, DATABASE, MIGRATIONS, SQL schema, or business rules.
+- **Follow from:** [README.md](../README.md), [CHANGELOG.md](../CHANGELOG.md)
+- **Next:** v1.0.0 stable release preparation.
+
+---
+
 ## 2026-09-18 – Phase 5.7 Invitations & Permissions
 
 - **Status:** Complete

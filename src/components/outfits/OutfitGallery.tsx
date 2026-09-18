@@ -68,7 +68,9 @@ export function OutfitGallery({ outfit }: { outfit: Outfit }) {
               isActive={activeImage?.id === image.id}
               isFirst={index === 0}
               isLast={index === images.length - 1}
-              onDelete={(item) => void deleteImage(item)}
+              onDelete={(item) => {
+                if (window.confirm('Delete this reference image?')) void deleteImage(item);
+              }}
               onMove={(imageId, direction) => void moveImage(imageId, direction)}
               onSelect={(item) => setActiveId(item.id)}
               onSetPrimary={(imageId) => void setPrimaryImage(imageId)}

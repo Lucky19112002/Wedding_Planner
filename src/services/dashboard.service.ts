@@ -52,6 +52,14 @@ type OutfitRow = {
   status: OutfitStatus;
 };
 
+type MembershipRow = {
+  user_id: string;
+};
+
+type InvitationRow = {
+  id: string;
+};
+
 function toNumber(value: number | string | null | undefined): number {
   if (value == null) return 0;
   const parsed = Number(value);
@@ -155,6 +163,8 @@ export async function getDashboardData(weddingId: string): Promise<DashboardData
     participantsResult,
     participantProgressResult,
     outfitsResult,
+    invitationsResult,
+    membershipsResult,
   ] = await Promise.all([
     supabase
       .from('v_wedding_progress')
@@ -185,6 +195,17 @@ export async function getDashboardData(weddingId: string): Promise<DashboardData
       .select('participant_id,event_id,status')
       .eq('wedding_id', weddingId)
       .is('archived_at', null),
+    supabase
+      .from('invitations')
+      .select('id')
+      .eq('wedding_id', weddingId)
+      .eq('status', 'pending')
+      .is('archived_at', null),
+    supabase
+      .from('wedding_memberships')
+      .select('user_id')
+      .eq('wedding_id', weddingId)
+      .is('archived_at', null),
   ]);
 
   if (weddingProgressResult.error) throw weddingProgressResult.error;
@@ -193,10 +214,16 @@ export async function getDashboardData(weddingId: string): Promise<DashboardData
   if (participantsResult.error) throw participantsResult.error;
   if (participantProgressResult.error) throw participantProgressResult.error;
   if (outfitsResult.error) throw outfitsResult.error;
+  if (invitationsResult.error) throw invitationsResult.error;
+  if (membershipsResult.error) throw membershipsResult.error;
 
   const events = (eventsResult.data ?? []) as EventRow[];
   const participants = (participantsResult.data ?? []) as ParticipantRow[];
   const outfits = (outfitsResult.data ?? []) as OutfitRow[];
+  const todayTasks =
+    events.filter((event) => event.event_date && getDaysRemaining(event.event_date) === 0).length +
+    outfits.filter((outfit) => isPendingOutfitStatus(outfit.status)).length +
+    ((invitationsResult.data ?? []) as InvitationRow[]).length;
   const userIds = participants.flatMap((participant) => (participant.user_id ? [participant.user_id] : []));
   const profilesResult =
     userIds.length > 0
@@ -232,9 +259,12 @@ export async function getDashboardData(weddingId: string): Promise<DashboardData
     ),
     summary: {
       completedEvents: events.filter((event) => event.status === 'completed').length,
+      familyMembers: new Set(((membershipsResult.data ?? []) as MembershipRow[]).map((row) => row.user_id)).size,
       overallCompletionPct: toNumber(weddingProgressResult.data?.overall_completion_pct),
       pendingOutfits,
+      pendingInvitations: ((invitationsResult.data ?? []) as InvitationRow[]).length,
       readyOutfits,
+      todaysTasks: todayTasks,
       totalEvents: events.length,
       totalOutfits: outfits.length,
       totalParticipants: participants.length,

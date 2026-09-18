@@ -58,7 +58,9 @@ export function ImageUploader({ outfit }: ImageUploaderProps) {
       <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
         <div>
           <p className="font-medium text-slate-900">Add reference images</p>
-          <p className="text-sm text-slate-600">{images.length}/5 images. Drop files here or use camera/gallery.</p>
+          <p className="text-sm text-slate-600">
+            {images.length}/5 images. Drop multiple files here or use camera/gallery. Large photos are compressed before upload.
+          </p>
         </div>
         <Button disabled={disabled} type="button" variant="secondary" onClick={() => inputRef.current?.click()}>
           Add Images
