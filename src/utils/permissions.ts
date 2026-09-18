@@ -1,5 +1,7 @@
 import type {
+  ManagedPermissionResource,
   Membership,
+  PermissionMatrix,
   PermissionAction,
   PermissionLevel,
   PermissionResource,
@@ -10,6 +12,18 @@ import type {
 const none: PermissionLevel = { view: false, create: false, edit: false, admin: false };
 const viewOnly: PermissionLevel = { view: true, create: false, edit: false, admin: false };
 const full: PermissionLevel = { view: true, create: true, edit: true, admin: true };
+export const managedPermissionResources: ManagedPermissionResource[] = [
+  'events',
+  'participants',
+  'outfits',
+  'users',
+];
+export const permissionActions: PermissionAction[] = ['view', 'create', 'edit', 'admin'];
+export const weddingRoleLabels: Record<WeddingRole, string> = {
+  admin: 'Admin',
+  member: 'Member',
+  viewer: 'Viewer',
+};
 
 function rolePermissions(role: WeddingRole, resource: PermissionResource): PermissionLevel {
   if (role === 'admin') {
@@ -48,5 +62,17 @@ export function can(
 export function getDisplayRole(profile: Profile | null, membership: Membership | null): string {
   if (profile?.isSuperAdmin) return 'Super Admin';
   if (!membership) return 'No membership';
-  return membership.role.charAt(0).toUpperCase() + membership.role.slice(1);
+  return weddingRoleLabels[membership.role];
+}
+
+export function getRolePermissionMatrix(role: WeddingRole): PermissionMatrix {
+  return managedPermissionResources.reduce((matrix, resource) => {
+    matrix[resource] = rolePermissions(role, resource);
+    return matrix;
+  }, {} as PermissionMatrix);
+}
+
+export function isLastSuperAdmin(target: Profile, activeProfiles: Profile[]): boolean {
+  if (!target.isSuperAdmin) return false;
+  return activeProfiles.filter((profile) => profile.isSuperAdmin && !profile.isDeactivated).length <= 1;
 }

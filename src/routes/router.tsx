@@ -8,10 +8,12 @@ import { EventDetailPage } from '@/pages/events/EventDetailPage';
 import { EventEditPage } from '@/pages/events/EventEditPage';
 import { EventsPage } from '@/pages/events/EventsPage';
 import { LoginPage } from '@/pages/LoginPage';
+import { InvitePage } from '@/pages/invite/InvitePage';
 import { OutfitCreatePage } from '@/pages/outfits/OutfitCreatePage';
 import { OutfitDetailPage } from '@/pages/outfits/OutfitDetailPage';
 import { OutfitEditPage } from '@/pages/outfits/OutfitEditPage';
 import { PublicHomePage } from '@/pages/PublicHomePage';
+import { UsersPage } from '@/pages/users/UsersPage';
 
 export const router = createBrowserRouter([
   {
@@ -19,6 +21,7 @@ export const router = createBrowserRouter([
     children: [
       { path: '/', element: <PublicHomePage /> },
       { path: '/login', element: <LoginPage /> },
+      { path: '/invite/:token', element: <InvitePage /> },
     ],
   },
   {
@@ -36,6 +39,7 @@ export const router = createBrowserRouter([
           { path: 'participants/:participantId/outfits/new', element: <OutfitCreatePage /> },
           { path: 'outfits/:id', element: <OutfitDetailPage /> },
           { path: 'outfits/:id/edit', element: <OutfitEditPage /> },
+          { path: 'users', element: <UsersPage /> },
         ],
       },
     ],

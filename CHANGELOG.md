@@ -2,6 +2,36 @@
 
 Newest entries first. This root changelog records repository and release milestones. Detailed product documentation changes remain in `/docs`.
 
+## [v0.5.7-invitations-permissions] - 2026-09-18
+
+### Added
+
+- Phase 5.7 Invitations & Permission Management module.
+- `/app/users` user management page with search, role filters, active/deactivated filters, profile cards, role management, and role-derived permission matrix.
+- Invite User dialog with email validation, role selection, duplicate member prevention, pending invitation handling, and secure invite-link generation.
+- Pending invitations section with resend and cancel actions using the existing Supabase invitation RPC workflow.
+- Public `/invite/:token` response page for authenticated invite acceptance/rejection and terminal invite states.
+- Invitation and permission services, Zustand stores, reusable user-management components, and permission matrix tests.
+
+### Changed
+
+- App navigation now includes Users.
+- Permission labels and role-derived capability matrix are shared through the existing permission utility.
+
+### Verified
+
+- Browser-tested user management, invitation creation, duplicate pending-invite prevention, resend, cancel, invite state handling, role updates, permission matrix rendering, last-Super-Admin deactivation guard, and mobile layout.
+- Live Supabase invitation acceptance was verified after migration `006`.
+- `npx pnpm@latest run lint`
+- `npx pnpm@latest run build`
+- `npx pnpm@latest run test`
+
+### Notes
+
+- No PRD, SDD, DATABASE, MIGRATIONS, locked baseline migrations, or business rules were changed.
+
+---
+
 ## [v0.3.3.2-migration-reconciliation] - 2026-09-18
 
 ### Fixed

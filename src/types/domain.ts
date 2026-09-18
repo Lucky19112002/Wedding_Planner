@@ -1,4 +1,5 @@
 export type WeddingRole = 'admin' | 'member' | 'viewer';
+export type InvitationStatus = 'pending' | 'accepted' | 'rejected' | 'expired' | 'cancelled';
 export type EventStatus = 'draft' | 'planned' | 'confirmed' | 'completed' | 'cancelled';
 export type OutfitStatus = 'idea' | 'shortlisted' | 'ordered' | 'received' | 'altered' | 'ready' | 'dropped';
 
@@ -203,5 +204,48 @@ export type DashboardData = {
 
 export type PermissionAction = 'view' | 'create' | 'edit' | 'admin';
 export type PermissionResource = 'weddings' | 'users' | 'events' | 'participants' | 'outfits';
+export type ManagedPermissionResource = 'users' | 'events' | 'participants' | 'outfits';
 
 export type PermissionLevel = Record<PermissionAction, boolean>;
+
+export type Invitation = {
+  id: string;
+  weddingId: string;
+  weddingName: string | null;
+  email: string;
+  invitedRole: WeddingRole;
+  status: InvitationStatus;
+  expiresAt: string;
+  invitedBy: string | null;
+  createdAt: string;
+  updatedAt: string;
+};
+
+export type InvitationInput = {
+  weddingId: string;
+  email: string;
+  displayName: string;
+  invitedRole: WeddingRole;
+  optionalMessage: string | null;
+};
+
+export type SentInvitation = {
+  invitation: Invitation;
+  inviteUrl: string;
+  existingUser: Profile | null;
+};
+
+export type ManagedUser = {
+  userId: string;
+  membershipId: string;
+  displayName: string;
+  email: string;
+  systemRole: 'super_admin' | 'user';
+  weddingRole: WeddingRole;
+  invitationStatus: InvitationStatus | 'none';
+  isDeactivated: boolean;
+  relationshipNote: string | null;
+  updatedAt: string;
+};
+
+export type PermissionMatrix = Record<ManagedPermissionResource, PermissionLevel>;

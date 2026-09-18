@@ -4,6 +4,25 @@ Newest entries first. Every document added or changed under `docs/` is recorded 
 
 ---
 
+## 2026-09-18 – Phase 5.7 Invitations & Permissions
+
+- **Status:** Complete
+- **Phase:** 5.7 – Invitations & Permission Management
+- **What changed:**
+  - Added protected `/app/users` user management with search, role filtering, active/deactivated filtering, profile cards, role updates, permission matrix display, and deactivation confirmation.
+  - Added invite-user workflow with validation, active-member duplicate prevention, pending invitation list, resend, cancel, and generated invite links.
+  - Added public `/invite/:token` response flow for authenticated acceptance/rejection and invalid, expired, accepted, rejected, and cancelled states.
+  - Added `invitation.service.ts`, `permission.service.ts`, `invitationStore`, and `permissionStore` while keeping Supabase queries isolated.
+  - Added reusable user-management components and permission matrix tests.
+  - Used the existing Supabase invitation RPC workflow after migration `006` repaired token hashing.
+  - Browser-tested user management, invite creation, duplicate prevention, resend, cancel, invite state handling, role updates, permission matrix, deactivation guard, and mobile layout.
+  - Verified `npx pnpm@latest run lint`, `npx pnpm@latest run build`, and `npx pnpm@latest run test`.
+  - Did not modify PRD, SDD, DATABASE, MIGRATIONS, locked baseline migrations, or business rules.
+- **Follow from:** [README.md](../README.md), [CHANGELOG.md](../CHANGELOG.md)
+- **Next:** Phase 5 final integration.
+
+---
+
 ## 2026-09-18 – Phase 3.3.2 Baseline Migration Reconciliation
 
 - **Status:** Complete

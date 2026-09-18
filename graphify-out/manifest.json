@@ -30,9 +30,9 @@
     "semantic_hash": ""
   },
   "scripts/migrate.py": {
-    "mtime": 1789705804.3586721,
-    "seen": 1789706139.8854961,
-    "ast_hash": "35e80f74a4afcdd8a8472bd374ff6e90",
+    "mtime": 1789733838.2382584,
+    "seen": 1789734451.838502,
+    "ast_hash": "aaba5bec462da3640605c200e692f49a",
     "semantic_hash": ""
   },
   "docs/API.md": {
@@ -102,9 +102,9 @@
     "semantic_hash": ""
   },
   "docs/log.md": {
-    "mtime": 1789732120.2681963,
-    "seen": 1789732135.4235861,
-    "ast_hash": "5aa725bdb6f297db8a750b73692f4707",
+    "mtime": 1789734053.911955,
+    "seen": 1789734451.8386052,
+    "ast_hash": "8c88023ddfba4bb110a6ee2f8df63c8e",
     "semantic_hash": ""
   },
   "schema/README.md": {
@@ -234,9 +234,9 @@
     "semantic_hash": ""
   },
   "src/layouts/AppLayout.tsx": {
-    "mtime": 1789708765.5181715,
-    "seen": 1789709083.5885708,
-    "ast_hash": "4ae49f12025f4ce866b25646a06584d1",
+    "mtime": 1789732810.2604752,
+    "seen": 1789733363.7824159,
+    "ast_hash": "f2fe2cb7466449b1c16fcd9ae72e3900",
     "semantic_hash": ""
   },
   "src/layouts/PublicLayout.tsx": {
@@ -282,9 +282,9 @@
     "semantic_hash": ""
   },
   "src/routes/router.tsx": {
-    "mtime": 1789713598.17973,
-    "seen": 1789713977.1475048,
-    "ast_hash": "40bab78620981b31e26b4bf02d01556b",
+    "mtime": 1789732806.5398643,
+    "seen": 1789733363.782482,
+    "ast_hash": "506d8fbc35496fbbd534de53387c4586",
     "semantic_hash": ""
   },
   "src/store/authStore.ts": {
@@ -354,9 +354,9 @@
     "semantic_hash": ""
   },
   "CHANGELOG.md": {
-    "mtime": 1789732120.2669194,
-    "seen": 1789732135.423578,
-    "ast_hash": "d356332bc631918b5ae1ce03ce8002e1",
+    "mtime": 1789734044.7110884,
+    "seen": 1789734451.838596,
+    "ast_hash": "a51d249895314d93a35551465c0b5783",
     "semantic_hash": ""
   },
   "README.md": {
@@ -456,15 +456,15 @@
     "semantic_hash": ""
   },
   "src/types/domain.ts": {
-    "mtime": 1789715191.5277574,
-    "seen": 1789732135.423564,
-    "ast_hash": "563b49f317bd589bc3c47d93363ad0d3",
+    "mtime": 1789732488.1448264,
+    "seen": 1789733363.7825322,
+    "ast_hash": "ef89226d5ad6a3ac06cf0d523ff49c7b",
     "semantic_hash": ""
   },
   "src/utils/permissions.ts": {
-    "mtime": 1789707303.163613,
-    "seen": 1789707515.970454,
-    "ast_hash": "14a8fe282101fb265b857cc87b219910",
+    "mtime": 1789733377.7513714,
+    "seen": 1789733437.020085,
+    "ast_hash": "78f9fda0b010c1e0a8e91add14afe06d",
     "semantic_hash": ""
   },
   "tasks/plan.md": {
@@ -933,6 +933,102 @@
     "mtime": 1789715191.5291328,
     "seen": 1789732135.423566,
     "ast_hash": "13ccda24dea07a92b5370acc0c385e4f",
+    "semantic_hash": ""
+  },
+  "src/components/users/DeactivateUserDialog.tsx": {
+    "mtime": 1789732708.1298697,
+    "seen": 1789733363.7823749,
+    "ast_hash": "374c839e50a6b571a7a7408f393a4c07",
+    "semantic_hash": ""
+  },
+  "src/components/users/InviteUserDialog.tsx": {
+    "mtime": 1789733408.0390103,
+    "seen": 1789733437.0200388,
+    "ast_hash": "ccd039d8970b26704deac54fc6dc61fa",
+    "semantic_hash": ""
+  },
+  "src/components/users/PendingInvitationsSection.tsx": {
+    "mtime": 1789732699.0322878,
+    "seen": 1789733363.782379,
+    "ast_hash": "681b6ccdf48a4c3f0415b8f3462901c4",
+    "semantic_hash": ""
+  },
+  "src/components/users/PermissionEditor.tsx": {
+    "mtime": 1789732646.2680783,
+    "seen": 1789733363.782381,
+    "ast_hash": "3cddc664177b1265cc95ae5a6184b9d6",
+    "semantic_hash": ""
+  },
+  "src/components/users/UserCard.tsx": {
+    "mtime": 1789732661.9373908,
+    "seen": 1789733363.7823832,
+    "ast_hash": "36785df458336fd1cff5d3a20ceb9db5",
+    "semantic_hash": ""
+  },
+  "src/components/users/UserEmptyState.tsx": {
+    "mtime": 1789732713.1393385,
+    "seen": 1789733363.7823842,
+    "ast_hash": "9b548ca76cbdc932155afbe2a0916dcb",
+    "semantic_hash": ""
+  },
+  "src/components/users/index.ts": {
+    "mtime": 1789732717.317692,
+    "seen": 1789733363.7823858,
+    "ast_hash": "dd6856135d1216440d16402334591742",
+    "semantic_hash": ""
+  },
+  "src/pages/invite/InvitePage.tsx": {
+    "mtime": 1789733342.387852,
+    "seen": 1789733363.7824671,
+    "ast_hash": "ba8359301bc5870849b7c68a6450a190",
+    "semantic_hash": ""
+  },
+  "src/pages/users/UsersPage.tsx": {
+    "mtime": 1789733419.0571098,
+    "seen": 1789733437.0200572,
+    "ast_hash": "48f9e34f09abf394e2fa7e618196a26d",
+    "semantic_hash": ""
+  },
+  "src/services/invitation.service.ts": {
+    "mtime": 1789733265.0475106,
+    "seen": 1789733363.782491,
+    "ast_hash": "b8df530ebe96521a5f6e6c28945519ba",
+    "semantic_hash": ""
+  },
+  "src/services/permission.service.ts": {
+    "mtime": 1789732582.299623,
+    "seen": 1789733363.7825012,
+    "ast_hash": "90ad8ad7b3b55dbab53b075575fa71c5",
+    "semantic_hash": ""
+  },
+  "src/store/invitationStore.ts": {
+    "mtime": 1789732604.4083154,
+    "seen": 1789733363.782515,
+    "ast_hash": "1e943365c85fa968c3454c73abbfa9c5",
+    "semantic_hash": ""
+  },
+  "src/store/permissionStore.ts": {
+    "mtime": 1789733222.8336809,
+    "seen": 1789733363.782523,
+    "ast_hash": "441c88baa60c8067558ea1c22371cb91",
+    "semantic_hash": ""
+  },
+  "src/utils/permissions.test.ts": {
+    "mtime": 1789732512.7478564,
+    "seen": 1789733363.7825541,
+    "ast_hash": "92d55323d4e8d6b75f36def4eb4a1d61",
+    "semantic_hash": ""
+  },
+  "schema/006_fix_pgcrypto_invitation.sql": {
+    "mtime": 1789733552.8794527,
+    "seen": 1789734451.8385,
+    "ast_hash": "782f6a32a790b8ac06db1d535e2438fa",
+    "semantic_hash": ""
+  },
+  "docs/MIGRATION_RECONCILIATION.md": {
+    "mtime": 1789734080.2061012,
+    "seen": 1789734451.8386009,
+    "ast_hash": "ad8b4042b04d2a060a71815137e29689",
     "semantic_hash": ""
   }
 }

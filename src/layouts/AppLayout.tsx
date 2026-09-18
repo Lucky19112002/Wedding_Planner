@@ -15,6 +15,7 @@ import { getDisplayRole } from '@/utils/permissions';
 const navItems = [
   { label: 'Overview', to: '/app' },
   { label: 'Events', to: '/app/events' },
+  { label: 'Users', to: '/app/users' },
 ];
 
 export function AppLayout() {
