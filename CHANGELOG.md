@@ -2,6 +2,24 @@
 
 Newest entries first. This root changelog records repository and release milestones. Detailed product documentation changes remain in `/docs`.
 
+## [v0.3.3.2-migration-reconciliation] - 2026-09-18
+
+### Fixed
+
+- Added production baseline reconciliation for applied migrations `001` through `005` without editing live migration metadata.
+- Added `006_fix_pgcrypto_invitation.sql` to repair invitation token hashing with a fully qualified `pgcrypto` call.
+
+### Verified
+
+- `python3 scripts/migrate.py` reconciles `001` through `005`, applies `006`, and reports `Pending: (none)`.
+- Verified invitation creation, acceptance, membership creation, accepted-token invalidation, and duplicate acceptance prevention against live Supabase.
+
+### Notes
+
+- No business rules, existing baseline migration contents, tables, or schema metadata were manually edited.
+
+---
+
 ## [v0.5.6-progress-dashboard] - 2026-09-18
 
 ### Added

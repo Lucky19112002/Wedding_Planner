@@ -4,6 +4,23 @@ Newest entries first. Every document added or changed under `docs/` is recorded 
 
 ---
 
+## 2026-09-18 – Phase 3.3.2 Baseline Migration Reconciliation
+
+- **Status:** Complete
+- **Phase:** 3.3.2 – Baseline Migration Reconciliation
+- **What changed:**
+  - Added [MIGRATION_RECONCILIATION.md](MIGRATION_RECONCILIATION.md) documenting production checksums, current locked source checksums, and the reconciliation rules for migrations `001` through `005`.
+  - Updated `scripts/migrate.py` with a reconciled-baseline validator that accepts only the recorded live checksum plus the recorded locked source checksum.
+  - Added and applied `schema/006_fix_pgcrypto_invitation.sql` to repair `hash_invite_token()` with `extensions.digest(convert_to(...), 'sha256')`.
+  - Verified the runner reconciles `001` through `005`, applies `006`, and then reports `Pending: (none)`.
+  - Verified live invitation create, accept, membership creation, accepted-token invalidation, and duplicate acceptance prevention.
+  - Removed temporary QA invitation/user rows after verification.
+  - Did not edit `schema_migrations`, recreate the database, alter baseline migration contents, change business rules, or manually alter schema objects.
+- **Follow from:** [MIGRATION_RECONCILIATION.md](MIGRATION_RECONCILIATION.md), [CHANGELOG.md](../CHANGELOG.md)
+- **Next:** Continue Phase 5.7 — Invitations & Permissions browser verification and release.
+
+---
+
 ## 2026-09-18 – Phase 5.6 Progress Dashboard
 
 - **Status:** Complete

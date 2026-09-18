@@ -15,6 +15,34 @@ SCHEMA_DIR = ROOT / "schema"
 FILE_RE = re.compile(r"^(\d{3})_[a-z0-9_]+\.sql$")
 ENV_URL_KEYS = ("SUPABASE_DB_URL", "DATABASE_URL")
 
+RECONCILED_BASELINE = {
+    "001": {
+        "file_name": "001_initial_schema.sql",
+        "production_checksum": "8d8dd68b5725106b1f1db2bf789dba3b1caa12fcd776e01c9ed238971868219d",
+        "source_checksum": "edf2193152e9691fe715309385278137bb5c8039ba2f794a4ab91454f4bed87f",
+    },
+    "002": {
+        "file_name": "002_rls_policies.sql",
+        "production_checksum": "89b26cbee10606c192ca2149f73f80262aeee73e6b92517f7b4e2525e220083a",
+        "source_checksum": "1e467798072babc300dd05f1ea281ed2bd0b3908d78a30230c500503f51cbb40",
+    },
+    "003": {
+        "file_name": "003_storage.sql",
+        "production_checksum": "23b87421118d8e685fdd09795ac8ddfa47a3d5ef4e6c4c230eb1c3eff4e4fc17",
+        "source_checksum": "495914501aa72c58f2dd898409c4864db2a795990cc40a05bb002ee7348d3fc7",
+    },
+    "004": {
+        "file_name": "004_seed_data.sql",
+        "production_checksum": "1b1465d209912f88b66dd85e8ddfaf3beb10b331bd637e0a4072e6d3bb6ce825",
+        "source_checksum": "5486e3aad9ad0207db239b7fef6a3a7abf4b258ec5e0872af7a2c2ab3ce25aaa",
+    },
+    "005": {
+        "file_name": "005_example.sql",
+        "production_checksum": "c8032fc42461c1bb444785202601686fdf221c1e627846803f1b22963fba95c1",
+        "source_checksum": "381ccad25701c6e492b6b5ded5bd40abe164c1462039e4f7fdd3d2efb07bf023",
+    },
+}
+
 HISTORY_BOOTSTRAP = """
 CREATE TABLE IF NOT EXISTS public.schema_migrations (
   version text PRIMARY KEY,
@@ -57,6 +85,23 @@ def db_url() -> str:
 
 def checksum(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def is_reconciled_baseline(
+    version: str,
+    path: Path,
+    digest: str,
+    meta: dict[str, str | bool],
+) -> bool:
+    baseline = RECONCILED_BASELINE.get(version)
+    if not baseline:
+        return False
+    return (
+        path.name == baseline["file_name"]
+        and meta["file_name"] == baseline["file_name"]
+        and meta["checksum"] == baseline["production_checksum"]
+        and digest == baseline["source_checksum"]
+    )
 
 
 def list_migrations() -> list[tuple[str, Path]]:
@@ -198,13 +243,17 @@ def main() -> int:
         digest = checksum(path)
         meta = history.get(version)
         if meta and meta["success"]:
-            if meta["checksum"] != digest or meta["file_name"] != path.name:
+            if meta["checksum"] == digest and meta["file_name"] == path.name:
+                continue
+            if is_reconciled_baseline(version, path, digest, meta):
+                print(f"Reconciled baseline {path.name}: production checksum verified.")
+                continue
+            else:
                 print(
                     f"ERROR {path.name}: checksum or name changed after successful apply. "
                     "Add a new version instead of editing an applied file."
                 )
                 return 1
-            continue
         expected = f"{(max((int(v) for v in successful), default=0) + 1):03d}"
         if version != expected:
             print(f"ERROR: next pending file must be {expected}_*.sql, found {path.name}")
