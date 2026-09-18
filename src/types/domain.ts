@@ -149,6 +149,58 @@ export type ShoppingLinkInput = {
   label: string | null;
 };
 
+export type DashboardSummary = {
+  completedEvents: number;
+  overallCompletionPct: number;
+  pendingOutfits: number;
+  readyOutfits: number;
+  totalEvents: number;
+  totalOutfits: number;
+  totalParticipants: number;
+  upcomingEvents: number;
+};
+
+export type DashboardEventProgress = {
+  eventDate: string | null;
+  eventId: string;
+  location: string | null;
+  name: string;
+  participantCount: number;
+  progressPct: number;
+  readyOutfitCount: number;
+  status: EventStatus;
+};
+
+export type DashboardParticipantInsight = {
+  displayName: string;
+  email: string | null;
+  eventId: string;
+  participantId: string;
+  pendingOutfits: number;
+  progressPct: number;
+  readyOutfits: number;
+  relationshipNote: string | null;
+};
+
+export type DashboardTimelineEvent = {
+  daysRemaining: number;
+  eventDate: string;
+  eventId: string;
+  location: string | null;
+  name: string;
+  status: EventStatus;
+};
+
+export type DashboardOutfitAnalytics = Record<OutfitStatus, number>;
+
+export type DashboardData = {
+  eventProgress: DashboardEventProgress[];
+  outfitAnalytics: DashboardOutfitAnalytics;
+  participantInsights: DashboardParticipantInsight[];
+  summary: DashboardSummary;
+  timeline: DashboardTimelineEvent[];
+};
+
 export type PermissionAction = 'view' | 'create' | 'edit' | 'admin';
 export type PermissionResource = 'weddings' | 'users' | 'events' | 'participants' | 'outfits';
 

@@ -4,6 +4,25 @@ Newest entries first. Every document added or changed under `docs/` is recorded 
 
 ---
 
+## 2026-09-18 – Phase 5.6 Progress Dashboard
+
+- **Status:** Complete
+- **Phase:** 5.6 – Progress Dashboard & Analytics
+- **What changed:**
+  - Replaced the `/app` home screen with a mobile-first progress dashboard.
+  - Added dashboard service queries for `v_wedding_progress`, `v_event_progress`, and `v_participant_progress`, plus active events, participants, outfits, and profiles for display counts.
+  - Added dashboard Zustand store with loading, refreshing, error, and dashboard state.
+  - Added reusable dashboard UI components for the readiness ring, summary cards, event progress cards, participant insights, outfit analytics, upcoming timeline, quick actions, and skeleton loading.
+  - Added metric helpers and Vitest coverage for readiness labels, progress clamping, upcoming day labels, and pending outfit status handling.
+  - Did not modify schema, SQL migrations, locked product/system/database documentation, business rules, progress formulas, or permissions.
+  - Browser-tested dashboard load, refresh, progress values against seeded QA data, event navigation, mobile layout, tablet layout, desktop layout, and clean console.
+  - Archived the temporary Phase 5.6 QA events after verification.
+  - Verified `npx pnpm@latest run lint`, `npx pnpm@latest run build`, and `npx pnpm@latest run test`.
+- **Follow from:** [README.md](../README.md), [CHANGELOG.md](../CHANGELOG.md)
+- **Next:** Phase 5.7 — Invitations & Permissions.
+
+---
+
 ## 2026-09-18 – Phase 5.5 Images & Shopping Links
 
 - **Status:** Complete

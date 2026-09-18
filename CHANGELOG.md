@@ -2,6 +2,33 @@
 
 Newest entries first. This root changelog records repository and release milestones. Detailed product documentation changes remain in `/docs`.
 
+## [v0.5.6-progress-dashboard] - 2026-09-18
+
+### Added
+
+- Phase 5.6 Progress Dashboard home screen.
+- Dashboard service that reads existing Supabase progress views and active wedding tables without schema changes.
+- Dashboard Zustand store with dashboard state, loading, refresh, and error handling.
+- Reusable dashboard components for progress ring, summary cards, event progress, participant insights, outfit analytics, upcoming timeline, quick actions, and skeleton loading.
+- Dashboard metric tests for readiness labels, clamped progress, day labels, and pending outfit status handling.
+
+### Changed
+
+- `/app` now shows wedding readiness analytics instead of the Phase 5.1 profile summary.
+
+### Verified
+
+- Browser-tested dashboard load, refresh, progress values against seeded Supabase QA data, event-card navigation, mobile layout, tablet layout, desktop layout, and clean console.
+- `npx pnpm@latest run lint`
+- `npx pnpm@latest run build`
+- `npx pnpm@latest run test`
+
+### Notes
+
+- No schema, migration, PRD, SDD, DATABASE, or business-rule changes were made.
+
+---
+
 ## [v0.5.5-images-shopping-links] - 2026-09-18
 
 ### Added

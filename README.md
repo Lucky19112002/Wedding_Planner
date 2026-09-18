@@ -95,7 +95,8 @@ Planned tags:
 - Phase 5.3: Participant management — complete
 - Phase 5.4: Outfit management — complete
 - Phase 5.5: Images and shopping links — complete
-- Phase 5.6: Progress dashboard — next
+- Phase 5.6: Progress dashboard — complete
+- Phase 5.7: Invitations and permissions — next
 
 ## Current App Surface
 
@@ -114,6 +115,7 @@ Planned tags:
 - Outfit status workflow helpers, badges, timeline, archive-only destructive action, and Vitest coverage.
 - Private Supabase Storage outfit gallery with signed URLs, upload compression, thumbnail strip, full-screen preview, primary image ordering, delete, and reorder controls.
 - Shopping/reference link management with URL validation, provider detection, cards, edit/delete/open actions, and five-link cap handling.
+- Progress dashboard home screen using Supabase progress views for wedding readiness, event progress, participant insights, outfit analytics, upcoming timeline, and quick actions.
 - Vitest unit coverage for participant duplicate/search validation.
 
 ## Documentation

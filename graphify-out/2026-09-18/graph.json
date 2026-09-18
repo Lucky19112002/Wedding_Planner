@@ -2326,7 +2326,7 @@
       "file_type": "code",
       "norm_label": "setprimaryimage()",
       "source_file": "src/services/outfitImage.service.ts",
-      "source_location": "L183"
+      "source_location": "L187"
     },
     {
       "id": "src_services_outfitimage_service_signedurlforpath",
@@ -10448,6 +10448,78 @@
       "type": "external"
     },
     {
+      "id": "ref_components_outfits_emptygallery",
+      "label": "ref_components_outfits_emptygallery",
+      "_origin": "semantic",
+      "community": 73,
+      "community_name": "OutfitGallery.tsx",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "ref_components_outfits_emptygallery",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "ref_components_outfits_gallerythumbnail",
+      "label": "ref_components_outfits_gallerythumbnail",
+      "_origin": "semantic",
+      "community": 73,
+      "community_name": "OutfitGallery.tsx",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "ref_components_outfits_gallerythumbnail",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "ref_components_outfits_imageuploader",
+      "label": "ref_components_outfits_imageuploader",
+      "_origin": "semantic",
+      "community": 73,
+      "community_name": "OutfitGallery.tsx",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "ref_components_outfits_imageuploader",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "ref_components_outfits_imageviewer",
+      "label": "ref_components_outfits_imageviewer",
+      "_origin": "semantic",
+      "community": 73,
+      "community_name": "OutfitGallery.tsx",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "ref_components_outfits_imageviewer",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "ref_components_outfits_uploadprogress",
+      "label": "ref_components_outfits_uploadprogress",
+      "_origin": "semantic",
+      "community": 73,
+      "community_name": "OutfitGallery.tsx",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "ref_components_outfits_uploadprogress",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "ref_store_outfitimagestore",
+      "label": "ref_store_outfitimagestore",
+      "_origin": "semantic",
+      "community": 73,
+      "community_name": "OutfitGallery.tsx",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "ref_store_outfitimagestore",
+      "source_file": "",
+      "type": "external"
+    },
+    {
       "id": "ref_utils_participantvalidation",
       "label": "ref_utils_participantvalidation",
       "_origin": "semantic",
@@ -10460,6 +10532,18 @@
       "type": "external"
     },
     {
+      "id": "ref_utils_shoppinglinks",
+      "label": "ref_utils_shoppinglinks",
+      "_origin": "semantic",
+      "community": 74,
+      "community_name": "ShoppingLinkCard.tsx",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "ref_utils_shoppinglinks",
+      "source_file": "",
+      "type": "external"
+    },
+    {
       "id": "ref_components_ui_textarea",
       "label": "ref_components_ui_textarea",
       "_origin": "semantic",
@@ -10468,6 +10552,42 @@
       "external": true,
       "file_type": "concept",
       "norm_label": "ref_components_ui_textarea",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "ref_components_outfits_shoppinglinkcard",
+      "label": "ref_components_outfits_shoppinglinkcard",
+      "_origin": "semantic",
+      "community": 77,
+      "community_name": "ShoppingLinksPanel.tsx",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "ref_components_outfits_shoppinglinkcard",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "ref_components_outfits_shoppinglinkform",
+      "label": "ref_components_outfits_shoppinglinkform",
+      "_origin": "semantic",
+      "community": 77,
+      "community_name": "ShoppingLinksPanel.tsx",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "ref_components_outfits_shoppinglinkform",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "ref_store_shoppinglinkstore",
+      "label": "ref_store_shoppinglinkstore",
+      "_origin": "semantic",
+      "community": 77,
+      "community_name": "ShoppingLinksPanel.tsx",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "ref_store_shoppinglinkstore",
       "source_file": "",
       "type": "external"
     },
@@ -10508,6 +10628,18 @@
       "type": "external"
     },
     {
+      "id": "ref_services_outfitimage_service",
+      "label": "ref_services_outfitimage_service",
+      "_origin": "semantic",
+      "community": 8,
+      "community_name": "zustand",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "ref_services_outfitimage_service",
+      "source_file": "",
+      "type": "external"
+    },
+    {
       "id": "ref_services_participant_service",
       "label": "ref_services_participant_service",
       "_origin": "semantic",
@@ -10532,6 +10664,18 @@
       "type": "external"
     },
     {
+      "id": "ref_services_shoppinglink_service",
+      "label": "ref_services_shoppinglink_service",
+      "_origin": "semantic",
+      "community": 8,
+      "community_name": "zustand",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "ref_services_shoppinglink_service",
+      "source_file": "",
+      "type": "external"
+    },
+    {
       "id": "ref_services_wedding_service",
       "label": "ref_services_wedding_service",
       "_origin": "semantic",
@@ -10540,138 +10684,6 @@
       "external": true,
       "file_type": "concept",
       "norm_label": "ref_services_wedding_service",
-      "source_file": "",
-      "type": "external"
-    },
-    {
-      "id": "ref_components_outfits_emptygallery",
-      "label": "ref_components_outfits_emptygallery",
-      "community": 73,
-      "community_name": "OutfitGallery.tsx",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "ref_components_outfits_emptygallery",
-      "source_file": "",
-      "type": "external"
-    },
-    {
-      "id": "ref_components_outfits_gallerythumbnail",
-      "label": "ref_components_outfits_gallerythumbnail",
-      "community": 73,
-      "community_name": "OutfitGallery.tsx",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "ref_components_outfits_gallerythumbnail",
-      "source_file": "",
-      "type": "external"
-    },
-    {
-      "id": "ref_components_outfits_imageuploader",
-      "label": "ref_components_outfits_imageuploader",
-      "community": 73,
-      "community_name": "OutfitGallery.tsx",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "ref_components_outfits_imageuploader",
-      "source_file": "",
-      "type": "external"
-    },
-    {
-      "id": "ref_components_outfits_imageviewer",
-      "label": "ref_components_outfits_imageviewer",
-      "community": 73,
-      "community_name": "OutfitGallery.tsx",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "ref_components_outfits_imageviewer",
-      "source_file": "",
-      "type": "external"
-    },
-    {
-      "id": "ref_components_outfits_uploadprogress",
-      "label": "ref_components_outfits_uploadprogress",
-      "community": 73,
-      "community_name": "OutfitGallery.tsx",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "ref_components_outfits_uploadprogress",
-      "source_file": "",
-      "type": "external"
-    },
-    {
-      "id": "ref_store_outfitimagestore",
-      "label": "ref_store_outfitimagestore",
-      "community": 73,
-      "community_name": "OutfitGallery.tsx",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "ref_store_outfitimagestore",
-      "source_file": "",
-      "type": "external"
-    },
-    {
-      "id": "ref_utils_shoppinglinks",
-      "label": "ref_utils_shoppinglinks",
-      "community": 74,
-      "community_name": "ShoppingLinkCard.tsx",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "ref_utils_shoppinglinks",
-      "source_file": "",
-      "type": "external"
-    },
-    {
-      "id": "ref_components_outfits_shoppinglinkcard",
-      "label": "ref_components_outfits_shoppinglinkcard",
-      "community": 77,
-      "community_name": "ShoppingLinksPanel.tsx",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "ref_components_outfits_shoppinglinkcard",
-      "source_file": "",
-      "type": "external"
-    },
-    {
-      "id": "ref_components_outfits_shoppinglinkform",
-      "label": "ref_components_outfits_shoppinglinkform",
-      "community": 77,
-      "community_name": "ShoppingLinksPanel.tsx",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "ref_components_outfits_shoppinglinkform",
-      "source_file": "",
-      "type": "external"
-    },
-    {
-      "id": "ref_store_shoppinglinkstore",
-      "label": "ref_store_shoppinglinkstore",
-      "community": 77,
-      "community_name": "ShoppingLinksPanel.tsx",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "ref_store_shoppinglinkstore",
-      "source_file": "",
-      "type": "external"
-    },
-    {
-      "id": "ref_services_outfitimage_service",
-      "label": "ref_services_outfitimage_service",
-      "community": 8,
-      "community_name": "zustand",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "ref_services_outfitimage_service",
-      "source_file": "",
-      "type": "external"
-    },
-    {
-      "id": "ref_services_shoppinglink_service",
-      "label": "ref_services_shoppinglink_service",
-      "community": 8,
-      "community_name": "zustand",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "ref_services_shoppinglink_service",
       "source_file": "",
       "type": "external"
     }
@@ -11190,7 +11202,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/services/outfitImage.service.ts",
-      "source_location": "L180",
+      "source_location": "L184",
       "weight": 1.0
     },
     {
@@ -11202,7 +11214,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/services/outfitImage.service.ts",
-      "source_location": "L187",
+      "source_location": "L191",
       "weight": 1.0
     },
     {
@@ -21136,7 +21148,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/services/outfitImage.service.ts",
-      "source_location": "L183",
+      "source_location": "L187",
       "weight": 1.0
     },
     {

@@ -1,7 +1,7 @@
 # Graph Report - WeddingPlanner  (2026-09-18)
 
 ## Corpus Check
-- 140 files · ~54,955 words
+- 140 files · ~54,974 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 10 file(s) not represented in the graph (top: (none) 9, .css 1)
 
