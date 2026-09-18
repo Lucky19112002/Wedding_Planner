@@ -36,9 +36,9 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       isLoading,
       isAuthenticated: Boolean(session),
       signOut: async () => {
-        await signOut();
         clearAuthData();
         clearWeddingContext();
+        await signOut();
       },
     }),
     [clearAuthData, clearWeddingContext, isLoading, session],
@@ -56,3 +56,4 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
 }
+

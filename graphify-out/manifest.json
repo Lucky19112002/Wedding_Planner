@@ -150,10 +150,10 @@
     "semantic_hash": "2260f9aa7be9e213e16b0797ff7f6951"
   },
   "src/app/providers/AuthProvider.tsx": {
-    "mtime": 1789751458.8407693,
-    "seen": 1789751528.5518117,
-    "ast_hash": "6aea7863f97b933afc190bf595088038",
-    "semantic_hash": "6aea7863f97b933afc190bf595088038"
+    "mtime": 1789753167.2223682,
+    "seen": 1789753475.102806,
+    "ast_hash": "573019a7cf7805507632eb68b1c7e690",
+    "semantic_hash": "573019a7cf7805507632eb68b1c7e690"
   },
   "src/components/ui/Avatar.tsx": {
     "mtime": 1789671723.5052989,
@@ -432,10 +432,10 @@
     "semantic_hash": "ca87a319b2beafd40faeb8fbe3f6d156"
   },
   "src/services/auth.service.ts": {
-    "mtime": 1789751458.9863782,
-    "seen": 1789751528.5518117,
-    "ast_hash": "0ef550b04017c7dc86ede860957a2a89",
-    "semantic_hash": "0ef550b04017c7dc86ede860957a2a89"
+    "mtime": 1789752996.128319,
+    "seen": 1789753475.263375,
+    "ast_hash": "606b4c767c48efc35b6c5395544a0072",
+    "semantic_hash": "606b4c767c48efc35b6c5395544a0072"
   },
   "src/services/membership.service.ts": {
     "mtime": 1789751458.990368,
