@@ -30,9 +30,9 @@
     "semantic_hash": ""
   },
   "scripts/migrate.py": {
-    "mtime": 1789705804.3586721,
-    "seen": 1789706139.8854961,
-    "ast_hash": "35e80f74a4afcdd8a8472bd374ff6e90",
+    "mtime": 1789733838.2382584,
+    "seen": 1789734451.838502,
+    "ast_hash": "aaba5bec462da3640605c200e692f49a",
     "semantic_hash": ""
   },
   "docs/API.md": {
@@ -102,9 +102,9 @@
     "semantic_hash": ""
   },
   "docs/log.md": {
-    "mtime": 1789732120.2681963,
-    "seen": 1789732135.4235861,
-    "ast_hash": "5aa725bdb6f297db8a750b73692f4707",
+    "mtime": 1789734053.911955,
+    "seen": 1789734451.8386052,
+    "ast_hash": "8c88023ddfba4bb110a6ee2f8df63c8e",
     "semantic_hash": ""
   },
   "schema/README.md": {
@@ -354,9 +354,9 @@
     "semantic_hash": ""
   },
   "CHANGELOG.md": {
-    "mtime": 1789732120.2669194,
-    "seen": 1789732135.423578,
-    "ast_hash": "d356332bc631918b5ae1ce03ce8002e1",
+    "mtime": 1789734044.7110884,
+    "seen": 1789734451.838596,
+    "ast_hash": "a51d249895314d93a35551465c0b5783",
     "semantic_hash": ""
   },
   "README.md": {
@@ -1017,6 +1017,18 @@
     "mtime": 1789732512.7478564,
     "seen": 1789733363.7825541,
     "ast_hash": "92d55323d4e8d6b75f36def4eb4a1d61",
+    "semantic_hash": ""
+  },
+  "schema/006_fix_pgcrypto_invitation.sql": {
+    "mtime": 1789733552.8794527,
+    "seen": 1789734451.8385,
+    "ast_hash": "782f6a32a790b8ac06db1d535e2438fa",
+    "semantic_hash": ""
+  },
+  "docs/MIGRATION_RECONCILIATION.md": {
+    "mtime": 1789734080.2061012,
+    "seen": 1789734451.8386009,
+    "ast_hash": "ad8b4042b04d2a060a71815137e29689",
     "semantic_hash": ""
   }
 }

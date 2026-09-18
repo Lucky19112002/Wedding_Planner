@@ -96,7 +96,7 @@ Planned tags:
 - Phase 5.4: Outfit management — complete
 - Phase 5.5: Images and shopping links — complete
 - Phase 5.6: Progress dashboard — complete
-- Phase 5.7: Invitations and permissions — next
+- Phase 5.7: Invitations and permissions — complete
 
 ## Current App Surface
 
@@ -116,6 +116,8 @@ Planned tags:
 - Private Supabase Storage outfit gallery with signed URLs, upload compression, thumbnail strip, full-screen preview, primary image ordering, delete, and reorder controls.
 - Shopping/reference link management with URL validation, provider detection, cards, edit/delete/open actions, and five-link cap handling.
 - Progress dashboard home screen using Supabase progress views for wedding readiness, event progress, participant insights, outfit analytics, upcoming timeline, and quick actions.
+- User management with invitation sending, pending invite actions, role-derived permission matrix, and deactivate guard.
+- Public invite response page for authenticated accept/reject flows.
 - Vitest unit coverage for participant duplicate/search validation.
 
 ## Documentation
@@ -127,3 +129,4 @@ Planned tags:
 - [Migrations](docs/MIGRATIONS.md)
 - [Decision Log](docs/DECISIONS.md)
 - [Work Log](docs/log.md)
+

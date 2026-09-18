@@ -17,6 +17,7 @@ Newest entries first. Every document added or changed under `docs/` is recorded 
   - Used the existing Supabase invitation RPC workflow after migration `006` repaired token hashing.
   - Browser-tested user management, invite creation, duplicate prevention, resend, cancel, invite state handling, role updates, permission matrix, deactivation guard, and mobile layout.
   - Verified `npx pnpm@latest run lint`, `npx pnpm@latest run build`, and `npx pnpm@latest run test`.
+  - Re-verified from the home PC on `dev`: Graphify code index, protected `/app/users` redirect, public `/invite/:token`, mobile invite layout, lint, tests, and production build.
   - Did not modify PRD, SDD, DATABASE, MIGRATIONS, locked baseline migrations, or business rules.
 - **Follow from:** [README.md](../README.md), [CHANGELOG.md](../CHANGELOG.md)
 - **Next:** Phase 5 final integration.
@@ -276,3 +277,4 @@ Newest entries first. Every document added or changed under `docs/` is recorded 
 - **Phase:** 1 – Product Requirements (documentation only)
 - **What changed:** PRD authored (canonical: [PRD.md](PRD.md); original draft: [Plan.md](Plan.md)).
 - **Next:** Phase 2 SDD (now complete).
+
