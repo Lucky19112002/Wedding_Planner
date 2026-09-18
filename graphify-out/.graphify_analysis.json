@@ -10,11 +10,6 @@
       "docs_infrastructure_infrastructure",
       "docs_infrastructure_supabase_auth_configuration",
       "docs_infrastructure_supabase_project_setup",
-      "docs_log_log",
-      "docs_log_phase_2_1_documentation_revision",
-      "docs_log_phase_3_1_infrastructure_work",
-      "docs_log_phase_3_2_migration_work",
-      "docs_log_phase_3_database_work",
       "docs_migrations_ci_migration_gate",
       "docs_migrations_forward_only_rollback",
       "docs_migrations_migration_history_and_checksums",
@@ -29,12 +24,23 @@
       "schema_readme_readme"
     ],
     "1": [
+      "changelog",
+      "changelog_added",
+      "changelog_added_24",
+      "changelog_changed",
+      "changelog_changed_30",
+      "changelog_changelog",
+      "changelog_security",
+      "changelog_v0_3_4_repository_workflow_2026_09_18",
+      "changelog_v0_4_0_react_foundation_2026_09_18",
       "completedprocess",
       "hashlib",
       "os",
       "path",
       "pathlib",
       "re",
+      "readme_branch_workflow",
+      "readme_setup",
       "scripts_migrate",
       "scripts_migrate_checksum",
       "scripts_migrate_db_url",
@@ -50,23 +56,46 @@
       "sys"
     ],
     "2": [
-      "docs_api_api",
-      "docs_api_archive_rpcs",
-      "docs_api_invitation_rpcs",
-      "docs_api_private_outfit_storage",
-      "docs_api_progress_views",
-      "docs_api_row_level_security",
-      "docs_api_supabase_postgrest_api",
-      "docs_database_archive_lifecycle",
-      "docs_database_audit_stamps",
-      "docs_database_database",
-      "docs_database_domain_tables",
-      "docs_database_private_outfit_storage",
-      "docs_database_progress_views",
-      "docs_database_row_level_security",
-      "docs_database_supabase_postgresql_source_of_truth",
-      "docs_decisions_dec_008_derived_progress_views",
-      "docs_infrastructure_private_outfit_storage"
+      "ref_app_app",
+      "ref_app_providers_authcontext",
+      "ref_components_ui_slot",
+      "ref_lib_supabase",
+      "ref_react",
+      "ref_react_dom_client",
+      "ref_store_authstore",
+      "ref_styles_index_css",
+      "ref_utils_cx",
+      "src_app_providers_authprovider",
+      "src_app_providers_authprovider_authprovider",
+      "src_components_ui_avatar",
+      "src_components_ui_avatar_avatar",
+      "src_components_ui_avatar_avatarprops",
+      "src_components_ui_badge",
+      "src_components_ui_badge_badge",
+      "src_components_ui_button",
+      "src_components_ui_button_button",
+      "src_components_ui_button_buttonprops",
+      "src_components_ui_card",
+      "src_components_ui_card_card",
+      "src_components_ui_index",
+      "src_components_ui_input",
+      "src_components_ui_input_input",
+      "src_components_ui_input_inputprops",
+      "src_components_ui_loader",
+      "src_components_ui_loader_loader",
+      "src_components_ui_loader_loaderprops",
+      "src_components_ui_select",
+      "src_components_ui_select_select",
+      "src_components_ui_select_selectprops",
+      "src_components_ui_slot",
+      "src_components_ui_slot_slot",
+      "src_components_ui_slot_slotprops",
+      "src_components_ui_textarea",
+      "src_components_ui_textarea_textarea",
+      "src_components_ui_textarea_textareaprops",
+      "src_hooks_useauth",
+      "src_hooks_useauth_useauth",
+      "src_main"
     ],
     "3": [
       "docs_phase_2_1_archive_restore_and_permanent_delete",
@@ -88,6 +117,298 @@
       "docs_sdd_progress_calculation"
     ],
     "4": [
+      "eslint_config",
+      "package",
+      "package_name",
+      "package_private",
+      "package_scripts",
+      "package_scripts_build",
+      "package_scripts_dev",
+      "package_scripts_format",
+      "package_scripts_lint",
+      "package_scripts_typecheck",
+      "package_type",
+      "package_version",
+      "ref_autoprefixer",
+      "ref_eslint",
+      "ref_eslint_config_prettier",
+      "ref_eslint_js",
+      "ref_eslint_plugin_react_hooks",
+      "ref_eslint_plugin_react_refresh",
+      "ref_globals",
+      "ref_hookform_resolvers",
+      "ref_node_url",
+      "ref_postcss",
+      "ref_prettier",
+      "ref_react_dom",
+      "ref_tailwindcss",
+      "ref_tailwindcss_postcss",
+      "ref_types_node",
+      "ref_types_react",
+      "ref_types_react_dom",
+      "ref_typescript",
+      "ref_typescript_eslint",
+      "ref_vite",
+      "ref_vitejs_plugin_react",
+      "tailwind_config",
+      "vite_config"
+    ],
+    "5": [
+      "ref_app_providers_authprovider",
+      "ref_components_ui_button",
+      "ref_components_ui_card",
+      "ref_components_ui_input",
+      "ref_components_ui_loader",
+      "ref_hookform_resolvers_zod",
+      "ref_hooks_useauth",
+      "ref_layouts_applayout",
+      "ref_layouts_publiclayout",
+      "ref_pages_apphomepage",
+      "ref_pages_loginpage",
+      "ref_pages_publichomepage",
+      "ref_react_hook_form",
+      "ref_react_router_dom",
+      "ref_routes_protectedroute",
+      "ref_routes_router",
+      "ref_zod",
+      "src_app_app",
+      "src_app_app_app",
+      "src_components_ui_emptystate",
+      "src_components_ui_emptystate_emptystate",
+      "src_components_ui_emptystate_emptystateprops",
+      "src_components_ui_modal",
+      "src_components_ui_modal_modal",
+      "src_components_ui_modal_modalprops",
+      "src_layouts_applayout",
+      "src_layouts_applayout_applayout",
+      "src_layouts_publiclayout",
+      "src_layouts_publiclayout_publiclayout",
+      "src_pages_loginpage",
+      "src_pages_loginpage_loginform",
+      "src_pages_loginpage_loginpage",
+      "src_pages_loginpage_loginpage_onsubmit",
+      "src_pages_loginpage_loginschema",
+      "src_pages_publichomepage",
+      "src_pages_publichomepage_publichomepage",
+      "src_routes_protectedroute",
+      "src_routes_protectedroute_protectedroute",
+      "src_routes_router",
+      "src_routes_router_router"
+    ],
+    "6": [
+      "tsconfig_app",
+      "tsconfig_app_compileroptions",
+      "tsconfig_app_compileroptions_allowjs",
+      "tsconfig_app_compileroptions_allowsyntheticdefaultimports",
+      "tsconfig_app_compileroptions_composite",
+      "tsconfig_app_compileroptions_esmoduleinterop",
+      "tsconfig_app_compileroptions_forceconsistentcasinginfilenames",
+      "tsconfig_app_compileroptions_isolatedmodules",
+      "tsconfig_app_compileroptions_jsx",
+      "tsconfig_app_compileroptions_lib",
+      "tsconfig_app_compileroptions_module",
+      "tsconfig_app_compileroptions_moduleresolution",
+      "tsconfig_app_compileroptions_noemit",
+      "tsconfig_app_compileroptions_paths",
+      "tsconfig_app_compileroptions_resolvejsonmodule",
+      "tsconfig_app_compileroptions_skiplibcheck",
+      "tsconfig_app_compileroptions_strict",
+      "tsconfig_app_compileroptions_target",
+      "tsconfig_app_compileroptions_tsbuildinfofile",
+      "tsconfig_app_compileroptions_usedefineforclassfields",
+      "tsconfig_app_include"
+    ],
+    "7": [
+      "package_devdependencies",
+      "package_devdependencies_autoprefixer",
+      "package_devdependencies_eslint",
+      "package_devdependencies_eslint_config_prettier",
+      "package_devdependencies_eslint_js",
+      "package_devdependencies_eslint_plugin_react_hooks",
+      "package_devdependencies_eslint_plugin_react_refresh",
+      "package_devdependencies_globals",
+      "package_devdependencies_postcss",
+      "package_devdependencies_prettier",
+      "package_devdependencies_tailwindcss",
+      "package_devdependencies_tailwindcss_postcss",
+      "package_devdependencies_types_node",
+      "package_devdependencies_types_react",
+      "package_devdependencies_types_react_dom",
+      "package_devdependencies_typescript",
+      "package_devdependencies_typescript_eslint",
+      "package_devdependencies_vite"
+    ],
+    "8": [
+      "ref_supabase_supabase_js",
+      "ref_zustand",
+      "src_app_providers_authcontext",
+      "src_app_providers_authcontext_authcontext",
+      "src_app_providers_authcontext_authcontextvalue",
+      "src_lib_supabase",
+      "src_lib_supabase_issupabaseconfigured",
+      "src_lib_supabase_supabase",
+      "src_store_authstore",
+      "src_store_authstore_authstore",
+      "src_store_authstore_useauthstore",
+      "src_store_uistore",
+      "src_store_uistore_uistore",
+      "src_store_uistore_useuistore",
+      "src_store_weddingstore",
+      "src_store_weddingstore_useweddingstore",
+      "src_store_weddingstore_weddingstore"
+    ],
+    "9": [
+      "tsconfig_node",
+      "tsconfig_node_compileroptions",
+      "tsconfig_node_compileroptions_allowjs",
+      "tsconfig_node_compileroptions_composite",
+      "tsconfig_node_compileroptions_isolatedmodules",
+      "tsconfig_node_compileroptions_lib",
+      "tsconfig_node_compileroptions_module",
+      "tsconfig_node_compileroptions_moduleresolution",
+      "tsconfig_node_compileroptions_noemit",
+      "tsconfig_node_compileroptions_skiplibcheck",
+      "tsconfig_node_compileroptions_strict",
+      "tsconfig_node_compileroptions_target",
+      "tsconfig_node_compileroptions_tsbuildinfofile",
+      "tsconfig_node_compileroptions_types",
+      "tsconfig_node_include"
+    ],
+    "10": [
+      "package_dependencies",
+      "package_dependencies_hookform_resolvers",
+      "package_dependencies_react",
+      "package_dependencies_react_dom",
+      "package_dependencies_react_hook_form",
+      "package_dependencies_react_router_dom",
+      "package_dependencies_supabase_supabase_js",
+      "package_dependencies_vitejs_plugin_react",
+      "package_dependencies_zod",
+      "package_dependencies_zustand"
+    ],
+    "11": [
+      "public_handle_new_user",
+      "public_profiles",
+      "public_wedding_memberships",
+      "public_weddings",
+      "schema_002_rls_policies",
+      "schema_002_rls_policies_on_auth_user_created",
+      "schema_002_rls_policies_public_accept_invitation",
+      "schema_002_rls_policies_public_archive_event",
+      "schema_002_rls_policies_public_archive_outfit",
+      "schema_002_rls_policies_public_archive_participant",
+      "schema_002_rls_policies_public_archive_wedding",
+      "schema_002_rls_policies_public_can_manage_own_outfit",
+      "schema_002_rls_policies_public_cancel_invitation",
+      "schema_002_rls_policies_public_create_invitation",
+      "schema_002_rls_policies_public_handle_new_user",
+      "schema_002_rls_policies_public_has_wedding_access",
+      "schema_002_rls_policies_public_hash_invite_token",
+      "schema_002_rls_policies_public_is_current_user_active",
+      "schema_002_rls_policies_public_is_super_admin",
+      "schema_002_rls_policies_public_is_wedding_admin",
+      "schema_002_rls_policies_public_permanently_delete_event",
+      "schema_002_rls_policies_public_permanently_delete_outfit",
+      "schema_002_rls_policies_public_permanently_delete_participant",
+      "schema_002_rls_policies_public_permanently_delete_wedding",
+      "schema_002_rls_policies_public_reject_invitation",
+      "schema_002_rls_policies_public_resend_invitation",
+      "schema_002_rls_policies_public_stamp_archive",
+      "schema_002_rls_policies_public_wedding_role"
+    ],
+    "12": [
+      "public_manifest",
+      "public_manifest_background_color",
+      "public_manifest_description",
+      "public_manifest_display",
+      "public_manifest_icons",
+      "public_manifest_name",
+      "public_manifest_short_name",
+      "public_manifest_start_url",
+      "public_manifest_theme_color"
+    ],
+    "13": [
+      "public_enforce_outfit_image_cap",
+      "public_enforce_outfit_status_fields",
+      "public_log_event_activity",
+      "public_set_updated_audit",
+      "schema_001_initial_schema",
+      "schema_001_initial_schema_public_enforce_outfit_status_fields",
+      "schema_001_initial_schema_public_log_event_activity",
+      "schema_001_initial_schema_public_log_image_activity",
+      "schema_001_initial_schema_public_log_outfit_activity",
+      "schema_001_initial_schema_public_set_updated_audit",
+      "schema_001_initial_schema_trg_events_activity",
+      "schema_001_initial_schema_trg_events_updated",
+      "schema_001_initial_schema_trg_images_cap",
+      "schema_001_initial_schema_trg_images_updated",
+      "schema_001_initial_schema_trg_invitations_updated",
+      "schema_001_initial_schema_trg_memberships_updated",
+      "schema_001_initial_schema_trg_outfits_status",
+      "schema_001_initial_schema_trg_outfits_updated",
+      "schema_001_initial_schema_trg_participants_updated",
+      "schema_001_initial_schema_trg_profiles_updated",
+      "schema_001_initial_schema_trg_urls_updated",
+      "schema_001_initial_schema_trg_weddings_updated"
+    ],
+    "14": [
+      "ref_components_ui_emptystate",
+      "src_pages_apphomepage",
+      "src_pages_apphomepage_apphomepage"
+    ],
+    "15": [
+      "tsconfig",
+      "tsconfig_files",
+      "tsconfig_references"
+    ],
+    "16": [
+      "src_types_auth",
+      "src_types_auth_authstatus"
+    ],
+    "17": [
+      "src_utils_cx",
+      "src_utils_cx_cx"
+    ],
+    "18": [
+      "postcss_config"
+    ],
+    "19": [
+      "src_vite_env_d"
+    ],
+    "20": [
+      "docs_api_api",
+      "docs_api_archive_rpcs",
+      "docs_api_invitation_rpcs",
+      "docs_api_private_outfit_storage",
+      "docs_api_progress_views",
+      "docs_api_row_level_security",
+      "docs_api_supabase_postgrest_api",
+      "docs_database_archive_lifecycle",
+      "docs_database_audit_stamps",
+      "docs_database_database",
+      "docs_database_domain_tables",
+      "docs_database_private_outfit_storage",
+      "docs_database_progress_views",
+      "docs_database_row_level_security",
+      "docs_database_supabase_postgresql_source_of_truth",
+      "docs_decisions_dec_008_derived_progress_views",
+      "docs_infrastructure_private_outfit_storage"
+    ],
+    "21": [
+      "auth_users",
+      "schema_001_initial_schema_idx_activity_entity",
+      "schema_001_initial_schema_idx_activity_wedding_created",
+      "schema_001_initial_schema_idx_outfit_urls_outfit",
+      "schema_001_initial_schema_idx_profiles_super_admin",
+      "schema_001_initial_schema_idx_weddings_archived",
+      "schema_001_initial_schema_public_activity_logs",
+      "schema_001_initial_schema_public_enforce_outfit_url_cap",
+      "schema_001_initial_schema_public_outfit_urls",
+      "schema_001_initial_schema_public_prevent_last_super_admin_loss",
+      "schema_001_initial_schema_public_profiles",
+      "schema_001_initial_schema_public_weddings"
+    ],
+    "22": [
       "docs_database_wedding_scoped_data_isolation",
       "docs_prd_user_roles_and_permissions",
       "docs_sdd_archive_and_audit_alignment",
@@ -101,7 +422,7 @@
       "docs_sdd_supabase_backend",
       "docs_sdd_wedding_scoped_data_isolation"
     ],
-    "5": [
+    "23": [
       "docs_database_versioned_migrations",
       "docs_decisions_dec_001_react_frontend",
       "docs_decisions_dec_002_supabase_backend",
@@ -114,49 +435,225 @@
       "docs_decisions_decisions",
       "docs_migrations_versioned_migrations"
     ],
-    "6": [
+    "24": [
+      "docs_log_log",
+      "docs_log_phase_2_1_documentation_revision",
+      "docs_log_phase_3_1_infrastructure_work",
+      "docs_log_phase_3_2_migration_work",
+      "docs_log_phase_3_database_work",
       "docs_plan_event_management",
       "docs_plan_outfit_management",
       "docs_plan_plan",
       "docs_plan_reference_images_and_links",
       "docs_plan_user_roles_and_permissions",
       "docs_plan_wedding_project"
+    ],
+    "25": [
+      "readme",
+      "readme_architecture",
+      "readme_commit_convention",
+      "readme_documentation",
+      "readme_folder_structure",
+      "readme_release_workflow",
+      "readme_roadmap",
+      "readme_wedding_planner"
+    ],
+    "26": [
+      "schema_001_initial_schema_idx_outfit_images_outfit",
+      "schema_001_initial_schema_idx_outfits_owner",
+      "schema_001_initial_schema_idx_outfits_participant",
+      "schema_001_initial_schema_idx_outfits_wedding",
+      "schema_001_initial_schema_public_enforce_outfit_image_cap",
+      "schema_001_initial_schema_public_outfit_images",
+      "schema_001_initial_schema_public_outfits",
+      "schema_001_initial_schema_public_sync_outfit_child_wedding"
+    ],
+    "27": [
+      "schema_001_initial_schema_idx_participants_event",
+      "schema_001_initial_schema_idx_participants_wedding",
+      "schema_001_initial_schema_public_enforce_event_confirm_rules",
+      "schema_001_initial_schema_public_participants",
+      "schema_001_initial_schema_public_sync_outfit_denorm",
+      "schema_001_initial_schema_public_v_outfit_progress",
+      "schema_001_initial_schema_public_v_participant_progress",
+      "schema_001_initial_schema_uq_participants_event_user"
+    ],
+    "28": [
+      "schema_001_initial_schema_idx_events_wedding",
+      "schema_001_initial_schema_public_events",
+      "schema_001_initial_schema_public_sync_participant_wedding",
+      "schema_001_initial_schema_public_v_event_progress",
+      "schema_001_initial_schema_public_v_wedding_progress",
+      "schema_001_initial_schema_uq_events_active_name"
+    ],
+    "29": [
+      "schema_001_initial_schema_idx_invitations_email",
+      "schema_001_initial_schema_idx_invitations_expires",
+      "schema_001_initial_schema_idx_invitations_wedding",
+      "schema_001_initial_schema_public_invitations",
+      "schema_001_initial_schema_uq_invitations_pending_email"
+    ],
+    "30": [
+      "schema_001_initial_schema_idx_memberships_active",
+      "schema_001_initial_schema_idx_memberships_user",
+      "schema_001_initial_schema_idx_memberships_wedding",
+      "schema_001_initial_schema_public_wedding_memberships"
+    ],
+    "31": [
+      "public_sync_outfit_child_wedding",
+      "schema_001_initial_schema_trg_images_wedding",
+      "schema_001_initial_schema_trg_urls_wedding"
+    ],
+    "32": [
+      "agents",
+      "agents_graphify"
+    ],
+    "33": [
+      "public_enforce_event_confirm_rules",
+      "schema_001_initial_schema_trg_events_confirm"
+    ],
+    "34": [
+      "public_enforce_outfit_url_cap",
+      "schema_001_initial_schema_trg_urls_cap"
+    ],
+    "35": [
+      "public_log_image_activity",
+      "schema_001_initial_schema_trg_images_activity"
+    ],
+    "36": [
+      "public_log_outfit_activity",
+      "schema_001_initial_schema_trg_outfits_activity"
+    ],
+    "37": [
+      "public_prevent_last_super_admin_loss",
+      "schema_001_initial_schema_trg_profiles_last_sa"
+    ],
+    "38": [
+      "public_sync_outfit_denorm",
+      "schema_001_initial_schema_trg_outfits_denorm"
+    ],
+    "39": [
+      "public_sync_participant_wedding",
+      "schema_001_initial_schema_trg_participants_wedding"
+    ],
+    "40": [
+      "public_activity_logs"
+    ],
+    "41": [
+      "public_events"
+    ],
+    "42": [
+      "public_invitations"
+    ],
+    "43": [
+      "public_outfit_images"
+    ],
+    "44": [
+      "public_outfit_urls"
+    ],
+    "45": [
+      "public_outfits"
+    ],
+    "46": [
+      "public_participants"
+    ],
+    "47": [
+      "schema_003_storage"
+    ],
+    "48": [
+      "schema_004_seed_data"
+    ],
+    "49": [
+      "schema_005_example"
     ]
   },
   "cohesion": {
-    "0": 0.1076923076923077,
-    "1": 0.1695906432748538,
-    "2": 0.13970588235294118,
+    "0": 0.12380952380952381,
+    "1": 0.09195402298850575,
+    "2": 0.06153846153846154,
     "3": 0.13970588235294118,
-    "4": 0.16666666666666666,
-    "5": 0.18181818181818182,
-    "6": 0.3333333333333333
+    "4": 0.06722689075630252,
+    "5": 0.05641025641025641,
+    "6": 0.09523809523809523,
+    "7": 0.1111111111111111,
+    "8": 0.11764705882352941,
+    "9": 0.13333333333333333,
+    "10": 0.2,
+    "11": 0.07407407407407407,
+    "12": 0.2222222222222222,
+    "13": 0.12554112554112554,
+    "14": 0.6666666666666666,
+    "15": 0.6666666666666666,
+    "16": 1.0,
+    "17": 1.0,
+    "18": 1.0,
+    "19": 1.0,
+    "20": 0.13970588235294118,
+    "21": 0.19696969696969696,
+    "22": 0.16666666666666666,
+    "23": 0.18181818181818182,
+    "24": 0.18181818181818182,
+    "25": 0.25,
+    "26": 0.25,
+    "27": 0.25,
+    "28": 0.3333333333333333,
+    "29": 0.4,
+    "30": 0.5,
+    "31": 0.6666666666666666,
+    "32": 1.0,
+    "33": 1.0,
+    "34": 1.0,
+    "35": 1.0,
+    "36": 1.0,
+    "37": 1.0,
+    "38": 1.0,
+    "39": 1.0,
+    "40": 1.0,
+    "41": 1.0,
+    "42": 1.0,
+    "43": 1.0,
+    "44": 1.0,
+    "45": 1.0,
+    "46": 1.0,
+    "47": 1.0,
+    "48": 1.0,
+    "49": 1.0
   },
   "gods": [
     {
       "id": "docs_sdd_sdd",
       "label": "SDD",
-      "degree": 20
+      "degree": 21
     },
     {
       "id": "docs_database_database",
       "label": "DATABASE",
+      "degree": 20
+    },
+    {
+      "id": "tsconfig_app_compileroptions",
+      "label": "compilerOptions",
       "degree": 19
     },
     {
       "id": "docs_prd_prd",
       "label": "PRD",
-      "degree": 18
+      "degree": 19
     },
     {
       "id": "docs_log_log",
       "label": "log",
-      "degree": 16
+      "degree": 18
     },
     {
       "id": "docs_decisions_decisions",
       "label": "DECISIONS",
-      "degree": 16
+      "degree": 17
+    },
+    {
+      "id": "schema_001_initial_schema_public_profiles",
+      "label": "public.profiles",
+      "degree": 15
     },
     {
       "id": "docs_changelog_changelog",
@@ -164,27 +661,50 @@
       "degree": 15
     },
     {
-      "id": "docs_readme_readme",
-      "label": "README",
+      "id": "docs_migrations_migrations",
+      "label": "MIGRATIONS",
       "degree": 14
     },
     {
-      "id": "docs_migrations_migrations",
-      "label": "MIGRATIONS",
-      "degree": 13
-    },
-    {
-      "id": "docs_api_api",
-      "label": "API",
-      "degree": 13
-    },
-    {
-      "id": "docs_infrastructure_infrastructure",
-      "label": "INFRASTRUCTURE",
-      "degree": 12
+      "id": "docs_readme_readme",
+      "label": "README",
+      "degree": 14
     }
   ],
   "surprises": [
+    {
+      "source": "Added",
+      "target": "main()",
+      "source_files": [
+        "CHANGELOG.md",
+        "scripts/migrate.py"
+      ],
+      "confidence": "INFERRED",
+      "relation": "references",
+      "why": "inferred connection - not explicitly stated in source; crosses file types (code ↔ doc); connects across different repos/directories; peripheral node `Added` unexpectedly reaches hub `main()`"
+    },
+    {
+      "source": "Branch Workflow",
+      "target": "main()",
+      "source_files": [
+        "README.md",
+        "scripts/migrate.py"
+      ],
+      "confidence": "INFERRED",
+      "relation": "references",
+      "why": "inferred connection - not explicitly stated in source; crosses file types (code ↔ doc); connects across different repos/directories; peripheral node `Branch Workflow` unexpectedly reaches hub `main()`"
+    },
+    {
+      "source": "Setup",
+      "target": "psql()",
+      "source_files": [
+        "README.md",
+        "scripts/migrate.py"
+      ],
+      "confidence": "INFERRED",
+      "relation": "references",
+      "why": "inferred connection - not explicitly stated in source; crosses file types (code ↔ doc); connects across different repos/directories; peripheral node `Setup` unexpectedly reaches hub `psql()`"
+    },
     {
       "source": "DATABASE",
       "target": "README",
@@ -197,39 +717,6 @@
       "why": "connects across different repos/directories; bridges separate communities"
     },
     {
-      "source": "Plan",
-      "target": "PRD",
-      "source_files": [
-        "docs/Plan.md",
-        "docs/PRD.md"
-      ],
-      "confidence": "INFERRED",
-      "relation": "semantically_similar_to",
-      "why": "inferred connection - not explicitly stated in source; bridges separate communities; semantically similar concepts with no structural link"
-    },
-    {
-      "source": "CHANGELOG",
-      "target": "README",
-      "source_files": [
-        "docs/CHANGELOG.md",
-        "schema/README.md"
-      ],
-      "confidence": "EXTRACTED",
-      "relation": "references",
-      "why": "connects across different repos/directories"
-    },
-    {
-      "source": "INFRASTRUCTURE",
-      "target": "README",
-      "source_files": [
-        "docs/INFRASTRUCTURE.md",
-        "schema/README.md"
-      ],
-      "confidence": "EXTRACTED",
-      "relation": "references",
-      "why": "connects across different repos/directories"
-    },
-    {
       "source": "README",
       "target": "log",
       "source_files": [
@@ -238,44 +725,44 @@
       ],
       "confidence": "EXTRACTED",
       "relation": "references",
-      "why": "connects across different repos/directories"
+      "why": "connects across different repos/directories; bridges separate communities"
     }
   ],
   "questions": [
     {
       "type": "bridge_node",
-      "question": "Why does `SDD` connect `Wedding-scoped data isolation / User roles and permissions` to `CHANGELOG / Documentation version history`, `API / Archive RPCs`, `Archive restore and permanent delete / Audit and activity`, `Versioned migrations / DEC-001 React frontend`, `Event management / Outfit management`?",
-      "why": "High betweenness centrality (0.170) - this node is a cross-community bridge."
+      "question": "Why does `react` connect `react` to `@supabase/supabase-js`, `package.json`, `LoginPage.tsx`?",
+      "why": "High betweenness centrality (0.048) - this node is a cross-community bridge."
     },
     {
       "type": "bridge_node",
-      "question": "Why does `DATABASE` connect `API / Archive RPCs` to `CHANGELOG / Documentation version history`, `Archive restore and permanent delete / Audit and activity`, `Wedding-scoped data isolation / User roles and permissions`, `Versioned migrations / DEC-001 React frontend`?",
-      "why": "High betweenness centrality (0.150) - this node is a cross-community bridge."
+      "question": "Why does `react-router-dom` connect `LoginPage.tsx` to `package.json`?",
+      "why": "High betweenness centrality (0.030) - this node is a cross-community bridge."
     },
     {
       "type": "bridge_node",
-      "question": "Why does `PRD` connect `Archive restore and permanent delete / Audit and activity` to `CHANGELOG / Documentation version history`, `API / Archive RPCs`, `Wedding-scoped data isolation / User roles and permissions`, `Versioned migrations / DEC-001 React frontend`, `Event management / Outfit management`?",
-      "why": "High betweenness centrality (0.148) - this node is a cross-community bridge."
+      "question": "Why does `Wedding Planner` connect `Wedding Planner` to `migrate.py`?",
+      "why": "High betweenness centrality (0.025) - this node is a cross-community bridge."
     },
     {
       "type": "isolated_nodes",
-      "question": "What connects `Documentation version history`, `Phase 3.2 migration readiness`, `Phase 3 database readiness` to the rest of the system?",
-      "why": "46 weakly-connected nodes found - possible documentation gaps or missing edges."
+      "question": "What connects `AuthStatus`, `AvatarProps`, `ButtonProps` to the rest of the system?",
+      "why": "171 weakly-connected nodes found - possible documentation gaps or missing edges."
     },
     {
       "type": "low_cohesion",
-      "question": "Should `CHANGELOG / Documentation version history` be split into smaller, more focused modules?",
-      "why": "Cohesion score 0.1076923076923077 - nodes in this community are weakly interconnected."
+      "question": "Should `CHANGELOG` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.12380952380952381 - nodes in this community are weakly interconnected."
     },
     {
       "type": "low_cohesion",
-      "question": "Should `API / Archive RPCs` be split into smaller, more focused modules?",
-      "why": "Cohesion score 0.13970588235294118 - nodes in this community are weakly interconnected."
+      "question": "Should `migrate.py` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.09195402298850575 - nodes in this community are weakly interconnected."
     },
     {
       "type": "low_cohesion",
-      "question": "Should `Archive restore and permanent delete / Audit and activity` be split into smaller, more focused modules?",
-      "why": "Cohesion score 0.13970588235294118 - nodes in this community are weakly interconnected."
+      "question": "Should `react` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.06153846153846154 - nodes in this community are weakly interconnected."
     }
   ]
 }

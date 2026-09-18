@@ -16,7 +16,7 @@ docs/      Product, system, infrastructure, migration, and release docs
 public/    PWA manifest, favicon, and icons
 schema/    Numbered Supabase/PostgreSQL migrations
 scripts/   Local automation, including the migration runner
-src/       React application foundation
+src/       React application and business modules
 ```
 
 ## Setup
@@ -88,8 +88,18 @@ Planned tags:
 
 ## Roadmap
 
-- Phase 4: React foundation
-- Phase 5: Business modules
+- Phase 4: React foundation — complete
+- Phase 5.1: User, wedding, and membership module — complete
+- Phase 5.2: Event management — next
+
+## Current App Surface
+
+- Supabase Auth login/logout with persisted sessions.
+- Protected `/app` shell with mobile sidebar, header, wedding switcher, profile block, and logout action.
+- Read-only profile loading from `profiles`.
+- Wedding and membership loading from `weddings` and `wedding_memberships`.
+- Active wedding auto-selection and local restore after refresh.
+- Role-derived permission utilities for Phase 5 modules.
 
 ## Documentation
 

@@ -4,6 +4,23 @@ Newest entries first. Every document added or changed under `docs/` is recorded 
 
 ---
 
+## 2026-09-18 – Phase 5.1 User, wedding, and membership module
+
+- **Status:** Complete
+- **Phase:** 5.1 – First business module
+- **What changed:**
+  - Added typed profile, wedding, membership, auth, and permission utilities.
+  - Added Supabase service modules for auth, `profiles`, `weddings`, and `wedding_memberships`.
+  - Expanded auth and wedding stores to load profile, active memberships, accessible weddings, and persisted active wedding selection.
+  - Replaced placeholder `/app` with a protected responsive shell: sidebar, top header, wedding switcher, profile block, and logout action.
+  - Added reusable error, unauthorized, and error boundary states.
+  - Did not implement events, participants, outfits, invitations, dashboard widgets, or progress widgets.
+  - Verified `npx pnpm@latest run lint` and `npx pnpm@latest run build`.
+- **Follow from:** [README.md](../README.md), [CHANGELOG.md](../CHANGELOG.md)
+- **Next:** Phase 5.2 — Event Management.
+
+---
+
 ## 2026-09-18 – Phase 4 React foundation
 
 - **Status:** Complete
