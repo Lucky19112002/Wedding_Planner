@@ -234,9 +234,9 @@
     "semantic_hash": ""
   },
   "src/layouts/AppLayout.tsx": {
-    "mtime": 1789707410.430524,
-    "seen": 1789707515.970442,
-    "ast_hash": "0f98a2a6fe75d054ccbdd89a4b4983b1",
+    "mtime": 1789707789.5548015,
+    "seen": 1789707833.4195468,
+    "ast_hash": "f3c08c2b59cbea5fb350aa6ad14194f5",
     "semantic_hash": ""
   },
   "src/layouts/PublicLayout.tsx": {
@@ -420,15 +420,15 @@
     "semantic_hash": ""
   },
   "src/hooks/useProfile.ts": {
-    "mtime": 1789707362.854568,
-    "seen": 1789707515.9704409,
-    "ast_hash": "cb173d66bab52a30c5b758921600ad5e",
+    "mtime": 1789707789.5535302,
+    "seen": 1789707833.4195452,
+    "ast_hash": "4fc512d0f0d7959b676cc66c57c61992",
     "semantic_hash": ""
   },
   "src/hooks/useWeddingContext.ts": {
-    "mtime": 1789707362.8550503,
-    "seen": 1789707515.9704409,
-    "ast_hash": "00bfbbab4ddf41f9c71dadedde08ac89",
+    "mtime": 1789707789.5542529,
+    "seen": 1789707833.4195461,
+    "ast_hash": "b210ca7d815bf7f4618ec260f457b28a",
     "semantic_hash": ""
   },
   "src/services/auth.service.ts": {

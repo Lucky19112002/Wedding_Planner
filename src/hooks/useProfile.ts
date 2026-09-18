@@ -1,9 +1,9 @@
 import { useAuthStore } from '@/store/authStore';
 
 export function useProfile() {
-  return useAuthStore((state) => ({
-    profile: state.profile,
-    status: state.profileStatus,
-    error: state.profileError,
-  }));
+  const profile = useAuthStore((state) => state.profile);
+  const status = useAuthStore((state) => state.profileStatus);
+  const error = useAuthStore((state) => state.profileError);
+
+  return { error, profile, status };
 }

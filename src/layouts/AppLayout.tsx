@@ -25,7 +25,9 @@ export function AppLayout() {
     setActiveWeddingId,
     weddings,
   } = useWeddingContext();
-  const { isSidebarOpen, setSidebarOpen, toggleSidebar } = useUiStore();
+  const isSidebarOpen = useUiStore((state) => state.isSidebarOpen);
+  const setSidebarOpen = useUiStore((state) => state.setSidebarOpen);
+  const toggleSidebar = useUiStore((state) => state.toggleSidebar);
   const displayName = profile?.displayName ?? 'User';
   const displayRole = getDisplayRole(profile, activeMembership);
 
