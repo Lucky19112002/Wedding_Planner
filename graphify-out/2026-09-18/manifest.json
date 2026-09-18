@@ -102,9 +102,9 @@
     "semantic_hash": ""
   },
   "docs/log.md": {
-    "mtime": 1789705804.3540184,
-    "seen": 1789706139.885524,
-    "ast_hash": "05ba391d79f53898731e4fd473cb4773",
+    "mtime": 1789707508.1464207,
+    "seen": 1789707515.970468,
+    "ast_hash": "5185a917830f522a164457ad5c167379",
     "semantic_hash": ""
   },
   "schema/README.md": {
@@ -138,9 +138,9 @@
     "semantic_hash": ""
   },
   "src/app/App.tsx": {
-    "mtime": 1789705804.3588338,
-    "seen": 1789706139.8854961,
-    "ast_hash": "090e48156e6c41a4f7fba671614f9b0e",
+    "mtime": 1789707362.8586495,
+    "seen": 1789707515.970426,
+    "ast_hash": "46b1be07457c27ab6aed8708236eae66",
     "semantic_hash": ""
   },
   "src/app/providers/AuthContext.ts": {
@@ -150,9 +150,9 @@
     "semantic_hash": ""
   },
   "src/app/providers/AuthProvider.tsx": {
-    "mtime": 1789705804.3589435,
-    "seen": 1789706139.885497,
-    "ast_hash": "448fc530347ddf3f5ac20ae431bf7c35",
+    "mtime": 1789707338.4155645,
+    "seen": 1789707515.970428,
+    "ast_hash": "279239eb40d0556cc59477bd3b980c8a",
     "semantic_hash": ""
   },
   "src/components/ui/Avatar.tsx": {
@@ -222,9 +222,9 @@
     "semantic_hash": ""
   },
   "src/components/ui/index.ts": {
-    "mtime": 1789705804.360128,
-    "seen": 1789706139.885504,
-    "ast_hash": "68d8c7e0cdc76732465e7ab5d2a6fc10",
+    "mtime": 1789707362.8580432,
+    "seen": 1789707515.970439,
+    "ast_hash": "05a8ba57656f1ec14ad6752c7a5677fd",
     "semantic_hash": ""
   },
   "src/hooks/useAuth.ts": {
@@ -234,9 +234,9 @@
     "semantic_hash": ""
   },
   "src/layouts/AppLayout.tsx": {
-    "mtime": 1789705804.3603156,
-    "seen": 1789706139.885505,
-    "ast_hash": "84f1385a2771787cb8ef24c66f67026e",
+    "mtime": 1789707789.5548015,
+    "seen": 1789707833.4195468,
+    "ast_hash": "f3c08c2b59cbea5fb350aa6ad14194f5",
     "semantic_hash": ""
   },
   "src/layouts/PublicLayout.tsx": {
@@ -258,9 +258,9 @@
     "semantic_hash": ""
   },
   "src/pages/AppHomePage.tsx": {
-    "mtime": 1789705804.360653,
-    "seen": 1789706139.885508,
-    "ast_hash": "f78c7a01c0a6048a0c776f5c6f372a36",
+    "mtime": 1789707410.4311175,
+    "seen": 1789707515.970444,
+    "ast_hash": "371e8fdedb695301a23d0c882f226c23",
     "semantic_hash": ""
   },
   "src/pages/LoginPage.tsx": {
@@ -276,9 +276,9 @@
     "semantic_hash": ""
   },
   "src/routes/ProtectedRoute.tsx": {
-    "mtime": 1789705804.3608022,
-    "seen": 1789706139.885509,
-    "ast_hash": "c0319eee3d7485717358d353d216cc48",
+    "mtime": 1789707410.429566,
+    "seen": 1789707515.970446,
+    "ast_hash": "1fee3d3cb201840cd94ee1f804d96314",
     "semantic_hash": ""
   },
   "src/routes/router.tsx": {
@@ -288,21 +288,21 @@
     "semantic_hash": ""
   },
   "src/store/authStore.ts": {
-    "mtime": 1789705804.3609824,
-    "seen": 1789706139.885511,
-    "ast_hash": "371dc1669f997b5facb17bf40d9b40dd",
+    "mtime": 1789707338.414234,
+    "seen": 1789707515.97045,
+    "ast_hash": "c12a4d141bcc0623adc34402efaf4184",
     "semantic_hash": ""
   },
   "src/store/uiStore.ts": {
-    "mtime": 1789705804.3610249,
-    "seen": 1789706139.885511,
-    "ast_hash": "b463b12727435903e4b9da3dff7a9123",
+    "mtime": 1789707338.4149504,
+    "seen": 1789707515.9704509,
+    "ast_hash": "9acafc8bfc5a28dc3efde39297ec2cf9",
     "semantic_hash": ""
   },
   "src/store/weddingStore.ts": {
-    "mtime": 1789705804.3610694,
-    "seen": 1789706139.8855119,
-    "ast_hash": "e162236fa783d23282eb8a59013a7cc5",
+    "mtime": 1789707338.414656,
+    "seen": 1789707515.9704509,
+    "ast_hash": "ea1d72b4f34ff531080dd6cf3e995e91",
     "semantic_hash": ""
   },
   "src/types/auth.ts": {
@@ -354,15 +354,15 @@
     "semantic_hash": ""
   },
   "CHANGELOG.md": {
-    "mtime": 1789705804.3503237,
-    "seen": 1789706139.8855171,
-    "ast_hash": "d44fb5d59e89f2627e1b94a86454990d",
+    "mtime": 1789707508.145932,
+    "seen": 1789707515.97046,
+    "ast_hash": "f9d9eb3b5feb89d3acc481ca02ccdc5b",
     "semantic_hash": ""
   },
   "README.md": {
-    "mtime": 1789705804.3505197,
-    "seen": 1789706139.8855171,
-    "ast_hash": "54c0e2a0bac75f3e51b3e23bb72be1a2",
+    "mtime": 1789707508.145275,
+    "seen": 1789707515.97046,
+    "ast_hash": "2098618a3682fcaaa04297db5a10146e",
     "semantic_hash": ""
   },
   "index.html": {
@@ -393,6 +393,90 @@
     "mtime": 1789706157.00254,
     "seen": 1789706192.654851,
     "ast_hash": "6a47d64fcc136324ca395065a707ef76",
+    "semantic_hash": ""
+  },
+  "src/components/common/AppErrorBoundary.tsx": {
+    "mtime": 1789707362.855709,
+    "seen": 1789707515.970429,
+    "ast_hash": "282f457e605d9e4f44c85fd438acdf7e",
+    "semantic_hash": ""
+  },
+  "src/components/ui/ErrorState.tsx": {
+    "mtime": 1789707362.8570764,
+    "seen": 1789707515.970433,
+    "ast_hash": "9f8f9c4a5ac2dc17bfa8b42a32479482",
+    "semantic_hash": ""
+  },
+  "src/components/ui/UnauthorizedState.tsx": {
+    "mtime": 1789707362.8574288,
+    "seen": 1789707515.970438,
+    "ast_hash": "e505a076eedef6fbf5aee70f9d70dc7d",
+    "semantic_hash": ""
+  },
+  "src/hooks/usePermission.ts": {
+    "mtime": 1789707362.8554816,
+    "seen": 1789707515.97044,
+    "ast_hash": "c7cc7442f483e82c639453daa1562936",
+    "semantic_hash": ""
+  },
+  "src/hooks/useProfile.ts": {
+    "mtime": 1789707789.5535302,
+    "seen": 1789707833.4195452,
+    "ast_hash": "4fc512d0f0d7959b676cc66c57c61992",
+    "semantic_hash": ""
+  },
+  "src/hooks/useWeddingContext.ts": {
+    "mtime": 1789707789.5542529,
+    "seen": 1789707833.4195461,
+    "ast_hash": "b210ca7d815bf7f4618ec260f457b28a",
+    "semantic_hash": ""
+  },
+  "src/services/auth.service.ts": {
+    "mtime": 1789707303.1631835,
+    "seen": 1789707515.9704478,
+    "ast_hash": "30478f39a85db18d254e978f4ecbdf89",
+    "semantic_hash": ""
+  },
+  "src/services/membership.service.ts": {
+    "mtime": 1789707303.1635027,
+    "seen": 1789707515.9704478,
+    "ast_hash": "d3f7dc6b568594474f0e45162831f05f",
+    "semantic_hash": ""
+  },
+  "src/services/profile.service.ts": {
+    "mtime": 1789707303.1633027,
+    "seen": 1789707515.970449,
+    "ast_hash": "da87ff71b05ceec4500570ec15aca351",
+    "semantic_hash": ""
+  },
+  "src/services/wedding.service.ts": {
+    "mtime": 1789707303.1634035,
+    "seen": 1789707515.97045,
+    "ast_hash": "f213e943649a4d9132d423345ccc0dd9",
+    "semantic_hash": ""
+  },
+  "src/types/domain.ts": {
+    "mtime": 1789707303.162901,
+    "seen": 1789707515.970453,
+    "ast_hash": "c18d6dff417947c7133edda2a2725c93",
+    "semantic_hash": ""
+  },
+  "src/utils/permissions.ts": {
+    "mtime": 1789707303.163613,
+    "seen": 1789707515.970454,
+    "ast_hash": "14a8fe282101fb265b857cc87b219910",
+    "semantic_hash": ""
+  },
+  "tasks/plan.md": {
+    "mtime": 1789707255.4916623,
+    "seen": 1789707515.97047,
+    "ast_hash": "6a2dc9c898c2de3e6cfce790f1813731",
+    "semantic_hash": ""
+  },
+  "tasks/todo.md": {
+    "mtime": 1789707508.147043,
+    "seen": 1789707515.970471,
+    "ast_hash": "a405d58582ae9292d0a1076baf9379c0",
     "semantic_hash": ""
   }
 }

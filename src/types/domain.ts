@@ -1,4 +1,5 @@
 export type WeddingRole = 'admin' | 'member' | 'viewer';
+export type EventStatus = 'draft' | 'planned' | 'confirmed' | 'completed' | 'cancelled';
 
 export type Profile = {
   id: string;
@@ -22,6 +23,33 @@ export type Membership = {
   weddingId: string;
   userId: string;
   role: WeddingRole;
+};
+
+export type Event = {
+  id: string;
+  weddingId: string;
+  name: string;
+  eventDate: string | null;
+  startTime: string | null;
+  endTime: string | null;
+  location: string | null;
+  notes: string | null;
+  status: EventStatus;
+  participantCount: number;
+  createdAt: string;
+  updatedAt: string;
+  archivedAt: string | null;
+};
+
+export type EventInput = {
+  weddingId: string;
+  name: string;
+  eventDate: string;
+  startTime: string | null;
+  endTime: string | null;
+  location: string | null;
+  notes: string | null;
+  status: EventStatus;
 };
 
 export type PermissionAction = 'view' | 'create' | 'edit' | 'admin';

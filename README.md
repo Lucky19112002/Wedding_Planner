@@ -90,7 +90,8 @@ Planned tags:
 
 - Phase 4: React foundation — complete
 - Phase 5.1: User, wedding, and membership module — complete
-- Phase 5.2: Event management — next
+- Phase 5.2: Event management — complete
+- Phase 5.3: Participant management — next
 
 ## Current App Surface
 
@@ -100,6 +101,9 @@ Planned tags:
 - Wedding and membership loading from `weddings` and `wedding_memberships`.
 - Active wedding auto-selection and local restore after refresh.
 - Role-derived permission utilities for Phase 5 modules.
+- Event dashboard with upcoming/all events, search, status filter, empty state, and responsive New Event actions.
+- Event create/edit/detail/archive flows connected to Supabase.
+- Event status workflow helpers and archive-only destructive action.
 
 ## Documentation
 

@@ -1,4 +1,4 @@
-import { Outlet } from 'react-router-dom';
+import { NavLink, Outlet } from 'react-router-dom';
 import { Avatar } from '@/components/ui/Avatar';
 import { Badge } from '@/components/ui/Badge';
 import { Button } from '@/components/ui/Button';
@@ -12,7 +12,10 @@ import { useUiStore } from '@/store/uiStore';
 import { cx } from '@/utils/cx';
 import { getDisplayRole } from '@/utils/permissions';
 
-const navItems = ['Overview', 'People', 'Settings'];
+const navItems = [
+  { label: 'Overview', to: '/app' },
+  { label: 'Events', to: '/app/events' },
+];
 
 export function AppLayout() {
   const { signOut } = useAuth();
@@ -62,18 +65,20 @@ export function AppLayout() {
 
         <nav className="flex-1 space-y-1 px-3 py-4">
           {navItems.map((item) => (
-            <button
-              key={item}
-              className={cx(
-                'flex min-h-11 w-full items-center rounded-md px-3 text-left text-sm font-medium',
-                item === 'Overview'
-                  ? 'bg-brand-50 text-brand-700'
-                  : 'text-slate-700 hover:bg-slate-100',
-              )}
-              type="button"
+            <NavLink
+              key={item.label}
+              className={({ isActive }) =>
+                cx(
+                  'flex min-h-11 w-full items-center rounded-md px-3 text-left text-sm font-medium',
+                  isActive ? 'bg-brand-50 text-brand-700' : 'text-slate-700 hover:bg-slate-100',
+                )
+              }
+              end={item.to === '/app'}
+              to={item.to}
+              onClick={() => setSidebarOpen(false)}
             >
-              {item}
-            </button>
+              {item.label}
+            </NavLink>
           ))}
         </nav>
 

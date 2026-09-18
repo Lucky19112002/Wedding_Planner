@@ -2,6 +2,30 @@
 
 Newest entries first. This root changelog records repository and release milestones. Detailed product documentation changes remain in `/docs`.
 
+## [v0.5.2-event-management] - 2026-09-18
+
+### Added
+
+- Phase 5.2 Event Management module.
+- Event service with `getEvents`, `getEvent`, `createEvent`, `updateEvent`, and `archiveEvent`.
+- Event Zustand store with events, selected event, loading, saving, search, and status filter state.
+- Protected event routes: `/app/events`, `/app/events/new`, `/app/events/:id`, and `/app/events/:id/edit`.
+- Premium responsive event dashboard, event cards, status badges, form, details header, timeline, empty state, and archive dialog.
+
+### Changed
+
+- App navigation now includes Events.
+- Tailwind CSS entrypoint now uses the Tailwind v4 CSS-first import so generated utilities render correctly in browser.
+
+### Verified
+
+- Browser-tested create, edit, archive, search, filter, desktop layout, and mobile layout.
+- Browser console had no warnings or errors.
+- `npx pnpm@latest run lint`
+- `npx pnpm@latest run build`
+
+---
+
 ## [v0.5.1-user-wedding-membership] - 2026-09-18
 
 ### Added

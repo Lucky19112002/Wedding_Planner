@@ -4,6 +4,26 @@ Newest entries first. Every document added or changed under `docs/` is recorded 
 
 ---
 
+## 2026-09-18 – Phase 5.2 Event Management
+
+- **Status:** Complete
+- **Phase:** 5.2 – Event Management module
+- **What changed:**
+  - Added typed event models, event status workflow helpers, event formatting helpers, Supabase event service, and event Zustand store.
+  - Added protected event routes for dashboard, create, detail, and edit screens.
+  - Added premium mobile-first event dashboard with upcoming/all sections, search, status filter, empty state, and responsive New Event actions.
+  - Added React Hook Form + Zod event form with required name/date and end-time validation.
+  - Added event detail page with hero header, information, venue, notes, timeline, audit timestamps, and placeholders for Participants and Outfits.
+  - Added archive-only destructive flow using the existing `archive_event` RPC and confirmation modal.
+  - Fixed Tailwind v4 CSS entrypoint so browser styling renders correctly.
+  - Did not implement participant management, outfit management, invitations, progress widgets, permanent delete, schema, or migrations.
+  - Browser-tested create, edit, archive, search, filter, mobile layout, desktop layout, and clean console.
+  - Verified `npx pnpm@latest run lint` and `npx pnpm@latest run build`.
+- **Follow from:** [README.md](../README.md), [CHANGELOG.md](../CHANGELOG.md)
+- **Next:** Phase 5.3 — Participant Management.
+
+---
+
 ## 2026-09-18 – Phase 5.1 User, wedding, and membership module
 
 - **Status:** Complete

@@ -1,40 +1,42 @@
-# Implementation Plan: Phase 5.1 User, Wedding & Membership Module
+# Implementation Plan: Phase 5.2 Event Management
 
 ## Overview
-Implement the first business module on top of the existing React/Supabase foundation: authenticated app shell, profile loading, wedding membership loading, active wedding selection, permission helpers, and reusable loading/error/unauthorized states. No event, participant, outfit, invitation, dashboard, or progress UI.
+Build the Event Management module on the existing React/Supabase foundation. The module adds protected event routes, isolated event services, an event store, event list/search/filter UI, create/edit forms, detail view, archive confirmation, and browser verification. No participant, outfit, invitation, schema, or migration work is included.
 
 ## Architecture Decisions
-- Keep Supabase access isolated in small services under `src/services`.
-- Store only session, profile, memberships, active wedding, and shell UI state.
-- Persist only the active wedding id in localStorage; derive role and permissions from loaded membership.
-- Use existing UI primitives and native controls before adding dependencies.
+- Keep all Supabase event access in `src/services/event.service.ts`.
+- Add event types to the existing domain model and keep status workflow helpers in `src/utils`.
+- Use native date/time inputs and the existing UI primitives before adding any dependency.
+- Keep participant and outfit sections as visual placeholders only.
+- Use archive RPC only; no permanent delete UI or service.
 
 ## Task List
 
-### Phase 1: Data Contracts and Services
-- [ ] Add strict TypeScript domain types for profiles, weddings, memberships, and permissions.
-- [ ] Add auth, profile, wedding, and membership services.
+### Phase 1: Event Data Foundation
+- [ ] Add Event types, status workflow helpers, event service, and event store.
+- [ ] Verify lint/build after the foundation compiles.
 
-### Phase 2: State and Routing
-- [ ] Expand auth and wedding stores to load profile/memberships and choose an active wedding.
-- [ ] Add hooks/utilities for current profile, active wedding, membership role, and permission checks.
-- [ ] Keep protected routing session-aware and add unauthorized/empty/error states.
+### Phase 2: Events List And Create Flow
+- [ ] Add `/app/events` and `/app/events/new`.
+- [ ] Build dashboard, search, status filter, empty state, floating New Event action, and create form.
+- [ ] Verify create event works against Supabase in browser.
 
-### Phase 3: App Shell
-- [ ] Replace placeholder `/app` shell with responsive sidebar, header, wedding switcher, profile panel, and logout.
-- [ ] Keep home content scoped to user/wedding summary only.
+### Phase 3: Details, Edit, And Archive
+- [ ] Add `/app/events/:id` and `/app/events/:id/edit`.
+- [ ] Build details page, edit form, optimistic update, status timeline, placeholders, and archive dialog.
+- [ ] Verify edit and archive work against Supabase in browser.
 
-### Phase 4: Verification and Docs
-- [ ] Update README.md, CHANGELOG.md, and docs/log.md.
-- [ ] Run lint, typecheck/build, refresh Graphify, commit, and push dev.
+### Phase 4: Polish, Docs, And Release
+- [ ] Test desktop and mobile browser layouts.
+- [ ] Update only `README.md`, `CHANGELOG.md`, and `docs/log.md`.
+- [ ] Run lint, build, Graphify update, commit, and push `dev`.
 
 ## Risks and Mitigations
 | Risk | Impact | Mitigation |
 | --- | --- | --- |
-| RLS hides rows for unauthenticated/deactivated users | User sees empty/error shell | Explicit unauthorized/empty screens |
-| Persisted wedding id becomes invalid | Wrong context after membership changes | Validate against loaded memberships and auto-select fallback |
-| Business module grows into later phases | Scope creep | No event/outfit/invitation/progress queries or widgets |
+| Confirmed/Completed requires participants in DB | Create/edit may fail before Phase 5.3 | Surface Supabase validation clearly and guide users to Draft/Planned until participants exist |
+| Broad event read permissions differ from strict member event visibility | Members may see wedding rows allowed by current RLS | Follow existing DEC-007 and do not add fake client security |
+| Premium UI scope balloons | Slow delivery and brittle components | Reuse current primitives, native controls, and simple cards |
 
 ## Open Questions
-- None blocking; use current Supabase schema and locked product rules.
-
+- None blocking. Event participants and outfits remain placeholders until later phases.
