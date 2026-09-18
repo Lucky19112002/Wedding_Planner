@@ -2,6 +2,35 @@
 
 Newest entries first. This root changelog records repository and release milestones. Detailed product documentation changes remain in `/docs`.
 
+## [v0.5.3-participant-management] - 2026-09-18
+
+### Added
+
+- Phase 5.3 Participant Management module inside Event Details.
+- Participant service with `getParticipants`, `getParticipantCandidates`, `addParticipant`, `updateParticipant`, and `archiveParticipant`.
+- Participant Zustand store with participants, candidates, loading, saving, selected participant, and search state.
+- Reusable participant UI components: avatar, role badge, card, list, empty state, add/edit dialog, remove dialog, and event participants section.
+- Vitest test runner plus participant duplicate/search validation tests.
+
+### Changed
+
+- Event Details now shows live participants instead of a placeholder while keeping Outfits as a Phase 5.4 placeholder.
+- Participant candidate loading blocks users already assigned to the event, including archived assignments preserved by the locked schema.
+
+### Verified
+
+- Browser-tested add participant, edit participant role, remove/archive participant, duplicate prevention, member search, desktop layout, mobile layout, and navigation.
+- Browser console had no warnings or errors.
+- `npx pnpm@latest run lint`
+- `npx pnpm@latest run build`
+- `npx pnpm@latest run test`
+
+### Notes
+
+- Participant notes were not persisted because the locked live schema has no participant notes column; schema and migrations were intentionally not modified.
+
+---
+
 ## [v0.5.2-event-management] - 2026-09-18
 
 ### Added

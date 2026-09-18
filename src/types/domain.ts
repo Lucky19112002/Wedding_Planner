@@ -52,6 +52,42 @@ export type EventInput = {
   status: EventStatus;
 };
 
+export type Participant = {
+  id: string;
+  eventId: string;
+  weddingId: string;
+  userId: string | null;
+  displayName: string;
+  email: string | null;
+  relationshipNote: string | null;
+  roleInEvent: string | null;
+  memberRole: WeddingRole | null;
+  outfitCount: number;
+  createdAt: string;
+  updatedAt: string;
+  archivedAt: string | null;
+};
+
+export type ParticipantInput = {
+  eventId: string;
+  weddingId: string;
+  userId: string;
+  roleInEvent: string;
+};
+
+export type ParticipantUpdateInput = {
+  roleInEvent: string;
+};
+
+export type ParticipantCandidate = {
+  userId: string;
+  displayName: string;
+  email: string;
+  relationshipNote: string | null;
+  memberRole: WeddingRole;
+  isAlreadyParticipant: boolean;
+};
+
 export type PermissionAction = 'view' | 'create' | 'edit' | 'admin';
 export type PermissionResource = 'weddings' | 'users' | 'events' | 'participants' | 'outfits';
 

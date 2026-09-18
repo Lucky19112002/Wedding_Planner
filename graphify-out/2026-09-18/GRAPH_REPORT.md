@@ -1,44 +1,44 @@
 # Graph Report - WeddingPlanner  (2026-09-18)
 
 ## Corpus Check
-- 77 files · ~40,511 words
+- 107 files · ~47,159 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 10 file(s) not represented in the graph (top: (none) 9, .css 1)
 
 ## Summary
-- 554 nodes · 728 edges · 59 communities (36 shown, 23 thin omitted)
-- Extraction: 97% EXTRACTED · 3% INFERRED · 0% AMBIGUOUS · INFERRED: 19 edges (avg confidence: 0.94)
+- 710 nodes · 1003 edges · 73 communities (46 shown, 27 thin omitted)
+- Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 24 edges (avg confidence: 0.95)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `409e29ab`
+- Built from commit: `cc024596`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
 - CHANGELOG
 - migrate.py
-- index.ts
+- ui/index.ts
 - PRD
 - package.json
-- ref_components_ui_button
+- ref_lib_supabase
 - compilerOptions
 - devDependencies
-- ref_types_domain
+- zustand
 - compilerOptions
-- Changelog
+- event.service.ts
 - 002_rls_policies.sql
 - manifest.json
 - 001_initial_schema.sql
-- AppLayout.tsx
+- react-router-dom
 - tsconfig.json
 - auth.ts
 - DATABASE
 - public.profiles
 - SDD
 - DECISIONS
+- Plan
 - log
-- Wedding Planner
 - public.outfits
 - public.participants
 - public.events
@@ -60,15 +60,29 @@
 - public.outfit_urls
 - public.outfits
 - public.participants
-- Implementation Plan: Phase 5.1 User, Wedding & Membership Module
-- LoginPage.tsx
-- react-router-dom
-- AppErrorBoundary.tsx
-- ProtectedRoute.tsx
+- Implementation Plan: Phase 5.2 Event Management
+- react
+- AppLayout.tsx
+- ref_components_ui_button
+- participant.service.ts
 - router.tsx
 - domain.ts
+- ref_types_domain
+- Phase 5.2 Todo
+- dependencies
 - permissions.ts
-- Phase 5.1 Todo
+- eslint.config.js
+- scripts
+- ArchiveDialog.tsx
+- AppErrorBoundary.tsx
+- eventWorkflow.ts
+- EventEmptyState.tsx
+- App.tsx
+- participantValidation.test.ts
+- EventParticipantsSection
+- ParticipantList.tsx
+- vite.config.ts
+- tailwindcss
 
 ## God Nodes (most connected - your core abstractions)
 1. `SDD` - 21 edges
@@ -76,11 +90,11 @@
 3. `compilerOptions` - 19 edges
 4. `PRD` - 19 edges
 5. `log` - 18 edges
-6. `DECISIONS` - 17 edges
-7. `public.profiles` - 15 edges
-8. `CHANGELOG` - 15 edges
-9. `MIGRATIONS` - 14 edges
-10. `README` - 14 edges
+6. `react` - 17 edges
+7. `DECISIONS` - 17 edges
+8. `react-router-dom` - 15 edges
+9. `public.profiles` - 15 edges
+10. `CHANGELOG` - 15 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `Added` --references--> `main()`  [INFERRED]
@@ -89,39 +103,39 @@
   README.md → scripts/migrate.py
 - `Branch Workflow` --references--> `main()`  [INFERRED]
   README.md → scripts/migrate.py
-- `DATABASE` --references--> `README`  [EXTRACTED]
-  docs/DATABASE.md → schema/README.md
-- `README` --references--> `log`  [EXTRACTED]
-  schema/README.md → docs/log.md
+- `Added` --references--> `archiveEvent()`  [INFERRED]
+  CHANGELOG.md → src/services/event.service.ts
+- `Added` --references--> `getEvents()`  [INFERRED]
+  CHANGELOG.md → src/services/event.service.ts
 
 ## Import Cycles
 - None detected.
 
-## Communities (59 total, 23 thin omitted)
+## Communities (73 total, 27 thin omitted)
 
 ### Community 0 - "CHANGELOG"
-Cohesion: 0.12
-Nodes (21): CHANGELOG, Documentation version history, Phase 3.2 migration readiness, Phase 3 database readiness, Deployment prerequisites, Environment variables, INFRASTRUCTURE, Supabase Auth configuration (+13 more)
+Cohesion: 0.20
+Nodes (11): CHANGELOG, Documentation version history, Phase 3.2 migration readiness, Phase 3 database readiness, Documentation governance, Project phase status, README, Locked baseline migrations (+3 more)
 
 ### Community 1 - "migrate.py"
-Cohesion: 0.15
-Nodes (20): CompletedProcess, hashlib, os, Path, pathlib, re, Branch Workflow, Setup (+12 more)
+Cohesion: 0.10
+Nodes (28): CompletedProcess, hashlib, os, Path, pathlib, re, Architecture, Branch Workflow (+20 more)
 
-### Community 2 - "index.ts"
-Cohesion: 0.05
-Nodes (22): ref_app_app, ref_app_providers_authcontext, ref_components_ui_slot, react, ref_react_dom_client, ref_services_auth_service, ref_store_authstore, ref_store_weddingstore (+14 more)
+### Community 2 - "ui/index.ts"
+Cohesion: 0.07
+Nodes (14): ref_components_ui_slot, ref_utils_cx, AvatarProps, ButtonProps, EmptyStateProps, ErrorStateProps, Input, InputProps (+6 more)
 
 ### Community 3 - "PRD"
 Cohesion: 0.14
 Nodes (17): Archive restore and permanent delete, Audit and activity, Invitation onboarding, PHASE-2.1, Progress calculation, Archive restore and permanent delete, Audit and activity, Event management (+9 more)
 
 ### Community 4 - "package.json"
-Cohesion: 0.05
-Nodes (41): dependencies, @hookform/resolvers, react, react-dom, react-hook-form, react-router-dom, @supabase/supabase-js, @vitejs/plugin-react (+33 more)
+Cohesion: 0.12
+Nodes (15): name, private, type, version, autoprefixer, eslint, @hookform/resolvers, postcss (+7 more)
 
-### Community 5 - "ref_components_ui_button"
-Cohesion: 0.17
-Nodes (5): ref_components_ui_button, ref_components_ui_card, EmptyStateProps, ErrorStateProps, ModalProps
+### Community 5 - "ref_lib_supabase"
+Cohesion: 0.08
+Nodes (15): ref_app_providers_authcontext, ref_lib_supabase, ref_services_auth_service, ref_store_authstore, ref_store_weddingstore, signOut(), listMemberships(), mapMembership() (+7 more)
 
 ### Community 6 - "compilerOptions"
 Cohesion: 0.10
@@ -129,19 +143,19 @@ Nodes (20): compilerOptions, allowJs, allowSyntheticDefaultImports, composite, e
 
 ### Community 7 - "devDependencies"
 Cohesion: 0.11
-Nodes (18): devDependencies, autoprefixer, eslint, eslint-config-prettier, @eslint/js, eslint-plugin-react-hooks, eslint-plugin-react-refresh, globals (+10 more)
+Nodes (19): devDependencies, autoprefixer, eslint, eslint-config-prettier, @eslint/js, eslint-plugin-react-hooks, eslint-plugin-react-refresh, globals (+11 more)
 
-### Community 8 - "ref_types_domain"
+### Community 8 - "zustand"
 Cohesion: 0.07
-Nodes (25): ref_lib_supabase, ref_services_membership_service, ref_services_profile_service, ref_services_wedding_service, @supabase/supabase-js, ref_types_domain, zustand, isSupabaseConfigured (+17 more)
+Nodes (23): ref_services_event_service, ref_services_membership_service, ref_services_participant_service, ref_services_profile_service, ref_services_wedding_service, @supabase/supabase-js, zustand, AuthContext (+15 more)
 
 ### Community 9 - "compilerOptions"
 Cohesion: 0.13
 Nodes (14): compilerOptions, allowJs, composite, isolatedModules, lib, module, moduleResolution, noEmit (+6 more)
 
-### Community 10 - "Changelog"
-Cohesion: 0.15
-Nodes (12): Added, Added, Added, Changed, Changed, Changed, Changelog, Security (+4 more)
+### Community 10 - "event.service.ts"
+Cohesion: 0.11
+Nodes (26): Added, Added, Added, Added, Changed, Changed, Changed, Changed (+18 more)
 
 ### Community 11 - "002_rls_policies.sql"
 Cohesion: 0.07
@@ -155,9 +169,9 @@ Nodes (8): background_color, description, display, icons, name, short_name, star
 Cohesion: 0.13
 Nodes (16): public.enforce_outfit_image_cap, public.enforce_outfit_status_fields, public.log_event_activity, public.set_updated_audit, trg_events_activity, trg_events_updated, trg_images_cap, trg_images_updated (+8 more)
 
-### Community 14 - "AppLayout.tsx"
-Cohesion: 0.19
-Nodes (8): ref_components_ui_avatar, ref_components_ui_badge, ref_components_ui_emptystate, ref_components_ui_select, ref_hooks_useprofile, ref_store_uistore, ref_utils_permissions, navItems
+### Community 14 - "react-router-dom"
+Cohesion: 0.15
+Nodes (11): ref_components_events, ref_components_participants, ref_components_ui_errorstate, ref_components_ui_loader, ref_components_ui_select, ref_hooks_usepermission, react-router-dom, ref_store_eventstore (+3 more)
 
 ### Community 20 - "DATABASE"
 Cohesion: 0.14
@@ -175,13 +189,13 @@ Nodes (12): Wedding-scoped data isolation, User roles and permissions, Archive a
 Cohesion: 0.18
 Nodes (11): Versioned migrations, DEC-001 React frontend, DEC-002 Supabase backend, DEC-003 GitHub Pages hosting, DEC-004 PWA readiness, DEC-005 Multi-wedding architecture, DEC-006 Archive and audit history, DEC-007 Wedding ID denormalization (+3 more)
 
-### Community 24 - "log"
-Cohesion: 0.18
-Nodes (11): log, Phase 2.1 documentation revision, Phase 3.1 infrastructure work, Phase 3.2 migration work, Phase 3 database work, Event management, Outfit management, Plan (+3 more)
+### Community 24 - "Plan"
+Cohesion: 0.33
+Nodes (6): Event management, Outfit management, Plan, Reference images and links, User roles and permissions, Wedding project
 
-### Community 25 - "Wedding Planner"
-Cohesion: 0.22
-Nodes (8): Architecture, Commit Convention, Current App Surface, Documentation, Folder Structure, Release Workflow, Roadmap, Wedding Planner
+### Community 25 - "log"
+Cohesion: 0.15
+Nodes (15): Deployment prerequisites, Environment variables, INFRASTRUCTURE, Supabase Auth configuration, Supabase project setup, log, Phase 2.1 documentation revision, Phase 3.1 infrastructure work (+7 more)
 
 ### Community 26 - "public.outfits"
 Cohesion: 0.25
@@ -207,61 +221,101 @@ Nodes (4): idx_memberships_active, idx_memberships_user, idx_memberships_wedding
 Cohesion: 0.67
 Nodes (3): public.sync_outfit_child_wedding, trg_images_wedding, trg_urls_wedding
 
-### Community 50 - "Implementation Plan: Phase 5.1 User, Wedding & Membership Module"
+### Community 50 - "Implementation Plan: Phase 5.2 Event Management"
 Cohesion: 0.18
-Nodes (10): Architecture Decisions, Implementation Plan: Phase 5.1 User, Wedding & Membership Module, Open Questions, Overview, Phase 1: Data Contracts and Services, Phase 2: State and Routing, Phase 3: App Shell, Phase 4: Verification and Docs (+2 more)
+Nodes (10): Architecture Decisions, Implementation Plan: Phase 5.2 Event Management, Open Questions, Overview, Phase 1: Event Data Foundation, Phase 2: Events List And Create Flow, Phase 3: Details, Edit, And Archive, Phase 4: Polish, Docs, And Release (+2 more)
 
-### Community 51 - "LoginPage.tsx"
-Cohesion: 0.22
-Nodes (7): ref_components_ui_input, ref_hookform_resolvers_zod, react-hook-form, zod, LoginForm, LoginPage(), loginSchema
+### Community 51 - "react"
+Cohesion: 0.08
+Nodes (21): ref_app_app, ref_components_ui_input, ref_components_ui_textarea, ref_hookform_resolvers_zod, react, ref_react_dom_client, react-hook-form, ref_styles_index_css (+13 more)
 
-### Community 52 - "react-router-dom"
-Cohesion: 0.25
-Nodes (4): ref_app_providers_authprovider, ref_components_common_apperrorboundary, react-router-dom, ref_routes_router
+### Community 52 - "AppLayout.tsx"
+Cohesion: 0.12
+Nodes (10): ref_components_ui_avatar, ref_components_ui_badge, ref_components_ui_unauthorizedstate, ref_hooks_useauth, ref_hooks_useprofile, ref_hooks_useweddingcontext, ref_store_uistore, ref_utils_permissions (+2 more)
 
-### Community 53 - "AppErrorBoundary.tsx"
-Cohesion: 0.25
-Nodes (4): ref_components_ui_errorstate, AppErrorBoundary, AppErrorBoundaryProps, AppErrorBoundaryState
+### Community 53 - "ref_components_ui_button"
+Cohesion: 0.13
+Nodes (11): ref_components_participants_addparticipantdialog, ref_components_participants_participantavatar, ref_components_participants_participantemptystate, ref_components_participants_participantlist, ref_components_participants_participantrolebadge, ref_components_participants_removeparticipantdialog, ref_components_ui_button, ref_components_ui_card (+3 more)
 
-### Community 54 - "ProtectedRoute.tsx"
-Cohesion: 0.25
-Nodes (4): ref_components_ui_loader, ref_components_ui_unauthorizedstate, ref_hooks_useauth, ref_hooks_useweddingcontext
+### Community 54 - "participant.service.ts"
+Cohesion: 0.27
+Nodes (13): addParticipant(), byId(), countOutfits(), getMembershipRoles(), getParticipantCandidates(), getParticipants(), getProfiles(), mapParticipant() (+5 more)
 
 ### Community 55 - "router.tsx"
-Cohesion: 0.25
-Nodes (7): ref_layouts_applayout, ref_layouts_publiclayout, ref_pages_apphomepage, ref_pages_loginpage, ref_pages_publichomepage, ref_routes_protectedroute, router
+Cohesion: 0.17
+Nodes (11): ref_layouts_applayout, ref_layouts_publiclayout, ref_pages_apphomepage, ref_pages_events_eventcreatepage, ref_pages_events_eventdetailpage, ref_pages_events_eventeditpage, ref_pages_events_eventspage, ref_pages_loginpage (+3 more)
 
 ### Community 56 - "domain.ts"
-Cohesion: 0.25
-Nodes (7): Membership, PermissionAction, PermissionLevel, PermissionResource, Profile, Wedding, WeddingRole
+Cohesion: 0.13
+Nodes (14): Event, EventInput, EventStatus, Membership, Participant, ParticipantCandidate, ParticipantInput, ParticipantUpdateInput (+6 more)
 
-### Community 57 - "permissions.ts"
+### Community 57 - "ref_types_domain"
+Cohesion: 0.10
+Nodes (7): ref_components_events_eventcard, ref_components_events_eventstatusbadge, ref_types_domain, ref_utils_eventformat, ref_utils_eventworkflow, EventHeaderProps, badgeClass
+
+### Community 58 - "Phase 5.2 Todo"
+Cohesion: 0.33
+Nodes (5): Phase 5.2 Todo, Task 1: Event Data Foundation, Task 2: Events Dashboard And Create Flow, Task 3: Details, Edit, And Archive, Task 4: Verification And Release
+
+### Community 59 - "dependencies"
+Cohesion: 0.20
+Nodes (10): dependencies, @hookform/resolvers, react, react-dom, react-hook-form, react-router-dom, @supabase/supabase-js, @vitejs/plugin-react (+2 more)
+
+### Community 60 - "permissions.ts"
 Cohesion: 0.32
 Nodes (6): can(), full, getPermissionLevel(), none, rolePermissions(), viewOnly
 
-### Community 58 - "Phase 5.1 Todo"
-Cohesion: 0.33
-Nodes (5): Phase 5.1 Todo, Task 1: Data Contracts and Services, Task 2: State and Routing, Task 3: App Shell, Task 4: Verification and Docs
+### Community 61 - "eslint.config.js"
+Cohesion: 0.29
+Nodes (6): eslint-config-prettier, @eslint/js, eslint-plugin-react-hooks, eslint-plugin-react-refresh, globals, typescript-eslint
+
+### Community 62 - "scripts"
+Cohesion: 0.29
+Nodes (7): scripts, build, dev, format, lint, test, typecheck
+
+### Community 63 - "ArchiveDialog.tsx"
+Cohesion: 0.29
+Nodes (3): ref_components_ui_modal, ArchiveDialogProps, RemoveParticipantDialogProps
+
+### Community 64 - "AppErrorBoundary.tsx"
+Cohesion: 0.29
+Nodes (3): AppErrorBoundary, AppErrorBoundaryProps, AppErrorBoundaryState
+
+### Community 65 - "eventWorkflow.ts"
+Cohesion: 0.29
+Nodes (3): eventStatuses, eventStatusLabels, transitions
+
+### Community 67 - "App.tsx"
+Cohesion: 0.40
+Nodes (3): ref_app_providers_authprovider, ref_components_common_apperrorboundary, ref_routes_router
+
+### Community 68 - "participantValidation.test.ts"
+Cohesion: 0.40
+Nodes (4): ref_utils_participantvalidation, vitest, candidates, participant
+
+### Community 71 - "vite.config.ts"
+Cohesion: 0.50
+Nodes (3): ref_node_url, vite, @vitejs/plugin-react
 
 ## Knowledge Gaps
-- **204 isolated node(s):** `name`, `private`, `version`, `type`, `dev` (+199 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 328 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
-- **23 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **242 isolated node(s):** `name`, `private`, `version`, `type`, `dev` (+237 more)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 410 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **27 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `react` connect `index.ts` to `LoginPage.tsx`, `package.json`, `AppErrorBoundary.tsx`?**
-  _High betweenness centrality (0.053) - this node is a cross-community bridge._
-- **Why does `react-router-dom` connect `react-router-dom` to `package.json`, `ref_components_ui_button`, `AppLayout.tsx`, `LoginPage.tsx`, `ProtectedRoute.tsx`, `router.tsx`?**
-  _High betweenness centrality (0.038) - this node is a cross-community bridge._
-- **Why does `devDependencies` connect `devDependencies` to `package.json`?**
-  _High betweenness centrality (0.024) - this node is a cross-community bridge._
 - **What connects `name`, `private`, `version` to the rest of the system?**
-  _204 weakly-connected nodes found - possible documentation gaps or missing edges._
-- **Should `CHANGELOG` be split into smaller, more focused modules?**
-  _Cohesion score 0.12380952380952381 - nodes in this community are weakly interconnected._
+  _242 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `migrate.py` be split into smaller, more focused modules?**
-  _Cohesion score 0.14761904761904762 - nodes in this community are weakly interconnected._
-- **Should `index.ts` be split into smaller, more focused modules?**
-  _Cohesion score 0.04964539007092199 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.09852216748768473 - nodes in this community are weakly interconnected._
+- **Should `ui/index.ts` be split into smaller, more focused modules?**
+  _Cohesion score 0.06951871657754011 - nodes in this community are weakly interconnected._
+- **Should `PRD` be split into smaller, more focused modules?**
+  _Cohesion score 0.13970588235294118 - nodes in this community are weakly interconnected._
+- **Should `package.json` be split into smaller, more focused modules?**
+  _Cohesion score 0.125 - nodes in this community are weakly interconnected._
+- **Should `ref_lib_supabase` be split into smaller, more focused modules?**
+  _Cohesion score 0.07936507936507936 - nodes in this community are weakly interconnected._
+- **Should `compilerOptions` be split into smaller, more focused modules?**
+  _Cohesion score 0.09523809523809523 - nodes in this community are weakly interconnected._

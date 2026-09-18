@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import { ArchiveDialog, EventHeader, EventTimeline } from '@/components/events';
+import { EventParticipantsSection } from '@/components/participants';
 import { Card } from '@/components/ui/Card';
 import { ErrorState } from '@/components/ui/ErrorState';
 import { Loader } from '@/components/ui/Loader';
@@ -79,13 +80,15 @@ export function EventDetailPage() {
             </p>
           </Card>
 
+          <EventParticipantsSection
+            canManage={canAdmin}
+            event={event}
+            onChanged={() => {
+              if (id) void loadEvent(id);
+            }}
+          />
+
           <div className="grid gap-5 md:grid-cols-2">
-            <Card>
-              <h2 className="text-lg font-semibold">Participants</h2>
-              <p className="mt-3 text-sm text-slate-600">
-                Participant management starts in Phase 5.3. This event is ready for assignments.
-              </p>
-            </Card>
             <Card>
               <h2 className="text-lg font-semibold">Outfits</h2>
               <p className="mt-3 text-sm text-slate-600">

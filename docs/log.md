@@ -4,6 +4,25 @@ Newest entries first. Every document added or changed under `docs/` is recorded 
 
 ---
 
+## 2026-09-18 – Phase 5.3 Participant Management
+
+- **Status:** Complete
+- **Phase:** 5.3 – Participant Management module
+- **What changed:**
+  - Added typed participant models, participant validation helpers, Supabase participant service, and participant Zustand store.
+  - Added participant UI components for avatar, role badge, cards, lists, empty state, add/edit dialog, remove dialog, and event detail integration.
+  - Integrated Participants into Event Details with member search, add existing wedding member, edit event role, archive/remove participant, duplicate prevention, and live participant count refresh.
+  - Preserved the existing locked schema and used the `archive_participant` RPC for removal; no permanent delete is exposed.
+  - Kept event role as configurable text with role suggestions, not hardcoded enums.
+  - Added Vitest and unit tests for duplicate detection and candidate search filtering.
+  - Did not implement outfit management, standalone participant pages, schema changes, SQL migrations, or participant notes persistence because the locked schema has no participant notes column.
+  - Browser-tested add, edit, remove, duplicate prevention, search, desktop layout, mobile layout, navigation, and clean console.
+  - Verified `npx pnpm@latest run lint`, `npx pnpm@latest run build`, and `npx pnpm@latest run test`.
+- **Follow from:** [README.md](../README.md), [CHANGELOG.md](../CHANGELOG.md)
+- **Next:** Phase 5.4 — Outfit Management.
+
+---
+
 ## 2026-09-18 – Phase 5.2 Event Management
 
 - **Status:** Complete

@@ -36,6 +36,7 @@ VITE_SUPABASE_PUBLISHABLE_KEY=YOUR_PUBLISHABLE_KEY
 pnpm install
 pnpm run build
 pnpm run lint
+pnpm run test
 ```
 
 5. Run migrations from the project root when database changes are added:
@@ -91,7 +92,8 @@ Planned tags:
 - Phase 4: React foundation — complete
 - Phase 5.1: User, wedding, and membership module — complete
 - Phase 5.2: Event management — complete
-- Phase 5.3: Participant management — next
+- Phase 5.3: Participant management — complete
+- Phase 5.4: Outfit management — next
 
 ## Current App Surface
 
@@ -104,6 +106,8 @@ Planned tags:
 - Event dashboard with upcoming/all events, search, status filter, empty state, and responsive New Event actions.
 - Event create/edit/detail/archive flows connected to Supabase.
 - Event status workflow helpers and archive-only destructive action.
+- Participant management inside event details with member search, add/edit/remove, duplicate prevention, archive-only removal, responsive dialogs, and outfit-count placeholders.
+- Vitest unit coverage for participant duplicate/search validation.
 
 ## Documentation
 
