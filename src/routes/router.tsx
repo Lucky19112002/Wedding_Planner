@@ -14,7 +14,7 @@ function page(load: () => Promise<{ default: ComponentType }>) {
   );
 }
 
-export const router = createBrowserRouter([
+const routes = [
   {
     element: <PublicLayout />,
     children: [
@@ -92,4 +92,6 @@ export const router = createBrowserRouter([
     ],
   },
   { path: '*', element: <Navigate to="/" replace /> },
-]);
+];
+
+export const router = createBrowserRouter(routes, { basename: import.meta.env.BASE_URL });

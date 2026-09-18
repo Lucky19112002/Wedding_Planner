@@ -67,26 +67,18 @@ docs(phase-3.3): complete live database
 
 ## Release Workflow
 
-End every completed phase with:
+Production releases merge `dev` into `main` without squashing so phase history remains visible. A push to `main` starts the GitHub Pages workflow, which installs dependencies, runs lint, runs tests, builds the Vite app, uploads the Pages artifact, and deploys the site.
 
-```text
-git add .
-git commit -m "docs(phase-x.y): describe completed phase"
-git push origin dev
-git checkout main
-git merge dev
-git push origin main
-git tag -a vX.Y.Z-name -m "Release vX.Y.Z-name"
-git push origin vX.Y.Z-name
-git checkout dev
-```
+GitHub Pages must use:
 
-Planned tags:
+- **Source:** GitHub Actions
+- **HTTPS:** enforced in repository Pages settings
+- **SPA refresh:** handled by the workflow copying `dist/index.html` to `dist/404.html`
+- **Custom domain:** add a `CNAME` file and set the domain in Pages settings when needed
 
-- `v0.3.3-live-backend`
-- `v0.4.0-react-foundation`
-- `v0.5.0-business-modules`
-- `v1.0.0-production-ready`
+Stable release tag:
+
+- `v1.0.0-stable`
 
 ## Roadmap
 

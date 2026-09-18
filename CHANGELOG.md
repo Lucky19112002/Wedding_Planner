@@ -2,6 +2,39 @@
 
 Newest entries first. This root changelog records repository and release milestones. Detailed product documentation changes remain in `/docs`.
 
+## [v1.0.0-stable] - 2026-09-18
+
+### Added
+
+- GitHub Pages CI/CD workflow for production deployment from `main`.
+- Vite repository-base configuration for GitHub Pages asset paths.
+- SPA refresh fallback through `404.html` artifact generation.
+- Stable release documentation for Wedding Planner v1.0.0.
+
+### Released
+
+- Dashboard
+- Invitations
+- User Management
+- Outfit Management
+- Progress Tracking
+- Supabase Integration
+- Mobile-first UI
+- Automated Database Migrations
+
+### Verified
+
+- `pnpm run lint`
+- `pnpm run test`
+- `pnpm run build`
+- GitHub Pages production-base build
+
+### Notes
+
+- No PRD, SDD, DATABASE, MIGRATIONS, SQL schema, or business-rule changes were made.
+
+---
+
 ## [v1.0.0-production-ready] - 2026-09-18
 
 ### Added

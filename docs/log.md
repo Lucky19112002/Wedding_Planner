@@ -4,6 +4,22 @@ Newest entries first. Every document added or changed under `docs/` is recorded 
 
 ---
 
+## 2026-09-18 – Phase 7 GitHub Pages CI/CD & Production Release
+
+- **Status:** Complete
+- **Phase:** 7 – GitHub Pages CI/CD and production release
+- **What changed:**
+  - Added GitHub Actions deployment from `main` to GitHub Pages.
+  - Configured the Vite production base path for repository Pages deployments without hardcoded domains.
+  - Added SPA refresh support by publishing `404.html` with the production artifact.
+  - Documented Pages source, HTTPS, custom domain readiness, and stable release tag flow.
+  - Verified lint, tests, build, and GitHub Pages production-base build.
+  - Did not modify PRD, SDD, DATABASE, MIGRATIONS, SQL schema, or business rules.
+- **Follow from:** [README.md](../README.md), [CHANGELOG.md](../CHANGELOG.md)
+- **Next:** v1.0.0 production operation and future feature planning.
+
+---
+
 ## 2026-09-18 â€“ Phase 6 Performance, Dashboard & Production Polish
 
 - **Status:** Complete
