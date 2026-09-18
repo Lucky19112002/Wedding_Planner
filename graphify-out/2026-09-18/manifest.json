@@ -102,9 +102,9 @@
     "semantic_hash": ""
   },
   "docs/log.md": {
-    "mtime": 1789709006.7757857,
-    "seen": 1789709083.5886028,
-    "ast_hash": "3eee398ea1da5362f0c943365e9a2460",
+    "mtime": 1789713152.711976,
+    "seen": 1789713217.6817868,
+    "ast_hash": "d98d2743fd415c870fa7959e891ca04a",
     "semantic_hash": ""
   },
   "schema/README.md": {
@@ -354,15 +354,15 @@
     "semantic_hash": ""
   },
   "CHANGELOG.md": {
-    "mtime": 1789709006.775318,
-    "seen": 1789709083.588595,
-    "ast_hash": "420729e42c6e8f4d8aa8b14c912df782",
+    "mtime": 1789713152.7109158,
+    "seen": 1789713217.681778,
+    "ast_hash": "71bd584f1708244231545831490ac34c",
     "semantic_hash": ""
   },
   "README.md": {
-    "mtime": 1789709006.7749407,
-    "seen": 1789709083.588595,
-    "ast_hash": "82d9d8b9aa8b4ad298e75db152f5fc49",
+    "mtime": 1789713152.7104025,
+    "seen": 1789713217.681779,
+    "ast_hash": "e1a905cf34454f06eb1c58ba92892d05",
     "semantic_hash": ""
   },
   "index.html": {
@@ -588,9 +588,9 @@
     "semantic_hash": ""
   },
   "src/components/participants/EventParticipantsSection.tsx": {
-    "mtime": 1789710210.2344646,
-    "seen": 1789710648.0163488,
-    "ast_hash": "0fd4c0ed76f087c21ede88d065b7f3cd",
+    "mtime": 1789712967.873531,
+    "seen": 1789713217.6817322,
+    "ast_hash": "ebcf78a668f189c36780541fa29a3e26",
     "semantic_hash": ""
   },
   "src/components/participants/ParticipantAvatar.tsx": {
@@ -636,15 +636,15 @@
     "semantic_hash": ""
   },
   "src/services/participant.service.ts": {
-    "mtime": 1789710082.630983,
-    "seen": 1789710648.016376,
-    "ast_hash": "90642c52b73d3d24655e56f96d24e982",
+    "mtime": 1789713052.7721543,
+    "seen": 1789713217.681762,
+    "ast_hash": "7a6b3b037e5da1dfd958916ec409cb0e",
     "semantic_hash": ""
   },
   "src/store/participantStore.ts": {
-    "mtime": 1789710082.6315408,
-    "seen": 1789710648.0163798,
-    "ast_hash": "b372802c93b1abbf695782f0c19f9463",
+    "mtime": 1789713198.9749615,
+    "seen": 1789713217.681765,
+    "ast_hash": "1d97d5e9cb5468ac509b91d1ac1f8ccd",
     "semantic_hash": ""
   },
   "src/utils/participantValidation.test.ts": {

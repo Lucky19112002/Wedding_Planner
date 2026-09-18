@@ -30,6 +30,45 @@
       "source_location": "L19"
     },
     {
+      "id": "src_components_common_apperrorboundary_apperrorboundaryprops",
+      "label": "AppErrorBoundaryProps",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 14,
+      "community_name": "react",
+      "file_type": "code",
+      "norm_label": "apperrorboundaryprops",
+      "source_file": "src/components/common/AppErrorBoundary.tsx",
+      "source_location": "L4"
+    },
+    {
+      "id": "src_components_common_apperrorboundary_apperrorboundarystate",
+      "label": "AppErrorBoundaryState",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 14,
+      "community_name": "react",
+      "file_type": "code",
+      "norm_label": "apperrorboundarystate",
+      "source_file": "src/components/common/AppErrorBoundary.tsx",
+      "source_location": "L8"
+    },
+    {
+      "id": "src_components_ui_slot_slotprops",
+      "label": "SlotProps",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 14,
+      "community_name": "react",
+      "file_type": "code",
+      "norm_label": "slotprops",
+      "source_file": "src/components/ui/Slot.tsx",
+      "source_location": "L3"
+    },
+    {
       "id": "src_types_auth_authstatus",
       "label": "AuthStatus",
       "_callable": true,
@@ -69,32 +108,6 @@
       "source_location": "L4"
     },
     {
-      "id": "src_components_ui_emptystate_emptystateprops",
-      "label": "EmptyStateProps",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "ui/index.ts",
-      "file_type": "code",
-      "norm_label": "emptystateprops",
-      "source_file": "src/components/ui/EmptyState.tsx",
-      "source_location": "L3"
-    },
-    {
-      "id": "src_components_ui_errorstate_errorstateprops",
-      "label": "ErrorStateProps",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "ui/index.ts",
-      "file_type": "code",
-      "norm_label": "errorstateprops",
-      "source_file": "src/components/ui/ErrorState.tsx",
-      "source_location": "L4"
-    },
-    {
       "id": "src_components_ui_input_inputprops",
       "label": "InputProps",
       "_callable": true,
@@ -119,19 +132,6 @@
       "norm_label": "loaderprops",
       "source_file": "src/components/ui/Loader.tsx",
       "source_location": "L1"
-    },
-    {
-      "id": "src_components_ui_modal_modalprops",
-      "label": "ModalProps",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "ui/index.ts",
-      "file_type": "code",
-      "norm_label": "modalprops",
-      "source_file": "src/components/ui/Modal.tsx",
-      "source_location": "L3"
     },
     {
       "id": "src_components_ui_select_selectprops",
@@ -205,7 +205,7 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 51,
-      "community_name": "react",
+      "community_name": "EventForm.tsx",
       "file_type": "code",
       "norm_label": "eventformprops",
       "source_file": "src/components/events/EventForm.tsx",
@@ -218,37 +218,11 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 51,
-      "community_name": "react",
+      "community_name": "EventForm.tsx",
       "file_type": "code",
       "norm_label": "eventformvalues",
       "source_file": "src/components/events/EventForm.tsx",
       "source_location": "L27"
-    },
-    {
-      "id": "src_components_participants_addparticipantdialog_addparticipantdialogprops",
-      "label": "AddParticipantDialogProps",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 51,
-      "community_name": "react",
-      "file_type": "code",
-      "norm_label": "addparticipantdialogprops",
-      "source_file": "src/components/participants/AddParticipantDialog.tsx",
-      "source_location": "L10"
-    },
-    {
-      "id": "src_components_ui_slot_slotprops",
-      "label": "SlotProps",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 51,
-      "community_name": "react",
-      "file_type": "code",
-      "norm_label": "slotprops",
-      "source_file": "src/components/ui/Slot.tsx",
-      "source_location": "L3"
     },
     {
       "id": "src_pages_loginpage_loginform",
@@ -257,7 +231,7 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 51,
-      "community_name": "react",
+      "community_name": "EventForm.tsx",
       "file_type": "code",
       "norm_label": "loginform",
       "source_file": "src/pages/LoginPage.tsx",
@@ -270,24 +244,11 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 53,
-      "community_name": "ref_components_ui_button",
+      "community_name": "EventParticipantsSection.tsx",
       "file_type": "code",
       "norm_label": "eventparticipantssectionprops",
       "source_file": "src/components/participants/EventParticipantsSection.tsx",
       "source_location": "L13"
-    },
-    {
-      "id": "src_components_participants_participantcard_participantcardprops",
-      "label": "ParticipantCardProps",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 53,
-      "community_name": "ref_components_ui_button",
-      "file_type": "code",
-      "norm_label": "participantcardprops",
-      "source_file": "src/components/participants/ParticipantCard.tsx",
-      "source_location": "L8"
     },
     {
       "id": "src_services_participant_service_membershiprow",
@@ -530,11 +491,50 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 57,
-      "community_name": "ref_types_domain",
+      "community_name": "EventHeader.tsx",
       "file_type": "code",
       "norm_label": "eventheaderprops",
       "source_file": "src/components/events/EventHeader.tsx",
       "source_location": "L7"
+    },
+    {
+      "id": "src_components_ui_emptystate_emptystateprops",
+      "label": "EmptyStateProps",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 61,
+      "community_name": "ref_components_ui_card",
+      "file_type": "code",
+      "norm_label": "emptystateprops",
+      "source_file": "src/components/ui/EmptyState.tsx",
+      "source_location": "L3"
+    },
+    {
+      "id": "src_components_ui_errorstate_errorstateprops",
+      "label": "ErrorStateProps",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 61,
+      "community_name": "ref_components_ui_card",
+      "file_type": "code",
+      "norm_label": "errorstateprops",
+      "source_file": "src/components/ui/ErrorState.tsx",
+      "source_location": "L4"
+    },
+    {
+      "id": "src_components_participants_participantcard_participantcardprops",
+      "label": "ParticipantCardProps",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 62,
+      "community_name": "ParticipantCard.tsx",
+      "file_type": "code",
+      "norm_label": "participantcardprops",
+      "source_file": "src/components/participants/ParticipantCard.tsx",
+      "source_location": "L8"
     },
     {
       "id": "src_components_events_archivedialog_archivedialogprops",
@@ -569,37 +569,11 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 64,
-      "community_name": "AppErrorBoundary.tsx",
+      "community_name": "AppErrorBoundary",
       "file_type": "code",
       "norm_label": "apperrorboundary",
       "source_file": "src/components/common/AppErrorBoundary.tsx",
       "source_location": "L12"
-    },
-    {
-      "id": "src_components_common_apperrorboundary_apperrorboundaryprops",
-      "label": "AppErrorBoundaryProps",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 64,
-      "community_name": "AppErrorBoundary.tsx",
-      "file_type": "code",
-      "norm_label": "apperrorboundaryprops",
-      "source_file": "src/components/common/AppErrorBoundary.tsx",
-      "source_location": "L4"
-    },
-    {
-      "id": "src_components_common_apperrorboundary_apperrorboundarystate",
-      "label": "AppErrorBoundaryState",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 64,
-      "community_name": "AppErrorBoundary.tsx",
-      "file_type": "code",
-      "norm_label": "apperrorboundarystate",
-      "source_file": "src/components/common/AppErrorBoundary.tsx",
-      "source_location": "L8"
     },
     {
       "id": "src_components_participants_participantemptystate_participantemptystateprops",
@@ -608,11 +582,37 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 66,
-      "community_name": "EventEmptyState.tsx",
+      "community_name": "ref_components_ui_button",
       "file_type": "code",
       "norm_label": "participantemptystateprops",
       "source_file": "src/components/participants/ParticipantEmptyState.tsx",
       "source_location": "L4"
+    },
+    {
+      "id": "src_components_ui_modal_modalprops",
+      "label": "ModalProps",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 66,
+      "community_name": "ref_components_ui_button",
+      "file_type": "code",
+      "norm_label": "modalprops",
+      "source_file": "src/components/ui/Modal.tsx",
+      "source_location": "L3"
+    },
+    {
+      "id": "src_components_participants_addparticipantdialog_addparticipantdialogprops",
+      "label": "AddParticipantDialogProps",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 68,
+      "community_name": "AddParticipantDialog.tsx",
+      "file_type": "code",
+      "norm_label": "addparticipantdialogprops",
+      "source_file": "src/components/participants/AddParticipantDialog.tsx",
+      "source_location": "L10"
     },
     {
       "id": "src_components_participants_participantlist_participantlistprops",
@@ -621,7 +621,7 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 70,
-      "community_name": "ParticipantList.tsx",
+      "community_name": "participants/index.ts",
       "file_type": "code",
       "norm_label": "participantlistprops",
       "source_file": "src/components/participants/ParticipantList.tsx",
@@ -910,16 +910,16 @@
       "source_location": "L112"
     },
     {
-      "id": "src_layouts_publiclayout_publiclayout",
-      "label": "PublicLayout()",
+      "id": "src_components_ui_slot_slot",
+      "label": "Slot()",
       "_callable": true,
       "_origin": "ast",
       "community": 14,
-      "community_name": "react-router-dom",
+      "community_name": "react",
       "file_type": "code",
-      "norm_label": "publiclayout()",
-      "source_file": "src/layouts/PublicLayout.tsx",
-      "source_location": "L3"
+      "norm_label": "slot()",
+      "source_file": "src/components/ui/Slot.tsx",
+      "source_location": "L7"
     },
     {
       "id": "src_pages_events_eventcreatepage_eventcreatepage",
@@ -927,7 +927,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 14,
-      "community_name": "react-router-dom",
+      "community_name": "react",
       "file_type": "code",
       "norm_label": "eventcreatepage()",
       "source_file": "src/pages/events/EventCreatePage.tsx",
@@ -939,7 +939,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 14,
-      "community_name": "react-router-dom",
+      "community_name": "react",
       "file_type": "code",
       "norm_label": "handlesubmit()",
       "source_file": "src/pages/events/EventCreatePage.tsx",
@@ -951,7 +951,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 14,
-      "community_name": "react-router-dom",
+      "community_name": "react",
       "file_type": "code",
       "norm_label": "eventdetailpage()",
       "source_file": "src/pages/events/EventDetailPage.tsx",
@@ -963,7 +963,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 14,
-      "community_name": "react-router-dom",
+      "community_name": "react",
       "file_type": "code",
       "norm_label": "handlearchive()",
       "source_file": "src/pages/events/EventDetailPage.tsx",
@@ -975,7 +975,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 14,
-      "community_name": "react-router-dom",
+      "community_name": "react",
       "file_type": "code",
       "norm_label": "eventeditpage()",
       "source_file": "src/pages/events/EventEditPage.tsx",
@@ -987,7 +987,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 14,
-      "community_name": "react-router-dom",
+      "community_name": "react",
       "file_type": "code",
       "norm_label": "handlesubmit()",
       "source_file": "src/pages/events/EventEditPage.tsx",
@@ -999,7 +999,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 14,
-      "community_name": "react-router-dom",
+      "community_name": "react",
       "file_type": "code",
       "norm_label": "eventspage()",
       "source_file": "src/pages/events/EventsPage.tsx",
@@ -1066,30 +1066,6 @@
       "source_location": "L3"
     },
     {
-      "id": "src_components_ui_emptystate_emptystate",
-      "label": "EmptyState()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "ui/index.ts",
-      "file_type": "code",
-      "norm_label": "emptystate()",
-      "source_file": "src/components/ui/EmptyState.tsx",
-      "source_location": "L9"
-    },
-    {
-      "id": "src_components_ui_errorstate_errorstate",
-      "label": "ErrorState()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "ui/index.ts",
-      "file_type": "code",
-      "norm_label": "errorstate()",
-      "source_file": "src/components/ui/ErrorState.tsx",
-      "source_location": "L10"
-    },
-    {
       "id": "src_components_ui_loader_loader",
       "label": "Loader()",
       "_callable": true,
@@ -1100,18 +1076,6 @@
       "norm_label": "loader()",
       "source_file": "src/components/ui/Loader.tsx",
       "source_location": "L5"
-    },
-    {
-      "id": "src_components_ui_modal_modal",
-      "label": "Modal()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "ui/index.ts",
-      "file_type": "code",
-      "norm_label": "modal()",
-      "source_file": "src/components/ui/Modal.tsx",
-      "source_location": "L10"
     },
     {
       "id": "src_app_providers_authprovider_authprovider",
@@ -1263,7 +1227,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 51,
-      "community_name": "react",
+      "community_name": "EventForm.tsx",
       "file_type": "code",
       "norm_label": "eventform()",
       "source_file": "src/components/events/EventForm.tsx",
@@ -1275,7 +1239,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 51,
-      "community_name": "react",
+      "community_name": "EventForm.tsx",
       "file_type": "code",
       "norm_label": "handlesubmit()",
       "source_file": "src/components/events/EventForm.tsx",
@@ -1287,47 +1251,11 @@
       "_callable": true,
       "_origin": "ast",
       "community": 51,
-      "community_name": "react",
+      "community_name": "EventForm.tsx",
       "file_type": "code",
       "norm_label": "tovalues()",
       "source_file": "src/components/events/EventForm.tsx",
       "source_location": "L37"
-    },
-    {
-      "id": "src_components_participants_addparticipantdialog_addparticipantdialog",
-      "label": "AddParticipantDialog()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 51,
-      "community_name": "react",
-      "file_type": "code",
-      "norm_label": "addparticipantdialog()",
-      "source_file": "src/components/participants/AddParticipantDialog.tsx",
-      "source_location": "L25"
-    },
-    {
-      "id": "src_components_participants_addparticipantdialog_addparticipantdialog_handlesubmit",
-      "label": "handleSubmit()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 51,
-      "community_name": "react",
-      "file_type": "code",
-      "norm_label": "handlesubmit()",
-      "source_file": "src/components/participants/AddParticipantDialog.tsx",
-      "source_location": "L45"
-    },
-    {
-      "id": "src_components_ui_slot_slot",
-      "label": "Slot()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 51,
-      "community_name": "react",
-      "file_type": "code",
-      "norm_label": "slot()",
-      "source_file": "src/components/ui/Slot.tsx",
-      "source_location": "L7"
     },
     {
       "id": "src_pages_loginpage_loginpage",
@@ -1335,7 +1263,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 51,
-      "community_name": "react",
+      "community_name": "EventForm.tsx",
       "file_type": "code",
       "norm_label": "loginpage()",
       "source_file": "src/pages/LoginPage.tsx",
@@ -1347,35 +1275,23 @@
       "_callable": true,
       "_origin": "ast",
       "community": 51,
-      "community_name": "react",
+      "community_name": "EventForm.tsx",
       "file_type": "code",
       "norm_label": "onsubmit()",
       "source_file": "src/pages/LoginPage.tsx",
       "source_location": "L30"
     },
     {
-      "id": "src_components_participants_participantavatar_participantavatar",
-      "label": "ParticipantAvatar()",
+      "id": "src_components_ui_unauthorizedstate_unauthorizedstate",
+      "label": "UnauthorizedState()",
       "_callable": true,
       "_origin": "ast",
       "community": 52,
       "community_name": "AppLayout.tsx",
       "file_type": "code",
-      "norm_label": "participantavatar()",
-      "source_file": "src/components/participants/ParticipantAvatar.tsx",
-      "source_location": "L3"
-    },
-    {
-      "id": "src_components_participants_participantrolebadge_participantrolebadge",
-      "label": "ParticipantRoleBadge()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 52,
-      "community_name": "AppLayout.tsx",
-      "file_type": "code",
-      "norm_label": "participantrolebadge()",
-      "source_file": "src/components/participants/ParticipantRoleBadge.tsx",
-      "source_location": "L10"
+      "norm_label": "unauthorizedstate()",
+      "source_file": "src/components/ui/UnauthorizedState.tsx",
+      "source_location": "L5"
     },
     {
       "id": "src_hooks_usepermission_usepermission",
@@ -1426,40 +1342,64 @@
       "source_location": "L8"
     },
     {
-      "id": "src_components_participants_participantcard_participantcard",
-      "label": "ParticipantCard()",
+      "id": "src_components_participants_eventparticipantssection_eventparticipantssection",
+      "label": "EventParticipantsSection()",
       "_callable": true,
       "_origin": "ast",
       "community": 53,
-      "community_name": "ref_components_ui_button",
+      "community_name": "EventParticipantsSection.tsx",
       "file_type": "code",
-      "norm_label": "participantcard()",
-      "source_file": "src/components/participants/ParticipantCard.tsx",
-      "source_location": "L15"
+      "norm_label": "eventparticipantssection()",
+      "source_file": "src/components/participants/EventParticipantsSection.tsx",
+      "source_location": "L19"
     },
     {
-      "id": "src_components_ui_unauthorizedstate_unauthorizedstate",
-      "label": "UnauthorizedState()",
+      "id": "src_components_participants_eventparticipantssection_eventparticipantssection_handlechanged",
+      "label": "handleChanged()",
       "_callable": true,
       "_origin": "ast",
       "community": 53,
-      "community_name": "ref_components_ui_button",
+      "community_name": "EventParticipantsSection.tsx",
       "file_type": "code",
-      "norm_label": "unauthorizedstate()",
-      "source_file": "src/components/ui/UnauthorizedState.tsx",
-      "source_location": "L5"
+      "norm_label": "handlechanged()",
+      "source_file": "src/components/participants/EventParticipantsSection.tsx",
+      "source_location": "L61"
     },
     {
-      "id": "src_pages_publichomepage_publichomepage",
-      "label": "PublicHomePage()",
+      "id": "src_components_participants_eventparticipantssection_eventparticipantssection_handleremove",
+      "label": "handleRemove()",
       "_callable": true,
       "_origin": "ast",
       "community": 53,
-      "community_name": "ref_components_ui_button",
+      "community_name": "EventParticipantsSection.tsx",
       "file_type": "code",
-      "norm_label": "publichomepage()",
-      "source_file": "src/pages/PublicHomePage.tsx",
-      "source_location": "L5"
+      "norm_label": "handleremove()",
+      "source_file": "src/components/participants/EventParticipantsSection.tsx",
+      "source_location": "L54"
+    },
+    {
+      "id": "src_components_participants_eventparticipantssection_eventparticipantssection_openadddialog",
+      "label": "openAddDialog()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 53,
+      "community_name": "EventParticipantsSection.tsx",
+      "file_type": "code",
+      "norm_label": "openadddialog()",
+      "source_file": "src/components/participants/EventParticipantsSection.tsx",
+      "source_location": "L42"
+    },
+    {
+      "id": "src_components_participants_eventparticipantssection_eventparticipantssection_openeditdialog",
+      "label": "openEditDialog()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 53,
+      "community_name": "EventParticipantsSection.tsx",
+      "file_type": "code",
+      "norm_label": "openeditdialog()",
+      "source_file": "src/components/participants/EventParticipantsSection.tsx",
+      "source_location": "L48"
     },
     {
       "id": "src_services_participant_service_addparticipant",
@@ -1471,7 +1411,7 @@
       "file_type": "code",
       "norm_label": "addparticipant()",
       "source_file": "src/services/participant.service.ts",
-      "source_location": "L173"
+      "source_location": "L183"
     },
     {
       "id": "src_services_participant_service_archiveparticipant",
@@ -1483,7 +1423,7 @@
       "file_type": "code",
       "norm_label": "archiveparticipant()",
       "source_file": "src/services/participant.service.ts",
-      "source_location": "L250"
+      "source_location": "L260"
     },
     {
       "id": "src_services_participant_service_byid",
@@ -1510,6 +1450,18 @@
       "source_location": "L41"
     },
     {
+      "id": "src_services_participant_service_geteventparticipantuserids",
+      "label": "getEventParticipantUserIds()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 54,
+      "community_name": "participant.service.ts",
+      "file_type": "code",
+      "norm_label": "geteventparticipantuserids()",
+      "source_file": "src/services/participant.service.ts",
+      "source_location": "L97"
+    },
+    {
       "id": "src_services_participant_service_getmembershiproles",
       "label": "getMembershipRoles()",
       "_callable": true,
@@ -1531,7 +1483,7 @@
       "file_type": "code",
       "norm_label": "getparticipantcandidates()",
       "source_file": "src/services/participant.service.ts",
-      "source_location": "L136"
+      "source_location": "L147"
     },
     {
       "id": "src_services_participant_service_getparticipants",
@@ -1543,7 +1495,7 @@
       "file_type": "code",
       "norm_label": "getparticipants()",
       "source_file": "src/services/participant.service.ts",
-      "source_location": "L97"
+      "source_location": "L108"
     },
     {
       "id": "src_services_participant_service_getprofiles",
@@ -1579,7 +1531,7 @@
       "file_type": "code",
       "norm_label": "updateparticipant()",
       "source_file": "src/services/participant.service.ts",
-      "source_location": "L210"
+      "source_location": "L220"
     },
     {
       "id": "src_components_events_eventcard_eventcard",
@@ -1587,7 +1539,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 57,
-      "community_name": "ref_types_domain",
+      "community_name": "EventHeader.tsx",
       "file_type": "code",
       "norm_label": "eventcard()",
       "source_file": "src/components/events/EventCard.tsx",
@@ -1599,7 +1551,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 57,
-      "community_name": "ref_types_domain",
+      "community_name": "EventHeader.tsx",
       "file_type": "code",
       "norm_label": "eventheader()",
       "source_file": "src/components/events/EventHeader.tsx",
@@ -1611,7 +1563,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 57,
-      "community_name": "ref_types_domain",
+      "community_name": "EventHeader.tsx",
       "file_type": "code",
       "norm_label": "eventlist()",
       "source_file": "src/components/events/EventList.tsx",
@@ -1622,7 +1574,7 @@
       "label": "EventStatusBadge()",
       "_callable": true,
       "_origin": "ast",
-      "community": 57,
+      "community": 59,
       "community_name": "ref_types_domain",
       "file_type": "code",
       "norm_label": "eventstatusbadge()",
@@ -1634,7 +1586,7 @@
       "label": "EventTimeline()",
       "_callable": true,
       "_origin": "ast",
-      "community": 57,
+      "community": 59,
       "community_name": "ref_types_domain",
       "file_type": "code",
       "norm_label": "eventtimeline()",
@@ -1642,47 +1594,11 @@
       "source_location": "L5"
     },
     {
-      "id": "src_utils_eventformat_formatdatetime",
-      "label": "formatDateTime()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 57,
-      "community_name": "ref_types_domain",
-      "file_type": "code",
-      "norm_label": "formatdatetime()",
-      "source_file": "src/utils/eventFormat.ts",
-      "source_location": "L18"
-    },
-    {
-      "id": "src_utils_eventformat_formateventdate",
-      "label": "formatEventDate()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 57,
-      "community_name": "ref_types_domain",
-      "file_type": "code",
-      "norm_label": "formateventdate()",
-      "source_file": "src/utils/eventFormat.ts",
-      "source_location": "L3"
-    },
-    {
-      "id": "src_utils_eventformat_formateventtime",
-      "label": "formatEventTime()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 57,
-      "community_name": "ref_types_domain",
-      "file_type": "code",
-      "norm_label": "formateventtime()",
-      "source_file": "src/utils/eventFormat.ts",
-      "source_location": "L12"
-    },
-    {
       "id": "src_utils_participantvalidation_getavailablecandidates",
       "label": "getAvailableCandidates()",
       "_callable": true,
       "_origin": "ast",
-      "community": 57,
+      "community": 59,
       "community_name": "ref_types_domain",
       "file_type": "code",
       "norm_label": "getavailablecandidates()",
@@ -1694,7 +1610,7 @@
       "label": "isDuplicateParticipant()",
       "_callable": true,
       "_origin": "ast",
-      "community": 57,
+      "community": 59,
       "community_name": "ref_types_domain",
       "file_type": "code",
       "norm_label": "isduplicateparticipant()",
@@ -1750,6 +1666,54 @@
       "source_location": "L14"
     },
     {
+      "id": "src_components_ui_emptystate_emptystate",
+      "label": "EmptyState()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 61,
+      "community_name": "ref_components_ui_card",
+      "file_type": "code",
+      "norm_label": "emptystate()",
+      "source_file": "src/components/ui/EmptyState.tsx",
+      "source_location": "L9"
+    },
+    {
+      "id": "src_components_ui_errorstate_errorstate",
+      "label": "ErrorState()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 61,
+      "community_name": "ref_components_ui_card",
+      "file_type": "code",
+      "norm_label": "errorstate()",
+      "source_file": "src/components/ui/ErrorState.tsx",
+      "source_location": "L10"
+    },
+    {
+      "id": "src_pages_publichomepage_publichomepage",
+      "label": "PublicHomePage()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 61,
+      "community_name": "ref_components_ui_card",
+      "file_type": "code",
+      "norm_label": "publichomepage()",
+      "source_file": "src/pages/PublicHomePage.tsx",
+      "source_location": "L5"
+    },
+    {
+      "id": "src_components_participants_participantcard_participantcard",
+      "label": "ParticipantCard()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 62,
+      "community_name": "ParticipantCard.tsx",
+      "file_type": "code",
+      "norm_label": "participantcard()",
+      "source_file": "src/components/participants/ParticipantCard.tsx",
+      "source_location": "L15"
+    },
+    {
       "id": "src_components_events_archivedialog_archivedialog",
       "label": "ArchiveDialog()",
       "_callable": true,
@@ -1779,7 +1743,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 64,
-      "community_name": "AppErrorBoundary.tsx",
+      "community_name": "AppErrorBoundary",
       "file_type": "code",
       "norm_label": ".componentdidcatch()",
       "source_file": "src/components/common/AppErrorBoundary.tsx",
@@ -1791,7 +1755,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 64,
-      "community_name": "AppErrorBoundary.tsx",
+      "community_name": "AppErrorBoundary",
       "file_type": "code",
       "norm_label": ".getderivedstatefromerror()",
       "source_file": "src/components/common/AppErrorBoundary.tsx",
@@ -1803,7 +1767,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 64,
-      "community_name": "AppErrorBoundary.tsx",
+      "community_name": "AppErrorBoundary",
       "file_type": "code",
       "norm_label": ".render()",
       "source_file": "src/components/common/AppErrorBoundary.tsx",
@@ -1851,7 +1815,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 66,
-      "community_name": "EventEmptyState.tsx",
+      "community_name": "ref_components_ui_button",
       "file_type": "code",
       "norm_label": "eventemptystate()",
       "source_file": "src/components/events/EventEmptyState.tsx",
@@ -1863,11 +1827,23 @@
       "_callable": true,
       "_origin": "ast",
       "community": 66,
-      "community_name": "EventEmptyState.tsx",
+      "community_name": "ref_components_ui_button",
       "file_type": "code",
       "norm_label": "participantemptystate()",
       "source_file": "src/components/participants/ParticipantEmptyState.tsx",
       "source_location": "L9"
+    },
+    {
+      "id": "src_components_ui_modal_modal",
+      "label": "Modal()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 66,
+      "community_name": "ref_components_ui_button",
+      "file_type": "code",
+      "norm_label": "modal()",
+      "source_file": "src/components/ui/Modal.tsx",
+      "source_location": "L10"
     },
     {
       "id": "src_app_app_app",
@@ -1875,71 +1851,59 @@
       "_callable": true,
       "_origin": "ast",
       "community": 67,
-      "community_name": "App.tsx",
+      "community_name": "react-router-dom",
       "file_type": "code",
       "norm_label": "app()",
       "source_file": "src/app/App.tsx",
       "source_location": "L6"
     },
     {
-      "id": "src_components_participants_eventparticipantssection_eventparticipantssection",
-      "label": "EventParticipantsSection()",
+      "id": "src_layouts_publiclayout_publiclayout",
+      "label": "PublicLayout()",
       "_callable": true,
       "_origin": "ast",
-      "community": 69,
-      "community_name": "EventParticipantsSection",
+      "community": 67,
+      "community_name": "react-router-dom",
       "file_type": "code",
-      "norm_label": "eventparticipantssection()",
-      "source_file": "src/components/participants/EventParticipantsSection.tsx",
-      "source_location": "L19"
+      "norm_label": "publiclayout()",
+      "source_file": "src/layouts/PublicLayout.tsx",
+      "source_location": "L3"
     },
     {
-      "id": "src_components_participants_eventparticipantssection_eventparticipantssection_handlechanged",
-      "label": "handleChanged()",
+      "id": "src_components_participants_addparticipantdialog_addparticipantdialog",
+      "label": "AddParticipantDialog()",
       "_callable": true,
       "_origin": "ast",
-      "community": 69,
-      "community_name": "EventParticipantsSection",
+      "community": 68,
+      "community_name": "AddParticipantDialog.tsx",
       "file_type": "code",
-      "norm_label": "handlechanged()",
-      "source_file": "src/components/participants/EventParticipantsSection.tsx",
-      "source_location": "L61"
+      "norm_label": "addparticipantdialog()",
+      "source_file": "src/components/participants/AddParticipantDialog.tsx",
+      "source_location": "L25"
     },
     {
-      "id": "src_components_participants_eventparticipantssection_eventparticipantssection_handleremove",
-      "label": "handleRemove()",
+      "id": "src_components_participants_addparticipantdialog_addparticipantdialog_handlesubmit",
+      "label": "handleSubmit()",
       "_callable": true,
       "_origin": "ast",
-      "community": 69,
-      "community_name": "EventParticipantsSection",
+      "community": 68,
+      "community_name": "AddParticipantDialog.tsx",
       "file_type": "code",
-      "norm_label": "handleremove()",
-      "source_file": "src/components/participants/EventParticipantsSection.tsx",
-      "source_location": "L54"
+      "norm_label": "handlesubmit()",
+      "source_file": "src/components/participants/AddParticipantDialog.tsx",
+      "source_location": "L45"
     },
     {
-      "id": "src_components_participants_eventparticipantssection_eventparticipantssection_openadddialog",
-      "label": "openAddDialog()",
+      "id": "src_components_participants_participantavatar_participantavatar",
+      "label": "ParticipantAvatar()",
       "_callable": true,
       "_origin": "ast",
-      "community": 69,
-      "community_name": "EventParticipantsSection",
+      "community": 70,
+      "community_name": "participants/index.ts",
       "file_type": "code",
-      "norm_label": "openadddialog()",
-      "source_file": "src/components/participants/EventParticipantsSection.tsx",
-      "source_location": "L42"
-    },
-    {
-      "id": "src_components_participants_eventparticipantssection_eventparticipantssection_openeditdialog",
-      "label": "openEditDialog()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 69,
-      "community_name": "EventParticipantsSection",
-      "file_type": "code",
-      "norm_label": "openeditdialog()",
-      "source_file": "src/components/participants/EventParticipantsSection.tsx",
-      "source_location": "L48"
+      "norm_label": "participantavatar()",
+      "source_file": "src/components/participants/ParticipantAvatar.tsx",
+      "source_location": "L3"
     },
     {
       "id": "src_components_participants_participantlist_participantlist",
@@ -1947,11 +1911,59 @@
       "_callable": true,
       "_origin": "ast",
       "community": 70,
-      "community_name": "ParticipantList.tsx",
+      "community_name": "participants/index.ts",
       "file_type": "code",
       "norm_label": "participantlist()",
       "source_file": "src/components/participants/ParticipantList.tsx",
       "source_location": "L11"
+    },
+    {
+      "id": "src_components_participants_participantrolebadge_participantrolebadge",
+      "label": "ParticipantRoleBadge()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 70,
+      "community_name": "participants/index.ts",
+      "file_type": "code",
+      "norm_label": "participantrolebadge()",
+      "source_file": "src/components/participants/ParticipantRoleBadge.tsx",
+      "source_location": "L10"
+    },
+    {
+      "id": "src_utils_eventformat_formatdatetime",
+      "label": "formatDateTime()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 71,
+      "community_name": "eventFormat.ts",
+      "file_type": "code",
+      "norm_label": "formatdatetime()",
+      "source_file": "src/utils/eventFormat.ts",
+      "source_location": "L18"
+    },
+    {
+      "id": "src_utils_eventformat_formateventdate",
+      "label": "formatEventDate()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 71,
+      "community_name": "eventFormat.ts",
+      "file_type": "code",
+      "norm_label": "formateventdate()",
+      "source_file": "src/utils/eventFormat.ts",
+      "source_location": "L3"
+    },
+    {
+      "id": "src_utils_eventformat_formateventtime",
+      "label": "formatEventTime()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 71,
+      "community_name": "eventFormat.ts",
+      "file_type": "code",
+      "norm_label": "formateventtime()",
+      "source_file": "src/utils/eventFormat.ts",
+      "source_location": "L12"
     },
     {
       "id": "src_store_eventstore_geterrormessage",
@@ -1975,7 +1987,7 @@
       "file_type": "code",
       "norm_label": "geterrormessage()",
       "source_file": "src/store/participantStore.ts",
-      "source_location": "L34"
+      "source_location": "L32"
     },
     {
       "id": "completedprocess",
@@ -2011,6 +2023,54 @@
       "source_location": "L1"
     },
     {
+      "id": "changelog_added_100",
+      "label": "Added",
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "migrate.py",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "added",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L100"
+    },
+    {
+      "id": "changelog_changed_106",
+      "label": "Changed",
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "migrate.py",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "changed",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L106"
+    },
+    {
+      "id": "changelog_security",
+      "label": "Security",
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "migrate.py",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "security",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L110"
+    },
+    {
+      "id": "changelog_v0_3_4_repository_workflow_2026_09_18",
+      "label": "[v0.3.4-repository-workflow] - 2026-09-18",
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "migrate.py",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "[v0.3.4-repository-workflow] - 2026-09-18",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L98"
+    },
+    {
       "id": "readme_architecture",
       "label": "Architecture",
       "_origin": "ast",
@@ -2032,7 +2092,7 @@
       "node_kind": "heading",
       "norm_label": "branch workflow",
       "source_file": "README.md",
-      "source_location": "L49"
+      "source_location": "L50"
     },
     {
       "id": "readme_commit_convention",
@@ -2044,7 +2104,7 @@
       "node_kind": "heading",
       "norm_label": "commit convention",
       "source_file": "README.md",
-      "source_location": "L56"
+      "source_location": "L57"
     },
     {
       "id": "readme_current_app_surface",
@@ -2056,7 +2116,7 @@
       "node_kind": "heading",
       "norm_label": "current app surface",
       "source_file": "README.md",
-      "source_location": "L96"
+      "source_location": "L98"
     },
     {
       "id": "readme_documentation",
@@ -2068,7 +2128,7 @@
       "node_kind": "heading",
       "norm_label": "documentation",
       "source_file": "README.md",
-      "source_location": "L108"
+      "source_location": "L112"
     },
     {
       "id": "readme_folder_structure",
@@ -2092,7 +2152,7 @@
       "node_kind": "heading",
       "norm_label": "release workflow",
       "source_file": "README.md",
-      "source_location": "L67"
+      "source_location": "L68"
     },
     {
       "id": "readme_roadmap",
@@ -2104,7 +2164,7 @@
       "node_kind": "heading",
       "norm_label": "roadmap",
       "source_file": "README.md",
-      "source_location": "L89"
+      "source_location": "L90"
     },
     {
       "id": "readme_setup",
@@ -2153,19 +2213,7 @@
       "source_location": "L1"
     },
     {
-      "id": "changelog",
-      "label": "CHANGELOG.md",
-      "_origin": "ast",
-      "community": 10,
-      "community_name": "event.service.ts",
-      "file_type": "document",
-      "node_kind": "page",
-      "norm_label": "changelog.md",
-      "source_file": "CHANGELOG.md",
-      "source_location": "L1"
-    },
-    {
-      "id": "changelog_added",
+      "id": "changelog_added_36",
       "label": "Added",
       "_origin": "ast",
       "community": 10,
@@ -2174,46 +2222,10 @@
       "node_kind": "heading",
       "norm_label": "added",
       "source_file": "CHANGELOG.md",
-      "source_location": "L7"
+      "source_location": "L36"
     },
     {
-      "id": "changelog_added_31",
-      "label": "Added",
-      "_origin": "ast",
-      "community": 10,
-      "community_name": "event.service.ts",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "added",
-      "source_file": "CHANGELOG.md",
-      "source_location": "L31"
-    },
-    {
-      "id": "changelog_added_54",
-      "label": "Added",
-      "_origin": "ast",
-      "community": 10,
-      "community_name": "event.service.ts",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "added",
-      "source_file": "CHANGELOG.md",
-      "source_location": "L54"
-    },
-    {
-      "id": "changelog_added_71",
-      "label": "Added",
-      "_origin": "ast",
-      "community": 10,
-      "community_name": "event.service.ts",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "added",
-      "source_file": "CHANGELOG.md",
-      "source_location": "L71"
-    },
-    {
-      "id": "changelog_changed",
+      "id": "changelog_changed_44",
       "label": "Changed",
       "_origin": "ast",
       "community": 10,
@@ -2222,103 +2234,7 @@
       "node_kind": "heading",
       "norm_label": "changed",
       "source_file": "CHANGELOG.md",
-      "source_location": "L15"
-    },
-    {
-      "id": "changelog_changed_40",
-      "label": "Changed",
-      "_origin": "ast",
-      "community": 10,
-      "community_name": "event.service.ts",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "changed",
-      "source_file": "CHANGELOG.md",
-      "source_location": "L40"
-    },
-    {
-      "id": "changelog_changed_63",
-      "label": "Changed",
-      "_origin": "ast",
-      "community": 10,
-      "community_name": "event.service.ts",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "changed",
-      "source_file": "CHANGELOG.md",
-      "source_location": "L63"
-    },
-    {
-      "id": "changelog_changed_77",
-      "label": "Changed",
-      "_origin": "ast",
-      "community": 10,
-      "community_name": "event.service.ts",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "changed",
-      "source_file": "CHANGELOG.md",
-      "source_location": "L77"
-    },
-    {
-      "id": "changelog_changelog",
-      "label": "Changelog",
-      "_origin": "ast",
-      "community": 10,
-      "community_name": "event.service.ts",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "changelog",
-      "source_file": "CHANGELOG.md",
-      "source_location": "L1"
-    },
-    {
-      "id": "changelog_security",
-      "label": "Security",
-      "_origin": "ast",
-      "community": 10,
-      "community_name": "event.service.ts",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "security",
-      "source_file": "CHANGELOG.md",
-      "source_location": "L81"
-    },
-    {
-      "id": "changelog_v0_3_4_repository_workflow_2026_09_18",
-      "label": "[v0.3.4-repository-workflow] - 2026-09-18",
-      "_origin": "ast",
-      "community": 10,
-      "community_name": "event.service.ts",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "[v0.3.4-repository-workflow] - 2026-09-18",
-      "source_file": "CHANGELOG.md",
-      "source_location": "L69"
-    },
-    {
-      "id": "changelog_v0_4_0_react_foundation_2026_09_18",
-      "label": "[v0.4.0-react-foundation] - 2026-09-18",
-      "_origin": "ast",
-      "community": 10,
-      "community_name": "event.service.ts",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "[v0.4.0-react-foundation] - 2026-09-18",
-      "source_file": "CHANGELOG.md",
-      "source_location": "L52"
-    },
-    {
-      "id": "changelog_v0_5_1_user_wedding_membership_2026_09_18",
-      "label": "[v0.5.1-user-wedding-membership] - 2026-09-18",
-      "_origin": "ast",
-      "community": 10,
-      "community_name": "event.service.ts",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "[v0.5.1-user-wedding-membership] - 2026-09-18",
-      "source_file": "CHANGELOG.md",
-      "source_location": "L29"
+      "source_location": "L44"
     },
     {
       "id": "changelog_v0_5_2_event_management_2026_09_18",
@@ -2330,10 +2246,10 @@
       "node_kind": "heading",
       "norm_label": "[v0.5.2-event-management] - 2026-09-18",
       "source_file": "CHANGELOG.md",
-      "source_location": "L5"
+      "source_location": "L34"
     },
     {
-      "id": "changelog_verified",
+      "id": "changelog_verified_49",
       "label": "Verified",
       "_origin": "ast",
       "community": 10,
@@ -2342,19 +2258,7 @@
       "node_kind": "heading",
       "norm_label": "verified",
       "source_file": "CHANGELOG.md",
-      "source_location": "L20"
-    },
-    {
-      "id": "changelog_verified_45",
-      "label": "Verified",
-      "_origin": "ast",
-      "community": 10,
-      "community_name": "event.service.ts",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "verified",
-      "source_file": "CHANGELOG.md",
-      "source_location": "L45"
+      "source_location": "L49"
     },
     {
       "id": "public_handle_new_user",
@@ -3006,14 +2910,25 @@
       "source_location": "L438"
     },
     {
-      "id": "src_layouts_publiclayout",
-      "label": "PublicLayout.tsx",
+      "id": "src_components_common_apperrorboundary",
+      "label": "AppErrorBoundary.tsx",
       "_origin": "ast",
       "community": 14,
-      "community_name": "react-router-dom",
+      "community_name": "react",
       "file_type": "code",
-      "norm_label": "publiclayout.tsx",
-      "source_file": "src/layouts/PublicLayout.tsx",
+      "norm_label": "apperrorboundary.tsx",
+      "source_file": "src/components/common/AppErrorBoundary.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_components_ui_slot",
+      "label": "Slot.tsx",
+      "_origin": "ast",
+      "community": 14,
+      "community_name": "react",
+      "file_type": "code",
+      "norm_label": "slot.tsx",
+      "source_file": "src/components/ui/Slot.tsx",
       "source_location": "L1"
     },
     {
@@ -3021,7 +2936,7 @@
       "label": "EventCreatePage.tsx",
       "_origin": "ast",
       "community": 14,
-      "community_name": "react-router-dom",
+      "community_name": "react",
       "file_type": "code",
       "norm_label": "eventcreatepage.tsx",
       "source_file": "src/pages/events/EventCreatePage.tsx",
@@ -3032,7 +2947,7 @@
       "label": "EventDetailPage.tsx",
       "_origin": "ast",
       "community": 14,
-      "community_name": "react-router-dom",
+      "community_name": "react",
       "file_type": "code",
       "norm_label": "eventdetailpage.tsx",
       "source_file": "src/pages/events/EventDetailPage.tsx",
@@ -3043,7 +2958,7 @@
       "label": "EventEditPage.tsx",
       "_origin": "ast",
       "community": 14,
-      "community_name": "react-router-dom",
+      "community_name": "react",
       "file_type": "code",
       "norm_label": "eventeditpage.tsx",
       "source_file": "src/pages/events/EventEditPage.tsx",
@@ -3054,22 +2969,22 @@
       "label": "EventsPage.tsx",
       "_origin": "ast",
       "community": 14,
-      "community_name": "react-router-dom",
+      "community_name": "react",
       "file_type": "code",
       "norm_label": "eventspage.tsx",
       "source_file": "src/pages/events/EventsPage.tsx",
       "source_location": "L1"
     },
     {
-      "id": "ref_react_router_dom",
-      "label": "react-router-dom",
+      "id": "ref_react",
+      "label": "react",
       "_origin": "ast",
       "community": 14,
-      "community_name": "react-router-dom",
+      "community_name": "react",
       "file_type": "concept",
-      "norm_label": "react-router-dom",
+      "norm_label": "react",
       "source_file": "package.json",
-      "source_location": "L21"
+      "source_location": "L18"
     },
     {
       "id": "tsconfig",
@@ -3193,28 +3108,6 @@
       "source_location": "L1"
     },
     {
-      "id": "src_components_ui_emptystate",
-      "label": "EmptyState.tsx",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "ui/index.ts",
-      "file_type": "code",
-      "norm_label": "emptystate.tsx",
-      "source_file": "src/components/ui/EmptyState.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_components_ui_errorstate",
-      "label": "ErrorState.tsx",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "ui/index.ts",
-      "file_type": "code",
-      "norm_label": "errorstate.tsx",
-      "source_file": "src/components/ui/ErrorState.tsx",
-      "source_location": "L1"
-    },
-    {
       "id": "src_components_ui_index",
       "label": "ui/index.ts",
       "_origin": "ast",
@@ -3256,17 +3149,6 @@
       "file_type": "code",
       "norm_label": "loader.tsx",
       "source_file": "src/components/ui/Loader.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_components_ui_modal",
-      "label": "Modal.tsx",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "ui/index.ts",
-      "file_type": "code",
-      "norm_label": "modal.tsx",
-      "source_file": "src/components/ui/Modal.tsx",
       "source_location": "L1"
     },
     {
@@ -4010,6 +3892,17 @@
       "source_location": "L463"
     },
     {
+      "id": "eslint_config",
+      "label": "eslint.config.js",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "package.json",
+      "file_type": "code",
+      "norm_label": "eslint.config.js",
+      "source_file": "eslint.config.js",
+      "source_location": "L1"
+    },
+    {
       "id": "package",
       "label": "package.json",
       "_origin": "ast",
@@ -4019,6 +3912,116 @@
       "norm_label": "package.json",
       "source_file": "package.json",
       "source_location": "L1"
+    },
+    {
+      "id": "package_dependencies",
+      "label": "dependencies",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "package.json",
+      "file_type": "code",
+      "norm_label": "dependencies",
+      "source_file": "package.json",
+      "source_location": "L14"
+    },
+    {
+      "id": "package_dependencies_hookform_resolvers",
+      "label": "@hookform/resolvers",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "package.json",
+      "file_type": "code",
+      "norm_label": "@hookform/resolvers",
+      "source_file": "package.json",
+      "source_location": "L15"
+    },
+    {
+      "id": "package_dependencies_react",
+      "label": "react",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "package.json",
+      "file_type": "code",
+      "norm_label": "react",
+      "source_file": "package.json",
+      "source_location": "L18"
+    },
+    {
+      "id": "package_dependencies_react_dom",
+      "label": "react-dom",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "package.json",
+      "file_type": "code",
+      "norm_label": "react-dom",
+      "source_file": "package.json",
+      "source_location": "L19"
+    },
+    {
+      "id": "package_dependencies_react_hook_form",
+      "label": "react-hook-form",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "package.json",
+      "file_type": "code",
+      "norm_label": "react-hook-form",
+      "source_file": "package.json",
+      "source_location": "L20"
+    },
+    {
+      "id": "package_dependencies_react_router_dom",
+      "label": "react-router-dom",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "package.json",
+      "file_type": "code",
+      "norm_label": "react-router-dom",
+      "source_file": "package.json",
+      "source_location": "L21"
+    },
+    {
+      "id": "package_dependencies_supabase_supabase_js",
+      "label": "@supabase/supabase-js",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "package.json",
+      "file_type": "code",
+      "norm_label": "@supabase/supabase-js",
+      "source_file": "package.json",
+      "source_location": "L16"
+    },
+    {
+      "id": "package_dependencies_vitejs_plugin_react",
+      "label": "@vitejs/plugin-react",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "package.json",
+      "file_type": "code",
+      "norm_label": "@vitejs/plugin-react",
+      "source_file": "package.json",
+      "source_location": "L17"
+    },
+    {
+      "id": "package_dependencies_zod",
+      "label": "zod",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "package.json",
+      "file_type": "code",
+      "norm_label": "zod",
+      "source_file": "package.json",
+      "source_location": "L22"
+    },
+    {
+      "id": "package_dependencies_zustand",
+      "label": "zustand",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "package.json",
+      "file_type": "code",
+      "norm_label": "zustand",
+      "source_file": "package.json",
+      "source_location": "L23"
     },
     {
       "id": "package_name",
@@ -4043,6 +4046,83 @@
       "source_location": "L3"
     },
     {
+      "id": "package_scripts",
+      "label": "scripts",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "package.json",
+      "file_type": "code",
+      "norm_label": "scripts",
+      "source_file": "package.json",
+      "source_location": "L6"
+    },
+    {
+      "id": "package_scripts_build",
+      "label": "build",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "package.json",
+      "file_type": "code",
+      "norm_label": "build",
+      "source_file": "package.json",
+      "source_location": "L8"
+    },
+    {
+      "id": "package_scripts_dev",
+      "label": "dev",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "package.json",
+      "file_type": "code",
+      "norm_label": "dev",
+      "source_file": "package.json",
+      "source_location": "L7"
+    },
+    {
+      "id": "package_scripts_format",
+      "label": "format",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "package.json",
+      "file_type": "code",
+      "norm_label": "format",
+      "source_file": "package.json",
+      "source_location": "L10"
+    },
+    {
+      "id": "package_scripts_lint",
+      "label": "lint",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "package.json",
+      "file_type": "code",
+      "norm_label": "lint",
+      "source_file": "package.json",
+      "source_location": "L9"
+    },
+    {
+      "id": "package_scripts_test",
+      "label": "test",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "package.json",
+      "file_type": "code",
+      "norm_label": "test",
+      "source_file": "package.json",
+      "source_location": "L11"
+    },
+    {
+      "id": "package_scripts_typecheck",
+      "label": "typecheck",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "package.json",
+      "file_type": "code",
+      "norm_label": "typecheck",
+      "source_file": "package.json",
+      "source_location": "L12"
+    },
+    {
       "id": "package_type",
       "label": "type",
       "_origin": "ast",
@@ -4065,6 +4145,28 @@
       "source_location": "L4"
     },
     {
+      "id": "tailwind_config",
+      "label": "tailwind.config.ts",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "package.json",
+      "file_type": "code",
+      "norm_label": "tailwind.config.ts",
+      "source_file": "tailwind.config.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "vite_config",
+      "label": "vite.config.ts",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "package.json",
+      "file_type": "code",
+      "norm_label": "vite.config.ts",
+      "source_file": "vite.config.ts",
+      "source_location": "L1"
+    },
+    {
       "id": "ref_autoprefixer",
       "label": "autoprefixer",
       "_origin": "ast",
@@ -4085,6 +4187,61 @@
       "norm_label": "eslint",
       "source_file": "package.json",
       "source_location": "L32"
+    },
+    {
+      "id": "ref_eslint_config_prettier",
+      "label": "eslint-config-prettier",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "package.json",
+      "file_type": "concept",
+      "norm_label": "eslint-config-prettier",
+      "source_file": "package.json",
+      "source_location": "L33"
+    },
+    {
+      "id": "ref_eslint_js",
+      "label": "@eslint/js",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "package.json",
+      "file_type": "concept",
+      "norm_label": "@eslint/js",
+      "source_file": "package.json",
+      "source_location": "L26"
+    },
+    {
+      "id": "ref_eslint_plugin_react_hooks",
+      "label": "eslint-plugin-react-hooks",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "package.json",
+      "file_type": "concept",
+      "norm_label": "eslint-plugin-react-hooks",
+      "source_file": "package.json",
+      "source_location": "L34"
+    },
+    {
+      "id": "ref_eslint_plugin_react_refresh",
+      "label": "eslint-plugin-react-refresh",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "package.json",
+      "file_type": "concept",
+      "norm_label": "eslint-plugin-react-refresh",
+      "source_file": "package.json",
+      "source_location": "L35"
+    },
+    {
+      "id": "ref_globals",
+      "label": "globals",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "package.json",
+      "file_type": "concept",
+      "norm_label": "globals",
+      "source_file": "package.json",
+      "source_location": "L36"
     },
     {
       "id": "ref_hookform_resolvers",
@@ -4129,6 +4286,17 @@
       "norm_label": "react-dom",
       "source_file": "package.json",
       "source_location": "L19"
+    },
+    {
+      "id": "ref_tailwindcss",
+      "label": "tailwindcss",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "package.json",
+      "file_type": "concept",
+      "norm_label": "tailwindcss",
+      "source_file": "package.json",
+      "source_location": "L39"
     },
     {
       "id": "ref_tailwindcss_postcss",
@@ -4184,6 +4352,39 @@
       "norm_label": "typescript",
       "source_file": "package.json",
       "source_location": "L40"
+    },
+    {
+      "id": "ref_typescript_eslint",
+      "label": "typescript-eslint",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "package.json",
+      "file_type": "concept",
+      "norm_label": "typescript-eslint",
+      "source_file": "package.json",
+      "source_location": "L41"
+    },
+    {
+      "id": "ref_vite",
+      "label": "vite",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "package.json",
+      "file_type": "concept",
+      "norm_label": "vite",
+      "source_file": "package.json",
+      "source_location": "L42"
+    },
+    {
+      "id": "ref_vitejs_plugin_react",
+      "label": "@vitejs/plugin-react",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "package.json",
+      "file_type": "concept",
+      "norm_label": "@vitejs/plugin-react",
+      "source_file": "package.json",
+      "source_location": "L17"
     },
     {
       "id": "public_activity_logs",
@@ -4520,7 +4721,7 @@
       "label": "EventForm.tsx",
       "_origin": "ast",
       "community": 51,
-      "community_name": "react",
+      "community_name": "EventForm.tsx",
       "file_type": "code",
       "norm_label": "eventform.tsx",
       "source_file": "src/components/events/EventForm.tsx",
@@ -4531,62 +4732,18 @@
       "label": "eventFormSchema",
       "_origin": "ast",
       "community": 51,
-      "community_name": "react",
+      "community_name": "EventForm.tsx",
       "file_type": "code",
       "norm_label": "eventformschema",
       "source_file": "src/components/events/EventForm.tsx",
       "source_location": "L12"
     },
     {
-      "id": "src_components_participants_addparticipantdialog",
-      "label": "AddParticipantDialog.tsx",
-      "_origin": "ast",
-      "community": 51,
-      "community_name": "react",
-      "file_type": "code",
-      "norm_label": "addparticipantdialog.tsx",
-      "source_file": "src/components/participants/AddParticipantDialog.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_components_participants_addparticipantdialog_rolesuggestions",
-      "label": "roleSuggestions",
-      "_origin": "ast",
-      "community": 51,
-      "community_name": "react",
-      "file_type": "code",
-      "norm_label": "rolesuggestions",
-      "source_file": "src/components/participants/AddParticipantDialog.tsx",
-      "source_location": "L8"
-    },
-    {
-      "id": "src_components_ui_slot",
-      "label": "Slot.tsx",
-      "_origin": "ast",
-      "community": 51,
-      "community_name": "react",
-      "file_type": "code",
-      "norm_label": "slot.tsx",
-      "source_file": "src/components/ui/Slot.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_main",
-      "label": "main.tsx",
-      "_origin": "ast",
-      "community": 51,
-      "community_name": "react",
-      "file_type": "code",
-      "norm_label": "main.tsx",
-      "source_file": "src/main.tsx",
-      "source_location": "L1"
-    },
-    {
       "id": "src_pages_loginpage",
       "label": "LoginPage.tsx",
       "_origin": "ast",
       "community": 51,
-      "community_name": "react",
+      "community_name": "EventForm.tsx",
       "file_type": "code",
       "norm_label": "loginpage.tsx",
       "source_file": "src/pages/LoginPage.tsx",
@@ -4597,29 +4754,18 @@
       "label": "loginSchema",
       "_origin": "ast",
       "community": 51,
-      "community_name": "react",
+      "community_name": "EventForm.tsx",
       "file_type": "code",
       "norm_label": "loginschema",
       "source_file": "src/pages/LoginPage.tsx",
       "source_location": "L12"
     },
     {
-      "id": "ref_react",
-      "label": "react",
-      "_origin": "ast",
-      "community": 51,
-      "community_name": "react",
-      "file_type": "concept",
-      "norm_label": "react",
-      "source_file": "package.json",
-      "source_location": "L18"
-    },
-    {
       "id": "ref_react_hook_form",
       "label": "react-hook-form",
       "_origin": "ast",
       "community": 51,
-      "community_name": "react",
+      "community_name": "EventForm.tsx",
       "file_type": "concept",
       "norm_label": "react-hook-form",
       "source_file": "package.json",
@@ -4630,55 +4776,22 @@
       "label": "zod",
       "_origin": "ast",
       "community": 51,
-      "community_name": "react",
+      "community_name": "EventForm.tsx",
       "file_type": "concept",
       "norm_label": "zod",
       "source_file": "package.json",
       "source_location": "L22"
     },
     {
-      "id": "src_components_participants_index",
-      "label": "participants/index.ts",
+      "id": "src_components_ui_unauthorizedstate",
+      "label": "UnauthorizedState.tsx",
       "_origin": "ast",
       "community": 52,
       "community_name": "AppLayout.tsx",
       "file_type": "code",
-      "norm_label": "participants/index.ts",
-      "source_file": "src/components/participants/index.ts",
+      "norm_label": "unauthorizedstate.tsx",
+      "source_file": "src/components/ui/UnauthorizedState.tsx",
       "source_location": "L1"
-    },
-    {
-      "id": "src_components_participants_participantavatar",
-      "label": "ParticipantAvatar.tsx",
-      "_origin": "ast",
-      "community": 52,
-      "community_name": "AppLayout.tsx",
-      "file_type": "code",
-      "norm_label": "participantavatar.tsx",
-      "source_file": "src/components/participants/ParticipantAvatar.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_components_participants_participantrolebadge",
-      "label": "ParticipantRoleBadge.tsx",
-      "_origin": "ast",
-      "community": 52,
-      "community_name": "AppLayout.tsx",
-      "file_type": "code",
-      "norm_label": "participantrolebadge.tsx",
-      "source_file": "src/components/participants/ParticipantRoleBadge.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_components_participants_participantrolebadge_labels",
-      "label": "labels",
-      "_origin": "ast",
-      "community": 52,
-      "community_name": "AppLayout.tsx",
-      "file_type": "code",
-      "norm_label": "labels",
-      "source_file": "src/components/participants/ParticipantRoleBadge.tsx",
-      "source_location": "L4"
     },
     {
       "id": "src_hooks_usepermission",
@@ -4740,43 +4853,10 @@
       "label": "EventParticipantsSection.tsx",
       "_origin": "ast",
       "community": 53,
-      "community_name": "ref_components_ui_button",
+      "community_name": "EventParticipantsSection.tsx",
       "file_type": "code",
       "norm_label": "eventparticipantssection.tsx",
       "source_file": "src/components/participants/EventParticipantsSection.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_components_participants_participantcard",
-      "label": "ParticipantCard.tsx",
-      "_origin": "ast",
-      "community": 53,
-      "community_name": "ref_components_ui_button",
-      "file_type": "code",
-      "norm_label": "participantcard.tsx",
-      "source_file": "src/components/participants/ParticipantCard.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_components_ui_unauthorizedstate",
-      "label": "UnauthorizedState.tsx",
-      "_origin": "ast",
-      "community": 53,
-      "community_name": "ref_components_ui_button",
-      "file_type": "code",
-      "norm_label": "unauthorizedstate.tsx",
-      "source_file": "src/components/ui/UnauthorizedState.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_pages_publichomepage",
-      "label": "PublicHomePage.tsx",
-      "_origin": "ast",
-      "community": 53,
-      "community_name": "ref_components_ui_button",
-      "file_type": "code",
-      "norm_label": "publichomepage.tsx",
-      "source_file": "src/pages/PublicHomePage.tsx",
       "source_location": "L1"
     },
     {
@@ -4789,6 +4869,174 @@
       "norm_label": "participant.service.ts",
       "source_file": "src/services/participant.service.ts",
       "source_location": "L1"
+    },
+    {
+      "id": "changelog",
+      "label": "CHANGELOG.md",
+      "_origin": "ast",
+      "community": 54,
+      "community_name": "participant.service.ts",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "changelog.md",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "changelog_added",
+      "label": "Added",
+      "_origin": "ast",
+      "community": 54,
+      "community_name": "participant.service.ts",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "added",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L7"
+    },
+    {
+      "id": "changelog_added_60",
+      "label": "Added",
+      "_origin": "ast",
+      "community": 54,
+      "community_name": "participant.service.ts",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "added",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L60"
+    },
+    {
+      "id": "changelog_added_83",
+      "label": "Added",
+      "_origin": "ast",
+      "community": 54,
+      "community_name": "participant.service.ts",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "added",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L83"
+    },
+    {
+      "id": "changelog_changed",
+      "label": "Changed",
+      "_origin": "ast",
+      "community": 54,
+      "community_name": "participant.service.ts",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "changed",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L15"
+    },
+    {
+      "id": "changelog_changed_69",
+      "label": "Changed",
+      "_origin": "ast",
+      "community": 54,
+      "community_name": "participant.service.ts",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "changed",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L69"
+    },
+    {
+      "id": "changelog_changed_92",
+      "label": "Changed",
+      "_origin": "ast",
+      "community": 54,
+      "community_name": "participant.service.ts",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "changed",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L92"
+    },
+    {
+      "id": "changelog_changelog",
+      "label": "Changelog",
+      "_origin": "ast",
+      "community": 54,
+      "community_name": "participant.service.ts",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "changelog",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "changelog_notes",
+      "label": "Notes",
+      "_origin": "ast",
+      "community": 54,
+      "community_name": "participant.service.ts",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "notes",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L28"
+    },
+    {
+      "id": "changelog_v0_4_0_react_foundation_2026_09_18",
+      "label": "[v0.4.0-react-foundation] - 2026-09-18",
+      "_origin": "ast",
+      "community": 54,
+      "community_name": "participant.service.ts",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "[v0.4.0-react-foundation] - 2026-09-18",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L81"
+    },
+    {
+      "id": "changelog_v0_5_1_user_wedding_membership_2026_09_18",
+      "label": "[v0.5.1-user-wedding-membership] - 2026-09-18",
+      "_origin": "ast",
+      "community": 54,
+      "community_name": "participant.service.ts",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "[v0.5.1-user-wedding-membership] - 2026-09-18",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L58"
+    },
+    {
+      "id": "changelog_v0_5_3_participant_management_2026_09_18",
+      "label": "[v0.5.3-participant-management] - 2026-09-18",
+      "_origin": "ast",
+      "community": 54,
+      "community_name": "participant.service.ts",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "[v0.5.3-participant-management] - 2026-09-18",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L5"
+    },
+    {
+      "id": "changelog_verified",
+      "label": "Verified",
+      "_origin": "ast",
+      "community": 54,
+      "community_name": "participant.service.ts",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "verified",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L20"
+    },
+    {
+      "id": "changelog_verified_74",
+      "label": "Verified",
+      "_origin": "ast",
+      "community": 54,
+      "community_name": "participant.service.ts",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "verified",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L74"
     },
     {
       "id": "src_routes_router",
@@ -4828,7 +5076,7 @@
       "label": "EventCard.tsx",
       "_origin": "ast",
       "community": 57,
-      "community_name": "ref_types_domain",
+      "community_name": "EventHeader.tsx",
       "file_type": "code",
       "norm_label": "eventcard.tsx",
       "source_file": "src/components/events/EventCard.tsx",
@@ -4839,7 +5087,7 @@
       "label": "EventHeader.tsx",
       "_origin": "ast",
       "community": 57,
-      "community_name": "ref_types_domain",
+      "community_name": "EventHeader.tsx",
       "file_type": "code",
       "norm_label": "eventheader.tsx",
       "source_file": "src/components/events/EventHeader.tsx",
@@ -4850,43 +5098,10 @@
       "label": "EventList.tsx",
       "_origin": "ast",
       "community": 57,
-      "community_name": "ref_types_domain",
+      "community_name": "EventHeader.tsx",
       "file_type": "code",
       "norm_label": "eventlist.tsx",
       "source_file": "src/components/events/EventList.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_components_events_eventstatusbadge",
-      "label": "EventStatusBadge.tsx",
-      "_origin": "ast",
-      "community": 57,
-      "community_name": "ref_types_domain",
-      "file_type": "code",
-      "norm_label": "eventstatusbadge.tsx",
-      "source_file": "src/components/events/EventStatusBadge.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_components_events_eventstatusbadge_badgeclass",
-      "label": "badgeClass",
-      "_origin": "ast",
-      "community": 57,
-      "community_name": "ref_types_domain",
-      "file_type": "code",
-      "norm_label": "badgeclass",
-      "source_file": "src/components/events/EventStatusBadge.tsx",
-      "source_location": "L5"
-    },
-    {
-      "id": "src_components_events_eventtimeline",
-      "label": "EventTimeline.tsx",
-      "_origin": "ast",
-      "community": 57,
-      "community_name": "ref_types_domain",
-      "file_type": "code",
-      "norm_label": "eventtimeline.tsx",
-      "source_file": "src/components/events/EventTimeline.tsx",
       "source_location": "L1"
     },
     {
@@ -4894,32 +5109,10 @@
       "label": "events/index.ts",
       "_origin": "ast",
       "community": 57,
-      "community_name": "ref_types_domain",
+      "community_name": "EventHeader.tsx",
       "file_type": "code",
       "norm_label": "events/index.ts",
       "source_file": "src/components/events/index.ts",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_utils_eventformat",
-      "label": "eventFormat.ts",
-      "_origin": "ast",
-      "community": 57,
-      "community_name": "ref_types_domain",
-      "file_type": "code",
-      "norm_label": "eventformat.ts",
-      "source_file": "src/utils/eventFormat.ts",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_utils_participantvalidation",
-      "label": "participantValidation.ts",
-      "_origin": "ast",
-      "community": 57,
-      "community_name": "ref_types_domain",
-      "file_type": "code",
-      "norm_label": "participantvalidation.ts",
-      "source_file": "src/utils/participantValidation.ts",
       "source_location": "L1"
     },
     {
@@ -4995,114 +5188,48 @@
       "source_location": "L21"
     },
     {
-      "id": "package_dependencies",
-      "label": "dependencies",
+      "id": "src_components_events_eventstatusbadge",
+      "label": "EventStatusBadge.tsx",
       "_origin": "ast",
       "community": 59,
-      "community_name": "dependencies",
+      "community_name": "ref_types_domain",
       "file_type": "code",
-      "norm_label": "dependencies",
-      "source_file": "package.json",
-      "source_location": "L14"
+      "norm_label": "eventstatusbadge.tsx",
+      "source_file": "src/components/events/EventStatusBadge.tsx",
+      "source_location": "L1"
     },
     {
-      "id": "package_dependencies_hookform_resolvers",
-      "label": "@hookform/resolvers",
+      "id": "src_components_events_eventstatusbadge_badgeclass",
+      "label": "badgeClass",
       "_origin": "ast",
       "community": 59,
-      "community_name": "dependencies",
+      "community_name": "ref_types_domain",
       "file_type": "code",
-      "norm_label": "@hookform/resolvers",
-      "source_file": "package.json",
-      "source_location": "L15"
+      "norm_label": "badgeclass",
+      "source_file": "src/components/events/EventStatusBadge.tsx",
+      "source_location": "L5"
     },
     {
-      "id": "package_dependencies_react",
-      "label": "react",
+      "id": "src_components_events_eventtimeline",
+      "label": "EventTimeline.tsx",
       "_origin": "ast",
       "community": 59,
-      "community_name": "dependencies",
+      "community_name": "ref_types_domain",
       "file_type": "code",
-      "norm_label": "react",
-      "source_file": "package.json",
-      "source_location": "L18"
+      "norm_label": "eventtimeline.tsx",
+      "source_file": "src/components/events/EventTimeline.tsx",
+      "source_location": "L1"
     },
     {
-      "id": "package_dependencies_react_dom",
-      "label": "react-dom",
+      "id": "src_utils_participantvalidation",
+      "label": "participantValidation.ts",
       "_origin": "ast",
       "community": 59,
-      "community_name": "dependencies",
+      "community_name": "ref_types_domain",
       "file_type": "code",
-      "norm_label": "react-dom",
-      "source_file": "package.json",
-      "source_location": "L19"
-    },
-    {
-      "id": "package_dependencies_react_hook_form",
-      "label": "react-hook-form",
-      "_origin": "ast",
-      "community": 59,
-      "community_name": "dependencies",
-      "file_type": "code",
-      "norm_label": "react-hook-form",
-      "source_file": "package.json",
-      "source_location": "L20"
-    },
-    {
-      "id": "package_dependencies_react_router_dom",
-      "label": "react-router-dom",
-      "_origin": "ast",
-      "community": 59,
-      "community_name": "dependencies",
-      "file_type": "code",
-      "norm_label": "react-router-dom",
-      "source_file": "package.json",
-      "source_location": "L21"
-    },
-    {
-      "id": "package_dependencies_supabase_supabase_js",
-      "label": "@supabase/supabase-js",
-      "_origin": "ast",
-      "community": 59,
-      "community_name": "dependencies",
-      "file_type": "code",
-      "norm_label": "@supabase/supabase-js",
-      "source_file": "package.json",
-      "source_location": "L16"
-    },
-    {
-      "id": "package_dependencies_vitejs_plugin_react",
-      "label": "@vitejs/plugin-react",
-      "_origin": "ast",
-      "community": 59,
-      "community_name": "dependencies",
-      "file_type": "code",
-      "norm_label": "@vitejs/plugin-react",
-      "source_file": "package.json",
-      "source_location": "L17"
-    },
-    {
-      "id": "package_dependencies_zod",
-      "label": "zod",
-      "_origin": "ast",
-      "community": 59,
-      "community_name": "dependencies",
-      "file_type": "code",
-      "norm_label": "zod",
-      "source_file": "package.json",
-      "source_location": "L22"
-    },
-    {
-      "id": "package_dependencies_zustand",
-      "label": "zustand",
-      "_origin": "ast",
-      "community": 59,
-      "community_name": "dependencies",
-      "file_type": "code",
-      "norm_label": "zustand",
-      "source_file": "package.json",
-      "source_location": "L23"
+      "norm_label": "participantvalidation.ts",
+      "source_file": "src/utils/participantValidation.ts",
+      "source_location": "L1"
     },
     {
       "id": "tsconfig_app",
@@ -5380,158 +5507,48 @@
       "source_location": "L11"
     },
     {
-      "id": "eslint_config",
-      "label": "eslint.config.js",
+      "id": "src_components_ui_emptystate",
+      "label": "EmptyState.tsx",
       "_origin": "ast",
       "community": 61,
-      "community_name": "eslint.config.js",
+      "community_name": "ref_components_ui_card",
       "file_type": "code",
-      "norm_label": "eslint.config.js",
-      "source_file": "eslint.config.js",
+      "norm_label": "emptystate.tsx",
+      "source_file": "src/components/ui/EmptyState.tsx",
       "source_location": "L1"
     },
     {
-      "id": "ref_eslint_config_prettier",
-      "label": "eslint-config-prettier",
+      "id": "src_components_ui_errorstate",
+      "label": "ErrorState.tsx",
       "_origin": "ast",
       "community": 61,
-      "community_name": "eslint.config.js",
-      "file_type": "concept",
-      "norm_label": "eslint-config-prettier",
-      "source_file": "package.json",
-      "source_location": "L33"
+      "community_name": "ref_components_ui_card",
+      "file_type": "code",
+      "norm_label": "errorstate.tsx",
+      "source_file": "src/components/ui/ErrorState.tsx",
+      "source_location": "L1"
     },
     {
-      "id": "ref_eslint_js",
-      "label": "@eslint/js",
+      "id": "src_pages_publichomepage",
+      "label": "PublicHomePage.tsx",
       "_origin": "ast",
       "community": 61,
-      "community_name": "eslint.config.js",
-      "file_type": "concept",
-      "norm_label": "@eslint/js",
-      "source_file": "package.json",
-      "source_location": "L26"
+      "community_name": "ref_components_ui_card",
+      "file_type": "code",
+      "norm_label": "publichomepage.tsx",
+      "source_file": "src/pages/PublicHomePage.tsx",
+      "source_location": "L1"
     },
     {
-      "id": "ref_eslint_plugin_react_hooks",
-      "label": "eslint-plugin-react-hooks",
-      "_origin": "ast",
-      "community": 61,
-      "community_name": "eslint.config.js",
-      "file_type": "concept",
-      "norm_label": "eslint-plugin-react-hooks",
-      "source_file": "package.json",
-      "source_location": "L34"
-    },
-    {
-      "id": "ref_eslint_plugin_react_refresh",
-      "label": "eslint-plugin-react-refresh",
-      "_origin": "ast",
-      "community": 61,
-      "community_name": "eslint.config.js",
-      "file_type": "concept",
-      "norm_label": "eslint-plugin-react-refresh",
-      "source_file": "package.json",
-      "source_location": "L35"
-    },
-    {
-      "id": "ref_globals",
-      "label": "globals",
-      "_origin": "ast",
-      "community": 61,
-      "community_name": "eslint.config.js",
-      "file_type": "concept",
-      "norm_label": "globals",
-      "source_file": "package.json",
-      "source_location": "L36"
-    },
-    {
-      "id": "ref_typescript_eslint",
-      "label": "typescript-eslint",
-      "_origin": "ast",
-      "community": 61,
-      "community_name": "eslint.config.js",
-      "file_type": "concept",
-      "norm_label": "typescript-eslint",
-      "source_file": "package.json",
-      "source_location": "L41"
-    },
-    {
-      "id": "package_scripts",
-      "label": "scripts",
+      "id": "src_components_participants_participantcard",
+      "label": "ParticipantCard.tsx",
       "_origin": "ast",
       "community": 62,
-      "community_name": "scripts",
+      "community_name": "ParticipantCard.tsx",
       "file_type": "code",
-      "norm_label": "scripts",
-      "source_file": "package.json",
-      "source_location": "L6"
-    },
-    {
-      "id": "package_scripts_build",
-      "label": "build",
-      "_origin": "ast",
-      "community": 62,
-      "community_name": "scripts",
-      "file_type": "code",
-      "norm_label": "build",
-      "source_file": "package.json",
-      "source_location": "L8"
-    },
-    {
-      "id": "package_scripts_dev",
-      "label": "dev",
-      "_origin": "ast",
-      "community": 62,
-      "community_name": "scripts",
-      "file_type": "code",
-      "norm_label": "dev",
-      "source_file": "package.json",
-      "source_location": "L7"
-    },
-    {
-      "id": "package_scripts_format",
-      "label": "format",
-      "_origin": "ast",
-      "community": 62,
-      "community_name": "scripts",
-      "file_type": "code",
-      "norm_label": "format",
-      "source_file": "package.json",
-      "source_location": "L10"
-    },
-    {
-      "id": "package_scripts_lint",
-      "label": "lint",
-      "_origin": "ast",
-      "community": 62,
-      "community_name": "scripts",
-      "file_type": "code",
-      "norm_label": "lint",
-      "source_file": "package.json",
-      "source_location": "L9"
-    },
-    {
-      "id": "package_scripts_test",
-      "label": "test",
-      "_origin": "ast",
-      "community": 62,
-      "community_name": "scripts",
-      "file_type": "code",
-      "norm_label": "test",
-      "source_file": "package.json",
-      "source_location": "L11"
-    },
-    {
-      "id": "package_scripts_typecheck",
-      "label": "typecheck",
-      "_origin": "ast",
-      "community": 62,
-      "community_name": "scripts",
-      "file_type": "code",
-      "norm_label": "typecheck",
-      "source_file": "package.json",
-      "source_location": "L12"
+      "norm_label": "participantcard.tsx",
+      "source_file": "src/components/participants/ParticipantCard.tsx",
+      "source_location": "L1"
     },
     {
       "id": "src_components_events_archivedialog",
@@ -5553,17 +5570,6 @@
       "file_type": "code",
       "norm_label": "removeparticipantdialog.tsx",
       "source_file": "src/components/participants/RemoveParticipantDialog.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_components_common_apperrorboundary",
-      "label": "AppErrorBoundary.tsx",
-      "_origin": "ast",
-      "community": 64,
-      "community_name": "AppErrorBoundary.tsx",
-      "file_type": "code",
-      "norm_label": "apperrorboundary.tsx",
-      "source_file": "src/components/common/AppErrorBoundary.tsx",
       "source_location": "L1"
     },
     {
@@ -5615,7 +5621,7 @@
       "label": "EventEmptyState.tsx",
       "_origin": "ast",
       "community": 66,
-      "community_name": "EventEmptyState.tsx",
+      "community_name": "ref_components_ui_button",
       "file_type": "code",
       "norm_label": "eventemptystate.tsx",
       "source_file": "src/components/events/EventEmptyState.tsx",
@@ -5626,10 +5632,21 @@
       "label": "ParticipantEmptyState.tsx",
       "_origin": "ast",
       "community": 66,
-      "community_name": "EventEmptyState.tsx",
+      "community_name": "ref_components_ui_button",
       "file_type": "code",
       "norm_label": "participantemptystate.tsx",
       "source_file": "src/components/participants/ParticipantEmptyState.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_components_ui_modal",
+      "label": "Modal.tsx",
+      "_origin": "ast",
+      "community": 66,
+      "community_name": "ref_components_ui_button",
+      "file_type": "code",
+      "norm_label": "modal.tsx",
+      "source_file": "src/components/ui/Modal.tsx",
       "source_location": "L1"
     },
     {
@@ -5637,18 +5654,62 @@
       "label": "App.tsx",
       "_origin": "ast",
       "community": 67,
-      "community_name": "App.tsx",
+      "community_name": "react-router-dom",
       "file_type": "code",
       "norm_label": "app.tsx",
       "source_file": "src/app/App.tsx",
       "source_location": "L1"
     },
     {
+      "id": "src_layouts_publiclayout",
+      "label": "PublicLayout.tsx",
+      "_origin": "ast",
+      "community": 67,
+      "community_name": "react-router-dom",
+      "file_type": "code",
+      "norm_label": "publiclayout.tsx",
+      "source_file": "src/layouts/PublicLayout.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "ref_react_router_dom",
+      "label": "react-router-dom",
+      "_origin": "ast",
+      "community": 67,
+      "community_name": "react-router-dom",
+      "file_type": "concept",
+      "norm_label": "react-router-dom",
+      "source_file": "package.json",
+      "source_location": "L21"
+    },
+    {
+      "id": "src_components_participants_addparticipantdialog",
+      "label": "AddParticipantDialog.tsx",
+      "_origin": "ast",
+      "community": 68,
+      "community_name": "AddParticipantDialog.tsx",
+      "file_type": "code",
+      "norm_label": "addparticipantdialog.tsx",
+      "source_file": "src/components/participants/AddParticipantDialog.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_components_participants_addparticipantdialog_rolesuggestions",
+      "label": "roleSuggestions",
+      "_origin": "ast",
+      "community": 68,
+      "community_name": "AddParticipantDialog.tsx",
+      "file_type": "code",
+      "norm_label": "rolesuggestions",
+      "source_file": "src/components/participants/AddParticipantDialog.tsx",
+      "source_location": "L8"
+    },
+    {
       "id": "src_utils_participantvalidation_test",
       "label": "participantValidation.test.ts",
       "_origin": "ast",
       "community": 68,
-      "community_name": "participantValidation.test.ts",
+      "community_name": "AddParticipantDialog.tsx",
       "file_type": "code",
       "norm_label": "participantvalidation.test.ts",
       "source_file": "src/utils/participantValidation.test.ts",
@@ -5659,7 +5720,7 @@
       "label": "candidates",
       "_origin": "ast",
       "community": 68,
-      "community_name": "participantValidation.test.ts",
+      "community_name": "AddParticipantDialog.tsx",
       "file_type": "code",
       "norm_label": "candidates",
       "source_file": "src/utils/participantValidation.test.ts",
@@ -5670,7 +5731,7 @@
       "label": "participant",
       "_origin": "ast",
       "community": 68,
-      "community_name": "participantValidation.test.ts",
+      "community_name": "AddParticipantDialog.tsx",
       "file_type": "code",
       "norm_label": "participant",
       "source_file": "src/utils/participantValidation.test.ts",
@@ -5681,11 +5742,22 @@
       "label": "vitest",
       "_origin": "ast",
       "community": 68,
-      "community_name": "participantValidation.test.ts",
+      "community_name": "AddParticipantDialog.tsx",
       "file_type": "concept",
       "norm_label": "vitest",
       "source_file": "package.json",
       "source_location": "L43"
+    },
+    {
+      "id": "src_main",
+      "label": "main.tsx",
+      "_origin": "ast",
+      "community": 69,
+      "community_name": "main.tsx",
+      "file_type": "code",
+      "norm_label": "main.tsx",
+      "source_file": "src/main.tsx",
+      "source_location": "L1"
     },
     {
       "id": "package_devdependencies",
@@ -5897,70 +5969,70 @@
       "source_location": "L43"
     },
     {
+      "id": "src_components_participants_index",
+      "label": "participants/index.ts",
+      "_origin": "ast",
+      "community": 70,
+      "community_name": "participants/index.ts",
+      "file_type": "code",
+      "norm_label": "participants/index.ts",
+      "source_file": "src/components/participants/index.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_components_participants_participantavatar",
+      "label": "ParticipantAvatar.tsx",
+      "_origin": "ast",
+      "community": 70,
+      "community_name": "participants/index.ts",
+      "file_type": "code",
+      "norm_label": "participantavatar.tsx",
+      "source_file": "src/components/participants/ParticipantAvatar.tsx",
+      "source_location": "L1"
+    },
+    {
       "id": "src_components_participants_participantlist",
       "label": "ParticipantList.tsx",
       "_origin": "ast",
       "community": 70,
-      "community_name": "ParticipantList.tsx",
+      "community_name": "participants/index.ts",
       "file_type": "code",
       "norm_label": "participantlist.tsx",
       "source_file": "src/components/participants/ParticipantList.tsx",
       "source_location": "L1"
     },
     {
-      "id": "vite_config",
-      "label": "vite.config.ts",
+      "id": "src_components_participants_participantrolebadge",
+      "label": "ParticipantRoleBadge.tsx",
       "_origin": "ast",
-      "community": 71,
-      "community_name": "vite.config.ts",
+      "community": 70,
+      "community_name": "participants/index.ts",
       "file_type": "code",
-      "norm_label": "vite.config.ts",
-      "source_file": "vite.config.ts",
+      "norm_label": "participantrolebadge.tsx",
+      "source_file": "src/components/participants/ParticipantRoleBadge.tsx",
       "source_location": "L1"
     },
     {
-      "id": "ref_vite",
-      "label": "vite",
+      "id": "src_components_participants_participantrolebadge_labels",
+      "label": "labels",
       "_origin": "ast",
-      "community": 71,
-      "community_name": "vite.config.ts",
-      "file_type": "concept",
-      "norm_label": "vite",
-      "source_file": "package.json",
-      "source_location": "L42"
-    },
-    {
-      "id": "ref_vitejs_plugin_react",
-      "label": "@vitejs/plugin-react",
-      "_origin": "ast",
-      "community": 71,
-      "community_name": "vite.config.ts",
-      "file_type": "concept",
-      "norm_label": "@vitejs/plugin-react",
-      "source_file": "package.json",
-      "source_location": "L17"
-    },
-    {
-      "id": "tailwind_config",
-      "label": "tailwind.config.ts",
-      "_origin": "ast",
-      "community": 72,
-      "community_name": "tailwindcss",
+      "community": 70,
+      "community_name": "participants/index.ts",
       "file_type": "code",
-      "norm_label": "tailwind.config.ts",
-      "source_file": "tailwind.config.ts",
-      "source_location": "L1"
+      "norm_label": "labels",
+      "source_file": "src/components/participants/ParticipantRoleBadge.tsx",
+      "source_location": "L4"
     },
     {
-      "id": "ref_tailwindcss",
-      "label": "tailwindcss",
+      "id": "src_utils_eventformat",
+      "label": "eventFormat.ts",
       "_origin": "ast",
-      "community": 72,
-      "community_name": "tailwindcss",
-      "file_type": "concept",
-      "norm_label": "tailwindcss",
-      "source_file": "package.json",
-      "source_location": "L39"
+      "community": 71,
+      "community_name": "eventFormat.ts",
+      "file_type": "code",
+      "norm_label": "eventformat.ts",
+      "source_file": "src/utils/eventFormat.ts",
+      "source_location": "L1"
     },
     {
       "id": "src_app_providers_authcontext",
@@ -6081,7 +6153,7 @@
       "file_type": "code",
       "norm_label": "useparticipantstore",
       "source_file": "src/store/participantStore.ts",
-      "source_location": "L38"
+      "source_location": "L36"
     },
     {
       "id": "src_store_uistore",
@@ -7735,10 +7807,22 @@
       "label": "ref_components_events",
       "_origin": "semantic",
       "community": 14,
-      "community_name": "react-router-dom",
+      "community_name": "react",
       "external": true,
       "file_type": "concept",
       "norm_label": "ref_components_events",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "ref_components_participants",
+      "label": "ref_components_participants",
+      "_origin": "semantic",
+      "community": 14,
+      "community_name": "react",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "ref_components_participants",
       "source_file": "",
       "type": "external"
     },
@@ -7747,7 +7831,7 @@
       "label": "ref_components_ui_errorstate",
       "_origin": "semantic",
       "community": 14,
-      "community_name": "react-router-dom",
+      "community_name": "react",
       "external": true,
       "file_type": "concept",
       "norm_label": "ref_components_ui_errorstate",
@@ -7759,7 +7843,7 @@
       "label": "ref_components_ui_loader",
       "_origin": "semantic",
       "community": 14,
-      "community_name": "react-router-dom",
+      "community_name": "react",
       "external": true,
       "file_type": "concept",
       "norm_label": "ref_components_ui_loader",
@@ -7771,7 +7855,7 @@
       "label": "ref_components_ui_select",
       "_origin": "semantic",
       "community": 14,
-      "community_name": "react-router-dom",
+      "community_name": "react",
       "external": true,
       "file_type": "concept",
       "norm_label": "ref_components_ui_select",
@@ -7783,7 +7867,7 @@
       "label": "ref_hooks_usepermission",
       "_origin": "semantic",
       "community": 14,
-      "community_name": "react-router-dom",
+      "community_name": "react",
       "external": true,
       "file_type": "concept",
       "norm_label": "ref_hooks_usepermission",
@@ -7795,7 +7879,7 @@
       "label": "ref_store_eventstore",
       "_origin": "semantic",
       "community": 14,
-      "community_name": "react-router-dom",
+      "community_name": "react",
       "external": true,
       "file_type": "concept",
       "norm_label": "ref_store_eventstore",
@@ -7823,6 +7907,18 @@
       "external": true,
       "file_type": "concept",
       "norm_label": "ref_utils_cx",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "ref_node_url",
+      "label": "ref_node_url",
+      "_origin": "semantic",
+      "community": 4,
+      "community_name": "package.json",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "ref_node_url",
       "source_file": "",
       "type": "external"
     },
@@ -7887,35 +7983,11 @@
       "type": "external"
     },
     {
-      "id": "ref_app_app",
-      "label": "ref_app_app",
-      "_origin": "semantic",
-      "community": 51,
-      "community_name": "react",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "ref_app_app",
-      "source_file": "",
-      "type": "external"
-    },
-    {
-      "id": "ref_components_ui_input",
-      "label": "ref_components_ui_input",
-      "_origin": "semantic",
-      "community": 51,
-      "community_name": "react",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "ref_components_ui_input",
-      "source_file": "",
-      "type": "external"
-    },
-    {
       "id": "ref_components_ui_textarea",
       "label": "ref_components_ui_textarea",
       "_origin": "semantic",
       "community": 51,
-      "community_name": "react",
+      "community_name": "EventForm.tsx",
       "external": true,
       "file_type": "concept",
       "norm_label": "ref_components_ui_textarea",
@@ -7927,46 +7999,10 @@
       "label": "ref_hookform_resolvers_zod",
       "_origin": "semantic",
       "community": 51,
-      "community_name": "react",
+      "community_name": "EventForm.tsx",
       "external": true,
       "file_type": "concept",
       "norm_label": "ref_hookform_resolvers_zod",
-      "source_file": "",
-      "type": "external"
-    },
-    {
-      "id": "ref_react_dom_client",
-      "label": "ref_react_dom_client",
-      "_origin": "semantic",
-      "community": 51,
-      "community_name": "react",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "ref_react_dom_client",
-      "source_file": "",
-      "type": "external"
-    },
-    {
-      "id": "ref_styles_index_css",
-      "label": "ref_styles_index_css",
-      "_origin": "semantic",
-      "community": 51,
-      "community_name": "react",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "ref_styles_index_css",
-      "source_file": "",
-      "type": "external"
-    },
-    {
-      "id": "ref_components_ui_avatar",
-      "label": "ref_components_ui_avatar",
-      "_origin": "semantic",
-      "community": 52,
-      "community_name": "AppLayout.tsx",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "ref_components_ui_avatar",
       "source_file": "",
       "type": "external"
     },
@@ -8055,26 +8091,62 @@
       "type": "external"
     },
     {
-      "id": "ref_components_ui_button",
-      "label": "ref_components_ui_button",
+      "id": "ref_components_participants_addparticipantdialog",
+      "label": "ref_components_participants_addparticipantdialog",
       "_origin": "semantic",
       "community": 53,
-      "community_name": "ref_components_ui_button",
+      "community_name": "EventParticipantsSection.tsx",
       "external": true,
       "file_type": "concept",
-      "norm_label": "ref_components_ui_button",
+      "norm_label": "ref_components_participants_addparticipantdialog",
       "source_file": "",
       "type": "external"
     },
     {
-      "id": "ref_components_ui_card",
-      "label": "ref_components_ui_card",
+      "id": "ref_components_participants_participantemptystate",
+      "label": "ref_components_participants_participantemptystate",
       "_origin": "semantic",
       "community": 53,
-      "community_name": "ref_components_ui_button",
+      "community_name": "EventParticipantsSection.tsx",
       "external": true,
       "file_type": "concept",
-      "norm_label": "ref_components_ui_card",
+      "norm_label": "ref_components_participants_participantemptystate",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "ref_components_participants_participantlist",
+      "label": "ref_components_participants_participantlist",
+      "_origin": "semantic",
+      "community": 53,
+      "community_name": "EventParticipantsSection.tsx",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "ref_components_participants_participantlist",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "ref_components_participants_removeparticipantdialog",
+      "label": "ref_components_participants_removeparticipantdialog",
+      "_origin": "semantic",
+      "community": 53,
+      "community_name": "EventParticipantsSection.tsx",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "ref_components_participants_removeparticipantdialog",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "ref_store_participantstore",
+      "label": "ref_store_participantstore",
+      "_origin": "semantic",
+      "community": 53,
+      "community_name": "EventParticipantsSection.tsx",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "ref_store_participantstore",
       "source_file": "",
       "type": "external"
     },
@@ -8203,7 +8275,7 @@
       "label": "ref_components_events_eventcard",
       "_origin": "semantic",
       "community": 57,
-      "community_name": "ref_types_domain",
+      "community_name": "EventHeader.tsx",
       "external": true,
       "file_type": "concept",
       "norm_label": "ref_components_events_eventcard",
@@ -8215,22 +8287,10 @@
       "label": "ref_components_events_eventstatusbadge",
       "_origin": "semantic",
       "community": 57,
-      "community_name": "ref_types_domain",
+      "community_name": "EventHeader.tsx",
       "external": true,
       "file_type": "concept",
       "norm_label": "ref_components_events_eventstatusbadge",
-      "source_file": "",
-      "type": "external"
-    },
-    {
-      "id": "ref_types_domain",
-      "label": "ref_types_domain",
-      "_origin": "semantic",
-      "community": 57,
-      "community_name": "ref_types_domain",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "ref_types_domain",
       "source_file": "",
       "type": "external"
     },
@@ -8239,7 +8299,7 @@
       "label": "ref_utils_eventformat",
       "_origin": "semantic",
       "community": 57,
-      "community_name": "ref_types_domain",
+      "community_name": "EventHeader.tsx",
       "external": true,
       "file_type": "concept",
       "norm_label": "ref_utils_eventformat",
@@ -8247,14 +8307,62 @@
       "type": "external"
     },
     {
+      "id": "ref_types_domain",
+      "label": "ref_types_domain",
+      "_origin": "semantic",
+      "community": 59,
+      "community_name": "ref_types_domain",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "ref_types_domain",
+      "source_file": "",
+      "type": "external"
+    },
+    {
       "id": "ref_utils_eventworkflow",
       "label": "ref_utils_eventworkflow",
       "_origin": "semantic",
-      "community": 57,
+      "community": 59,
       "community_name": "ref_types_domain",
       "external": true,
       "file_type": "concept",
       "norm_label": "ref_utils_eventworkflow",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "ref_components_ui_card",
+      "label": "ref_components_ui_card",
+      "_origin": "semantic",
+      "community": 61,
+      "community_name": "ref_components_ui_card",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "ref_components_ui_card",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "ref_components_participants_participantavatar",
+      "label": "ref_components_participants_participantavatar",
+      "_origin": "semantic",
+      "community": 62,
+      "community_name": "ParticipantCard.tsx",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "ref_components_participants_participantavatar",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "ref_components_participants_participantrolebadge",
+      "label": "ref_components_participants_participantrolebadge",
+      "_origin": "semantic",
+      "community": 62,
+      "community_name": "ParticipantCard.tsx",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "ref_components_participants_participantrolebadge",
       "source_file": "",
       "type": "external"
     },
@@ -8271,11 +8379,23 @@
       "type": "external"
     },
     {
+      "id": "ref_components_ui_button",
+      "label": "ref_components_ui_button",
+      "_origin": "semantic",
+      "community": 66,
+      "community_name": "ref_components_ui_button",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "ref_components_ui_button",
+      "source_file": "",
+      "type": "external"
+    },
+    {
       "id": "ref_components_ui_emptystate",
       "label": "ref_components_ui_emptystate",
       "_origin": "semantic",
       "community": 66,
-      "community_name": "EventEmptyState.tsx",
+      "community_name": "ref_components_ui_button",
       "external": true,
       "file_type": "concept",
       "norm_label": "ref_components_ui_emptystate",
@@ -8287,7 +8407,7 @@
       "label": "ref_app_providers_authprovider",
       "_origin": "semantic",
       "community": 67,
-      "community_name": "App.tsx",
+      "community_name": "react-router-dom",
       "external": true,
       "file_type": "concept",
       "norm_label": "ref_app_providers_authprovider",
@@ -8299,7 +8419,7 @@
       "label": "ref_components_common_apperrorboundary",
       "_origin": "semantic",
       "community": 67,
-      "community_name": "App.tsx",
+      "community_name": "react-router-dom",
       "external": true,
       "file_type": "concept",
       "norm_label": "ref_components_common_apperrorboundary",
@@ -8311,7 +8431,7 @@
       "label": "ref_routes_router",
       "_origin": "semantic",
       "community": 67,
-      "community_name": "App.tsx",
+      "community_name": "react-router-dom",
       "external": true,
       "file_type": "concept",
       "norm_label": "ref_routes_router",
@@ -8319,14 +8439,86 @@
       "type": "external"
     },
     {
-      "id": "ref_node_url",
-      "label": "ref_node_url",
+      "id": "ref_components_ui_input",
+      "label": "ref_components_ui_input",
       "_origin": "semantic",
-      "community": 71,
-      "community_name": "vite.config.ts",
+      "community": 68,
+      "community_name": "AddParticipantDialog.tsx",
       "external": true,
       "file_type": "concept",
-      "norm_label": "ref_node_url",
+      "norm_label": "ref_components_ui_input",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "ref_utils_participantvalidation",
+      "label": "ref_utils_participantvalidation",
+      "_origin": "semantic",
+      "community": 68,
+      "community_name": "AddParticipantDialog.tsx",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "ref_utils_participantvalidation",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "ref_app_app",
+      "label": "ref_app_app",
+      "_origin": "semantic",
+      "community": 69,
+      "community_name": "main.tsx",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "ref_app_app",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "ref_react_dom_client",
+      "label": "ref_react_dom_client",
+      "_origin": "semantic",
+      "community": 69,
+      "community_name": "main.tsx",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "ref_react_dom_client",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "ref_styles_index_css",
+      "label": "ref_styles_index_css",
+      "_origin": "semantic",
+      "community": 69,
+      "community_name": "main.tsx",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "ref_styles_index_css",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "ref_components_participants_participantcard",
+      "label": "ref_components_participants_participantcard",
+      "_origin": "semantic",
+      "community": 70,
+      "community_name": "participants/index.ts",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "ref_components_participants_participantcard",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "ref_components_ui_avatar",
+      "label": "ref_components_ui_avatar",
+      "_origin": "semantic",
+      "community": 70,
+      "community_name": "participants/index.ts",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "ref_components_ui_avatar",
       "source_file": "",
       "type": "external"
     },
@@ -8355,6 +8547,18 @@
       "type": "external"
     },
     {
+      "id": "ref_services_participant_service",
+      "label": "ref_services_participant_service",
+      "_origin": "semantic",
+      "community": 8,
+      "community_name": "zustand",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "ref_services_participant_service",
+      "source_file": "",
+      "type": "external"
+    },
+    {
       "id": "ref_services_profile_service",
       "label": "ref_services_profile_service",
       "_origin": "semantic",
@@ -8375,127 +8579,6 @@
       "external": true,
       "file_type": "concept",
       "norm_label": "ref_services_wedding_service",
-      "source_file": "",
-      "type": "external"
-    },
-    {
-      "id": "ref_components_participants",
-      "label": "ref_components_participants",
-      "community": 14,
-      "community_name": "react-router-dom",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "ref_components_participants",
-      "source_file": "",
-      "type": "external"
-    },
-    {
-      "id": "ref_components_participants_addparticipantdialog",
-      "label": "ref_components_participants_addparticipantdialog",
-      "community": 53,
-      "community_name": "ref_components_ui_button",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "ref_components_participants_addparticipantdialog",
-      "source_file": "",
-      "type": "external"
-    },
-    {
-      "id": "ref_components_participants_participantavatar",
-      "label": "ref_components_participants_participantavatar",
-      "community": 53,
-      "community_name": "ref_components_ui_button",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "ref_components_participants_participantavatar",
-      "source_file": "",
-      "type": "external"
-    },
-    {
-      "id": "ref_components_participants_participantemptystate",
-      "label": "ref_components_participants_participantemptystate",
-      "community": 53,
-      "community_name": "ref_components_ui_button",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "ref_components_participants_participantemptystate",
-      "source_file": "",
-      "type": "external"
-    },
-    {
-      "id": "ref_components_participants_participantlist",
-      "label": "ref_components_participants_participantlist",
-      "community": 53,
-      "community_name": "ref_components_ui_button",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "ref_components_participants_participantlist",
-      "source_file": "",
-      "type": "external"
-    },
-    {
-      "id": "ref_components_participants_participantrolebadge",
-      "label": "ref_components_participants_participantrolebadge",
-      "community": 53,
-      "community_name": "ref_components_ui_button",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "ref_components_participants_participantrolebadge",
-      "source_file": "",
-      "type": "external"
-    },
-    {
-      "id": "ref_components_participants_removeparticipantdialog",
-      "label": "ref_components_participants_removeparticipantdialog",
-      "community": 53,
-      "community_name": "ref_components_ui_button",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "ref_components_participants_removeparticipantdialog",
-      "source_file": "",
-      "type": "external"
-    },
-    {
-      "id": "ref_store_participantstore",
-      "label": "ref_store_participantstore",
-      "community": 53,
-      "community_name": "ref_components_ui_button",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "ref_store_participantstore",
-      "source_file": "",
-      "type": "external"
-    },
-    {
-      "id": "ref_utils_participantvalidation",
-      "label": "ref_utils_participantvalidation",
-      "community": 68,
-      "community_name": "participantValidation.test.ts",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "ref_utils_participantvalidation",
-      "source_file": "",
-      "type": "external"
-    },
-    {
-      "id": "ref_components_participants_participantcard",
-      "label": "ref_components_participants_participantcard",
-      "community": 70,
-      "community_name": "ParticipantList.tsx",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "ref_components_participants_participantcard",
-      "source_file": "",
-      "type": "external"
-    },
-    {
-      "id": "ref_services_participant_service",
-      "label": "ref_services_participant_service",
-      "community": 8,
-      "community_name": "zustand",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "ref_services_participant_service",
       "source_file": "",
       "type": "external"
     }
@@ -8762,7 +8845,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/services/participant.service.ts",
-      "source_location": "L174",
+      "source_location": "L184",
       "weight": 1.0
     },
     {
@@ -8774,7 +8857,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/services/participant.service.ts",
-      "source_location": "L206",
+      "source_location": "L216",
       "weight": 1.0
     },
     {
@@ -8786,7 +8869,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/services/participant.service.ts",
-      "source_location": "L207",
+      "source_location": "L217",
       "weight": 1.0
     },
     {
@@ -8798,19 +8881,19 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/services/participant.service.ts",
-      "source_location": "L151",
+      "source_location": "L162",
       "weight": 1.0
     },
     {
       "source": "src_services_participant_service_getparticipantcandidates",
-      "target": "src_services_participant_service_getparticipants",
+      "target": "src_services_participant_service_geteventparticipantuserids",
       "relation": "calls",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/services/participant.service.ts",
-      "source_location": "L152",
+      "source_location": "L163",
       "weight": 1.0
     },
     {
@@ -8822,7 +8905,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/services/participant.service.ts",
-      "source_location": "L119",
+      "source_location": "L130",
       "weight": 1.0
     },
     {
@@ -8834,7 +8917,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/services/participant.service.ts",
-      "source_location": "L120",
+      "source_location": "L131",
       "weight": 1.0
     },
     {
@@ -8846,7 +8929,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/services/participant.service.ts",
-      "source_location": "L124",
+      "source_location": "L135",
       "weight": 1.0
     },
     {
@@ -8858,7 +8941,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/services/participant.service.ts",
-      "source_location": "L127",
+      "source_location": "L138",
       "weight": 1.0
     },
     {
@@ -8882,7 +8965,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/services/participant.service.ts",
-      "source_location": "L236",
+      "source_location": "L246",
       "weight": 1.0
     },
     {
@@ -8894,7 +8977,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/services/participant.service.ts",
-      "source_location": "L237",
+      "source_location": "L247",
       "weight": 1.0
     },
     {
@@ -8906,7 +8989,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/services/participant.service.ts",
-      "source_location": "L238",
+      "source_location": "L248",
       "weight": 1.0
     },
     {
@@ -8918,7 +9001,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/services/participant.service.ts",
-      "source_location": "L242",
+      "source_location": "L252",
       "weight": 1.0
     },
     {
@@ -8966,7 +9049,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/store/participantStore.ts",
-      "source_location": "L53",
+      "source_location": "L49",
       "weight": 1.0
     },
     {
@@ -12868,18 +12951,18 @@
     },
     {
       "source": "changelog_changelog",
-      "target": "changelog_v0_5_1_user_wedding_membership_2026_09_18",
+      "target": "changelog_v0_5_2_event_management_2026_09_18",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "CHANGELOG.md",
-      "source_location": "L29",
+      "source_location": "L34",
       "weight": 1.0
     },
     {
       "source": "changelog_changelog",
-      "target": "changelog_v0_5_2_event_management_2026_09_18",
+      "target": "changelog_v0_5_3_participant_management_2026_09_18",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -12890,13 +12973,24 @@
     },
     {
       "source": "changelog_changelog",
+      "target": "changelog_v0_5_1_user_wedding_membership_2026_09_18",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "CHANGELOG.md",
+      "source_location": "L58",
+      "weight": 1.0
+    },
+    {
+      "source": "changelog_changelog",
       "target": "changelog_v0_4_0_react_foundation_2026_09_18",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "CHANGELOG.md",
-      "source_location": "L52",
+      "source_location": "L81",
       "weight": 1.0
     },
     {
@@ -12907,29 +13001,29 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "CHANGELOG.md",
-      "source_location": "L69",
+      "source_location": "L98",
       "weight": 1.0
     },
     {
       "source": "changelog_v0_3_4_repository_workflow_2026_09_18",
-      "target": "changelog_added_71",
+      "target": "changelog_added_100",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "CHANGELOG.md",
-      "source_location": "L71",
+      "source_location": "L100",
       "weight": 1.0
     },
     {
       "source": "changelog_v0_3_4_repository_workflow_2026_09_18",
-      "target": "changelog_changed_77",
+      "target": "changelog_changed_106",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "CHANGELOG.md",
-      "source_location": "L77",
+      "source_location": "L106",
       "weight": 1.0
     },
     {
@@ -12940,66 +13034,99 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "CHANGELOG.md",
-      "source_location": "L81",
+      "source_location": "L110",
       "weight": 1.0
     },
     {
       "source": "changelog_v0_4_0_react_foundation_2026_09_18",
-      "target": "changelog_added_54",
+      "target": "changelog_added_83",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "CHANGELOG.md",
-      "source_location": "L54",
+      "source_location": "L83",
       "weight": 1.0
     },
     {
       "source": "changelog_v0_4_0_react_foundation_2026_09_18",
-      "target": "changelog_changed_63",
+      "target": "changelog_changed_92",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "CHANGELOG.md",
-      "source_location": "L63",
+      "source_location": "L92",
       "weight": 1.0
     },
     {
       "source": "changelog_v0_5_1_user_wedding_membership_2026_09_18",
-      "target": "changelog_added_31",
+      "target": "changelog_added_60",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "CHANGELOG.md",
-      "source_location": "L31",
+      "source_location": "L60",
       "weight": 1.0
     },
     {
       "source": "changelog_v0_5_1_user_wedding_membership_2026_09_18",
-      "target": "changelog_changed_40",
+      "target": "changelog_changed_69",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "CHANGELOG.md",
-      "source_location": "L40",
+      "source_location": "L69",
       "weight": 1.0
     },
     {
       "source": "changelog_v0_5_1_user_wedding_membership_2026_09_18",
-      "target": "changelog_verified_45",
+      "target": "changelog_verified_74",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "CHANGELOG.md",
-      "source_location": "L45",
+      "source_location": "L74",
       "weight": 1.0
     },
     {
       "source": "changelog_v0_5_2_event_management_2026_09_18",
+      "target": "changelog_added_36",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "CHANGELOG.md",
+      "source_location": "L36",
+      "weight": 1.0
+    },
+    {
+      "source": "changelog_v0_5_2_event_management_2026_09_18",
+      "target": "changelog_changed_44",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "CHANGELOG.md",
+      "source_location": "L44",
+      "weight": 1.0
+    },
+    {
+      "source": "changelog_v0_5_2_event_management_2026_09_18",
+      "target": "changelog_verified_49",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "CHANGELOG.md",
+      "source_location": "L49",
+      "weight": 1.0
+    },
+    {
+      "source": "changelog_v0_5_3_participant_management_2026_09_18",
       "target": "changelog_changed",
       "relation": "contains",
       "_origin": "ast",
@@ -13010,7 +13137,7 @@
       "weight": 1.0
     },
     {
-      "source": "changelog_v0_5_2_event_management_2026_09_18",
+      "source": "changelog_v0_5_3_participant_management_2026_09_18",
       "target": "changelog_verified",
       "relation": "contains",
       "_origin": "ast",
@@ -13021,7 +13148,18 @@
       "weight": 1.0
     },
     {
-      "source": "changelog_v0_5_2_event_management_2026_09_18",
+      "source": "changelog_v0_5_3_participant_management_2026_09_18",
+      "target": "changelog_notes",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "CHANGELOG.md",
+      "source_location": "L28",
+      "weight": 1.0
+    },
+    {
+      "source": "changelog_v0_5_3_participant_management_2026_09_18",
       "target": "changelog_added",
       "relation": "contains",
       "_origin": "ast",
@@ -13578,7 +13716,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L108",
+      "source_location": "L112",
       "weight": 1.0
     },
     {
@@ -13605,17 +13743,6 @@
     },
     {
       "source": "readme_wedding_planner",
-      "target": "readme_branch_workflow",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md",
-      "source_location": "L49",
-      "weight": 1.0
-    },
-    {
-      "source": "readme_wedding_planner",
       "target": "readme_architecture",
       "relation": "contains",
       "_origin": "ast",
@@ -13627,13 +13754,24 @@
     },
     {
       "source": "readme_wedding_planner",
+      "target": "readme_branch_workflow",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": "L50",
+      "weight": 1.0
+    },
+    {
+      "source": "readme_wedding_planner",
       "target": "readme_commit_convention",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L56",
+      "source_location": "L57",
       "weight": 1.0
     },
     {
@@ -13644,7 +13782,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L67",
+      "source_location": "L68",
       "weight": 1.0
     },
     {
@@ -13655,7 +13793,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L89",
+      "source_location": "L90",
       "weight": 1.0
     },
     {
@@ -13666,7 +13804,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L96",
+      "source_location": "L98",
       "weight": 1.0
     },
     {
@@ -15871,13 +16009,24 @@
     },
     {
       "source": "src_services_participant_service",
+      "target": "src_services_participant_service_getparticipants",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/services/participant.service.ts",
+      "source_location": "L108",
+      "weight": 1.0
+    },
+    {
+      "source": "src_services_participant_service",
       "target": "src_services_participant_service_getparticipantcandidates",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/services/participant.service.ts",
-      "source_location": "L136",
+      "source_location": "L147",
       "weight": 1.0
     },
     {
@@ -15888,7 +16037,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/services/participant.service.ts",
-      "source_location": "L173",
+      "source_location": "L183",
       "weight": 1.0
     },
     {
@@ -15910,7 +16059,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/services/participant.service.ts",
-      "source_location": "L210",
+      "source_location": "L220",
       "weight": 1.0
     },
     {
@@ -15921,7 +16070,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/services/participant.service.ts",
-      "source_location": "L250",
+      "source_location": "L260",
       "weight": 1.0
     },
     {
@@ -16003,7 +16152,7 @@
     },
     {
       "source": "src_services_participant_service",
-      "target": "src_services_participant_service_getparticipants",
+      "target": "src_services_participant_service_geteventparticipantuserids",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -16152,7 +16301,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/store/participantStore.ts",
-      "source_location": "L34",
+      "source_location": "L32",
       "weight": 1.0
     },
     {
@@ -16163,7 +16312,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/store/participantStore.ts",
-      "source_location": "L38",
+      "source_location": "L36",
       "weight": 1.0
     },
     {
@@ -17659,7 +17808,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L110",
+      "source_location": "L114",
       "weight": 1.0
     },
     {
@@ -17670,7 +17819,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L111",
+      "source_location": "L115",
       "weight": 1.0
     },
     {
@@ -17681,7 +17830,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L112",
+      "source_location": "L116",
       "weight": 1.0
     },
     {
@@ -17692,7 +17841,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L113",
+      "source_location": "L117",
       "weight": 1.0
     },
     {
@@ -17703,7 +17852,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L114",
+      "source_location": "L118",
       "weight": 1.0
     },
     {
@@ -17714,7 +17863,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L115",
+      "source_location": "L119",
       "weight": 1.0
     },
     {
@@ -17725,7 +17874,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L116",
+      "source_location": "L120",
       "weight": 1.0
     },
     {
@@ -18248,6 +18397,18 @@
     },
     {
       "source": "changelog_added",
+      "target": "src_services_participant_service_addparticipant",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "context": "addParticipant",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "changelog_added_36",
       "target": "src_services_event_service_archiveevent",
       "relation": "references",
       "_origin": "ast",
@@ -18255,11 +18416,23 @@
       "confidence_score": 0.95,
       "context": "archiveEvent",
       "source_file": "CHANGELOG.md",
-      "source_location": "L10",
+      "source_location": "L39",
       "weight": 1.0
     },
     {
       "source": "changelog_added",
+      "target": "src_services_participant_service_archiveparticipant",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "context": "archiveParticipant",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "changelog_added_36",
       "target": "src_services_event_service_createevent",
       "relation": "references",
       "_origin": "ast",
@@ -18267,11 +18440,11 @@
       "confidence_score": 0.95,
       "context": "createEvent",
       "source_file": "CHANGELOG.md",
-      "source_location": "L10",
+      "source_location": "L39",
       "weight": 1.0
     },
     {
-      "source": "changelog_added",
+      "source": "changelog_added_36",
       "target": "src_services_event_service_getevent",
       "relation": "references",
       "_origin": "ast",
@@ -18279,11 +18452,11 @@
       "confidence_score": 0.95,
       "context": "getEvent",
       "source_file": "CHANGELOG.md",
-      "source_location": "L10",
+      "source_location": "L39",
       "weight": 1.0
     },
     {
-      "source": "changelog_added",
+      "source": "changelog_added_36",
       "target": "src_services_event_service_getevents",
       "relation": "references",
       "_origin": "ast",
@@ -18291,11 +18464,35 @@
       "confidence_score": 0.95,
       "context": "getEvents",
       "source_file": "CHANGELOG.md",
+      "source_location": "L39",
+      "weight": 1.0
+    },
+    {
+      "source": "changelog_added",
+      "target": "src_services_participant_service_getparticipantcandidates",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "context": "getParticipantCandidates",
+      "source_file": "CHANGELOG.md",
       "source_location": "L10",
       "weight": 1.0
     },
     {
-      "source": "changelog_added_71",
+      "source": "changelog_added",
+      "target": "src_services_participant_service_getparticipants",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "context": "getParticipants",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "changelog_added_100",
       "target": "scripts_migrate_main",
       "relation": "references",
       "_origin": "ast",
@@ -18303,7 +18500,7 @@
       "confidence_score": 0.95,
       "context": "main",
       "source_file": "CHANGELOG.md",
-      "source_location": "L75",
+      "source_location": "L104",
       "weight": 1.0
     },
     {
@@ -18315,7 +18512,7 @@
       "confidence_score": 0.95,
       "context": "main",
       "source_file": "README.md",
-      "source_location": "L51",
+      "source_location": "L52",
       "weight": 1.0
     },
     {
@@ -18331,13 +18528,25 @@
       "weight": 1.0
     },
     {
-      "source": "changelog_added",
+      "source": "changelog_added_36",
       "target": "src_services_event_service_updateevent",
       "relation": "references",
       "_origin": "ast",
       "confidence": "INFERRED",
       "confidence_score": 0.95,
       "context": "updateEvent",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L39",
+      "weight": 1.0
+    },
+    {
+      "source": "changelog_added",
+      "target": "src_services_participant_service_updateparticipant",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "context": "updateParticipant",
       "source_file": "CHANGELOG.md",
       "source_location": "L10",
       "weight": 1.0

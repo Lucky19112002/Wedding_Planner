@@ -88,14 +88,6 @@ export function EventDetailPage() {
             }}
           />
 
-          <div className="grid gap-5 md:grid-cols-2">
-            <Card>
-              <h2 className="text-lg font-semibold">Outfits</h2>
-              <p className="mt-3 text-sm text-slate-600">
-                Outfit planning will appear after participant management is in place.
-              </p>
-            </Card>
-          </div>
         </div>
 
         <div className="space-y-5">

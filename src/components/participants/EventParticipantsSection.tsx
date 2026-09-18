@@ -4,7 +4,6 @@ import { ParticipantEmptyState } from '@/components/participants/ParticipantEmpt
 import { ParticipantList } from '@/components/participants/ParticipantList';
 import { RemoveParticipantDialog } from '@/components/participants/RemoveParticipantDialog';
 import { Button } from '@/components/ui/Button';
-import { Card } from '@/components/ui/Card';
 import { ErrorState } from '@/components/ui/ErrorState';
 import { Loader } from '@/components/ui/Loader';
 import { useParticipantStore } from '@/store/participantStore';
@@ -86,10 +85,6 @@ export function EventParticipantsSection({ canManage, event, onChanged }: EventP
           onRemove={setParticipantToRemove}
         />
       ) : null}
-
-      <Card className="text-sm text-slate-600">
-        Outfit count is a placeholder until Phase 5.4 adds outfit management.
-      </Card>
 
       {dialogOpen ? (
         <AddParticipantDialog

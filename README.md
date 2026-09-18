@@ -93,7 +93,8 @@ Planned tags:
 - Phase 5.1: User, wedding, and membership module — complete
 - Phase 5.2: Event management — complete
 - Phase 5.3: Participant management — complete
-- Phase 5.4: Outfit management — next
+- Phase 5.4: Outfit management — complete
+- Phase 5.5: Images and shopping links — next
 
 ## Current App Surface
 
@@ -106,7 +107,11 @@ Planned tags:
 - Event dashboard with upcoming/all events, search, status filter, empty state, and responsive New Event actions.
 - Event create/edit/detail/archive flows connected to Supabase.
 - Event status workflow helpers and archive-only destructive action.
-- Participant management inside event details with member search, add/edit/remove, duplicate prevention, archive-only removal, responsive dialogs, and outfit-count placeholders.
+- Participant management inside event details with member search, add/edit/remove, duplicate prevention, archive-only removal, responsive dialogs, and live outfit counts.
+- Participant-scoped outfit lists inside Event Details with premium cards, empty states, and New Outfit actions.
+- Outfit create/edit/detail/archive flows connected to Supabase.
+- Outfit status workflow helpers, badges, timeline, archive-only destructive action, and Vitest coverage.
+- Outfit image gallery and shopping-link sections prepared for Phase 5.5 without schema changes.
 - Vitest unit coverage for participant duplicate/search validation.
 
 ## Documentation

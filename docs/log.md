@@ -4,6 +4,26 @@ Newest entries first. Every document added or changed under `docs/` is recorded 
 
 ---
 
+## 2026-09-18 – Phase 5.4 Outfit Management
+
+- **Status:** Complete
+- **Phase:** 5.4 – Outfit Management module
+- **What changed:**
+  - Added typed outfit models, outfit workflow helpers, outfit formatting helpers, Supabase outfit service, and outfit Zustand store.
+  - Added protected outfit routes for participant-scoped create, outfit detail, and outfit edit screens.
+  - Integrated participant-scoped outfit lists into Event Details with active outfit counts, empty states, and New Outfit links.
+  - Added React Hook Form + Zod outfit form with dress type, colour, quantity minimum, status, and notes.
+  - Added outfit detail page with hero image placeholder, outfit information, notes, status timeline, image gallery placeholder, shopping-link placeholder, and audit timestamps.
+  - Added archive-only destructive flow using the existing `archive_outfit` RPC and confirmation modal.
+  - Added Vitest coverage for outfit workflow transitions and progress exclusion.
+  - Did not implement image upload, image gallery management, shopping-link editing, schema changes, SQL migrations, permanent delete, or progress widgets.
+  - Browser-tested create, edit, archive, status changes, quantity validation, navigation, mobile layout, desktop layout, and clean console.
+  - Verified `npx pnpm@latest run lint`, `npx pnpm@latest run build`, and `npx pnpm@latest run test`.
+- **Follow from:** [README.md](../README.md), [CHANGELOG.md](../CHANGELOG.md)
+- **Next:** Phase 5.5 — Images & Shopping Links.
+
+---
+
 ## 2026-09-18 – Phase 5.3 Participant Management
 
 - **Status:** Complete

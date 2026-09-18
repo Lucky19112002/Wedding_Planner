@@ -1,4 +1,5 @@
 import { ParticipantCard } from '@/components/participants/ParticipantCard';
+import { ParticipantOutfitsSection } from '@/components/outfits/ParticipantOutfitsSection';
 import type { Participant } from '@/types/domain';
 
 type ParticipantListProps = {
@@ -10,15 +11,17 @@ type ParticipantListProps = {
 
 export function ParticipantList({ canManage, onEdit, onRemove, participants }: ParticipantListProps) {
   return (
-    <div className="grid gap-3 md:grid-cols-2">
+    <div className="space-y-5">
       {participants.map((participant) => (
-        <ParticipantCard
-          canManage={canManage}
-          key={participant.id}
-          participant={participant}
-          onEdit={onEdit}
-          onRemove={onRemove}
-        />
+        <section className="space-y-3" key={participant.id}>
+          <ParticipantCard
+            canManage={canManage}
+            participant={participant}
+            onEdit={onEdit}
+            onRemove={onRemove}
+          />
+          <ParticipantOutfitsSection canManage={canManage} participant={participant} />
+        </section>
       ))}
     </div>
   );

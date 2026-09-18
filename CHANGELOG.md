@@ -2,6 +2,37 @@
 
 Newest entries first. This root changelog records repository and release milestones. Detailed product documentation changes remain in `/docs`.
 
+## [v0.5.4-outfit-management] - 2026-09-18
+
+### Added
+
+- Phase 5.4 Outfit Management module.
+- Outfit service with `getOutfits`, `getOutfit`, `createOutfit`, `updateOutfit`, and `archiveOutfit`.
+- Outfit Zustand store with outfits, selected outfit, loading, saving, and filter state.
+- Protected outfit routes: `/app/outfits/:id`, `/app/outfits/:id/edit`, and `/app/participants/:participantId/outfits/new`.
+- Participant-scoped outfit sections inside Event Details.
+- Reusable outfit UI components for cards, form, status badge, timeline, gallery placeholder, empty state, and archive dialog.
+- Outfit workflow tests for valid transitions, final Ready state, and Dropped progress exclusion.
+
+### Changed
+
+- Event Details now renders outfit planning beneath each participant instead of a generic event-level placeholder.
+- Participant outfit counts now refresh from active outfit rows.
+
+### Verified
+
+- Browser-tested create outfit, quantity validation, edit outfit, status transition options, archive outfit, navigation, desktop layout, and mobile layout.
+- Browser console had no warnings or errors.
+- `npx pnpm@latest run lint`
+- `npx pnpm@latest run build`
+- `npx pnpm@latest run test`
+
+### Notes
+
+- Image upload/gallery management and shopping-link editing remain Phase 5.5. Phase 5.4 displays existing image/link counts and placeholders without schema changes.
+
+---
+
 ## [v0.5.3-participant-management] - 2026-09-18
 
 ### Added

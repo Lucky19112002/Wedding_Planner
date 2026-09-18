@@ -1,5 +1,6 @@
 export type WeddingRole = 'admin' | 'member' | 'viewer';
 export type EventStatus = 'draft' | 'planned' | 'confirmed' | 'completed' | 'cancelled';
+export type OutfitStatus = 'idea' | 'shortlisted' | 'ordered' | 'received' | 'altered' | 'ready' | 'dropped';
 
 export type Profile = {
   id: string;
@@ -86,6 +87,34 @@ export type ParticipantCandidate = {
   relationshipNote: string | null;
   memberRole: WeddingRole;
   isAlreadyParticipant: boolean;
+};
+
+export type Outfit = {
+  id: string;
+  participantId: string;
+  eventId: string;
+  weddingId: string;
+  ownerUserId: string | null;
+  dressType: string | null;
+  colour: string | null;
+  quantity: number;
+  notes: string | null;
+  status: OutfitStatus;
+  primaryImagePath: string | null;
+  imageCount: number;
+  shoppingLinkCount: number;
+  createdAt: string;
+  updatedAt: string;
+  archivedAt: string | null;
+};
+
+export type OutfitInput = {
+  participantId: string;
+  dressType: string;
+  colour: string;
+  quantity: number;
+  notes: string | null;
+  status: OutfitStatus;
 };
 
 export type PermissionAction = 'view' | 'create' | 'edit' | 'admin';
