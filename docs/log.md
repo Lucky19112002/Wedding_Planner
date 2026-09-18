@@ -4,6 +4,26 @@ Newest entries first. Every document added or changed under `docs/` is recorded 
 
 ---
 
+## 2026-09-18 – Phase 5.5 Images & Shopping Links
+
+- **Status:** Complete
+- **Phase:** 5.5 – Images & Shopping Links module
+- **What changed:**
+  - Added typed outfit image and shopping-link models, private Storage image service, shopping-link service, and independent Zustand stores.
+  - Added signed URL generation and session caching for private `outfit-references` images.
+  - Added browser-side image validation/compression, upload progress state, delete, reorder, and set-primary image controls.
+  - Replaced Outfit Details image placeholders with a real gallery: hero image, thumbnail strip, full-screen preview, upload panel, empty state, and lazy-loaded images.
+  - Added shopping link cards with provider detection, custom labels, domains, open/edit/delete actions, and URL validation.
+  - Enforced five active images and five active links in the UI while preserving the existing database caps.
+  - Added Vitest coverage for shopping URL validation and provider detection.
+  - Did not modify schema, SQL migrations, locked product/system/database documentation, business rules, or permanent delete behavior.
+  - Browser-tested signed image rendering, five-image cap rejection, reorder, set primary, delete, invalid URL rejection, add links, five-link cap rejection, edit, delete, open link, and clean console.
+  - Verified `npx pnpm@latest run lint`, `npx pnpm@latest run build`, and `npx pnpm@latest run test`.
+- **Follow from:** [README.md](../README.md), [CHANGELOG.md](../CHANGELOG.md)
+- **Next:** Phase 5.6 — Progress Dashboard.
+
+---
+
 ## 2026-09-18 – Phase 5.4 Outfit Management
 
 - **Status:** Complete

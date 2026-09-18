@@ -2,6 +2,37 @@
 
 Newest entries first. This root changelog records repository and release milestones. Detailed product documentation changes remain in `/docs`.
 
+## [v0.5.5-images-shopping-links] - 2026-09-18
+
+### Added
+
+- Phase 5.5 Images & Shopping Links module.
+- Private outfit image service with upload, delete, reorder, primary image ordering, and signed URL generation.
+- Outfit image Zustand store with image list, upload progress, loading, error, and optimistic ordering state.
+- Shopping link service and store for create, update, delete, validation, and active-link loading.
+- Premium Outfit Details gallery with hero image, thumbnail strip, full-screen preview, upload panel, delete, reorder, and primary controls.
+- Shopping link cards with provider detection, domain display, open/edit/delete actions, and add/edit form.
+- Unit tests for shopping URL validation and provider detection.
+
+### Changed
+
+- Outfit list cards now render signed primary images when a reference exists.
+- Outfit Details now manages real image gallery and shopping links instead of Phase 5.5 placeholders.
+
+### Verified
+
+- Browser-tested outfit image signed rendering, five-image cap rejection, reorder, set primary, delete, invalid URL rejection, add five links, five-link cap rejection, edit link, delete link, and open link.
+- Browser console had no warnings or errors.
+- `npx pnpm@latest run lint`
+- `npx pnpm@latest run build`
+- `npx pnpm@latest run test`
+
+### Notes
+
+- No schema, migration, PRD, SDD, DATABASE, or business-rule changes were made.
+
+---
+
 ## [v0.5.4-outfit-management] - 2026-09-18
 
 ### Added

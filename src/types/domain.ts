@@ -101,6 +101,7 @@ export type Outfit = {
   notes: string | null;
   status: OutfitStatus;
   primaryImagePath: string | null;
+  primaryImageUrl: string | null;
   imageCount: number;
   shoppingLinkCount: number;
   createdAt: string;
@@ -115,6 +116,37 @@ export type OutfitInput = {
   quantity: number;
   notes: string | null;
   status: OutfitStatus;
+};
+
+export type OutfitImage = {
+  id: string;
+  outfitId: string;
+  weddingId: string;
+  storagePath: string;
+  sortOrder: number;
+  signedUrl: string | null;
+  createdAt: string;
+  updatedAt: string;
+  archivedAt: string | null;
+};
+
+export type ShoppingLink = {
+  id: string;
+  outfitId: string;
+  weddingId: string;
+  url: string;
+  label: string | null;
+  sortOrder: number;
+  createdAt: string;
+  updatedAt: string;
+  archivedAt: string | null;
+};
+
+export type ShoppingLinkInput = {
+  outfitId: string;
+  weddingId: string;
+  url: string;
+  label: string | null;
 };
 
 export type PermissionAction = 'view' | 'create' | 'edit' | 'admin';

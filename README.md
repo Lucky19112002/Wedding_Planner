@@ -94,7 +94,8 @@ Planned tags:
 - Phase 5.2: Event management — complete
 - Phase 5.3: Participant management — complete
 - Phase 5.4: Outfit management — complete
-- Phase 5.5: Images and shopping links — next
+- Phase 5.5: Images and shopping links — complete
+- Phase 5.6: Progress dashboard — next
 
 ## Current App Surface
 
@@ -111,7 +112,8 @@ Planned tags:
 - Participant-scoped outfit lists inside Event Details with premium cards, empty states, and New Outfit actions.
 - Outfit create/edit/detail/archive flows connected to Supabase.
 - Outfit status workflow helpers, badges, timeline, archive-only destructive action, and Vitest coverage.
-- Outfit image gallery and shopping-link sections prepared for Phase 5.5 without schema changes.
+- Private Supabase Storage outfit gallery with signed URLs, upload compression, thumbnail strip, full-screen preview, primary image ordering, delete, and reorder controls.
+- Shopping/reference link management with URL validation, provider detection, cards, edit/delete/open actions, and five-link cap handling.
 - Vitest unit coverage for participant duplicate/search validation.
 
 ## Documentation

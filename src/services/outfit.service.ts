@@ -36,6 +36,7 @@ type UrlRow = {
 
 const outfitSelect =
   'id,participant_id,event_id,wedding_id,owner_user_id,dress_type,colour,quantity,notes,status,archived_at,created_at,updated_at';
+const bucket = 'outfit-references';
 
 function countByOutfit<T extends { outfit_id: string }>(rows: T[]): Map<string, number> {
   return rows.reduce((counts, row) => {
@@ -52,9 +53,21 @@ function mapPrimaryImages(rows: ImageRow[]): Map<string, string> {
   }, new Map<string, string>());
 }
 
+async function mapPrimaryImageUrls(primaryImages: Map<string, string>): Promise<Map<string, string>> {
+  const entries = await Promise.all(
+    [...primaryImages.entries()].map(async ([outfitId, storagePath]) => {
+      const { data, error } = await supabase.storage.from(bucket).createSignedUrl(storagePath, 60 * 30);
+      if (error) return [outfitId, ''] as const;
+      return [outfitId, data.signedUrl] as const;
+    }),
+  );
+  return new Map(entries.filter(([, url]) => url));
+}
+
 function mapOutfit(
   row: OutfitRow,
   primaryImages = new Map<string, string>(),
+  primaryImageUrls = new Map<string, string>(),
   imageCounts = new Map<string, number>(),
   linkCounts = new Map<string, number>(),
 ): Outfit {
@@ -70,6 +83,7 @@ function mapOutfit(
     notes: row.notes,
     status: row.status,
     primaryImagePath: primaryImages.get(row.id) ?? null,
+    primaryImageUrl: primaryImageUrls.get(row.id) ?? null,
     imageCount: imageCounts.get(row.id) ?? 0,
     shoppingLinkCount: linkCounts.get(row.id) ?? 0,
     createdAt: row.created_at,
@@ -100,8 +114,10 @@ async function getOutfitMeta(outfitIds: string[]) {
   if (urlError) throw urlError;
 
   const images = (imageData ?? []) as ImageRow[];
+  const primaryImages = mapPrimaryImages(images);
   return {
-    primaryImages: mapPrimaryImages(images),
+    primaryImages,
+    primaryImageUrls: await mapPrimaryImageUrls(primaryImages),
     imageCounts: countByOutfit(images),
     linkCounts: countByOutfit((urlData ?? []) as UrlRow[]),
   };
@@ -145,7 +161,7 @@ export async function getOutfits(participantId: string): Promise<Outfit[]> {
 
   const rows = (data ?? []) as OutfitRow[];
   const meta = await getOutfitMeta(rows.map((row) => row.id));
-  return rows.map((row) => mapOutfit(row, meta.primaryImages, meta.imageCounts, meta.linkCounts));
+  return rows.map((row) => mapOutfit(row, meta.primaryImages, meta.primaryImageUrls, meta.imageCounts, meta.linkCounts));
 }
 
 export async function getOutfit(outfitId: string): Promise<Outfit | null> {
@@ -160,7 +176,7 @@ export async function getOutfit(outfitId: string): Promise<Outfit | null> {
   if (!data) return null;
 
   const meta = await getOutfitMeta([data.id]);
-  return mapOutfit(data, meta.primaryImages, meta.imageCounts, meta.linkCounts);
+  return mapOutfit(data, meta.primaryImages, meta.primaryImageUrls, meta.imageCounts, meta.linkCounts);
 }
 
 export async function createOutfit(input: OutfitInput): Promise<Outfit> {
@@ -184,7 +200,7 @@ export async function updateOutfit(outfitId: string, input: OutfitInput): Promis
   if (error) throw error;
 
   const meta = await getOutfitMeta([data.id]);
-  return mapOutfit(data, meta.primaryImages, meta.imageCounts, meta.linkCounts);
+  return mapOutfit(data, meta.primaryImages, meta.primaryImageUrls, meta.imageCounts, meta.linkCounts);
 }
 
 export async function archiveOutfit(outfitId: string): Promise<void> {

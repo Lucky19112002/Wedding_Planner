@@ -3,9 +3,9 @@ import { Link, useNavigate, useParams } from 'react-router-dom';
 import {
   ArchiveOutfitDialog,
   OutfitGallery,
-  OutfitImagePlaceholder,
   OutfitStatusBadge,
   OutfitTimeline,
+  ShoppingLinksPanel,
 } from '@/components/outfits';
 import { Button } from '@/components/ui/Button';
 import { Card } from '@/components/ui/Card';
@@ -48,7 +48,7 @@ export function OutfitDetailPage() {
       </Link>
 
       <section className="grid gap-5 lg:grid-cols-[1.1fr_0.9fr]">
-        <OutfitImagePlaceholder outfit={outfit} size="hero" />
+        <OutfitGallery outfit={outfit} />
         <Card className="space-y-4">
           <OutfitStatusBadge status={outfit.status} />
           <div>
@@ -93,11 +93,7 @@ export function OutfitDetailPage() {
             <h2 className="text-lg font-semibold">Notes</h2>
             <p className="mt-3 whitespace-pre-wrap text-sm text-slate-600">{outfit.notes || 'No notes yet.'}</p>
           </Card>
-          <OutfitGallery outfit={outfit} />
-          <Card>
-            <h2 className="text-lg font-semibold">Shopping links</h2>
-            <p className="mt-3 text-sm text-slate-600">Shopping link management starts in Phase 5.5.</p>
-          </Card>
+          <ShoppingLinksPanel outfit={outfit} />
         </div>
         <div className="space-y-5">
           <Card>

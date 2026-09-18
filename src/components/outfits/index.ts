@@ -1,4 +1,8 @@
 export * from './ArchiveOutfitDialog';
+export * from './EmptyGallery';
+export * from './GalleryThumbnail';
+export * from './ImageUploader';
+export * from './ImageViewer';
 export * from './OutfitCard';
 export * from './OutfitEmptyState';
 export * from './OutfitForm';
@@ -8,3 +12,7 @@ export * from './OutfitList';
 export * from './OutfitStatusBadge';
 export * from './OutfitTimeline';
 export * from './ParticipantOutfitsSection';
+export * from './ShoppingLinkCard';
+export * from './ShoppingLinkForm';
+export * from './ShoppingLinksPanel';
+export * from './UploadProgress';
