@@ -102,9 +102,9 @@
     "semantic_hash": ""
   },
   "docs/log.md": {
-    "mtime": 1789792897.09293,
-    "seen": 1789792923.84897,
-    "ast_hash": "31349b194eb9bf9c8bb1a814e7d38338",
+    "mtime": 1789794118.7025113,
+    "seen": 1789794262.404682,
+    "ast_hash": "f2da5f5ad3f16596f9d19fc3d396345d",
     "semantic_hash": ""
   },
   "schema/README.md": {
@@ -354,9 +354,9 @@
     "semantic_hash": ""
   },
   "CHANGELOG.md": {
-    "mtime": 1789792897.0918038,
-    "seen": 1789792923.848953,
-    "ast_hash": "5800d3bc17273c433ad97022f5e0ec25",
+    "mtime": 1789794110.5985768,
+    "seen": 1789794262.404672,
+    "ast_hash": "6e30dcb25a21bd4419499828c811d96f",
     "semantic_hash": ""
   },
   "README.md": {
@@ -990,9 +990,9 @@
     "semantic_hash": ""
   },
   "src/services/invitation.service.ts": {
-    "mtime": 1789789994.9818475,
-    "seen": 1789792923.8489249,
-    "ast_hash": "f0ab698dfba8de69d9848fc81c8477ad",
+    "mtime": 1789794082.7222087,
+    "seen": 1789794262.40464,
+    "ast_hash": "1074ab96b311fe3e881905bd29a9c6a4",
     "semantic_hash": ""
   },
   "src/services/permission.service.ts": {
@@ -1002,9 +1002,9 @@
     "semantic_hash": ""
   },
   "src/store/invitationStore.ts": {
-    "mtime": 1789789994.985602,
-    "seen": 1789792923.8489332,
-    "ast_hash": "1e943365c85fa968c3454c73abbfa9c5",
+    "mtime": 1789794089.702829,
+    "seen": 1789794262.4046478,
+    "ast_hash": "4dba841a5a8c5ade89176f5f2964b776",
     "semantic_hash": ""
   },
   "src/store/permissionStore.ts": {
@@ -1041,6 +1041,18 @@
     "mtime": 1789792808.0253332,
     "seen": 1789792923.8487968,
     "ast_hash": "96089f2917adb873aec0832e41bc34d4",
+    "semantic_hash": ""
+  },
+  "src/utils/appUrl.test.ts": {
+    "mtime": 1789794097.2365716,
+    "seen": 1789794262.4046552,
+    "ast_hash": "942de69c0d276a9844c4c2b4d324415d",
+    "semantic_hash": ""
+  },
+  "src/utils/appUrl.ts": {
+    "mtime": 1789794077.2920036,
+    "seen": 1789794262.4046562,
+    "ast_hash": "87354e4e8c56f0de9b6240028431cd6c",
     "semantic_hash": ""
   }
 }
