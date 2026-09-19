@@ -4,6 +4,22 @@ Newest entries first. Every document added or changed under `docs/` is recorded 
 
 ---
 
+## 2026-09-19 - Phase 7.2 Invitation Onboarding Hotfix
+
+- **Status:** Complete
+- **Phase:** 7.2 - Complete invitation onboarding
+- **What changed:**
+  - Added `schema/008_invitation_onboarding_details.sql` and `schema/009_invitation_details_wedding_date.sql` with a token-scoped invitation details RPC.
+  - Displayed wedding name, invited email, invited role, status, and expiry on the invite page before authentication.
+  - Added locked-email account creation for brand-new invited users.
+  - Automatically accepts the invitation after successful Supabase Auth signup and redirects into the app.
+  - Kept existing sign-in and accept flow for invited users who already have an account.
+  - Did not modify PRD, SDD, DATABASE, existing tables, RLS policies, or business rules.
+- **Follow from:** [CHANGELOG.md](../CHANGELOG.md)
+- **Next:** Production browser QA and main release promotion.
+
+---
+
 ## 2026-09-19 - Hotfix v1.0.1 Invitation Refresh and Invite URLs
 
 - **Status:** Complete
