@@ -4,10 +4,10 @@ Newest entries first. Every document added or changed under `docs/` is recorded 
 
 ---
 
-## 2026-09-18 – Phase 7 GitHub Pages CI/CD & Production Release
+## 2026-09-18 - Phase 7 GitHub Pages CI/CD & Production Release
 
 - **Status:** Complete
-- **Phase:** 7 – GitHub Pages CI/CD and production release
+- **Phase:** 7 - GitHub Pages CI/CD and production release
 - **What changed:**
   - Added GitHub Actions deployment from `main` to GitHub Pages.
   - Configured the Vite production base path for repository Pages deployments without hardcoded domains.
