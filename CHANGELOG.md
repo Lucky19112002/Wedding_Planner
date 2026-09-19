@@ -2,6 +2,21 @@
 
 Newest entries first. This root changelog records repository and release milestones. Detailed product documentation changes remain in `/docs`.
 
+## [v1.0.1-onboarding-hotfix] - 2026-09-19
+
+### Fixed
+
+- Brand-new invited users can now create an account from the invitation page.
+- Invitation pages now show wedding name, invited email, role, status, and expiry before authentication.
+- New invited accounts automatically accept the invitation and enter the app after signup.
+
+### Verified
+
+- Migrations `008_invitation_onboarding_details.sql` and `009_invitation_details_wedding_date.sql` applied with `Pending: (none)`.
+- Lint, tests, and build were run for the onboarding hotfix.
+
+---
+
 ## [v1.0.1-hotfix] - 2026-09-19
 
 ### Fixed

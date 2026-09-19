@@ -21,6 +21,40 @@ type InvitationRow = {
   created_by: string | null;
 };
 
+export type InvitationDetailsStatus = InvitationStatus | 'valid' | 'invalid';
+
+export type InvitationDetails = {
+  email: string;
+  invitedRole: WeddingRole;
+  status: InvitationDetailsStatus;
+  expiresAt: string;
+  weddingId: string;
+  weddingName: string;
+  weddingDate: string;
+  existingAccount: boolean;
+};
+
+type InvitationDetailsRow = {
+  email: string;
+  invited_role: WeddingRole;
+  status: InvitationStatus;
+  effective_status: InvitationDetailsStatus;
+  expires_at: string;
+  wedding_id: string;
+  wedding_name: string;
+  wedding_date: string;
+  existing_account: boolean;
+};
+
+export type InvitedAccountInput = {
+  token: string;
+  email: string;
+  password: string;
+  displayName: string;
+};
+
+export type InvitedSignInInput = Omit<InvitedAccountInput, 'displayName'>;
+
 type WeddingRow = {
   id: string;
   name: string;
@@ -207,6 +241,69 @@ export async function acceptInvitation(token: string): Promise<void> {
   if (error) {
     throw new Error(getErrorMessage(error));
   }
+}
+
+export async function getInvitationDetails(token: string): Promise<InvitationDetails | null> {
+  const { data, error } = await supabase.rpc('get_invitation_details', { p_token: token });
+  if (error) throw new Error(getErrorMessage(error));
+
+  const row = ((data ?? []) as InvitationDetailsRow[])[0];
+  if (!row) return null;
+
+  return {
+    email: row.email,
+    invitedRole: row.invited_role,
+    status: row.effective_status,
+    expiresAt: row.expires_at,
+    weddingId: row.wedding_id,
+    weddingName: row.wedding_name,
+    weddingDate: row.wedding_date,
+    existingAccount: row.existing_account,
+  };
+}
+
+export async function signInInvitedAccountAndAccept(input: InvitedSignInInput): Promise<string> {
+  const { data, error } = await supabase.auth.signInWithPassword({
+    email: input.email,
+    password: input.password,
+  });
+
+  if (error) throw new Error(getErrorMessage(error));
+  if (!data.session?.user.id) throw new Error('Sign in failed.');
+
+  await acceptInvitation(input.token);
+  return data.session.user.id;
+}
+
+export async function createInvitedAccountAndAccept(input: InvitedAccountInput): Promise<string> {
+  const { data, error } = await supabase.auth.signUp({
+    email: input.email,
+    password: input.password,
+    options: {
+      data: {
+        display_name: input.displayName,
+      },
+    },
+  });
+
+  if (error) throw new Error(getErrorMessage(error));
+
+  let session = data.session;
+  if (!session) {
+    const { data: signInData, error: signInError } = await supabase.auth.signInWithPassword({
+      email: input.email,
+      password: input.password,
+    });
+    if (signInError) throw new Error(getErrorMessage(signInError));
+    session = signInData.session;
+  }
+
+  if (!session?.user.id) {
+    throw new Error('Account created. Please sign in to accept this invitation.');
+  }
+
+  await acceptInvitation(input.token);
+  return session.user.id;
 }
 
 export async function getInvitationState(
