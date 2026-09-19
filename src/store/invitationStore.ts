@@ -49,14 +49,11 @@ export const useInvitationStore = create<InvitationStore>((set) => ({
     set({ saving: true, error: null, lastInviteUrl: null });
     try {
       const result = await sendInvitation(input);
-      set((state) => ({
-        pendingInvitations: [
-          result.invitation,
-          ...state.pendingInvitations.filter((invitation) => invitation.id !== result.invitation.id),
-        ],
+      set({
+        pendingInvitations: await getPendingInvitations(input.weddingId),
         lastInviteUrl: result.inviteUrl,
         saving: false,
-      }));
+      });
       return result;
     } catch (error) {
       set({

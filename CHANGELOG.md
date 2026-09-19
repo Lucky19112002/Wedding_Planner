@@ -2,6 +2,20 @@
 
 Newest entries first. This root changelog records repository and release milestones. Detailed product documentation changes remain in `/docs`.
 
+## [v1.0.1-hotfix] - 2026-09-19
+
+### Fixed
+
+- Pending invitations now refresh from Supabase immediately after a successful invite creation.
+- Generated invite links now include the configured Vite base path for GitHub Pages while keeping localhost and root-domain deployments clean.
+
+### Verified
+
+- Added URL regression coverage for GitHub Pages and root-base invite links.
+- Ran lint, tests, and build for the hotfix.
+
+---
+
 ## [v1.0.1-production-seed] - 2026-09-19
 
 ### Added

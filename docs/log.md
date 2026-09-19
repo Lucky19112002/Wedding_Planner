@@ -4,6 +4,21 @@ Newest entries first. Every document added or changed under `docs/` is recorded 
 
 ---
 
+## 2026-09-19 - Hotfix v1.0.1 Invitation Refresh and Invite URLs
+
+- **Status:** Complete
+- **Phase:** Hotfix v1.0.1
+- **What changed:**
+  - Refreshed pending invitations from Supabase immediately after invite creation.
+  - Centralized app URL generation so invitation creation and resend use the configured Vite base path.
+  - Fixed GitHub Pages invite links to resolve under `/Wedding_Planner/` without hardcoding the repository name.
+  - Added URL regression coverage for GitHub Pages and root-base deployments.
+  - Did not modify PRD, SDD, DATABASE, MIGRATIONS, schema, RLS, or business rules.
+- **Follow from:** [CHANGELOG.md](../CHANGELOG.md)
+- **Next:** Merge hotfix after production verification.
+
+---
+
 ## 2026-09-19 - Phase 7.1 Production Data Seed
 
 - **Status:** Complete
