@@ -1,0 +1,17 @@
+import type { Config } from 'tailwindcss';
+
+export default {
+  content: ['./index.html', './src/**/*.{ts,tsx}'],
+  theme: {
+    extend: {
+      colors: {
+        brand: {
+          50: '#f5f3ff',
+          600: '#7c3aed',
+          700: '#6d28d9',
+        },
+      },
+    },
+  },
+  plugins: [],
+} satisfies Config;
