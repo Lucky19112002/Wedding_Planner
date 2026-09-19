@@ -2,7 +2,21 @@
 
 Newest entries first. This root changelog records repository and release milestones. Detailed product documentation changes remain in `/docs`.
 
-## [v1.0.1-onboarding-hotfix] - 2026-09-19
+## [v1.0.3] - 2026-09-19
+
+### Fixed
+
+- Invited first-time users are created through a token-bound backend RPC with confirmed email, so onboarding no longer stops at `Email not confirmed`.
+- The invite page still keeps email locked to the token, preserves existing-user sign-in, and accepts the invitation only after a successful invited account sign-in.
+
+### Verified
+
+- Migration `010_confirm_invited_signup.sql` applied with `Pending: (none)`.
+- Added regression coverage for the invited-account RPC path.
+
+---
+
+## [v1.0.2] - 2026-09-19
 
 ### Fixed
 

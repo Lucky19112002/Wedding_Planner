@@ -4,6 +4,21 @@ Newest entries first. Every document added or changed under `docs/` is recorded 
 
 ---
 
+## 2026-09-19 - Hotfix v1.0.3 Seamless Invitation Onboarding
+
+- **Status:** In progress
+- **Phase:** Hotfix v1.0.3
+- **What changed:**
+  - Added `schema/010_confirm_invited_signup.sql` with a token-bound backend RPC for invited account creation.
+  - Creates invited Auth users with `email_confirmed_at` set by the database so first-time users can immediately sign in and accept the invitation.
+  - Updated the invite signup service to use the backend RPC instead of normal Supabase signup.
+  - Added regression coverage for the invited-account creation path.
+  - Did not expose service keys in the frontend.
+- **Follow from:** [CHANGELOG.md](../CHANGELOG.md)
+- **Next:** Full validation, browser QA, and production release if all checks pass.
+
+---
+
 ## 2026-09-19 - Phase 7.2 Invitation Onboarding Hotfix
 
 - **Status:** Complete

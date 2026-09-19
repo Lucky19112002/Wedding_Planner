@@ -102,9 +102,9 @@
     "semantic_hash": ""
   },
   "docs/log.md": {
-    "mtime": 1789794118.7025113,
-    "seen": 1789794262.404682,
-    "ast_hash": "f2da5f5ad3f16596f9d19fc3d396345d",
+    "mtime": 1789797138.4331775,
+    "seen": 1789797305.023438,
+    "ast_hash": "5174a528c5e585f9b5a854e2db850e0c",
     "semantic_hash": ""
   },
   "schema/README.md": {
@@ -354,9 +354,9 @@
     "semantic_hash": ""
   },
   "CHANGELOG.md": {
-    "mtime": 1789794110.5985768,
-    "seen": 1789794262.404672,
-    "ast_hash": "6e30dcb25a21bd4419499828c811d96f",
+    "mtime": 1789797138.4324508,
+    "seen": 1789797305.0234292,
+    "ast_hash": "4e32be3879cc1af19d919c2b2281a7ff",
     "semantic_hash": ""
   },
   "README.md": {
@@ -978,9 +978,9 @@
     "semantic_hash": ""
   },
   "src/pages/invite/InvitePage.tsx": {
-    "mtime": 1789789994.978516,
-    "seen": 1789792923.848901,
-    "ast_hash": "ba8359301bc5870849b7c68a6450a190",
+    "mtime": 1789796156.350629,
+    "seen": 1789797305.02339,
+    "ast_hash": "4524b0a7c970c0e70a2d0daa1d2f27ad",
     "semantic_hash": ""
   },
   "src/pages/users/UsersPage.tsx": {
@@ -990,9 +990,9 @@
     "semantic_hash": ""
   },
   "src/services/invitation.service.ts": {
-    "mtime": 1789794082.7222087,
-    "seen": 1789794262.40464,
-    "ast_hash": "1074ab96b311fe3e881905bd29a9c6a4",
+    "mtime": 1789797104.447311,
+    "seen": 1789797305.023398,
+    "ast_hash": "598a85bb859eae7b8da246da79d23543",
     "semantic_hash": ""
   },
   "src/services/permission.service.ts": {
@@ -1002,8 +1002,8 @@
     "semantic_hash": ""
   },
   "src/store/invitationStore.ts": {
-    "mtime": 1789794089.702829,
-    "seen": 1789794262.4046478,
+    "mtime": 1789794661.9351547,
+    "seen": 1789797305.0234072,
     "ast_hash": "4dba841a5a8c5ade89176f5f2964b776",
     "semantic_hash": ""
   },
@@ -1032,27 +1032,69 @@
     "semantic_hash": ""
   },
   ".github/workflows/deploy.yml": {
-    "mtime": 1789792397.2593381,
-    "seen": 1789792923.848951,
+    "mtime": 1789797013.4504433,
+    "seen": 1789797305.023427,
     "ast_hash": "70f3f67a4e7e222342ba0a580a316388",
     "semantic_hash": ""
   },
   "schema/007_seed_production_wedding.sql": {
-    "mtime": 1789792808.0253332,
-    "seen": 1789792923.8487968,
+    "mtime": 1789794661.9336329,
+    "seen": 1789797305.023324,
     "ast_hash": "96089f2917adb873aec0832e41bc34d4",
     "semantic_hash": ""
   },
   "src/utils/appUrl.test.ts": {
-    "mtime": 1789794097.2365716,
-    "seen": 1789794262.4046552,
+    "mtime": 1789794661.9354637,
+    "seen": 1789797305.023413,
     "ast_hash": "942de69c0d276a9844c4c2b4d324415d",
     "semantic_hash": ""
   },
   "src/utils/appUrl.ts": {
-    "mtime": 1789794077.2920036,
-    "seen": 1789794262.4046562,
+    "mtime": 1789794661.935691,
+    "seen": 1789797305.0234141,
     "ast_hash": "87354e4e8c56f0de9b6240028431cd6c",
+    "semantic_hash": ""
+  },
+  "schema/008_invitation_onboarding_details.sql": {
+    "mtime": 1789796156.3503404,
+    "seen": 1789797305.023325,
+    "ast_hash": "1d8c4fae06ffb2915249716e8d6878f4",
+    "semantic_hash": ""
+  },
+  "schema/009_invitation_details_wedding_date.sql": {
+    "mtime": 1789796156.3504395,
+    "seen": 1789797305.023325,
+    "ast_hash": "0ce4cf4c7744cf38fa90d26b0802008f",
+    "semantic_hash": ""
+  },
+  "schema/010_confirm_invited_signup.sql": {
+    "mtime": 1789797104.4464443,
+    "seen": 1789797305.023326,
+    "ast_hash": "d8d27775c6596aa2434f726f1f7665b9",
+    "semantic_hash": ""
+  },
+  "src/services/invitation.service.test.ts": {
+    "mtime": 1789797104.4484668,
+    "seen": 1789797305.0233972,
+    "ast_hash": "c2be9e528d8bd67304f0a7bde8344333",
+    "semantic_hash": ""
+  },
+  "qa-screenshots/invitation-e2e-2026-09-19/01-pending-invitation-instant.png": {
+    "mtime": 1789796156.349779,
+    "seen": 1789797305.023443,
+    "ast_hash": "148a5049fbe624ed3678eb90a9e027f9",
+    "semantic_hash": ""
+  },
+  "qa-screenshots/invitation-e2e-2026-09-19/02-generated-invite-url.png": {
+    "mtime": 1789796156.3500297,
+    "seen": 1789797305.023444,
+    "ast_hash": "148a5049fbe624ed3678eb90a9e027f9",
+    "semantic_hash": ""
+  },
+  "qa-screenshots/invitation-e2e-2026-09-19/03-invite-page.png": {
+    "mtime": 1789796156.350176,
+    "seen": 1789797305.023444,
+    "ast_hash": "eb6dcdabcf6d09598eedcba2dc15813f",
     "semantic_hash": ""
   }
 }

@@ -1,22 +1,22 @@
 # Graph Report - WeddingPlanner  (2026-09-19)
 
 ## Corpus Check
-- 170 files · ~65,659 words
+- 172 files · ~65,937 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 11 file(s) not represented in the graph (top: (none) 10, .css 1)
 
 ## Summary
-- 1113 nodes · 1655 edges · 122 communities (80 shown, 42 thin omitted)
+- 1122 nodes · 1666 edges · 126 communities (71 shown, 55 thin omitted)
 - Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 38 edges (avg confidence: 0.94)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `04c9d0a4`
+- Built from commit: `b98d571e`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
-- permission.service.ts
+- UserCard.tsx
 - EventParticipantsSection.tsx
 - package.json
 - ref_utils_cx
@@ -26,7 +26,7 @@
 - outfits/index.ts
 - dashboard.service.ts
 - outfit.service.ts
-- ref_components_ui_card
+- ref_utils_eventformat
 - ref_components_ui_button
 - invitation.service.ts
 - participant.service.ts
@@ -34,16 +34,16 @@
 - compilerOptions
 - DATABASE
 - devDependencies
-- ref_components_ui_errorstate
+- react
 - event.service.ts
 - router.tsx
 - outfitImage.service.ts
 - PRD
-- EventsPage.tsx
+- EventCreatePage
 - compilerOptions
 - permissions.ts
 - OutfitGallery.tsx
-- authStore.ts
+- permission.service.ts
 - DECISIONS
 - CHANGELOG
 - MIGRATIONS
@@ -51,36 +51,36 @@
 - Implementation Plan: Phase 5.2 Event Management
 - SDD
 - manifest.json
-- react-router-dom
-- OutfitForm.tsx
-- InviteUserDialog.tsx
-- ShoppingLinkForm.tsx
-- AuthProvider.tsx
+- users/index.ts
 - EventForm.tsx
+- AppErrorBoundary.tsx
+- ParticipantList.tsx
+- ref_lib_supabase
+- EventParticipantsSection
 - UsersPage
 - eventWorkflow.ts
 - outfitWorkflow.ts
 - shoppingLinks.ts
 - Plan
-- AddParticipantDialog.tsx
+- Button.tsx
 - dependencies
 - permissionStore.ts
 - events/index.ts
 - Phase 5.2 Todo
 - App.tsx
-- ref_utils_outfitworkflow
+- zustand
 - dashboardStore.ts
 - eventStore.ts
 - invitationStore.ts
-- zustand
+- weddingStore.ts
 - outfitStore.ts
 - outfitImageStore.ts
 - participantStore.ts
 - shoppingLinkStore.ts
 - public.outfits
-- react
-- Wedding Planner
-- UsersPage.tsx
+- main.tsx
+- Avatar.tsx
+- classifyInviteError
 - tsconfig.json
 - AGENTS.md
 - auth.ts
@@ -102,7 +102,7 @@
 - public.participants
 - trg_profiles_last_sa
 - scripts
-- ref_lib_supabase
+- EmptyState.tsx
 - public.sync_outfit_child_wedding
 - trg_outfits_denorm
 - trg_participants_wedding
@@ -110,11 +110,11 @@
 - public.invitations
 - vite.config.ts
 - public.wedding_memberships
-- shoppingLink.service.ts
+- ErrorState.tsx
 - ref_components_ui_emptystate
 - ref_types_domain
-- PermissionEditor.tsx
-- membership.service.ts
+- Loader.tsx
+- Modal.tsx
 - ref_pages_apphomepage
 - ref_pages_events_eventcreatepage
 - ref_pages_events_eventdetailpage
@@ -127,7 +127,11 @@
 - ref_pages_outfits_outfiteditpage
 - ref_pages_publichomepage
 - ref_pages_users_userspage
-- profile.service.ts
+- Slot.tsx
+- TextArea.tsx
+- EventDetailPage
+- EventEditPage
+- OutfitDetailPage
 
 ## God Nodes (most connected - your core abstractions)
 1. `react` - 31 edges
@@ -139,7 +143,7 @@
 7. `log` - 19 edges
 8. `DECISIONS` - 17 edges
 9. `public.profiles` - 15 edges
-10. `CHANGELOG` - 15 edges
+10. `Changelog` - 15 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `Added` --references--> `main()`  [INFERRED]
@@ -156,35 +160,39 @@
 ## Import Cycles
 - None detected.
 
-## Communities (122 total, 42 thin omitted)
+## Communities (126 total, 55 thin omitted)
 
-### Community 0 - "permission.service.ts"
-Cohesion: 0.06
-Nodes (31): ref_components_ui_badge, ref_components_users_deactivateuserdialog, ref_components_users_inviteuserdialog, ref_components_users_pendinginvitationssection, ref_components_users_permissioneditor, ref_components_users_usercard, ref_components_users_useremptystate, ref_utils_participantvalidation (+23 more)
+### Community 0 - "UserCard.tsx"
+Cohesion: 0.15
+Nodes (9): ref_components_ui_avatar, ref_components_ui_badge, labels, formatDate(), PendingInvitationsSection(), PendingInvitationsSectionProps, formatDate(), UserCard() (+1 more)
 
 ### Community 1 - "EventParticipantsSection.tsx"
-Cohesion: 0.08
-Nodes (13): ref_components_outfits_participantoutfitssection, ref_components_participants_addparticipantdialog, ref_components_participants_participantavatar, ref_components_participants_participantcard, ref_components_participants_participantemptystate, ref_components_participants_participantlist, ref_components_participants_participantrolebadge, ref_components_participants_removeparticipantdialog (+5 more)
+Cohesion: 0.12
+Nodes (10): ref_components_participants_addparticipantdialog, ref_components_participants_participantavatar, ref_components_participants_participantemptystate, ref_components_participants_participantlist, ref_components_participants_participantrolebadge, ref_components_participants_removeparticipantdialog, ref_store_participantstore, EventParticipantsSectionProps (+2 more)
 
 ### Community 2 - "package.json"
 Cohesion: 0.10
 Nodes (22): name, private, type, version, autoprefixer, eslint, eslint-config-prettier, @eslint/js (+14 more)
 
 ### Community 3 - "ref_utils_cx"
-Cohesion: 0.07
-Nodes (14): ref_components_ui_slot, ref_utils_cx, AvatarProps, ButtonProps, EmptyStateProps, ErrorStateProps, Input, InputProps (+6 more)
+Cohesion: 0.21
+Nodes (5): ref_utils_cx, Input, InputProps, Select, SelectProps
 
 ### Community 4 - "Changelog"
-Cohesion: 0.05
-Nodes (40): Added, Added, Added, Added, Added, Added, Added, Added (+32 more)
+Cohesion: 0.04
+Nodes (44): Added, Added, Added, Added, Added, Added, Added, Added (+36 more)
 
 ### Community 5 - "migrate.py"
-Cohesion: 0.11
-Nodes (27): Added, Notes, Released, [v1.0.0-stable] - 2026-09-18, Verified, CompletedProcess, hashlib, os (+19 more)
+Cohesion: 0.09
+Nodes (33): Added, Changed, Security, [v0.3.4-repository-workflow] - 2026-09-18, CompletedProcess, hashlib, os, Path (+25 more)
 
 ### Community 6 - "domain.ts"
 Cohesion: 0.06
 Nodes (33): DashboardData, DashboardEventProgress, DashboardOutfitAnalytics, DashboardParticipantInsight, DashboardSummary, DashboardTimelineEvent, Event, EventInput (+25 more)
+
+### Community 7 - "outfits/index.ts"
+Cohesion: 0.06
+Nodes (13): ref_components_outfits_outfitcard, ref_utils_outfitworkflow, ref_utils_participantvalidation, ref_utils_shoppinglinks, vitest, GalleryThumbnailProps, badgeClass, ShoppingLinkCardProps (+5 more)
 
 ### Community 8 - "dashboard.service.ts"
 Cohesion: 0.18
@@ -194,41 +202,41 @@ Nodes (16): buildEventProgress(), buildParticipantInsights(), buildTimeline(), c
 Cohesion: 0.17
 Nodes (21): Added, Changed, Notes, [v0.5.4-outfit-management] - 2026-09-18, Verified, archiveOutfit(), countByOutfit(), createOutfit() (+13 more)
 
-### Community 10 - "ref_components_ui_card"
-Cohesion: 0.11
-Nodes (7): ref_components_dashboard, ref_components_ui_avatar, ref_components_ui_card, ref_store_dashboardstore, ref_utils_dashboardmetrics, actions, SummaryCardProps
+### Community 10 - "ref_utils_eventformat"
+Cohesion: 0.10
+Nodes (6): ref_components_events_eventstatusbadge, ref_utils_dashboardmetrics, ref_utils_eventformat, actions, SummaryCardProps, EventHeaderProps
 
 ### Community 11 - "ref_components_ui_button"
-Cohesion: 0.15
-Nodes (6): ref_components_ui_button, ref_components_ui_modal, ArchiveDialogProps, ImageViewerProps, RemoveParticipantDialogProps, DeactivateUserDialogProps
+Cohesion: 0.11
+Nodes (8): ref_components_ui_button, ref_components_ui_modal, ref_utils_outfitformat, ArchiveDialogProps, ArchiveOutfitDialogProps, ImageViewerProps, RemoveParticipantDialogProps, DeactivateUserDialogProps
 
 ### Community 12 - "invitation.service.ts"
-Cohesion: 0.17
-Nodes (21): acceptInvitation(), buildInviteUrl(), cancelInvitation(), generateInviteToken(), getErrorMessage(), getInvitationState(), getPendingInvitations(), getProfileByEmail() (+13 more)
+Cohesion: 0.16
+Nodes (22): ref_utils_appurl, acceptInvitation(), buildInviteUrl(), cancelInvitation(), generateInviteToken(), getErrorMessage(), getInvitationState(), getPendingInvitations() (+14 more)
 
 ### Community 13 - "participant.service.ts"
 Cohesion: 0.18
 Nodes (20): Added, Changed, Notes, [v0.5.3-participant-management] - 2026-09-18, Verified, addParticipant(), archiveParticipant(), byId() (+12 more)
 
 ### Community 14 - "AppLayout.tsx"
-Cohesion: 0.21
-Nodes (6): ref_components_ui_unauthorizedstate, ref_hooks_useauth, ref_hooks_useprofile, ref_hooks_useweddingcontext, ref_store_uistore, navItems
+Cohesion: 0.11
+Nodes (10): ref_components_dashboard, ref_components_ui_unauthorizedstate, ref_hooks_useauth, ref_hooks_useprofile, ref_hooks_useweddingcontext, ref_store_dashboardstore, ref_store_uistore, ref_utils_permissions (+2 more)
 
 ### Community 15 - "compilerOptions"
 Cohesion: 0.10
 Nodes (20): compilerOptions, allowJs, allowSyntheticDefaultImports, composite, esModuleInterop, forceConsistentCasingInFileNames, isolatedModules, jsx (+12 more)
 
 ### Community 16 - "DATABASE"
-Cohesion: 0.11
-Nodes (21): API, Archive RPCs, Invitation RPCs, Private outfit storage, Row Level Security, Supabase PostgREST API, Archive lifecycle, Audit stamps (+13 more)
+Cohesion: 0.12
+Nodes (19): API, Archive RPCs, Invitation RPCs, Private outfit storage, Row Level Security, Supabase PostgREST API, Archive lifecycle, Audit stamps (+11 more)
 
 ### Community 17 - "devDependencies"
 Cohesion: 0.11
 Nodes (19): devDependencies, autoprefixer, eslint, eslint-config-prettier, @eslint/js, eslint-plugin-react-hooks, eslint-plugin-react-refresh, globals (+11 more)
 
-### Community 18 - "ref_components_ui_errorstate"
-Cohesion: 0.11
-Nodes (11): ref_components_outfits, ref_components_ui_errorstate, ref_components_ui_loader, ref_store_outfitstore, AppErrorBoundary, AppErrorBoundaryProps, AppErrorBoundaryState, ParticipantOutfitsSectionProps (+3 more)
+### Community 18 - "react"
+Cohesion: 0.14
+Nodes (18): ref_components_events, ref_components_outfits, ref_components_participants, ref_components_ui_card, ref_components_ui_errorstate, ref_components_ui_loader, ref_components_users, ref_hooks_usepermission (+10 more)
 
 ### Community 19 - "event.service.ts"
 Cohesion: 0.26
@@ -246,10 +254,6 @@ Nodes (16): acceptedImageTypes, assertImageFile(), compressImage(), getOutfitIma
 Cohesion: 0.14
 Nodes (17): Archive restore and permanent delete, Audit and activity, Invitation onboarding, PHASE-2.1, Progress calculation, Archive restore and permanent delete, Audit and activity, Event management (+9 more)
 
-### Community 23 - "EventsPage.tsx"
-Cohesion: 0.17
-Nodes (7): ref_components_events, ref_components_participants, ref_hooks_usepermission, ref_store_eventstore, EventCreatePage(), EventDetailPage(), EventEditPage()
-
 ### Community 24 - "compilerOptions"
 Cohesion: 0.13
 Nodes (14): compilerOptions, allowJs, composite, isolatedModules, lib, module, moduleResolution, noEmit (+6 more)
@@ -262,9 +266,9 @@ Nodes (10): can(), full, getPermissionLevel(), getRolePermissionMatrix(), manage
 Cohesion: 0.17
 Nodes (8): ref_components_outfits_emptygallery, ref_components_outfits_gallerythumbnail, ref_components_outfits_imageuploader, ref_components_outfits_imageviewer, ref_components_outfits_uploadprogress, ref_store_outfitimagestore, ImageUploader(), ImageUploaderProps
 
-### Community 27 - "authStore.ts"
-Cohesion: 0.18
-Nodes (8): ref_services_profile_service, @supabase/supabase-js, AuthContext, AuthContextValue, isSupabaseConfigured, supabase, AuthStore, useAuthStore
+### Community 27 - "permission.service.ts"
+Cohesion: 0.24
+Nodes (11): deactivateUser(), getPendingInvitationStatuses(), getProfiles(), getUsers(), InvitationRow, mapProfile(), mapUser(), MembershipRow (+3 more)
 
 ### Community 28 - "DECISIONS"
 Cohesion: 0.18
@@ -275,8 +279,8 @@ Cohesion: 0.20
 Nodes (11): CHANGELOG, Documentation version history, Phase 3.2 migration readiness, Phase 3 database readiness, Documentation governance, Project phase status, README, Locked baseline migrations (+3 more)
 
 ### Community 30 - "MIGRATIONS"
-Cohesion: 0.25
-Nodes (8): Versioned migrations, DEC-009 Versioned migrations, CI migration gate, Forward-only rollback, Migration history and checksums, Migration runner, MIGRATIONS, Versioned migrations
+Cohesion: 0.20
+Nodes (10): Deployment prerequisites, Environment variables, INFRASTRUCTURE, Supabase Auth configuration, Supabase project setup, CI migration gate, Forward-only rollback, Migration history and checksums (+2 more)
 
 ### Community 31 - "log"
 Cohesion: 0.18
@@ -294,29 +298,25 @@ Nodes (10): User roles and permissions, Archive and audit alignment, GitHub Page
 Cohesion: 0.22
 Nodes (8): background_color, description, display, icons, name, short_name, start_url, theme_color
 
-### Community 35 - "react-router-dom"
-Cohesion: 0.21
-Nodes (4): ref_components_events_eventstatusbadge, react-router-dom, ref_utils_eventformat, EventHeaderProps
-
-### Community 36 - "OutfitForm.tsx"
-Cohesion: 0.16
-Nodes (10): react-hook-form, zod, OutfitForm(), OutfitFormProps, outfitFormSchema, OutfitFormValues, toValues(), LoginForm (+2 more)
-
-### Community 37 - "InviteUserDialog.tsx"
+### Community 35 - "users/index.ts"
 Cohesion: 0.29
-Nodes (5): ref_components_ui_textarea, InviteForm, inviteSchema, InviteUserDialog(), InviteUserDialogProps
+Nodes (6): ref_components_users_deactivateuserdialog, ref_components_users_inviteuserdialog, ref_components_users_pendinginvitationssection, ref_components_users_permissioneditor, ref_components_users_usercard, ref_components_users_useremptystate
 
-### Community 38 - "ShoppingLinkForm.tsx"
-Cohesion: 0.18
-Nodes (7): ref_hookform_resolvers_zod, ref_utils_shoppinglinks, ShoppingLinkCardProps, LinkFormValues, linkSchema, ShoppingLinkForm(), ShoppingLinkFormProps
+### Community 36 - "EventForm.tsx"
+Cohesion: 0.06
+Nodes (33): ref_components_ui_input, ref_components_ui_select, ref_components_ui_textarea, ref_hookform_resolvers_zod, react-hook-form, zod, EventForm(), EventFormProps (+25 more)
 
-### Community 39 - "AuthProvider.tsx"
-Cohesion: 0.17
-Nodes (4): ref_app_providers_authcontext, ref_services_auth_service, ref_store_authstore, ref_store_weddingstore
+### Community 37 - "AppErrorBoundary.tsx"
+Cohesion: 0.29
+Nodes (3): AppErrorBoundary, AppErrorBoundaryProps, AppErrorBoundaryState
 
-### Community 40 - "EventForm.tsx"
-Cohesion: 0.33
-Nodes (5): EventForm(), EventFormProps, eventFormSchema, EventFormValues, toValues()
+### Community 38 - "ParticipantList.tsx"
+Cohesion: 0.40
+Nodes (3): ref_components_outfits_participantoutfitssection, ref_components_participants_participantcard, ParticipantListProps
+
+### Community 39 - "ref_lib_supabase"
+Cohesion: 0.05
+Nodes (29): ref_app_providers_authcontext, ref_lib_supabase, ref_services_auth_service, ref_services_profile_service, ref_store_authstore, ref_store_weddingstore, @supabase/supabase-js, AuthContext (+21 more)
 
 ### Community 42 - "eventWorkflow.ts"
 Cohesion: 0.29
@@ -333,10 +333,6 @@ Nodes (5): detectLinkProvider(), getLinkDomain(), LinkProvider, maxShoppingLinks
 ### Community 45 - "Plan"
 Cohesion: 0.33
 Nodes (6): Event management, Outfit management, Plan, Reference images and links, User roles and permissions, Wedding project
-
-### Community 46 - "AddParticipantDialog.tsx"
-Cohesion: 0.33
-Nodes (4): ref_components_ui_input, AddParticipantDialog(), AddParticipantDialogProps, roleSuggestions
 
 ### Community 47 - "dependencies"
 Cohesion: 0.20
@@ -358,9 +354,9 @@ Nodes (5): Phase 5.2 Todo, Task 1: Event Data Foundation, Task 2: Events Dashboa
 Cohesion: 0.40
 Nodes (3): ref_app_providers_authprovider, ref_components_common_apperrorboundary, ref_routes_router
 
-### Community 53 - "ref_utils_outfitworkflow"
-Cohesion: 0.20
-Nodes (3): ref_utils_outfitworkflow, colorByStatus, badgeClass
+### Community 53 - "zustand"
+Cohesion: 0.50
+Nodes (3): zustand, UiStore, useUiStore
 
 ### Community 54 - "dashboardStore.ts"
 Cohesion: 0.50
@@ -374,9 +370,9 @@ Nodes (4): ref_services_event_service, EventStore, getErrorMessage(), useEventSt
 Cohesion: 0.50
 Nodes (4): ref_services_invitation_service, getErrorMessage(), InvitationStore, useInvitationStore
 
-### Community 57 - "zustand"
-Cohesion: 0.22
-Nodes (7): ref_services_membership_service, ref_services_wedding_service, zustand, UiStore, useUiStore, useWeddingStore, WeddingStore
+### Community 57 - "weddingStore.ts"
+Cohesion: 0.40
+Nodes (4): ref_services_membership_service, ref_services_wedding_service, useWeddingStore, WeddingStore
 
 ### Community 58 - "outfitStore.ts"
 Cohesion: 0.50
@@ -398,17 +394,13 @@ Nodes (4): ref_services_shoppinglink_service, getErrorMessage(), ShoppingLinkSto
 Cohesion: 0.25
 Nodes (8): idx_outfit_images_outfit, idx_outfits_owner, idx_outfits_participant, idx_outfits_wedding, public.enforce_outfit_image_cap(), public.outfit_images, public.outfits, public.sync_outfit_child_wedding()
 
-### Community 63 - "react"
-Cohesion: 0.15
-Nodes (8): ref_app_app, ref_components_outfits_shoppinglinkcard, ref_components_outfits_shoppinglinkform, react, ref_react_dom_client, ref_store_shoppinglinkstore, ref_styles_index_css, SlotProps
+### Community 63 - "main.tsx"
+Cohesion: 0.50
+Nodes (3): ref_app_app, ref_react_dom_client, ref_styles_index_css
 
-### Community 64 - "Wedding Planner"
-Cohesion: 0.25
-Nodes (7): Architecture, Commit Convention, Current App Surface, Documentation, Folder Structure, Roadmap, Wedding Planner
-
-### Community 65 - "UsersPage.tsx"
-Cohesion: 0.27
-Nodes (8): ref_components_users, ref_store_invitationstore, ref_store_permissionstore, classifyInviteError(), InvitePage(), handleAccept(), handleReject(), InviteState
+### Community 65 - "classifyInviteError"
+Cohesion: 0.83
+Nodes (4): classifyInviteError(), InvitePage(), handleAccept(), handleReject()
 
 ### Community 71 - "public.profiles"
 Cohesion: 0.20
@@ -426,17 +418,9 @@ Nodes (8): idx_participants_event, idx_participants_wedding, public.enforce_even
 Cohesion: 0.07
 Nodes (8): public.handle_new_user, public.profiles, public.wedding_memberships, public.weddings, on_auth_user_created, public.is_current_user_active(), public.is_super_admin(), public.wedding_role()
 
-### Community 81 - "OutfitCard.tsx"
-Cohesion: 0.25
-Nodes (4): ref_components_outfits_outfitimageplaceholder, ref_components_outfits_outfitstatusbadge, ref_utils_outfitformat, ArchiveOutfitDialogProps
-
 ### Community 89 - "scripts"
 Cohesion: 0.29
 Nodes (7): scripts, build, dev, format, lint, test, typecheck
-
-### Community 90 - "ref_lib_supabase"
-Cohesion: 0.29
-Nodes (5): ref_lib_supabase, signOut(), listAccessibleWeddings(), mapWedding(), WeddingRow
 
 ### Community 91 - "public.sync_outfit_child_wedding"
 Cohesion: 0.67
@@ -458,45 +442,29 @@ Nodes (3): ref_node_url, vite, @vitejs/plugin-react
 Cohesion: 0.50
 Nodes (4): idx_memberships_active, idx_memberships_user, idx_memberships_wedding, public.wedding_memberships
 
-### Community 99 - "shoppingLink.service.ts"
-Cohesion: 0.43
-Nodes (6): createShoppingLink(), getShoppingLinks(), mapLink(), normalizeUrl(), ShoppingLinkRow, updateShoppingLink()
-
-### Community 100 - "ref_components_ui_emptystate"
-Cohesion: 0.22
-Nodes (3): ref_components_ui_emptystate, ParticipantEmptyStateProps, UserEmptyStateProps
-
-### Community 102 - "PermissionEditor.tsx"
-Cohesion: 0.33
-Nodes (4): ref_components_ui_select, actionLabels, PermissionEditorProps, resourceLabels
-
-### Community 103 - "membership.service.ts"
-Cohesion: 0.67
-Nodes (3): listMemberships(), mapMembership(), MembershipRow
-
-### Community 120 - "profile.service.ts"
-Cohesion: 0.67
-Nodes (3): getProfile(), mapProfile(), ProfileRow
+### Community 101 - "ref_types_domain"
+Cohesion: 0.13
+Nodes (5): ref_components_outfits_shoppinglinkcard, ref_components_outfits_shoppinglinkform, ref_store_shoppinglinkstore, ref_types_domain, colorByStatus
 
 ## Knowledge Gaps
-- **365 isolated node(s):** `name`, `private`, `version`, `type`, `dev` (+360 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 630 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
-- **42 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **368 isolated node(s):** `name`, `private`, `version`, `type`, `dev` (+363 more)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 634 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **55 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `Changelog` connect `Changelog` to `outfit.service.ts`, `migrate.py`, `event.service.ts`, `participant.service.ts`?**
-  _High betweenness centrality (0.169) - this node is a cross-community bridge._
-- **Why does `log` connect `log` to `Wedding Planner`, `SDD`, `Changelog`, `Plan`, `DATABASE`, `PRD`, `DECISIONS`, `CHANGELOG`, `MIGRATIONS`?**
-  _High betweenness centrality (0.103) - this node is a cross-community bridge._
-- **Why does `react` connect `react` to `permission.service.ts`, `EventParticipantsSection.tsx`, `package.json`, `ref_utils_cx`, `OutfitForm.tsx`, `InviteUserDialog.tsx`, `ShoppingLinkForm.tsx`, `AuthProvider.tsx`, `EventForm.tsx`, `UsersPage.tsx`, `ref_components_ui_card`, `AddParticipantDialog.tsx`, `ref_components_ui_errorstate`, `router.tsx`, `EventsPage.tsx`, `OutfitGallery.tsx`, `authStore.ts`?**
-  _High betweenness centrality (0.082) - this node is a cross-community bridge._
+- **Why does `Changelog` connect `Changelog` to `outfit.service.ts`, `participant.service.ts`, `event.service.ts`, `migrate.py`?**
+  _High betweenness centrality (0.161) - this node is a cross-community bridge._
+- **Why does `log` connect `log` to `SDD`, `Changelog`, `Plan`, `DATABASE`, `PRD`, `DECISIONS`, `CHANGELOG`, `MIGRATIONS`?**
+  _High betweenness centrality (0.094) - this node is a cross-community bridge._
+- **Why does `react` connect `react` to `UserCard.tsx`, `EventParticipantsSection.tsx`, `package.json`, `ref_utils_cx`, `EventForm.tsx`, `AppErrorBoundary.tsx`, `ref_types_domain`, `ref_lib_supabase`, `TextArea.tsx`, `AppLayout.tsx`, `router.tsx`, `Slot.tsx`, `OutfitGallery.tsx`, `main.tsx`?**
+  _High betweenness centrality (0.072) - this node is a cross-community bridge._
 - **What connects `name`, `private`, `version` to the rest of the system?**
-  _365 weakly-connected nodes found - possible documentation gaps or missing edges._
-- **Should `permission.service.ts` be split into smaller, more focused modules?**
-  _Cohesion score 0.06025641025641026 - nodes in this community are weakly interconnected._
+  _368 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `EventParticipantsSection.tsx` be split into smaller, more focused modules?**
-  _Cohesion score 0.08 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.125 - nodes in this community are weakly interconnected._
 - **Should `package.json` be split into smaller, more focused modules?**
   _Cohesion score 0.09666666666666666 - nodes in this community are weakly interconnected._
+- **Should `Changelog` be split into smaller, more focused modules?**
+  _Cohesion score 0.044444444444444446 - nodes in this community are weakly interconnected._

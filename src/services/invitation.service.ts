@@ -276,34 +276,26 @@ export async function signInInvitedAccountAndAccept(input: InvitedSignInInput): 
 }
 
 export async function createInvitedAccountAndAccept(input: InvitedAccountInput): Promise<string> {
-  const { data, error } = await supabase.auth.signUp({
-    email: input.email,
-    password: input.password,
-    options: {
-      data: {
-        display_name: input.displayName,
-      },
-    },
+  const { error } = await supabase.rpc('create_invited_auth_user', {
+    p_token: input.token,
+    p_password: input.password,
+    p_display_name: input.displayName,
   });
 
   if (error) throw new Error(getErrorMessage(error));
 
-  let session = data.session;
-  if (!session) {
-    const { data: signInData, error: signInError } = await supabase.auth.signInWithPassword({
-      email: input.email,
-      password: input.password,
-    });
-    if (signInError) throw new Error(getErrorMessage(signInError));
-    session = signInData.session;
-  }
+  const { data: signInData, error: signInError } = await supabase.auth.signInWithPassword({
+    email: input.email,
+    password: input.password,
+  });
+  if (signInError) throw new Error(getErrorMessage(signInError));
 
-  if (!session?.user.id) {
+  if (!signInData.session?.user.id) {
     throw new Error('Account created. Please sign in to accept this invitation.');
   }
 
   await acceptInvitation(input.token);
-  return session.user.id;
+  return signInData.session.user.id;
 }
 
 export async function getInvitationState(
