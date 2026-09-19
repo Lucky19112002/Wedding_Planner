@@ -2,6 +2,26 @@
 
 Newest entries first. This root changelog records repository and release milestones. Detailed product documentation changes remain in `/docs`.
 
+## [v1.0.1-production-seed] - 2026-09-19
+
+### Added
+
+- Migration `007_seed_production_wedding.sql` to reset application data and seed the real `K&L Weds` wedding.
+- Production Auth/Profile users for Lucky, Kareena, and Mom.
+- Five production events with Lucky/Kareena participant assignments.
+
+### Verified
+
+- `python3 scripts/migrate.py` applied migration `007`.
+- Re-running the migration runner reports `Pending: (none)`.
+- Direct idempotency rerun of migration `007` keeps exact counts: 1 wedding, 3 users, 5 events, 9 participants, 0 invitations, and 0 outfits.
+
+### Notes
+
+- No schema, RLS, functions, views, storage bucket, locked docs, or business rules were changed.
+
+---
+
 ## [v1.0.0-stable] - 2026-09-18
 
 ### Added
