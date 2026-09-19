@@ -4,6 +4,24 @@ Newest entries first. Every document added or changed under `docs/` is recorded 
 
 ---
 
+## 2026-09-19 - v1.0.0 Stable Production Release
+
+- **Status:** Released
+- **Tag:** `v1.0.0-stable`
+- **Main commit:** `4810c77`
+- **Production URL:** https://lucky19112002.github.io/Wedding_Planner/
+- **What changed:**
+  - Merged `dev` into `main` with preserved history.
+  - Enabled GitHub Pages through GitHub Actions with HTTPS enforced and no custom domain.
+  - Fixed the Pages workflow ordering so `pnpm` is available before `actions/setup-node` cache resolution.
+  - Updated the `github-pages` environment deployment branch rule from `dev` to `main`.
+  - Published the first stable production deployment.
+  - Verified home, `/login`, protected `/app` redirect, manifest, JavaScript, and CSS assets in production.
+- **Follow from:** [CHANGELOG.md](../CHANGELOG.md)
+- **Next:** Production operations and future planning.
+
+---
+
 ## 2026-09-18 - Phase 7 GitHub Pages CI/CD & Production Release
 
 - **Status:** Complete
@@ -310,4 +328,3 @@ Newest entries first. Every document added or changed under `docs/` is recorded 
 - **Phase:** 1 – Product Requirements (documentation only)
 - **What changed:** PRD authored (canonical: [PRD.md](PRD.md); original draft: [Plan.md](Plan.md)).
 - **Next:** Phase 2 SDD (now complete).
-

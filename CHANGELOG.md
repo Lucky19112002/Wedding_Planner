@@ -2,6 +2,24 @@
 
 Newest entries first. This root changelog records repository and release milestones. Detailed product documentation changes remain in `/docs`.
 
+## [v1.0.0-stable] - 2026-09-19
+
+### Released
+
+- Wedding Planner v1.0.0 first stable production release.
+- Production URL: https://lucky19112002.github.io/Wedding_Planner/
+- Tag: `v1.0.0-stable`
+- Main commit: `4810c77`
+
+### Verified
+
+- `main` deployed through GitHub Actions.
+- GitHub Pages source is GitHub Actions with HTTPS enabled and no custom domain.
+- Home, `/login`, and protected `/app` refresh behavior verified in production.
+- Production manifest, JavaScript, and CSS assets load successfully.
+
+---
+
 ## [v1.0.0-stable] - 2026-09-18
 
 ### Added
