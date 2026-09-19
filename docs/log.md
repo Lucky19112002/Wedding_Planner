@@ -4,6 +4,39 @@ Newest entries first. Every document added or changed under `docs/` is recorded 
 
 ---
 
+## 2026-09-19 - Hotfix v1.0.1 Invitation Refresh and Invite URLs
+
+- **Status:** Complete
+- **Phase:** Hotfix v1.0.1
+- **What changed:**
+  - Refreshed pending invitations from Supabase immediately after invite creation.
+  - Centralized app URL generation so invitation creation and resend use the configured Vite base path.
+  - Fixed GitHub Pages invite links to resolve under `/Wedding_Planner/` without hardcoding the repository name.
+  - Added URL regression coverage for GitHub Pages and root-base deployments.
+  - Did not modify PRD, SDD, DATABASE, MIGRATIONS, schema, RLS, or business rules.
+- **Follow from:** [CHANGELOG.md](../CHANGELOG.md)
+- **Next:** Merge hotfix after production verification.
+
+---
+
+## 2026-09-19 - Phase 7.1 Production Data Seed
+
+- **Status:** Complete
+- **Phase:** 7.1 - Production data reset and wedding seed
+- **What changed:**
+  - Added `schema/007_seed_production_wedding.sql`.
+  - Removed previous application data and seeded the real `K&L Weds` wedding for 2026-12-05.
+  - Created production Auth/Profile users for Lucky, Kareena, and Mom.
+  - Created memberships: Lucky admin/Super Admin, Kareena member, Mom viewer.
+  - Created five production events: Janda Nikla, Haldi, Mehndi, Nikah, and Post Wedding Shoot.
+  - Created production participants only; no outfits, images, links, or invitations were seeded.
+  - Verified exact counts, roles, idempotency, and `Pending: (none)` from the migration runner.
+  - Did not modify PRD, SDD, DATABASE, MIGRATIONS, schema design, RLS, functions, views, storage, React UI, or business rules.
+- **Follow from:** [CHANGELOG.md](../CHANGELOG.md)
+- **Next:** Production use with real outfit planning data.
+
+---
+
 ## 2026-09-19 - v1.0.0 Stable Production Release
 
 - **Status:** Released

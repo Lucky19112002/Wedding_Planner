@@ -7,6 +7,7 @@ import type {
   SentInvitation,
   WeddingRole,
 } from '@/types/domain';
+import { buildAppUrl } from '@/utils/appUrl';
 
 type InvitationRow = {
   id: string;
@@ -61,7 +62,7 @@ function mapProfile(row: ProfileRow): Profile {
 }
 
 function buildInviteUrl(token: string): string {
-  return `${window.location.origin}/invite/${encodeURIComponent(token)}`;
+  return buildAppUrl(`/invite/${encodeURIComponent(token)}`);
 }
 
 async function hashInviteToken(token: string): Promise<string> {
