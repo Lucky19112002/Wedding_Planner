@@ -48,6 +48,12 @@ const routes = [
             element: page(() => import('@/pages/events/EventsPage').then((module) => ({ default: module.EventsPage }))),
           },
           {
+            path: 'clothing',
+            element: page(() =>
+              import('@/pages/clothing/ClothingPage').then((module) => ({ default: module.ClothingPage })),
+            ),
+          },
+          {
             path: 'events/new',
             element: page(() =>
               import('@/pages/events/EventCreatePage').then((module) => ({ default: module.EventCreatePage })),

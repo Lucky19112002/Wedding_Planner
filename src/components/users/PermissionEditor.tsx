@@ -1,90 +1,54 @@
-import { Button } from '@/components/ui/Button';
 import { Select } from '@/components/ui/Select';
-import type { ManagedUser, WeddingRole } from '@/types/domain';
-import {
-  getRolePermissionMatrix,
-  managedPermissionResources,
-  permissionActions,
-  weddingRoleLabels,
-} from '@/utils/permissions';
+import type { Event, EventPermissionLevel, ManagedUser, UserEventPermission } from '@/types/domain';
 
 type PermissionEditorProps = {
   disabled?: boolean;
+  events: Event[];
+  permissions: UserEventPermission[];
   user: ManagedUser;
-  onRoleChange: (role: WeddingRole) => void;
+  onPermissionChange: (eventId: string, level: EventPermissionLevel) => void;
 };
 
-const resourceLabels = {
-  events: 'Events',
-  participants: 'Participants',
-  outfits: 'Outfits',
-  users: 'Users',
-};
+function getLevel(permissions: UserEventPermission[], eventId: string): EventPermissionLevel {
+  return permissions.find((permission) => permission.eventId === eventId)?.level ?? 'view';
+}
 
-const actionLabels = {
-  view: 'View',
-  create: 'Create',
-  edit: 'Edit',
-  admin: 'Admin',
-};
-
-export function PermissionEditor({ disabled = false, onRoleChange, user }: PermissionEditorProps) {
-  const matrix = getRolePermissionMatrix(user.weddingRole);
-
+export function PermissionEditor({
+  disabled = false,
+  events,
+  onPermissionChange,
+  permissions,
+  user,
+}: PermissionEditorProps) {
   return (
-    <div className="space-y-4">
-      <Select
-        label="Permission preset"
-        value={user.weddingRole}
-        disabled={disabled || user.isDeactivated}
-        onChange={(event) => onRoleChange(event.target.value as WeddingRole)}
-      >
-        {(['admin', 'member', 'viewer'] as WeddingRole[]).map((role) => (
-          <option key={role} value={role}>
-            {weddingRoleLabels[role]}
-          </option>
-        ))}
-      </Select>
+    <div className="space-y-3">
+      <div>
+        <h3 className="text-sm font-semibold text-slate-900">Event permissions</h3>
+        <p className="mt-1 text-sm text-slate-600">Choose View or Edit for each event. Edit allows clothing changes.</p>
+      </div>
 
       <div className="overflow-hidden rounded-md border border-slate-200">
-        <div className="grid grid-cols-[1fr_repeat(4,minmax(64px,80px))] bg-slate-50 text-xs font-semibold uppercase tracking-wide text-slate-500">
-          <div className="px-3 py-2">Resource</div>
-          {permissionActions.map((action) => (
-            <div key={action} className="px-2 py-2 text-center">
-              {actionLabels[action]}
-            </div>
-          ))}
+        <div className="grid grid-cols-[1fr_140px] bg-slate-50 text-xs font-semibold uppercase tracking-wide text-slate-500">
+          <div className="px-3 py-2">Event</div>
+          <div className="px-3 py-2">Level</div>
         </div>
-        {managedPermissionResources.map((resource) => (
-          <div
-            key={resource}
-            className="grid grid-cols-[1fr_repeat(4,minmax(64px,80px))] border-t border-slate-200 text-sm"
-          >
-            <div className="px-3 py-2 font-medium text-slate-700">{resourceLabels[resource]}</div>
-            {permissionActions.map((action) => (
-              <div key={action} className="flex justify-center px-2 py-2">
-                <input
-                  aria-label={`${resourceLabels[resource]} ${actionLabels[action]}`}
-                  checked={matrix[resource][action]}
-                  className="h-4 w-4 accent-violet-600"
-                  readOnly
-                  type="checkbox"
-                />
-              </div>
-            ))}
+        {events.map((event) => (
+          <div key={event.id} className="grid grid-cols-[1fr_140px] border-t border-slate-200 text-sm">
+            <div className="px-3 py-3 font-medium text-slate-700">{event.name}</div>
+            <div className="px-3 py-2">
+              <Select
+                aria-label={`${user.displayName} ${event.name} permission`}
+                value={getLevel(permissions, event.id)}
+                disabled={disabled || user.isDeactivated}
+                onChange={(change) => onPermissionChange(event.id, change.target.value as EventPermissionLevel)}
+              >
+                <option value="view">View</option>
+                <option value="edit">Edit</option>
+              </Select>
+            </div>
           </div>
         ))}
       </div>
-
-      <Button
-        className="w-full"
-        disabled={disabled || user.isDeactivated}
-        type="button"
-        variant="secondary"
-        onClick={() => onRoleChange(user.weddingRole)}
-      >
-        Save permissions
-      </Button>
     </div>
   );
 }

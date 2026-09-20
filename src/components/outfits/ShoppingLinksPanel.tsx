@@ -7,7 +7,7 @@ import { ShoppingLinkForm } from '@/components/outfits/ShoppingLinkForm';
 import { useShoppingLinkStore } from '@/store/shoppingLinkStore';
 import type { Outfit, ShoppingLink } from '@/types/domain';
 
-export function ShoppingLinksPanel({ outfit }: { outfit: Outfit }) {
+export function ShoppingLinksPanel({ canManage, outfit }: { canManage: boolean; outfit: Outfit }) {
   const links = useShoppingLinkStore((state) => state.links);
   const loading = useShoppingLinkStore((state) => state.loading);
   const saving = useShoppingLinkStore((state) => state.saving);
@@ -49,10 +49,10 @@ export function ShoppingLinksPanel({ outfit }: { outfit: Outfit }) {
                 void navigator.clipboard.writeText(url);
                 setCopiedId(link.id);
               }}
-              onDelete={(id) => {
+              onDelete={canManage ? (id) => {
                 if (window.confirm('Delete this shopping link?')) void deleteLink(id);
-              }}
-              onEdit={setEditing}
+              } : undefined}
+              onEdit={canManage ? setEditing : undefined}
             />
           ))}
         </div>
@@ -60,7 +60,7 @@ export function ShoppingLinksPanel({ outfit }: { outfit: Outfit }) {
 
       {copiedId ? <p className="text-sm text-emerald-700">Link copied.</p> : null}
 
-      {editing ? (
+      {canManage && editing ? (
         <ShoppingLinkForm
           isSaving={saving}
           link={editing}
@@ -70,14 +70,14 @@ export function ShoppingLinksPanel({ outfit }: { outfit: Outfit }) {
             setEditing(null);
           }}
         />
-      ) : links.length < 5 ? (
+      ) : canManage && links.length < 5 ? (
         <ShoppingLinkForm
           isSaving={saving}
           onSubmit={(values) => createLink({ ...values, outfitId: outfit.id, weddingId: outfit.weddingId })}
         />
-      ) : (
+      ) : canManage ? (
         <p className="rounded-md bg-slate-100 p-3 text-sm text-slate-600">This outfit already has 5 links.</p>
-      )}
+      ) : null}
     </Card>
   );
 }

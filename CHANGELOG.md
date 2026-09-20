@@ -2,6 +2,29 @@
 
 Newest entries first. This root changelog records repository and release milestones. Detailed product documentation changes remain in `/docs`.
 
+## [v1.0.4] - 2026-09-20
+
+### Added
+
+- Event + user permission model with viewer-safe menu visibility and route access.
+- Clothing menu for viewer and admin workflows, including event and person filters.
+- Single Add Outfit flow with details, images, and reference URLs saved together.
+- Admin-only outfit owner switching with live Supabase RPC enforcement.
+
+### Changed
+
+- Events page now uses one date-sorted list and shows outfit counts on event cards.
+- Login/loading guards now wait for profile and wedding context before rendering protected pages.
+- Graphify project graph was safely regenerated with semantic document nodes preserved.
+
+### Verified
+
+- Migration `013_switch_outfit_owner.sql` applied with `Pending: (none)`.
+- `pnpm install`, `pnpm run typecheck`, `pnpm run lint`, `pnpm run test`, and `pnpm run build` passed.
+- Browser checks covered admin and viewer clothing/outfit permission behavior.
+
+---
+
 ## [v1.0.3] - 2026-09-19
 
 ### Fixed

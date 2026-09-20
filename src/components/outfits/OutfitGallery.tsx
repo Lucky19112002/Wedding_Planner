@@ -9,7 +9,7 @@ import { ImageViewer } from '@/components/outfits/ImageViewer';
 import { useOutfitImageStore } from '@/store/outfitImageStore';
 import type { Outfit, OutfitImage } from '@/types/domain';
 
-export function OutfitGallery({ outfit }: { outfit: Outfit }) {
+export function OutfitGallery({ canManage, outfit }: { canManage: boolean; outfit: Outfit }) {
   const images = useOutfitImageStore((state) => state.images);
   const loading = useOutfitImageStore((state) => state.loading);
   const error = useOutfitImageStore((state) => state.error);
@@ -68,18 +68,18 @@ export function OutfitGallery({ outfit }: { outfit: Outfit }) {
               isActive={activeImage?.id === image.id}
               isFirst={index === 0}
               isLast={index === images.length - 1}
-              onDelete={(item) => {
+              onDelete={canManage ? (item) => {
                 if (window.confirm('Delete this reference image?')) void deleteImage(item);
-              }}
-              onMove={(imageId, direction) => void moveImage(imageId, direction)}
+              } : undefined}
+              onMove={canManage ? (imageId, direction) => void moveImage(imageId, direction) : undefined}
               onSelect={(item) => setActiveId(item.id)}
-              onSetPrimary={(imageId) => void setPrimaryImage(imageId)}
+              onSetPrimary={canManage ? (imageId) => void setPrimaryImage(imageId) : undefined}
             />
           ))}
         </div>
       ) : null}
 
-      <ImageUploader outfit={outfit} />
+      {canManage ? <ImageUploader outfit={outfit} /> : null}
       <ImageViewer image={preview} onClose={() => setPreview(null)} />
     </Card>
   );

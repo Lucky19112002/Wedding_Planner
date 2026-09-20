@@ -1,9 +1,10 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import { Card } from '@/components/ui/Card';
 import { ErrorState } from '@/components/ui/ErrorState';
 import { Loader } from '@/components/ui/Loader';
 import { OutfitForm } from '@/components/outfits';
+import { getMyEventPermission } from '@/services/permission.service';
 import { useOutfitStore } from '@/store/outfitStore';
 import type { OutfitInput } from '@/types/domain';
 
@@ -16,10 +17,18 @@ export function OutfitEditPage() {
   const saving = useOutfitStore((state) => state.saving);
   const loadOutfit = useOutfitStore((state) => state.loadOutfit);
   const updateOutfit = useOutfitStore((state) => state.updateOutfit);
+  const [canManage, setCanManage] = useState(false);
 
   useEffect(() => {
     if (id) void loadOutfit(id);
   }, [id, loadOutfit]);
+
+  useEffect(() => {
+    if (!outfit) return;
+    void getMyEventPermission(outfit.eventId)
+      .then((level) => setCanManage(level === 'edit'))
+      .catch(() => setCanManage(false));
+  }, [outfit]);
 
   async function handleSubmit(input: OutfitInput) {
     if (!id) return;
@@ -30,6 +39,7 @@ export function OutfitEditPage() {
   if (loading && !outfit) return <Loader label="Loading outfit" />;
   if (error) return <ErrorState message={error} />;
   if (!outfit) return <ErrorState message="Outfit not found." />;
+  if (!canManage) return <ErrorState message="You can view this outfit, but you cannot edit it." />;
 
   return (
     <div className="mx-auto max-w-3xl space-y-5">

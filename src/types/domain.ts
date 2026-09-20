@@ -38,6 +38,7 @@ export type Event = {
   notes: string | null;
   status: EventStatus;
   participantCount: number;
+  outfitCount: number;
   createdAt: string;
   updatedAt: string;
   archivedAt: string | null;
@@ -93,6 +94,8 @@ export type ParticipantCandidate = {
 export type Outfit = {
   id: string;
   participantId: string;
+  participantName?: string;
+  participantEmail?: string | null;
   eventId: string;
   weddingId: string;
   ownerUserId: string | null;
@@ -208,6 +211,7 @@ export type DashboardData = {
 export type PermissionAction = 'view' | 'create' | 'edit' | 'admin';
 export type PermissionResource = 'weddings' | 'users' | 'events' | 'participants' | 'outfits';
 export type ManagedPermissionResource = 'users' | 'events' | 'participants' | 'outfits';
+export type EventPermissionLevel = 'view' | 'edit';
 
 export type PermissionLevel = Record<PermissionAction, boolean>;
 
@@ -252,3 +256,9 @@ export type ManagedUser = {
 };
 
 export type PermissionMatrix = Record<ManagedPermissionResource, PermissionLevel>;
+
+export type UserEventPermission = {
+  eventId: string;
+  userId: string;
+  level: EventPermissionLevel;
+};

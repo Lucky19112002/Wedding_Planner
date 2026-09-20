@@ -24,6 +24,17 @@ type ParticipantRow = {
   user_id: string | null;
 };
 
+type OutfitParticipantRow = {
+  id: string;
+  user_id: string | null;
+};
+
+type ProfileRow = {
+  id: string;
+  email: string;
+  display_name: string;
+};
+
 type ImageRow = {
   outfit_id: string;
   storage_path: string;
@@ -70,10 +81,14 @@ function mapOutfit(
   primaryImageUrls = new Map<string, string>(),
   imageCounts = new Map<string, number>(),
   linkCounts = new Map<string, number>(),
+  participantProfiles = new Map<string, ProfileRow>(),
 ): Outfit {
+  const participantProfile = participantProfiles.get(row.participant_id);
   return {
     id: row.id,
     participantId: row.participant_id,
+    participantName: participantProfile?.display_name,
+    participantEmail: participantProfile?.email ?? null,
     eventId: row.event_id,
     weddingId: row.wedding_id,
     ownerUserId: row.owner_user_id,
@@ -90,6 +105,36 @@ function mapOutfit(
     updatedAt: row.updated_at,
     archivedAt: row.archived_at,
   };
+}
+
+
+async function getParticipantProfiles(participantIds: string[]): Promise<Map<string, ProfileRow>> {
+  if (participantIds.length === 0) return new Map();
+
+  const { data: participants, error: participantError } = await supabase
+    .from('participants')
+    .select('id,user_id')
+    .in('id', participantIds)
+    .is('archived_at', null);
+
+  if (participantError) throw participantError;
+
+  const rows = (participants ?? []) as OutfitParticipantRow[];
+  const userIds = rows.flatMap((row) => (row.user_id ? [row.user_id] : []));
+  if (userIds.length === 0) return new Map();
+
+  const { data: profiles, error: profileError } = await supabase
+    .from('profiles')
+    .select('id,email,display_name')
+    .in('id', userIds);
+
+  if (profileError) throw profileError;
+
+  const profilesById = new Map(((profiles ?? []) as ProfileRow[]).map((profile) => [profile.id, profile]));
+  return new Map(rows.flatMap((row) => {
+    const profile = row.user_id ? profilesById.get(row.user_id) : undefined;
+    return profile ? [[row.id, profile] as const] : [];
+  }));
 }
 
 async function getOutfitMeta(outfitIds: string[]) {
@@ -149,6 +194,40 @@ function toRow(input: OutfitInput, participant: ParticipantRow) {
   };
 }
 
+
+export async function getWeddingOutfits(weddingId: string): Promise<Outfit[]> {
+  const { data, error } = await supabase
+    .from('outfits')
+    .select(outfitSelect)
+    .eq('wedding_id', weddingId)
+    .is('archived_at', null)
+    .order('updated_at', { ascending: false });
+
+  if (error) throw error;
+
+  const rows = (data ?? []) as OutfitRow[];
+  const [meta, participantProfiles] = await Promise.all([
+    getOutfitMeta(rows.map((row) => row.id)),
+    getParticipantProfiles(rows.map((row) => row.participant_id)),
+  ]);
+  return rows.map((row) =>
+    mapOutfit(row, meta.primaryImages, meta.primaryImageUrls, meta.imageCounts, meta.linkCounts, participantProfiles),
+  );
+}
+
+export async function switchOutfitParticipant(outfitId: string, participantId: string): Promise<Outfit> {
+  const { error } = await supabase.rpc('switch_outfit_participant', {
+    p_outfit_id: outfitId,
+    p_participant_id: participantId,
+  });
+
+  if (error) throw error;
+
+  const outfit = await getOutfit(outfitId);
+  if (!outfit) throw new Error('Outfit not found.');
+  return outfit;
+}
+
 export async function getOutfits(participantId: string): Promise<Outfit[]> {
   const { data, error } = await supabase
     .from('outfits')
@@ -175,8 +254,11 @@ export async function getOutfit(outfitId: string): Promise<Outfit | null> {
   if (error) throw error;
   if (!data) return null;
 
-  const meta = await getOutfitMeta([data.id]);
-  return mapOutfit(data, meta.primaryImages, meta.primaryImageUrls, meta.imageCounts, meta.linkCounts);
+  const [meta, participantProfiles] = await Promise.all([
+    getOutfitMeta([data.id]),
+    getParticipantProfiles([data.participant_id]),
+  ]);
+  return mapOutfit(data, meta.primaryImages, meta.primaryImageUrls, meta.imageCounts, meta.linkCounts, participantProfiles);
 }
 
 export async function createOutfit(input: OutfitInput): Promise<Outfit> {

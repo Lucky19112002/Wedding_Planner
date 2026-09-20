@@ -14,23 +14,26 @@ import {
 } from '@/components/users';
 import { usePermission } from '@/hooks/usePermission';
 import { useWeddingContext } from '@/hooks/useWeddingContext';
+import { getEvents } from '@/services/event.service';
 import { useInvitationStore } from '@/store/invitationStore';
 import { usePermissionStore } from '@/store/permissionStore';
-import type { Invitation, InvitationInput, ManagedUser, WeddingRole } from '@/types/domain';
+import type { Event, EventPermissionLevel, Invitation, InvitationInput, ManagedUser, WeddingRole } from '@/types/domain';
 import { weddingRoleLabels } from '@/utils/permissions';
 
 export function UsersPage() {
   const [isInviteOpen, setInviteOpen] = useState(false);
   const [deactivationTarget, setDeactivationTarget] = useState<ManagedUser | null>(null);
+  const [events, setEvents] = useState<Event[]>([]);
   const { activeMembership, activeWeddingId, weddings } = useWeddingContext();
-  const canManageUsers = usePermission('users', 'create');
+  const canManageUsers = usePermission('users', 'admin');
   const users = usePermissionStore((state) => state.users);
   const loadingUsers = usePermissionStore((state) => state.loading);
   const savingUsers = usePermissionStore((state) => state.saving);
   const usersError = usePermissionStore((state) => state.error);
   const clearUserError = usePermissionStore((state) => state.clearError);
   const loadUsers = usePermissionStore((state) => state.loadUsers);
-  const updatePermissions = usePermissionStore((state) => state.updatePermissions);
+  const eventPermissions = usePermissionStore((state) => state.eventPermissions);
+  const updateEventPermission = usePermissionStore((state) => state.updateEventPermission);
   const deactivateUser = usePermissionStore((state) => state.deactivateUser);
   const search = usePermissionStore((state) => state.search);
   const setSearch = usePermissionStore((state) => state.setSearch);
@@ -52,6 +55,7 @@ export function UsersPage() {
     if (!activeWeddingId) return;
     void loadUsers(activeWeddingId);
     void loadPendingInvitations(activeWeddingId);
+    void getEvents(activeWeddingId).then(setEvents).catch(() => setEvents([]));
   }, [activeWeddingId, loadPendingInvitations, loadUsers]);
 
   const filteredUsers = useMemo(() => {
@@ -89,10 +93,10 @@ export function UsersPage() {
     await navigator.clipboard.writeText(lastInviteUrl);
   }
 
-  async function handleRoleChange(user: ManagedUser, role: WeddingRole) {
+  async function handleEventPermissionChange(user: ManagedUser, eventId: string, level: EventPermissionLevel) {
     if (!activeWeddingId) return;
     try {
-      await updatePermissions(activeWeddingId, user.membershipId, role);
+      await updateEventPermission(activeWeddingId, eventId, user.userId, level);
     } catch {
       // Store error is rendered on the page.
     }
@@ -126,6 +130,8 @@ export function UsersPage() {
     }
   }
 
+  if (!canManageUsers) return <ErrorState message="User Management is only available to admins." />;
+
   if (!activeWeddingId || !activeMembership) {
     return <ErrorState message="Select an active wedding before managing users." />;
   }
@@ -139,7 +145,7 @@ export function UsersPage() {
           <p className="text-sm font-medium text-brand-700">Invitation & Permission Management</p>
           <h1 className="mt-1 text-3xl font-semibold tracking-tight">Users</h1>
           <p className="mt-2 max-w-2xl text-sm text-slate-600">
-            Invite family members, manage wedding roles, and review role-derived permissions.
+Invite family members and manage each user's View/Edit access per event.
           </p>
         </div>
         {canManageUsers ? (
@@ -215,13 +221,15 @@ export function UsersPage() {
             <UserCard
               key={user.membershipId}
               canManage={canManageUsers}
+              eventPermissions={eventPermissions.filter((permission) => permission.userId === user.userId)}
+              events={events}
               isSaving={savingUsers}
               user={user}
               onDeactivate={(target) => {
                 clearUserError();
                 setDeactivationTarget(target);
               }}
-              onRoleChange={handleRoleChange}
+              onEventPermissionChange={handleEventPermissionChange}
             />
           ))}
         </section>

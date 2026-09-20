@@ -12,12 +12,14 @@ import {
 import { Button } from '@/components/ui/Button';
 import { Card } from '@/components/ui/Card';
 import { ErrorState } from '@/components/ui/ErrorState';
+import { usePermission } from '@/hooks/usePermission';
 import { useWeddingContext } from '@/hooks/useWeddingContext';
 import { useDashboardStore } from '@/store/dashboardStore';
 import { clampProgress } from '@/utils/dashboardMetrics';
 
 export function AppHomePage() {
   const { activeWedding, activeWeddingId } = useWeddingContext();
+  const canViewDashboard = usePermission('events', 'admin');
   const dashboard = useDashboardStore((state) => state.dashboard);
   const error = useDashboardStore((state) => state.error);
   const loading = useDashboardStore((state) => state.loading);
@@ -26,9 +28,10 @@ export function AppHomePage() {
   const refreshDashboard = useDashboardStore((state) => state.refreshDashboard);
 
   useEffect(() => {
-    if (activeWeddingId) void loadDashboard(activeWeddingId);
-  }, [activeWeddingId, loadDashboard]);
+    if (activeWeddingId && canViewDashboard) void loadDashboard(activeWeddingId);
+  }, [activeWeddingId, canViewDashboard, loadDashboard]);
 
+  if (!canViewDashboard) return <ErrorState message="Dashboard is only available to admins. Open Events to view your assigned events." />;
   if (loading && !dashboard) return <DashboardSkeleton />;
   if (error && !dashboard) return <ErrorState message={error} />;
   if (!dashboard) return <DashboardSkeleton />;

@@ -19,7 +19,7 @@ export function ProtectedRoute() {
     return <Navigate to="/login" replace state={{ from: location }} />;
   }
 
-  if (profileStatus === 'loading' || weddingStatus === 'loading') {
+  if (profileStatus === 'idle' || profileStatus === 'loading' || weddingStatus === 'idle' || weddingStatus === 'loading') {
     return <Loader label="Loading workspace" />;
   }
 

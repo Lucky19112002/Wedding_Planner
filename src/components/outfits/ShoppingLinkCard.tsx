@@ -5,8 +5,8 @@ import { detectLinkProvider, getLinkDomain } from '@/utils/shoppingLinks';
 type ShoppingLinkCardProps = {
   link: ShoppingLink;
   onCopy: (url: string) => void;
-  onDelete: (id: string) => void;
-  onEdit: (link: ShoppingLink) => void;
+  onDelete?: (id: string) => void;
+  onEdit?: (link: ShoppingLink) => void;
 };
 
 export function ShoppingLinkCard({ link, onCopy, onDelete, onEdit }: ShoppingLinkCardProps) {
@@ -30,12 +30,16 @@ export function ShoppingLinkCard({ link, onCopy, onDelete, onEdit }: ShoppingLin
         <Button type="button" variant="ghost" onClick={() => onCopy(link.url)}>
           Copy
         </Button>
-        <Button type="button" variant="ghost" onClick={() => onEdit(link)}>
-          Edit
-        </Button>
-        <Button type="button" variant="ghost" onClick={() => onDelete(link.id)}>
-          Delete
-        </Button>
+        {onEdit ? (
+          <Button type="button" variant="ghost" onClick={() => onEdit(link)}>
+            Edit
+          </Button>
+        ) : null}
+        {onDelete ? (
+          <Button type="button" variant="ghost" onClick={() => onDelete(link.id)}>
+            Delete
+          </Button>
+        ) : null}
       </div>
     </div>
   );

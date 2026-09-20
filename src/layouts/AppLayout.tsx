@@ -7,26 +7,23 @@ import { ErrorState } from '@/components/ui/ErrorState';
 import { Select } from '@/components/ui/Select';
 import { useAuth } from '@/hooks/useAuth';
 import { useProfile } from '@/hooks/useProfile';
+import { usePermission } from '@/hooks/usePermission';
 import { useWeddingContext } from '@/hooks/useWeddingContext';
 import { useUiStore } from '@/store/uiStore';
 import { cx } from '@/utils/cx';
 import { getDisplayRole } from '@/utils/permissions';
 
-const navItems = [
-  { label: 'Overview', to: '/app' },
-  { label: 'Events', to: '/app/events' },
-  { label: 'Users', to: '/app/users' },
-];
 
 export function AppLayout() {
   const { signOut } = useAuth();
-  const { error: profileError, profile } = useProfile();
+  const { error: profileError, profile, status: profileStatus } = useProfile();
   const {
     activeMembership,
     activeWedding,
     activeWeddingId,
     error: weddingError,
     setActiveWeddingId,
+    status: weddingStatus,
     weddings,
   } = useWeddingContext();
   const isSidebarOpen = useUiStore((state) => state.isSidebarOpen);
@@ -34,8 +31,16 @@ export function AppLayout() {
   const toggleSidebar = useUiStore((state) => state.toggleSidebar);
   const displayName = profile?.displayName ?? 'User';
   const displayRole = getDisplayRole(profile, activeMembership);
+  const canAdminEvents = usePermission('events', 'admin');
+  const canAdminUsers = usePermission('users', 'admin');
+  const navItems = [
+    ...(canAdminEvents ? [{ label: 'Overview', to: '/app' }] : []),
+    { label: 'Events', to: '/app/events' },
+    { label: 'Clothing', to: '/app/clothing' },
+    ...(canAdminUsers ? [{ label: 'Users', to: '/app/users' }] : []),
+  ];
 
-  if (profileError || weddingError) {
+  if ((profileStatus === 'error' && profileError) || (weddingStatus === 'error' && weddingError)) {
     return (
       <main className="mx-auto flex min-h-screen max-w-2xl items-center px-4 py-10">
         <ErrorState message={profileError ?? weddingError ?? 'The workspace could not be loaded.'} />

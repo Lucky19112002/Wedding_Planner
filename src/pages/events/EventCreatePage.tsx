@@ -1,7 +1,8 @@
 import { Link, useNavigate } from 'react-router-dom';
 import { Card } from '@/components/ui/Card';
-import { ErrorState } from '@/components/ui/ErrorState';
 import { EventForm } from '@/components/events';
+import { ErrorState } from '@/components/ui/ErrorState';
+import { usePermission } from '@/hooks/usePermission';
 import { useWeddingContext } from '@/hooks/useWeddingContext';
 import { useEventStore } from '@/store/eventStore';
 import type { EventInput } from '@/types/domain';
@@ -9,6 +10,7 @@ import type { EventInput } from '@/types/domain';
 export function EventCreatePage() {
   const navigate = useNavigate();
   const { activeWeddingId } = useWeddingContext();
+  const canCreate = usePermission('events', 'create');
   const createEvent = useEventStore((state) => state.createEvent);
   const error = useEventStore((state) => state.error);
   const saving = useEventStore((state) => state.saving);
@@ -18,6 +20,7 @@ export function EventCreatePage() {
     navigate(`/app/events/${event.id}`);
   }
 
+  if (!canCreate) return <ErrorState message="Creating events is only available to admins." />;
   if (!activeWeddingId) return <ErrorState message="Choose a wedding before creating events." />;
 
   return (
