@@ -10,8 +10,27 @@ import { EventEmptyState, EventList } from '@/components/events';
 import { usePermission } from '@/hooks/usePermission';
 import { useWeddingContext } from '@/hooks/useWeddingContext';
 import { useEventStore } from '@/store/eventStore';
-import { eventStatuses, eventStatusLabels, isUpcomingEvent } from '@/utils/eventWorkflow';
-import type { EventStatus } from '@/types/domain';
+import { eventStatuses, eventStatusLabels } from '@/utils/eventWorkflow';
+import type { Event, EventStatus } from '@/types/domain';
+
+function eventTime(event: Event) {
+  return event.eventDate ? new Date(`${event.eventDate}T00:00:00`).getTime() : Number.MAX_SAFE_INTEGER;
+}
+
+function sortEventsByPlanningOrder(events: Event[]) {
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+  const todayTime = today.getTime();
+
+  return [...events].sort((left, right) => {
+    const leftTime = eventTime(left);
+    const rightTime = eventTime(right);
+    const leftPast = leftTime < todayTime;
+    const rightPast = rightTime < todayTime;
+    if (leftPast !== rightPast) return leftPast ? 1 : -1;
+    return leftTime - rightTime || left.name.localeCompare(right.name);
+  });
+}
 
 export function EventsPage() {
   const { activeWeddingId } = useWeddingContext();
@@ -31,16 +50,15 @@ export function EventsPage() {
 
   const filteredEvents = useMemo(() => {
     const query = search.trim().toLowerCase();
-    return events.filter((event) => {
+    return sortEventsByPlanningOrder(events.filter((event) => {
       const matchesSearch =
         !query ||
         event.name.toLowerCase().includes(query) ||
         (event.location?.toLowerCase().includes(query) ?? false);
       const matchesStatus = statusFilter === 'all' || event.status === statusFilter;
       return matchesSearch && matchesStatus;
-    });
+    }));
   }, [events, search, statusFilter]);
-  const upcomingEvents = filteredEvents.filter((event) => isUpcomingEvent(event.eventDate, event.status));
   const hasFilters = Boolean(search.trim()) || statusFilter !== 'all';
 
   if (loading && events.length === 0) return <Loader label="Loading events" />;
@@ -53,7 +71,7 @@ export function EventsPage() {
           <p className="text-sm font-medium text-brand-700">Event Management</p>
           <h1 className="mt-1 text-3xl font-semibold tracking-tight">Events</h1>
           <p className="mt-2 max-w-2xl text-sm text-slate-600">
-            Plan ceremonies, family functions, and shopping milestones in one wedding timeline.
+            View the events assigned to you. Admins can manage the full wedding timeline.
           </p>
         </div>
         {canCreate ? (
@@ -90,21 +108,7 @@ export function EventsPage() {
       {filteredEvents.length === 0 ? (
         <EventEmptyState hasFilters={hasFilters} />
       ) : (
-        <>
-          <section className="space-y-3">
-            <h2 className="text-lg font-semibold">Upcoming events</h2>
-            {upcomingEvents.length > 0 ? (
-              <EventList events={upcomingEvents} />
-            ) : (
-              <Card className="text-sm text-slate-600">No upcoming events match this view.</Card>
-            )}
-          </section>
-
-          <section className="space-y-3">
-            <h2 className="text-lg font-semibold">All events</h2>
-            <EventList events={filteredEvents} />
-          </section>
-        </>
+        <EventList events={filteredEvents} />
       )}
 
       {canCreate ? (

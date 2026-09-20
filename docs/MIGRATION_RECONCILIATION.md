@@ -22,13 +22,13 @@ This reconciliation records the live checksums as the canonical production basel
 
 ## Drift Cause
 
-Versions `001`, `003`, and `005` differ by line-ending normalization between the live apply-time files and the current repository files. Versions `002` and `004` also reflect post-apply baseline cleanup from the Phase 3 live database execution period. The live database state remained correct; only the migration framework's byte-for-byte checksum comparison lacked a way to recognize the locked production baseline.
+Versions `001`, `003`, `005`, and `006` through `010` differ by line-ending normalization between the live apply-time files and the current repository files. Versions `002` and `004` also reflect post-apply baseline cleanup from the Phase 3 live database execution period. The live database state remained correct; only the migration framework's byte-for-byte checksum comparison lacked a way to recognize the locked production baseline.
 
 ## Runner Behavior
 
 The migration runner now validates applied baseline migrations in two ways:
 
 1. Normal mode: the live checksum must match the current file checksum.
-2. Reconciled baseline mode: for versions `001` through `005`, the live checksum must match the recorded production checksum and the current file checksum must match the recorded locked source checksum.
+2. Reconciled baseline mode: for versions `001` through `010`, the live checksum must match the recorded production checksum and the current file checksum must match the recorded locked source checksum.
 
-Any future edit to `001` through `005` changes the current source checksum and is rejected. Any change to live migration metadata changes the production checksum and is rejected. New migrations continue to apply normally in numeric order.
+Any future edit to `001` through `010` changes the current source checksum and is rejected. Any change to live migration metadata changes the production checksum and is rejected. New migrations continue to apply normally in numeric order.

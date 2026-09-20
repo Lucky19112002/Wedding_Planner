@@ -4,6 +4,30 @@ Newest entries first. Every document added or changed under `docs/` is recorded 
 
 ---
 
+## 2026-09-20 – Single Add Outfit Form
+
+- **Status:** Complete
+- **What changed:**
+  - Updated the Add Outfit flow so outfit details, images, and reference URLs are entered before one submit.
+  - The create action now saves the outfit row, selected images, and reference URLs from the same form submission.
+  - Added validation for image type and URL limits before saving.
+  - Added cleanup by archiving the newly created outfit if reference saving fails.
+  - Verified TypeScript, ESLint, Vitest, and production build.
+
+---
+
+## 2026-09-20 – Event-scoped Permission Enforcement
+
+- **Status:** Complete
+- **What changed:**
+  - Replaced the static permission display with event-user View/Edit permissions in the Users screen.
+  - Added live RLS-backed event permission migrations `011` and `012`.
+  - Enforced event Edit permission for event updates, participant updates, outfit changes, image actions, shopping links, archive actions, and Storage object writes.
+  - Verified `Hasinasp@gmail.com` has View permission on 10 events and 0 Edit permissions.
+  - Verified TypeScript, ESLint, Vitest, production build, and zero pending migrations.
+
+---
+
 ## 2026-09-19 - Hotfix v1.0.3 Seamless Invitation Onboarding
 
 - **Status:** In progress

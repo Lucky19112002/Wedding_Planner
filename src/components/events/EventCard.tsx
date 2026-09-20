@@ -25,7 +25,11 @@ export function EventCard({ event }: { event: Event }) {
             <dt className="text-slate-500">Participants</dt>
             <dd className="font-medium">{event.participantCount}</dd>
           </div>
-          <div className="col-span-2">
+          <div>
+            <dt className="text-slate-500">Outfits</dt>
+            <dd className="font-medium">{event.outfitCount}</dd>
+          </div>
+          <div>
             <dt className="text-slate-500">Venue</dt>
             <dd className="truncate font-medium">{event.location || 'Not set'}</dd>
           </div>

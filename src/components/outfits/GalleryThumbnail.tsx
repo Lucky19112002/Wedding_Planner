@@ -8,10 +8,10 @@ type GalleryThumbnailProps = {
   isActive: boolean;
   isFirst: boolean;
   isLast: boolean;
-  onDelete: (image: OutfitImage) => void;
-  onMove: (imageId: string, direction: -1 | 1) => void;
+  onDelete?: (image: OutfitImage) => void;
+  onMove?: (imageId: string, direction: -1 | 1) => void;
   onSelect: (image: OutfitImage) => void;
-  onSetPrimary: (imageId: string) => void;
+  onSetPrimary?: (imageId: string) => void;
 };
 
 export function GalleryThumbnail({
@@ -37,20 +37,22 @@ export function GalleryThumbnail({
       >
         <img alt={`Reference ${index + 1}`} className="h-full w-full object-cover" loading="lazy" src={image.signedUrl ?? ''} />
       </button>
-      <div className="grid grid-cols-2 gap-1">
-        <Button className="min-h-9 px-2" disabled={isFirst} type="button" variant="secondary" onClick={() => onMove(image.id, -1)}>
-          Up
-        </Button>
-        <Button className="min-h-9 px-2" disabled={isLast} type="button" variant="secondary" onClick={() => onMove(image.id, 1)}>
-          Down
-        </Button>
-        <Button className="min-h-9 px-2" disabled={isFirst} type="button" variant="ghost" onClick={() => onSetPrimary(image.id)}>
-          Primary
-        </Button>
-        <Button className="min-h-9 px-2" type="button" variant="ghost" onClick={() => onDelete(image)}>
-          Delete
-        </Button>
-      </div>
+      {onDelete && onMove && onSetPrimary ? (
+        <div className="grid grid-cols-2 gap-1">
+          <Button className="min-h-9 px-2" disabled={isFirst} type="button" variant="secondary" onClick={() => onMove(image.id, -1)}>
+            Up
+          </Button>
+          <Button className="min-h-9 px-2" disabled={isLast} type="button" variant="secondary" onClick={() => onMove(image.id, 1)}>
+            Down
+          </Button>
+          <Button className="min-h-9 px-2" disabled={isFirst} type="button" variant="ghost" onClick={() => onSetPrimary(image.id)}>
+            Primary
+          </Button>
+          <Button className="min-h-9 px-2" type="button" variant="ghost" onClick={() => onDelete(image)}>
+            Delete
+          </Button>
+        </div>
+      ) : null}
     </div>
   );
 }

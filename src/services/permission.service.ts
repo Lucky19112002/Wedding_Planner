@@ -1,5 +1,5 @@
 import { supabase } from '@/lib/supabase';
-import type { InvitationStatus, ManagedUser, Profile, WeddingRole } from '@/types/domain';
+import type { EventPermissionLevel, InvitationStatus, ManagedUser, Profile, UserEventPermission, WeddingRole } from '@/types/domain';
 import { isLastSuperAdmin } from '@/utils/permissions';
 
 type MembershipRow = {
@@ -21,6 +21,12 @@ type ProfileRow = {
 type InvitationRow = {
   email: string;
   status: InvitationStatus;
+};
+
+type EventPermissionRow = {
+  event_id: string;
+  user_id: string;
+  permission_level: EventPermissionLevel;
 };
 
 function mapProfile(row: ProfileRow): Profile {
@@ -136,4 +142,66 @@ export async function deactivateUser(userId: string): Promise<void> {
     .eq('id', userId);
 
   if (updateError) throw updateError;
+}
+
+
+export async function getEventPermissions(weddingId: string): Promise<UserEventPermission[]> {
+  const { data: events, error: eventError } = await supabase
+    .from('events')
+    .select('id')
+    .eq('wedding_id', weddingId)
+    .is('archived_at', null);
+
+  if (eventError) throw eventError;
+
+  const eventIds = (events ?? []).map((event) => event.id as string);
+  if (eventIds.length === 0) return [];
+
+  const { data, error } = await supabase
+    .from('event_permissions')
+    .select('event_id,user_id,permission_level')
+    .in('event_id', eventIds)
+    .is('archived_at', null);
+
+  if (error) throw error;
+
+  return ((data ?? []) as EventPermissionRow[]).map((permission) => ({
+    eventId: permission.event_id,
+    userId: permission.user_id,
+    level: permission.permission_level,
+  }));
+}
+
+export async function updateEventPermission(
+  eventId: string,
+  userId: string,
+  level: EventPermissionLevel,
+): Promise<void> {
+  const { error } = await supabase
+    .from('event_permissions')
+    .upsert(
+      { event_id: eventId, user_id: userId, permission_level: level, archived_at: null },
+      { onConflict: 'event_id,user_id' },
+    );
+
+  if (error) throw error;
+}
+
+
+export async function getMyEventPermission(eventId: string): Promise<EventPermissionLevel | null> {
+  const { data, error } = await supabase.rpc('event_permission_level', { p_event_id: eventId });
+  if (error) throw error;
+  return data as EventPermissionLevel | null;
+}
+
+export async function getMyParticipantEventPermission(participantId: string): Promise<EventPermissionLevel | null> {
+  const { data, error } = await supabase
+    .from('participants')
+    .select('event_id')
+    .eq('id', participantId)
+    .is('archived_at', null)
+    .maybeSingle<{ event_id: string }>();
+
+  if (error) throw error;
+  return data ? getMyEventPermission(data.event_id) : null;
 }

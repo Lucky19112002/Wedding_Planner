@@ -4,6 +4,7 @@ import {
   createOutfit,
   getOutfit,
   getOutfits,
+  switchOutfitParticipant,
   updateOutfit,
 } from '@/services/outfit.service';
 import type { Outfit, OutfitInput, OutfitStatus } from '@/types/domain';
@@ -22,6 +23,7 @@ type OutfitStore = {
   loadOutfit: (outfitId: string) => Promise<void>;
   createOutfit: (input: OutfitInput) => Promise<Outfit>;
   updateOutfit: (outfitId: string, input: OutfitInput) => Promise<Outfit>;
+  switchOutfitParticipant: (outfitId: string, participantId: string) => Promise<Outfit>;
   archiveOutfit: (outfitId: string) => Promise<void>;
   resetOutfits: () => void;
 };
@@ -96,6 +98,21 @@ export const useOutfitStore = create<OutfitStore>((set, get) => ({
         error: getErrorMessage(error, 'Outfit could not be updated.'),
         saving: false,
       });
+      throw error;
+    }
+  },
+  switchOutfitParticipant: async (outfitId, participantId) => {
+    set({ saving: true, error: null });
+    try {
+      const outfit = await switchOutfitParticipant(outfitId, participantId);
+      set((state) => ({
+        outfits: state.outfits.map((item) => (item.id === outfitId ? outfit : item)),
+        selectedOutfit: state.selectedOutfit?.id === outfitId ? outfit : state.selectedOutfit,
+        saving: false,
+      }));
+      return outfit;
+    } catch (error) {
+      set({ error: getErrorMessage(error, 'Outfit owner could not be changed.'), saving: false });
       throw error;
     }
   },

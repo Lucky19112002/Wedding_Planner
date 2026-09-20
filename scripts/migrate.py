@@ -41,6 +41,31 @@ RECONCILED_BASELINE = {
         "production_checksum": "c8032fc42461c1bb444785202601686fdf221c1e627846803f1b22963fba95c1",
         "source_checksum": "381ccad25701c6e492b6b5ded5bd40abe164c1462039e4f7fdd3d2efb07bf023",
     },
+    "006": {
+        "file_name": "006_fix_pgcrypto_invitation.sql",
+        "production_checksum": "8f26ef202f1ca58e70d5ccb710d2418fb3321cba1c6d63599d19acc2efdcd3e7",
+        "source_checksum": "3d09ce30594343e83d02ee269893c6cfcdb4dc2f3b7134fb6ea814350489c2e3",
+    },
+    "007": {
+        "file_name": "007_seed_production_wedding.sql",
+        "production_checksum": "39a7590f72b8693100f64db25589dfc61f48ba89033eee848cd803b6bc38a9a4",
+        "source_checksum": "3fbdbc2cadee7bfda422da672e51011b55b70bcd66c527aad79514df23974678",
+    },
+    "008": {
+        "file_name": "008_invitation_onboarding_details.sql",
+        "production_checksum": "5f504941f81812f43ac911af27cd5b3970188eb504994b655fdd02815b23d8ea",
+        "source_checksum": "abf68adb9f830a2eaea606b875c644b574513a247dcad08df3e33fc64fef6f7c",
+    },
+    "009": {
+        "file_name": "009_invitation_details_wedding_date.sql",
+        "production_checksum": "85404e2c39d8a788c3ddabddd8ad18790157b326ab75f63a3b53b5166f677e95",
+        "source_checksum": "7eb53b06045595896178e97e6625487c22300423a9f5700c546b123d498aadb0",
+    },
+    "010": {
+        "file_name": "010_confirm_invited_signup.sql",
+        "production_checksum": "c51ebe5bc8663758dcab4aa4f738433a70709045a4d485822244d6b172dd6c5c",
+        "source_checksum": "3d9bac0d6ac44dfc2716f3275a5ffd004a14d5b105c28cec9988443f211e0953",
+    },
 }
 
 HISTORY_BOOTSTRAP = """

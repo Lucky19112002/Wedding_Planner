@@ -4,22 +4,32 @@ import { Badge } from '@/components/ui/Badge';
 import { Button } from '@/components/ui/Button';
 import { Card } from '@/components/ui/Card';
 import { PermissionEditor } from '@/components/users/PermissionEditor';
-import type { ManagedUser, WeddingRole } from '@/types/domain';
+import type { Event, EventPermissionLevel, ManagedUser, UserEventPermission } from '@/types/domain';
 import { weddingRoleLabels } from '@/utils/permissions';
 
 type UserCardProps = {
   canManage: boolean;
   isSaving?: boolean;
+  eventPermissions: UserEventPermission[];
+  events: Event[];
   user: ManagedUser;
   onDeactivate: (user: ManagedUser) => void;
-  onRoleChange: (user: ManagedUser, role: WeddingRole) => void;
+  onEventPermissionChange: (user: ManagedUser, eventId: string, level: EventPermissionLevel) => void;
 };
 
 function formatDate(value: string): string {
   return new Intl.DateTimeFormat(undefined, { dateStyle: 'medium' }).format(new Date(value));
 }
 
-export function UserCard({ canManage, isSaving = false, onDeactivate, onRoleChange, user }: UserCardProps) {
+export function UserCard({
+  canManage,
+  eventPermissions,
+  events,
+  isSaving = false,
+  onDeactivate,
+  onEventPermissionChange,
+  user,
+}: UserCardProps) {
   const [isExpanded, setExpanded] = useState(false);
 
   return (
@@ -55,7 +65,9 @@ export function UserCard({ canManage, isSaving = false, onDeactivate, onRoleChan
         <PermissionEditor
           disabled={!canManage || isSaving}
           user={user}
-          onRoleChange={(role) => onRoleChange(user, role)}
+          events={events}
+          permissions={eventPermissions}
+          onPermissionChange={(eventId, level) => onEventPermissionChange(user, eventId, level)}
         />
       ) : null}
     </Card>

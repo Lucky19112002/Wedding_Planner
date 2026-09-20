@@ -1,16 +1,19 @@
 import { create } from 'zustand';
 import {
   deactivateUser,
+  getEventPermissions,
   getUsers,
+  updateEventPermission,
   updatePermissions,
   updateRole,
 } from '@/services/permission.service';
-import type { InvitationStatus, ManagedUser, WeddingRole } from '@/types/domain';
+import type { EventPermissionLevel, InvitationStatus, ManagedUser, UserEventPermission, WeddingRole } from '@/types/domain';
 
 type UserStatusFilter = 'all' | 'active' | 'deactivated' | InvitationStatus;
 
 type PermissionStore = {
   users: ManagedUser[];
+  eventPermissions: UserEventPermission[];
   loading: boolean;
   saving: boolean;
   error: string | null;
@@ -22,6 +25,7 @@ type PermissionStore = {
   setStatusFilter: (statusFilter: UserStatusFilter) => void;
   clearError: () => void;
   loadUsers: (weddingId: string) => Promise<void>;
+  updateEventPermission: (weddingId: string, eventId: string, userId: string, level: EventPermissionLevel) => Promise<void>;
   updateRole: (weddingId: string, membershipId: string, role: WeddingRole) => Promise<void>;
   updatePermissions: (weddingId: string, membershipId: string, role: WeddingRole) => Promise<void>;
   deactivateUser: (weddingId: string, userId: string) => Promise<void>;
@@ -33,6 +37,7 @@ function getErrorMessage(error: unknown, fallback: string): string {
 
 export const usePermissionStore = create<PermissionStore>((set) => ({
   users: [],
+  eventPermissions: [],
   loading: false,
   saving: false,
   error: null,
@@ -46,16 +51,28 @@ export const usePermissionStore = create<PermissionStore>((set) => ({
   loadUsers: async (weddingId) => {
     set({ loading: true, error: null });
     try {
-      set({ users: await getUsers(weddingId), loading: false });
+      const [users, eventPermissions] = await Promise.all([getUsers(weddingId), getEventPermissions(weddingId)]);
+      set({ users, eventPermissions, loading: false });
     } catch (error) {
       set({ error: getErrorMessage(error, 'Users could not be loaded.'), loading: false });
+    }
+  },
+  updateEventPermission: async (weddingId, eventId, userId, level) => {
+    set({ saving: true, error: null });
+    try {
+      await updateEventPermission(eventId, userId, level);
+      set({ eventPermissions: await getEventPermissions(weddingId), saving: false });
+    } catch (error) {
+      set({ error: getErrorMessage(error, 'Event permission could not be updated.'), saving: false });
+      throw error;
     }
   },
   updateRole: async (weddingId, membershipId, role) => {
     set({ saving: true, error: null });
     try {
       await updateRole(membershipId, role);
-      set({ users: await getUsers(weddingId), saving: false });
+      const [users, eventPermissions] = await Promise.all([getUsers(weddingId), getEventPermissions(weddingId)]);
+      set({ users, eventPermissions, saving: false });
     } catch (error) {
       set({ error: getErrorMessage(error, 'Role could not be updated.'), saving: false });
       throw error;
@@ -65,7 +82,8 @@ export const usePermissionStore = create<PermissionStore>((set) => ({
     set({ saving: true, error: null });
     try {
       await updatePermissions(membershipId, role);
-      set({ users: await getUsers(weddingId), saving: false });
+      const [users, eventPermissions] = await Promise.all([getUsers(weddingId), getEventPermissions(weddingId)]);
+      set({ users, eventPermissions, saving: false });
     } catch (error) {
       set({ error: getErrorMessage(error, 'Permissions could not be updated.'), saving: false });
       throw error;
@@ -75,7 +93,8 @@ export const usePermissionStore = create<PermissionStore>((set) => ({
     set({ saving: true, error: null });
     try {
       await deactivateUser(userId);
-      set({ users: await getUsers(weddingId), saving: false });
+      const [users, eventPermissions] = await Promise.all([getUsers(weddingId), getEventPermissions(weddingId)]);
+      set({ users, eventPermissions, saving: false });
     } catch (error) {
       set({ error: getErrorMessage(error, 'User could not be deactivated.'), saving: false });
       throw error;

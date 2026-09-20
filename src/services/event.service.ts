@@ -20,7 +20,11 @@ type ParticipantRow = {
   event_id: string;
 };
 
-function mapEvent(row: EventRow, participantCount = 0): Event {
+type OutfitRow = {
+  event_id: string;
+};
+
+function mapEvent(row: EventRow, participantCount = 0, outfitCount = 0): Event {
   return {
     id: row.id,
     weddingId: row.wedding_id,
@@ -32,6 +36,7 @@ function mapEvent(row: EventRow, participantCount = 0): Event {
     notes: row.notes,
     status: row.status,
     participantCount,
+    outfitCount,
     createdAt: row.created_at,
     updatedAt: row.updated_at,
     archivedAt: row.archived_at,
@@ -51,6 +56,13 @@ function toRow(input: EventInput) {
   };
 }
 
+function countByEvent<T extends { event_id: string }>(rows: T[]): Map<string, number> {
+  return rows.reduce((counts, row) => {
+    counts.set(row.event_id, (counts.get(row.event_id) ?? 0) + 1);
+    return counts;
+  }, new Map<string, number>());
+}
+
 async function getParticipantCounts(weddingId: string): Promise<Map<string, number>> {
   const { data, error } = await supabase
     .from('participants')
@@ -60,15 +72,22 @@ async function getParticipantCounts(weddingId: string): Promise<Map<string, numb
 
   if (error) throw error;
 
-  return (data ?? []).reduce((counts, row) => {
-    const eventId = (row as ParticipantRow).event_id;
-    counts.set(eventId, (counts.get(eventId) ?? 0) + 1);
-    return counts;
-  }, new Map<string, number>());
+  return countByEvent((data ?? []) as ParticipantRow[]);
+}
+
+async function getOutfitCounts(weddingId: string): Promise<Map<string, number>> {
+  const { data, error } = await supabase
+    .from('outfits')
+    .select('event_id')
+    .eq('wedding_id', weddingId)
+    .is('archived_at', null);
+
+  if (error) throw error;
+  return countByEvent((data ?? []) as OutfitRow[]);
 }
 
 export async function getEvents(weddingId: string): Promise<Event[]> {
-  const [{ data, error }, participantCounts] = await Promise.all([
+  const [{ data, error }, participantCounts, outfitCounts] = await Promise.all([
     supabase
       .from('events')
       .select('id,wedding_id,name,event_date,start_time,end_time,location,notes,status,created_at,updated_at,archived_at')
@@ -77,10 +96,14 @@ export async function getEvents(weddingId: string): Promise<Event[]> {
       .order('event_date', { ascending: true, nullsFirst: false })
       .order('created_at', { ascending: false }),
     getParticipantCounts(weddingId),
+    getOutfitCounts(weddingId),
   ]);
 
   if (error) throw error;
-  return (data ?? []).map((row) => mapEvent(row as EventRow, participantCounts.get((row as EventRow).id)));
+  return (data ?? []).map((row) => {
+    const event = row as EventRow;
+    return mapEvent(event, participantCounts.get(event.id), outfitCounts.get(event.id));
+  });
 }
 
 export async function getEvent(eventId: string): Promise<Event | null> {
@@ -94,8 +117,11 @@ export async function getEvent(eventId: string): Promise<Event | null> {
   if (error) throw error;
   if (!data) return null;
 
-  const counts = await getParticipantCounts(data.wedding_id);
-  return mapEvent(data, counts.get(data.id));
+  const [participantCounts, outfitCounts] = await Promise.all([
+    getParticipantCounts(data.wedding_id),
+    getOutfitCounts(data.wedding_id),
+  ]);
+  return mapEvent(data, participantCounts.get(data.id), outfitCounts.get(data.id));
 }
 
 export async function createEvent(input: EventInput): Promise<Event> {
@@ -118,8 +144,11 @@ export async function updateEvent(eventId: string, input: EventInput): Promise<E
     .single<EventRow>();
 
   if (error) throw error;
-  const counts = await getParticipantCounts(input.weddingId);
-  return mapEvent(data, counts.get(data.id));
+  const [participantCounts, outfitCounts] = await Promise.all([
+    getParticipantCounts(input.weddingId),
+    getOutfitCounts(input.weddingId),
+  ]);
+  return mapEvent(data, participantCounts.get(data.id), outfitCounts.get(data.id));
 }
 
 export async function archiveEvent(eventId: string): Promise<void> {

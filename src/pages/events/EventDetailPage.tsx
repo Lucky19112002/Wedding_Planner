@@ -5,15 +5,14 @@ import { EventParticipantsSection } from '@/components/participants';
 import { Card } from '@/components/ui/Card';
 import { ErrorState } from '@/components/ui/ErrorState';
 import { Loader } from '@/components/ui/Loader';
-import { usePermission } from '@/hooks/usePermission';
+import { getMyEventPermission } from '@/services/permission.service';
 import { useEventStore } from '@/store/eventStore';
 import { formatDateTime, formatEventDate, formatEventTime } from '@/utils/eventFormat';
 
 export function EventDetailPage() {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
-  const canEdit = usePermission('events', 'edit');
-  const canAdmin = usePermission('events', 'admin');
+  const [eventPermission, setEventPermission] = useState<'view' | 'edit' | null>(null);
   const event = useEventStore((state) => state.selectedEvent);
   const error = useEventStore((state) => state.error);
   const loading = useEventStore((state) => state.loading);
@@ -23,7 +22,9 @@ export function EventDetailPage() {
   const [isArchiveOpen, setArchiveOpen] = useState(false);
 
   useEffect(() => {
-    if (id) void loadEvent(id);
+    if (!id) return;
+    void loadEvent(id);
+    void getMyEventPermission(id).then(setEventPermission).catch(() => setEventPermission(null));
   }, [id, loadEvent]);
 
   async function handleArchive() {
@@ -43,8 +44,8 @@ export function EventDetailPage() {
         Back to events
       </Link>
       <EventHeader
-        canArchive={canAdmin}
-        canEdit={canEdit}
+        canArchive={eventPermission === 'edit'}
+        canEdit={eventPermission === 'edit'}
         event={event}
         onArchive={() => setArchiveOpen(true)}
       />
@@ -81,7 +82,7 @@ export function EventDetailPage() {
           </Card>
 
           <EventParticipantsSection
-            canManage={canAdmin}
+            canManage={eventPermission === 'edit'}
             event={event}
             onChanged={() => {
               if (id) void loadEvent(id);

@@ -1,5 +1,5 @@
 import { zodResolver } from '@hookform/resolvers/zod';
-import { useEffect } from 'react';
+import { useEffect, type ReactNode } from 'react';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 import { Button } from '@/components/ui/Button';
@@ -25,6 +25,7 @@ type OutfitFormProps = {
   isSaving: boolean;
   submitLabel: string;
   onSubmit: (input: OutfitInput) => Promise<void>;
+  children?: ReactNode;
 };
 
 function toValues(outfit?: Outfit): OutfitFormValues {
@@ -37,7 +38,7 @@ function toValues(outfit?: Outfit): OutfitFormValues {
   };
 }
 
-export function OutfitForm({ isSaving, onSubmit, outfit, participantId, submitLabel }: OutfitFormProps) {
+export function OutfitForm({ children, isSaving, onSubmit, outfit, participantId, submitLabel }: OutfitFormProps) {
   const form = useForm<OutfitFormValues>({
     resolver: zodResolver(outfitFormSchema),
     defaultValues: toValues(outfit),
@@ -61,7 +62,7 @@ export function OutfitForm({ isSaving, onSubmit, outfit, participantId, submitLa
 
   return (
     <form className="space-y-5" onSubmit={form.handleSubmit(handleSubmit)}>
-      <Input label="Dress Type" placeholder="Sherwani, lehenga, suit..." {...form.register('dressType')} />
+      <Input label="Outfit Name" placeholder="Sherwani, lehenga, suit..." {...form.register('dressType')} />
       {form.formState.errors.dressType ? (
         <p className="text-sm text-rose-600">{form.formState.errors.dressType.message}</p>
       ) : null}
@@ -85,6 +86,8 @@ export function OutfitForm({ isSaving, onSubmit, outfit, participantId, submitLa
       </Select>
 
       <TextArea label="Notes" placeholder="Tailor, fabric, shopping reminders..." {...form.register('notes')} />
+
+      {children}
 
       <Button className="w-full sm:w-auto" isLoading={isSaving} type="submit">
         {submitLabel}
